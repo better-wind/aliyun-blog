@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2016-12-14T10:46:41.929Z</updated>
+  <updated>2016-12-14T10:52:49.859Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
@@ -16,21 +16,21 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Blog</title>
+    <title>In city</title>
     <link href="https://luyi10year.github.io/2016/12/14/Blog/"/>
     <id>https://luyi10year.github.io/2016/12/14/Blog/</id>
     <published>2016-12-14T10:40:08.000Z</published>
-    <updated>2016-12-14T10:46:41.929Z</updated>
+    <updated>2016-12-14T10:52:49.859Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/assets/blogImg/con_bg.jpg" alt="夜景"></p>
+    <content type="html"><![CDATA[<p><img src="/assets/blogImg/city.jpg" alt="City"></p>
 <p>悠然,随心,随性,随缘。</p>
 <a id="more"></a>
-<p><img src="/assets/blogImg/city.jpg" alt="夜景"><br>悠然,随心,随性,随缘。</p>
+<p><img src="/assets/blogImg/con_bg.jpg" alt="夜景"><br>悠然,随心,随性,随缘。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/assets/blogImg/con_bg.jpg&quot; alt=&quot;夜景&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/assets/blogImg/city.jpg&quot; alt=&quot;City&quot;&gt;&lt;/p&gt;
 &lt;p&gt;悠然,随心,随性,随缘。&lt;/p&gt;
     
     </summary>

@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/canvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/star.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo/2012/12/19/a-chrismas-ico/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo/archives/2012/12/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo/archives/2012/index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/13/new-article/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/13/new-article/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/index.html" afterPath="$PROJECT_DIR$/hexo/archives/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/border1px.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/border1px.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/coffee_pc_demo/pro-con.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/coffee_pc_demo/pro-con.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/gift/index.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/gift/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/hack_demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/hack_demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo2.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/mediator/demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/mediator/demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/my_news_reader/index.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/my_news_reader/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/pre_css3_demo/demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/pre_css3_demo/demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/atom.xml" afterPath="$PROJECT_DIR$/hexo/atom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/baidusitemap.xm" afterPath="$PROJECT_DIR$/hexo/baidusitemap.xm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/content.json" afterPath="$PROJECT_DIR$/hexo/content.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/feed.json" afterPath="$PROJECT_DIR$/hexo/feed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/index.html" afterPath="$PROJECT_DIR$/hexo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/main.css" afterPath="$PROJECT_DIR$/hexo/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/main.js" afterPath="$PROJECT_DIR$/hexo/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/sitemap.xml" afterPath="$PROJECT_DIR$/hexo/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/slider.js" afterPath="$PROJECT_DIR$/hexo/slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/node/index.html" afterPath="$PROJECT_DIR$/hexo/tags/node/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/杂谈/index.html" afterPath="$PROJECT_DIR$/hexo/tags/杂谈/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,21 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="new-article.markdown" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new-article.markdown" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/new-article.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="351">
               <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blog.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Blog.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/Blog.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="135">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -128,8 +94,8 @@
         <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" />
         <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/webpack.config.js" />
         <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/grid.scss" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/Blog.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/new-article.markdown" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/Blog.md" />
       </list>
     </option>
   </component>
@@ -390,12 +356,12 @@
       <updated>1481695573111</updated>
       <workItem from="1481695574270" duration="3313000" />
       <workItem from="1481700051915" duration="2491000" />
-      <workItem from="1481702867397" duration="9558000" />
+      <workItem from="1481702867397" duration="9826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15362000" />
+    <option name="totallyTimeSpent" value="15630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="32" width="1936" height="1176" extended-state="6" />
@@ -408,7 +374,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4193858" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59884834" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -694,18 +660,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/Blog.md">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/new-article.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="351">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/new-article.markdown">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/Blog.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
