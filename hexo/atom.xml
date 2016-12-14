@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>十年的博客</title>
-  <subtitle>十年，富士山下。。</subtitle>
+  <subtitle>十年是胖子</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2016-12-13T10:50:15.150Z</updated>
+  <updated>2016-12-14T10:46:41.929Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
@@ -16,58 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Node</title>
-    <link href="https://luyi10year.github.io/2016/12/13/new-article/"/>
-    <id>https://luyi10year.github.io/2016/12/13/new-article/</id>
-    <published>2016-12-13T10:41:55.000Z</published>
-    <updated>2016-12-13T10:50:15.150Z</updated>
+    <title>Blog</title>
+    <link href="https://luyi10year.github.io/2016/12/14/Blog/"/>
+    <id>https://luyi10year.github.io/2016/12/14/Blog/</id>
+    <published>2016-12-14T10:40:08.000Z</published>
+    <updated>2016-12-14T10:46:41.929Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
-<p>node<br>node.js</p>
-</blockquote>
+    <content type="html"><![CDATA[<p><img src="/assets/blogImg/con_bg.jpg" alt="夜景"></p>
+<p>悠然,随心,随性,随缘。</p>
 <a id="more"></a>
-<p><strong>Happy Chrismas!</strong></p>
+<p><img src="/assets/blogImg/city.jpg" alt="夜景"><br>悠然,随心,随性,随缘。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;node&lt;br&gt;node.js&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="node" scheme="https://luyi10year.github.io/tags/node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序</title>
-    <link href="https://luyi10year.github.io/2012/12/19/a-chrismas-ico/"/>
-    <id>https://luyi10year.github.io/2012/12/19/a-chrismas-ico/</id>
-    <published>2012-12-19T06:48:00.000Z</published>
-    <updated>2016-12-14T05:05:21.622Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/assets/blogImg/it_man.jpg" alt="ico原来的样子"></p>
-<blockquote>
-<p>程序员</p>
-</blockquote>
-<a id="more"></a>
-<p><strong>Happy Chrismas!</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/assets/blogImg/it_man.jpg&quot; alt=&quot;ico原来的样子&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;程序员&lt;/p&gt;
-&lt;/blockquote&gt;
+      &lt;p&gt;&lt;img src=&quot;/assets/blogImg/con_bg.jpg&quot; alt=&quot;夜景&quot;&gt;&lt;/p&gt;
+&lt;p&gt;悠然,随心,随性,随缘。&lt;/p&gt;
     
     </summary>
     
     
       <category term="杂谈" scheme="https://luyi10year.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node</title>
+    <link href="https://luyi10year.github.io/2016/12/13/new-article/"/>
+    <id>https://luyi10year.github.io/2016/12/13/new-article/</id>
+    <published>2016-12-13T10:41:55.000Z</published>
+    <updated>2016-12-14T10:47:34.696Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/assets/blogImg/node.jpg" alt="node"></p>
+<blockquote>
+<p>Node<br>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。<br><a id="more"></a><br>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/assets/blogImg/node.jpg&quot; alt=&quot;node&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Node&lt;br&gt;Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="node" scheme="https://luyi10year.github.io/tags/node/"/>
     
   </entry>
   

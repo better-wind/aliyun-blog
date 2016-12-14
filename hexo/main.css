@@ -19,10 +19,6 @@
   transition: all 0.8s ease-in;
   -ms-transition: all 0.8s ease-in; }
 
-#container.show {
-  background: -webkit-linear-gradient(250deg, #a0cfe4, #e8c37e);
-  background: linear-gradient(200deg, #a0cfe4, #e8c37e); }
-
 /*弹性动画*/
 @-webkit-keyframes leftIn {
   from, 60%, 75%, 90%, to {
@@ -604,9 +600,11 @@ html, body, #container {
   min-height: 100%; }
   #container .anm-canvas {
     display: none; }
-  #container.show .anm-canvas {
-    display: block;
-    position: fixed; }
+  #container.show {
+    background: url("/img/con_bg.jpg") no-repeat center center/cover; }
+    #container.show .anm-canvas {
+      display: block;
+      position: fixed; }
 
 .body-wrap {
   margin-bottom: 80px; }
@@ -665,7 +663,7 @@ html, body, #container {
     height: 180px;
     background-color: black;
     position: absolute;
-    opacity: 0.7; }
+    opacity: 1; }
   .left-col .intrude-less {
     width: 76%;
     text-align: center;
@@ -2032,7 +2030,7 @@ pre .css ~ * .id {
     height: 2em;
     top: 50%;
     margin: -1em 0 0;
-    background: url("/img/tooltip.svg") no-repeat center center;
+    background: url("/fonts/tooltip.svg") no-repeat center center;
     background-size: 100%; }
   .tooltip-left .tooltip-west .tooltip-content::before,
   .tooltip-left .tooltip-west .tooltip-content::after {
