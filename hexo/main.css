@@ -601,7 +601,7 @@ html, body, #container {
   #container .anm-canvas {
     display: none; }
   #container.show {
-    background: url("/img/con_bg.jpg") no-repeat center center/cover; }
+    background: url("/img/city.jpg") no-repeat center center/cover; }
     #container.show .anm-canvas {
       display: block;
       position: fixed; }
@@ -620,7 +620,7 @@ html, body, #container {
     background: none;
     opacity: .9; }
     .mid-col.show .article {
-      background: rgba(255, 255, 255, 0.3); }
+      background: rgba(255, 255, 255, 0.8); }
 
 #mobile-nav {
   display: none; }

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2016-12-14T10:52:49.859Z</updated>
+  <updated>2016-12-16T10:43:13.781Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
@@ -16,22 +16,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>学点运维，搭个阿里云服务器</title>
+    <link href="https://luyi10year.github.io/2016/12/15/aliyun/"/>
+    <id>https://luyi10year.github.io/2016/12/15/aliyun/</id>
+    <published>2016-12-15T09:08:08.000Z</published>
+    <updated>2016-12-16T10:43:13.781Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png" alt="aliyun"></p>
+<p>前段时间和同事合租了一个阿里云服务器，60几块钱一个月。<br>服务器上的资源工具很多也都是他配的，<br>作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索<br>然后这货今天离职了。</p>
+<a id="more"></a>
+<p>走之前，悠悠然发了我一个连接<br>阿里云搞活动 <a href="http://click.aliyun.com/m/8360/" target="_blank" rel="external">传送门</a> 服务器免费赠送6个月</p>
+<p>果断入手</p>
+<p>然后<br>买域名<br>解析DNS<br>配nginx<br>装git<br>搭node</p>
+<p>也算是小入门了</p>
+<hr>
+<p>But 今天我想说的是<br>作为一个开发人员and 一个合格的开发人员<br>首先具备的应该是解决问题，查找问题的能力</p>
+<p>而不是一有问题不假思索的问别人<br>有时候多学一样本来,就早说一句求人的话</p>
+<p>所以作为 入门小白<br>搭环境的过程中问题也是不少</p>
+<h2 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h2><p>linux git的安装</p>
+<p>忽略前面下载解压过程</p>
+<blockquote>
+<p>./configure –prefix=/usr/local<br>make &amp; make install</p>
+</blockquote>
+<p>果断报错。。<br>OK 下载各种依赖<br>报错<br>继续<br>安装成功<br>git –version<br>嗯 有版本号<br>easy嘛<br>然后 来 git clone ..<br>error:fatal: Unable to find remote helper for ‘https’<br>又报错，奔溃</p>
+<p>这是因为Git环境在重装后没有安装完全，需要重新安装</p>
+<blockquote>
+<p>./configure –prefix=/usr/local<br>make all doc<br>make install install-doc install-man install-html</p>
+</blockquote>
+<p>继续 OK<br>问题解决</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png&quot; alt=&quot;aliyun&quot;&gt;&lt;/p&gt;
+&lt;p&gt;前段时间和同事合租了一个阿里云服务器，60几块钱一个月。&lt;br&gt;服务器上的资源工具很多也都是他配的，&lt;br&gt;作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索&lt;br&gt;然后这货今天离职了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
+    
+      <category term="Git" scheme="https://luyi10year.github.io/tags/Git/"/>
+    
+      <category term="服务器" scheme="https://luyi10year.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>In city</title>
-    <link href="https://luyi10year.github.io/2016/12/14/Blog/"/>
-    <id>https://luyi10year.github.io/2016/12/14/Blog/</id>
+    <link href="https://luyi10year.github.io/2016/12/14/in-city/"/>
+    <id>https://luyi10year.github.io/2016/12/14/in-city/</id>
     <published>2016-12-14T10:40:08.000Z</published>
-    <updated>2016-12-14T10:52:49.859Z</updated>
+    <updated>2016-12-16T10:39:38.677Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/blogImg/city.jpg" alt="City"></p>
-<p>悠然,随心,随性,随缘。</p>
-<a id="more"></a>
-<p><img src="/assets/blogImg/con_bg.jpg" alt="夜景"><br>悠然,随心,随性,随缘。</p>
+<p>悠然<br>随心<br>随性<br>随缘<br>勿忘初心<br><a id="more"></a><br>杭州，省会<br>美丽的西湖（我也只去过西湖。。）<br>在风口，是只猪也能飞起来。<br>在杭州，这只猪更多的是各个互联网创业公司</p>
+<p>但是风过了，依然在飞的却是鹰</p>
+<p>同样这也适用于我们<br>身处互联网大时代<br>机会很多，机遇很多<br>首先要飞起来<br>然后守住本心<br>勿忘初心<br>也就是不断学习and进步<br>最后<br>溜的起飞</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;/assets/blogImg/city.jpg&quot; alt=&quot;City&quot;&gt;&lt;/p&gt;
-&lt;p&gt;悠然,随心,随性,随缘。&lt;/p&gt;
+&lt;p&gt;悠然&lt;br&gt;随心&lt;br&gt;随性&lt;br&gt;随缘&lt;br&gt;勿忘初心&lt;br&gt;
     
     </summary>
     
@@ -42,22 +89,25 @@
   
   <entry>
     <title>Node</title>
-    <link href="https://luyi10year.github.io/2016/12/13/new-article/"/>
-    <id>https://luyi10year.github.io/2016/12/13/new-article/</id>
+    <link href="https://luyi10year.github.io/2016/12/13/node/"/>
+    <id>https://luyi10year.github.io/2016/12/13/node/</id>
     <published>2016-12-13T10:41:55.000Z</published>
-    <updated>2016-12-14T10:47:34.696Z</updated>
+    <updated>2016-12-16T10:40:57.026Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/blogImg/node.jpg" alt="node"></p>
 <blockquote>
-<p>Node<br>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。<br><a id="more"></a><br>Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。</p>
+<p>Node<br>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</p>
 </blockquote>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>哈哈 先占上<br>到时候再补</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;/assets/blogImg/node.jpg&quot; alt=&quot;node&quot;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Node&lt;br&gt;Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。&lt;br&gt;
+&lt;p&gt;Node&lt;br&gt;Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;
     
     </summary>
     
