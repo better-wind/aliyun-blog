@@ -1,55 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>十年的博客</title>
-  <subtitle>十年是胖子</subtitle>
+  <title>Louis Blog</title>
+  <subtitle>Louis/十年</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2016-12-16T10:43:13.781Z</updated>
+  <updated>2016-12-19T05:48:40.706Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
-    <name>十年</name>
+    <name>louis</name>
     <email>wjf550@qq.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>学点运维，搭个阿里云服务器</title>
+    <title>学点运维，配个服务器</title>
     <link href="https://luyi10year.github.io/2016/12/15/aliyun/"/>
     <id>https://luyi10year.github.io/2016/12/15/aliyun/</id>
     <published>2016-12-15T09:08:08.000Z</published>
-    <updated>2016-12-16T10:43:13.781Z</updated>
+    <updated>2016-12-19T05:48:40.706Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png" alt="aliyun"></p>
-<p>前段时间和同事合租了一个阿里云服务器，60几块钱一个月。<br>服务器上的资源工具很多也都是他配的，<br>作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索<br>然后这货今天离职了。</p>
+<p>前段时间和同事合租了一个阿里云服务器，60几块钱一个月。<br>服务器上的资源环境很多都是他配的，<br>作为前端，只是在上面放点静态的东西，也没太大兴趣在这方面去摸索<br>然后这货今天离职了。</p>
 <a id="more"></a>
 <p>走之前，悠悠然发了我一个连接<br>阿里云搞活动 <a href="http://click.aliyun.com/m/8360/" target="_blank" rel="external">传送门</a> 服务器免费赠送6个月</p>
-<p>果断入手</p>
+<p>果断入手(要买个9块钱的套餐)</p>
 <p>然后<br>买域名<br>解析DNS<br>配nginx<br>装git<br>搭node</p>
 <p>也算是小入门了</p>
 <hr>
-<p>But 今天我想说的是<br>作为一个开发人员and 一个合格的开发人员<br>首先具备的应该是解决问题，查找问题的能力</p>
-<p>而不是一有问题不假思索的问别人<br>有时候多学一样本来,就早说一句求人的话</p>
-<p>所以作为 入门小白<br>搭环境的过程中问题也是不少</p>
-<h2 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h2><p>linux git的安装</p>
+<p>But 我想说的是<br>作为一个开发人员and 一个合格的开发人员<br>首先具备的应该是解决问题，查找问题的能力</p>
+<p>而不是一有问题不假思索的问别人<br>有时候多学一样本领,就早说一句求人的话</p>
+<p>作为我们作为初学者<br>总会碰到各种各样的问题<br>那么，怎么解决？</p>
+<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h2><p>linux git的安装</p>
 <p>忽略前面下载解压过程</p>
 <blockquote>
 <p>./configure –prefix=/usr/local<br>make &amp; make install</p>
 </blockquote>
 <p>果断报错。。<br>OK 下载各种依赖<br>报错<br>继续<br>安装成功<br>git –version<br>嗯 有版本号<br>easy嘛<br>然后 来 git clone ..<br>error:fatal: Unable to find remote helper for ‘https’<br>又报错，奔溃</p>
-<p>这是因为Git环境在重装后没有安装完全，需要重新安装</p>
+<p>这是因为Git环境没有安装完全，需要重新安装</p>
 <blockquote>
 <p>./configure –prefix=/usr/local<br>make all doc<br>make install install-doc install-man install-html</p>
 </blockquote>
 <p>继续 OK<br>问题解决</p>
+<p>那么这解决问题的过程 就比解决问题来的跟有用<br>前提是问题是你自己解决的</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png&quot; alt=&quot;aliyun&quot;&gt;&lt;/p&gt;
-&lt;p&gt;前段时间和同事合租了一个阿里云服务器，60几块钱一个月。&lt;br&gt;服务器上的资源工具很多也都是他配的，&lt;br&gt;作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索&lt;br&gt;然后这货今天离职了。&lt;/p&gt;
+&lt;p&gt;前段时间和同事合租了一个阿里云服务器，60几块钱一个月。&lt;br&gt;服务器上的资源环境很多都是他配的，&lt;br&gt;作为前端，只是在上面放点静态的东西，也没太大兴趣在这方面去摸索&lt;br&gt;然后这货今天离职了。&lt;/p&gt;
     
     </summary>
     
@@ -67,18 +68,21 @@
     <link href="https://luyi10year.github.io/2016/12/14/in-city/"/>
     <id>https://luyi10year.github.io/2016/12/14/in-city/</id>
     <published>2016-12-14T10:40:08.000Z</published>
-    <updated>2016-12-16T10:39:38.677Z</updated>
+    <updated>2016-12-19T05:47:17.434Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/blogImg/city.jpg" alt="City"></p>
-<p>悠然<br>随心<br>随性<br>随缘<br>勿忘初心<br><a id="more"></a><br>杭州，省会<br>美丽的西湖（我也只去过西湖。。）<br>在风口，是只猪也能飞起来。<br>在杭州，这只猪更多的是各个互联网创业公司</p>
+<p>悠然<br>随心<br>随性<br>随缘<br><a id="more"></a><br>杭州，省会<br>美丽的西湖（我也只去过西湖。。）<br>一年前，在这<br>我开启了前端之旅</p>
+<p>那谁说过，在风口，是只猪也能飞起来。<br>何况是在杭州这样的互联网台风中。。</p>
 <p>但是风过了，依然在飞的却是鹰</p>
-<p>同样这也适用于我们<br>身处互联网大时代<br>机会很多，机遇很多<br>首先要飞起来<br>然后守住本心<br>勿忘初心<br>也就是不断学习and进步<br>最后<br>溜的起飞</p>
+<p>麻雀从不担心树枝会断<br>因为他相信的不是树枝<br>而是自己的翅膀</p>
+<p>身处互联网大时代<br>机会很多，机遇很多<br>首先飞起来<br>然后去充实自己<br>不断学习不断进步</p>
+<p>最后<br>风即使过了<br>我们也进化成了鹰</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;/assets/blogImg/city.jpg&quot; alt=&quot;City&quot;&gt;&lt;/p&gt;
-&lt;p&gt;悠然&lt;br&gt;随心&lt;br&gt;随性&lt;br&gt;随缘&lt;br&gt;勿忘初心&lt;br&gt;
+&lt;p&gt;悠然&lt;br&gt;随心&lt;br&gt;随性&lt;br&gt;随缘&lt;br&gt;
     
     </summary>
     

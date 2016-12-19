@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://luyi10year.github.io">
-  <title>学点运维，搭个阿里云服务器 | 十年的博客</title>
+  <title>学点运维，配个服务器 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前段时间和同事合租了一个阿里云服务器，60几块钱一个月。服务器上的资源工具很多也都是他配的，作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索然后这货今天离职了。">
+  <meta name="description" content="前段时间和同事合租了一个阿里云服务器，60几块钱一个月。服务器上的资源环境很多都是他配的，作为前端，只是在上面放点静态的东西，也没太大兴趣在这方面去摸索然后这货今天离职了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学点运维，搭个阿里云服务器">
+<meta property="og:title" content="学点运维，配个服务器">
 <meta property="og:url" content="https://luyi10year.github.io/2016/12/15/aliyun/index.html">
-<meta property="og:site_name" content="十年的博客">
-<meta property="og:description" content="前段时间和同事合租了一个阿里云服务器，60几块钱一个月。服务器上的资源工具很多也都是他配的，作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索然后这货今天离职了。">
+<meta property="og:site_name" content="Louis Blog">
+<meta property="og:description" content="前段时间和同事合租了一个阿里云服务器，60几块钱一个月。服务器上的资源环境很多都是他配的，作为前端，只是在上面放点静态的东西，也没太大兴趣在这方面去摸索然后这货今天离职了。">
 <meta property="og:image" content="http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png">
-<meta property="og:updated_time" content="2016-12-16T10:43:13.781Z">
+<meta property="og:updated_time" content="2016-12-19T05:48:40.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学点运维，搭个阿里云服务器">
-<meta name="twitter:description" content="前段时间和同事合租了一个阿里云服务器，60几块钱一个月。服务器上的资源工具很多也都是他配的，作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索然后这货今天离职了。">
+<meta name="twitter:title" content="学点运维，配个服务器">
+<meta name="twitter:description" content="前段时间和同事合租了一个阿里云服务器，60几块钱一个月。服务器上的资源环境很多都是他配的，作为前端，只是在上面放点静态的东西，也没太大兴趣在这方面去摸索然后这货今天离职了。">
 <meta name="twitter:image" content="http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png">
   
-    <link rel="alternative" href="/atom.xml" title="十年的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/fav.ico">
@@ -35,8 +35,8 @@
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      <div class="overlay" id="starCanvasWrap">
-  <canvas id="starCanvas"></canvas>
+      <div class="overlay" id="starCanvasWrapWeb">
+  <canvas id="starCanvasWeb"></canvas>
 </div>
 <div class="intrude-less">
 	<header id="header" class="inner">
@@ -45,11 +45,11 @@
 		</a>
 
 		<hgroup>
-		  <h1 class="header-author"><a href="/">十年</a></h1>
+		  <h1 class="header-author"><a href="/">louis</a></h1>
 		</hgroup>
 
 		
-		<p class="header-subtitle">十年是胖子</p>
+		<p class="header-subtitle">Louis/十年</p>
 		
 
 		<nav class="header-menu">
@@ -88,9 +88,10 @@
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       <nav id="mobile-nav">
-  	<div class="overlay">
+  	<div class="overlay" id="starCanvasWrapMobile">
+      <canvas id="starCanvasMobile"></canvas>
   		<div class="slider-trigger"><i class="icon-sort"></i></div>
-  		<h1 class="header-author js-mobile-header hide">十年</h1>
+  		<h1 class="header-author js-mobile-header hide">louis</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
@@ -98,10 +99,10 @@
 				<img src="/assets/blogImg/it_man.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author">十年</h1>
+			  <h1 class="header-author">louis</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">十年是胖子</p>
+			<p class="header-subtitle">Louis/十年</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -137,7 +138,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      学点运维，搭个阿里云服务器
+      学点运维，配个服务器
     </h1>
   
 
@@ -149,27 +150,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png" alt="aliyun"></p>
-<p>前段时间和同事合租了一个阿里云服务器，60几块钱一个月。<br>服务器上的资源工具很多也都是他配的，<br>作为前端，我么也只是在上面放点静态的东西，也没太大兴趣在这方面去摸索<br>然后这货今天离职了。</p>
+<p>前段时间和同事合租了一个阿里云服务器，60几块钱一个月。<br>服务器上的资源环境很多都是他配的，<br>作为前端，只是在上面放点静态的东西，也没太大兴趣在这方面去摸索<br>然后这货今天离职了。</p>
 <a id="more"></a>
 <p>走之前，悠悠然发了我一个连接<br>阿里云搞活动 <a href="http://click.aliyun.com/m/8360/" target="_blank" rel="external">传送门</a> 服务器免费赠送6个月</p>
-<p>果断入手</p>
+<p>果断入手(要买个9块钱的套餐)</p>
 <p>然后<br>买域名<br>解析DNS<br>配nginx<br>装git<br>搭node</p>
 <p>也算是小入门了</p>
 <hr>
-<p>But 今天我想说的是<br>作为一个开发人员and 一个合格的开发人员<br>首先具备的应该是解决问题，查找问题的能力</p>
-<p>而不是一有问题不假思索的问别人<br>有时候多学一样本来,就早说一句求人的话</p>
-<p>所以作为 入门小白<br>搭环境的过程中问题也是不少</p>
-<h2 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h2><p>linux git的安装</p>
+<p>But 我想说的是<br>作为一个开发人员and 一个合格的开发人员<br>首先具备的应该是解决问题，查找问题的能力</p>
+<p>而不是一有问题不假思索的问别人<br>有时候多学一样本领,就早说一句求人的话</p>
+<p>作为我们作为初学者<br>总会碰到各种各样的问题<br>那么，怎么解决？</p>
+<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h2><p>linux git的安装</p>
 <p>忽略前面下载解压过程</p>
 <blockquote>
 <p>./configure –prefix=/usr/local<br>make &amp; make install</p>
 </blockquote>
 <p>果断报错。。<br>OK 下载各种依赖<br>报错<br>继续<br>安装成功<br>git –version<br>嗯 有版本号<br>easy嘛<br>然后 来 git clone ..<br>error:fatal: Unable to find remote helper for ‘https’<br>又报错，奔溃</p>
-<p>这是因为Git环境在重装后没有安装完全，需要重新安装</p>
+<p>这是因为Git环境没有安装完全，需要重新安装</p>
 <blockquote>
 <p>./configure –prefix=/usr/local<br>make all doc<br>make install install-doc install-man install-html</p>
 </blockquote>
 <p>继续 OK<br>问题解决</p>
+<p>那么这解决问题的过程 就比解决问题来的跟有用<br>前提是问题是你自己解决的</p>
 
       
 
@@ -187,57 +189,6 @@
 
       
 
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aW47iMBQFQPa/aeZ3JAicY5vRxK58tUJ34qKlq/t6POLr+XK19//+NHnX4xcXBgbGbRnPj9fr7+R3Xo91dcT263jzHAwMjAMYnwPf56NcvT4Pvvm7Lu9jYGBglEdMDp2nmBgYGBgtoy1T21CLgYGBMVPE5uE4f1pePC+rxTEwMG7IaJv1//Lnn8w3MDAwbsV4ltfaQjR/zpdTYWBgbM3IA1yS3uWY/KvJz4OBgbErY6zIbLO1dv3rc8H85g4GBsYBjOT1bcI3FrLzIcGbgIuBgXEAY2xhaya9m3nOZcDFwMDYjjG24tCG42Q8mS9wXJ4TAwPjAMbM+kW7opHDigEnBgbG1ow87RtL5lrY2EACAwNjb0b7oLbF34bUwedgYGBszWib+DmmLVDHvhoMDIy9GXkyN1bWjjXp2nCMgYGxN6P947ZNNjMkqDtpGBgYmzLyIWIeBJND54lglIxiYGAcwGjr3bygnRlJJgklBgbGCYy2+CwmohOkdpCJgYFxJiMpMtuWXLJy0Qb3LwEXAwNjO8ZMIriqldbiF+ezGBgY/z1jLMmbGXBOtdgwMDCOYaw9UDsGaBtqX/4PGBgYmzLaMLdqPaJdzlgWsjEwMG7LGAuydeN+OuB+KbwxMDAOYLTFbTv4/HVTDwMDAyNfBWsTyjykFssWGBgYxzNmgma+ZtEOODEwME5gJEXs2AghadItGIJiYGBszWhXHMZa/GOLHYuHmhgYGPdj/AHy4ImHuVPHxAAAAABJRU5ErkJggg==" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
@@ -262,7 +213,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="aliyun" data-title="学点运维，搭个阿里云服务器" data-url="https://luyi10year.github.io/2016/12/15/aliyun/"></div>
+	<div class="ds-thread" data-thread-key="aliyun" data-title="学点运维，配个服务器" data-url="https://luyi10year.github.io/2016/12/15/aliyun/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -294,7 +245,7 @@
     	</div>
       	<div class="footer-right">
       		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
-          &copy; 2016 十年
+          &copy; 2016 louis
         </div>
     </div>
   </div>
@@ -403,7 +354,7 @@
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">悠然&lt;br&gt;随心&lt;br&gt;随性&lt;br&gt;随缘&lt;br&gt;&lt;br&gt;不想做服务端的运维&lt;br&gt;他不是个好前端</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">悠然&lt;br&gt;随心&lt;br&gt;&lt;br&gt;不想做服务端的前端&lt;br&gt;他不是个好运维</div>
   	  	
     	</section>
     
