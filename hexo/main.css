@@ -6,9 +6,6 @@
 .clearfix::after {
   clear: both; }
 
-.left-col.show {
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75); }
-
 .mid-col, .mid-col.show .article, .tools-col, .tools-col .tools-section .search-wrap .icon, .tools-col .tools-section .search-tag.tagcloud .article-tag-list, .tools-col .tools-section .search-ul .search-title:hover, .tools-col .tools-section .search-ul .search-time span:hover, .tools-col .tools-section .search-ul .search-tag span:hover {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -460,6 +457,13 @@ i {
   src: url("/fonts/iconfont.eot?t=1479831143478#iefix") format("embedded-opentype"), url("/fonts/iconfont.woff?t=1479831143478") format("woff"), url("/fonts/iconfont.ttf?t=1479831143478") format("truetype"), url("/fonts/iconfont.svg?t=1479831143478#iconfont") format("svg");
   /* iOS 4.1- */ }
 
+@font-face {
+  font-family: 'Della Respira';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Della Respira"), local("DellaRespira-Regular"), url("/fonts/Della-Respira.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'iconfont' !important;
@@ -597,14 +601,25 @@ html, body, #container {
 
 #container {
   position: relative;
-  min-height: 100%; }
-  #container .anm-canvas {
-    display: none; }
+  min-height: 100%;
+  background: -webkit-linear-gradient(top, black 20%, #191327 80%, #2b2048); }
+  #container .header-star-col {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px; }
+  #container .footer-star-col {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in; }
+    #container .footer-star-col img {
+      width: 100%; }
   #container.show {
-    background: url("/img/city.jpg") no-repeat center center/cover; }
-    #container.show .anm-canvas {
-      display: block;
-      position: fixed; }
+    background: -webkit-linear-gradient(top, black 20%, #191327 80%, #2b2048); }
 
 .body-wrap {
   margin-bottom: 80px; }
@@ -618,7 +633,7 @@ html, body, #container {
   width: auto; }
   .mid-col.show {
     background: none;
-    opacity: .9; }
+    opacity: .7; }
     .mid-col.show .article {
       background: rgba(255, 255, 255, 0.8); }
 
@@ -626,9 +641,10 @@ html, body, #container {
   display: none; }
   #mobile-nav .overlay {
     height: 110px;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    background: #4d4d4d; }
+    background: #4d4d4d;
+    z-index: 99; }
     #mobile-nav .overlay.fixed {
       position: fixed;
       height: 42px;
@@ -650,7 +666,6 @@ html, body, #container {
         margin: 3px; }
 
 .left-col {
-  background: #fff;
   width: 300px;
   position: fixed;
   opacity: 1;
@@ -658,10 +673,53 @@ html, body, #container {
   transition: all .2s ease-in;
   height: 100%;
   z-index: 999; }
+  .left-col .moon {
+    position: absolute;
+    top: 112px;
+    left: 86px;
+    width: 128px;
+    height: 128px;
+    background-color: white;
+    opacity: 0;
+    border-radius: 50%;
+    transition: opacity 0.8s linear;
+    -webkit-transition: opacity 0.8s linear; }
+  .left-col.show .floresta {
+    display: none; }
+  .left-col.show .moon {
+    opacity: 1;
+    box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+    background-color: #fff;
+    -webkit-animation-name: lua;
+            animation-name: lua;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    background: url("/img/bgMoon.png") no-repeat;
+    background-size: contain;
+    z-index: 10; }
+
+@-webkit-keyframes lua {
+  0% {
+    box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26); }
+  50% {
+    box-shadow: 0 0 40px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26); }
+  100% {
+    box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26); } }
+
+@keyframes lua {
+  0% {
+    box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26); }
+  50% {
+    box-shadow: 0 0 40px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26); }
+  100% {
+    box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26); } }
   .left-col .overlay {
     width: 100%;
     height: 180px;
-    background-color: black;
     position: absolute;
     opacity: 1; }
   .left-col .intrude-less {
@@ -672,7 +730,8 @@ html, body, #container {
     width: 100%;
     height: 300px;
     position: relative;
-    border-bottom: 1px solid color-border; }
+    border-bottom: 1px solid color-border;
+    z-index: 9; }
     .left-col #header a {
       color: #696969; }
       .left-col #header a:hover {
@@ -714,8 +773,7 @@ html, body, #container {
         content: ''; }
     .left-col #header .profilepic {
       text-align: center;
-      display: block;
-      border: 5px solid #fff;
+      opacity: 1;
       border-radius: 300px;
       width: 128px;
       height: 128px;
@@ -723,12 +781,12 @@ html, body, #container {
       position: relative;
       overflow: hidden;
       background: #88acdb;
-      -webkit-transition: all 0.2s ease-in;
       display: -webkit-box;
       -webkit-box-orient: horizontal;
       -webkit-box-pack: center;
       -webkit-box-align: center;
-      text-align: center; }
+      text-align: center;
+      box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.26); }
       .left-col #header .profilepic img {
         border-radius: 300px;
         opacity: 1;
@@ -740,7 +798,7 @@ html, body, #container {
     .left-col #header .header-author {
       text-align: center;
       margin: 0.67em 0;
-      font-family: Roboto, "Roboto", serif;
+      font-family: Della Respira,"Della Respira", serif;
       font-size: 30px;
       -webkit-transition: 0.3s;
       transition: 0.3s; }
@@ -2380,7 +2438,7 @@ pre .css ~ * .id {
       #viewer-box .viewer-box-l-bg .viewer-box-l {
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background: -webkit-linear-gradient(top, black 110px, #191327 80%, #2b2048);
         overflow: hidden; }
         #viewer-box .viewer-box-l-bg .viewer-box-l a {
           color: #d6d6d6;

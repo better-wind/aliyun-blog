@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyi10year.github.io/2016/12/19/rem-layout/</loc>
+    
+    <lastmod>2016-12-20T06:32:33.654Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/20/diary-2016-1220-1430/</loc>
+    
+    <lastmod>2016-12-20T06:30:44.453Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/2016/12/15/aliyun/</loc>
     
     <lastmod>2016-12-19T05:48:40.706Z</lastmod>
@@ -58,13 +72,6 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/css/reset.css</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/assets/demo/gift/css/index.css</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/css/reset.css</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -93,6 +100,13 @@
   </url>
   
   <url>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/main.js</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -100,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -149,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/main.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     

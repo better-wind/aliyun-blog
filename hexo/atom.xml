@@ -5,15 +5,64 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2016-12-19T05:48:40.706Z</updated>
+  <updated>2016-12-20T06:30:44.453Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
-    <name>louis</name>
+    <name>Louis</name>
     <email>wjf550@qq.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些想法</title>
+    <link href="https://luyi10year.github.io/2016/12/20/diary-2016-1220-1430/"/>
+    <id>https://luyi10year.github.io/2016/12/20/diary-2016-1220-1430/</id>
+    <published>2016-12-20T06:29:27.000Z</published>
+    <updated>2016-12-20T06:30:44.453Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=135355&auto=0&height=66"></iframe>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot; src=&quot;http://music.163.com/outchain/player?type=
+    
+    </summary>
+    
+    
+      <category term="杂谈" scheme="https://luyi10year.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端Rem布局</title>
+    <link href="https://luyi10year.github.io/2016/12/19/rem-layout/"/>
+    <id>https://luyi10year.github.io/2016/12/19/rem-layout/</id>
+    <published>2016-12-19T09:28:08.000Z</published>
+    <updated>2016-12-20T06:32:33.654Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/assets/blogImg/rem-dpr.png" alt="dpr"></p>
+<a id="more"></a>
+<p><img src="/assets/blogImg/timeout.gif" alt="dpr"></p>
+<blockquote>
+<p>h</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/assets/blogImg/rem-dpr.png&quot; alt=&quot;dpr&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="rem" scheme="https://luyi10year.github.io/tags/rem/"/>
+    
+      <category term="H5" scheme="https://luyi10year.github.io/tags/H5/"/>
+    
+  </entry>
   
   <entry>
     <title>学点运维，配个服务器</title>
