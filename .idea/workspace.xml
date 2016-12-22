@@ -3,36 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/13/node/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/13/node/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/14/in-city/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/14/in-city/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/15/aliyun/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/15/aliyun/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/19/rem-layout/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/19/rem-layout/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/20/diary-2016-1220-1430/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/20/diary-2016-1220-1430/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/index.html" afterPath="$PROJECT_DIR$/hexo/archives/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/border1px.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/border1px.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/coffee_pc_demo/pro-con.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/coffee_pc_demo/pro-con.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/gift/index.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/gift/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/hack_demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/hack_demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo2.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/mediator/demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/mediator/demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/my_news_reader/index.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/my_news_reader/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/pre_css3_demo/demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/pre_css3_demo/demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/atom.xml" afterPath="$PROJECT_DIR$/hexo/atom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/baidusitemap.xm" afterPath="$PROJECT_DIR$/hexo/baidusitemap.xm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/content.json" afterPath="$PROJECT_DIR$/hexo/content.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/feed.json" afterPath="$PROJECT_DIR$/hexo/feed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/index.html" afterPath="$PROJECT_DIR$/hexo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/sitemap.xml" afterPath="$PROJECT_DIR$/hexo/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Git/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Git/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/H5/index.html" afterPath="$PROJECT_DIR$/hexo/tags/H5/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Linux/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Linux/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/node/index.html" afterPath="$PROJECT_DIR$/hexo/tags/node/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/rem/index.html" afterPath="$PROJECT_DIR$/hexo/tags/rem/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/服务器/index.html" afterPath="$PROJECT_DIR$/hexo/tags/服务器/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/杂谈/index.html" afterPath="$PROJECT_DIR$/hexo/tags/杂谈/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,11 +34,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="diary-2016-1220-1430.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="diary-2016-1220-1430.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/diary-2016-1220-1430.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/marry/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-648">
+              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server-blog.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server-blog.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="43" column="11" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="43" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -108,16 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
               <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rem-layout.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/rem-layout.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,7 +207,6 @@
         <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/left.scss" />
         <option value="$PROJECT_DIR$/demo/marry/snow.js" />
         <option value="$PROJECT_DIR$/demo/a.js" />
-        <option value="$PROJECT_DIR$/demo/marry/index.html" />
         <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" />
         <option value="$PROJECT_DIR$/demo/demo.html" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/diary-2016-1220-1430.md" />
@@ -228,6 +218,12 @@
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/aliyun.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/in-city.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/node.md" />
+        <option value="$PROJECT_DIR$/demo/marry/n/a.html" />
+        <option value="$PROJECT_DIR$/demo/marry/index.html" />
+        <option value="$PROJECT_DIR$/demo/marry/snow/abc.html" />
+        <option value="$PROJECT_DIR$/demo/marry/a.css" />
+        <option value="$PROJECT_DIR$/demo/marry/abc.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -282,67 +278,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-tetris" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aliyu-deploy" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="D:/Install/tools/node/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -353,15 +295,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\github\aliyun-blog\demo\marry" />
+      <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\img" />
+      <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src\css\fonts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\blogImg" />
       <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\img" />
       <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source\img" />
       <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src\css\img" />
-      <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src\css\fonts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\img" />
       <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src\css\fonts" />
     </key>
   </component>
@@ -452,23 +395,23 @@
       <workItem from="1482237083417" duration="4738000" />
       <workItem from="1482301625175" duration="4928000" />
       <workItem from="1482310028778" duration="1710000" />
-      <workItem from="1482373178898" duration="4681000" />
+      <workItem from="1482373178898" duration="7575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86489000" />
+    <option name="totallyTimeSpent" value="89383000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="32" width="1936" height="1176" extended-state="0" />
-    <editor active="false" />
+    <frame x="1358" y="32" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15700738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12486828" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3541267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11612284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -510,41 +453,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/footer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/after-footer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1533">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/article-nav.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/viewer.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/browser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -763,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/marry/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="84" column="26" lean-forward="false" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
@@ -796,7 +697,7 @@
         <state relative-caret-position="46">
           <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,6 +770,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/marry/n/a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/marry/abc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/marry/a.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/marry/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="43" column="11" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="43" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
           <folding />
         </state>
       </provider>
