@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyi10year.github.io/2016/12/22/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</loc>
+    
+    <lastmod>2016-12-22T09:44:04.417Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/2016/12/13/node/</loc>
     
     <lastmod>2016-12-22T07:04:54.287Z</lastmod>
@@ -100,14 +107,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/css/index.css</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/css/reset.css</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -121,7 +121,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -143,6 +143,13 @@
   
   <url>
     <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/assets/demo/pre_css3_demo/demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -184,7 +184,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/css/reset.css</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/gift/css/index.css</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
