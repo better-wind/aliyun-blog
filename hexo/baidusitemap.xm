@@ -4,18 +4,18 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2016/12/22/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2016-12-22T09:44:04.417Z</lastmod>
+    <loc>https://luyi10year.github.io/2016/12/22/automated-deployment/</loc>
+    <lastmod>2016-12-22T11:05:00.338Z</lastmod>
     <data>
         <display>
-        <title>自动化部署</title>
+        <title>Git自动化部署</title>
         <pubTime>2016-12-22T09:42:46.000Z</pubTime>
         
         <tag>Linux</tag>
          
-        <tag>服务器</tag>
+        <tag>Git</tag>
          
-        <tag>git</tag>
+        <tag>服务器</tag>
          
          
            

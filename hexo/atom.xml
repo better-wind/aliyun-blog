@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2016-12-22T09:44:04.417Z</updated>
+  <updated>2016-12-22T11:05:00.338Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
@@ -16,28 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>自动化部署</title>
-    <link href="https://luyi10year.github.io/2016/12/22/%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
-    <id>https://luyi10year.github.io/2016/12/22/自动化部署/</id>
+    <title>Git自动化部署</title>
+    <link href="https://luyi10year.github.io/2016/12/22/automated-deployment/"/>
+    <id>https://luyi10year.github.io/2016/12/22/automated-deployment/</id>
     <published>2016-12-22T09:42:46.000Z</published>
-    <updated>2016-12-22T09:44:04.417Z</updated>
+    <updated>2016-12-22T11:05:00.338Z</updated>
     
-    <content type="html"><![CDATA[<p>服务器 github项目自动化部署</p>
-]]></content>
+    <content type="html"><![CDATA[<p>每次更新完博客,得先push到github上<br>然后在服务器上把代码pull下来部署</p>
+<p>一开始 忍了<br>后来 够了</p>
+<a id="more"></a>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=29829715&auto=0&height=66"></iframe><br>(码字太累，来首震撼的歌)</p>
+<p>整理一下<br>需要的是本地push成功后服务器上能自动执行pull命令<br>那么问题就变成了如何响应每次的push操作?</p>
+<p>监听Web Hooks</p>
+<h3 id="Web-Hoots"><a href="#Web-Hoots" class="headerlink" title="Web Hoots"></a>Web Hoots</h3>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;服务器 github项目自动化部署&lt;/p&gt;
-
+      &lt;p&gt;每次更新完博客,得先push到github上&lt;br&gt;然后在服务器上把代码pull下来部署&lt;/p&gt;
+&lt;p&gt;一开始 忍了&lt;br&gt;后来 够了&lt;/p&gt;
     
     </summary>
     
     
       <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
     
-      <category term="服务器" scheme="https://luyi10year.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="Git" scheme="https://luyi10year.github.io/tags/Git/"/>
     
-      <category term="git" scheme="https://luyi10year.github.io/tags/git/"/>
+      <category term="服务器" scheme="https://luyi10year.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
