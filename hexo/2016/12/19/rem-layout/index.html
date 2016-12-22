@@ -6,17 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://luyi10year.github.io">
-  <title>移动端Rem布局 | Louis Blog</title>
+  <title>1px != 1px -- 移动端适配浅析 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="移动端Rem布局">
+  <meta name="description" content="viewport
+物理像素(physical pixel)    设别像素，显示设备
+设备独立像素(density-independent pixel)
+设备像素比(device pixel ratio)    设备像素比 ＝ 物理像素 / 设备独立像素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1px != 1px -- 移动端适配浅析">
 <meta property="og:url" content="https://luyi10year.github.io/2016/12/19/rem-layout/index.html">
 <meta property="og:site_name" content="Louis Blog">
+<meta property="og:description" content="viewport
+物理像素(physical pixel)    设别像素，显示设备
+设备独立像素(density-independent pixel)
+设备像素比(device pixel ratio)    设备像素比 ＝ 物理像素 / 设备独立像素">
 <meta property="og:image" content="https://luyi10year.github.io/assets/blogImg/rem-dpr.png">
-<meta property="og:image" content="https://luyi10year.github.io/assets/blogImg/timeout.gif">
-<meta property="og:updated_time" content="2016-12-20T06:32:33.654Z">
+<meta property="og:updated_time" content="2016-12-21T08:36:59.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动端Rem布局">
+<meta name="twitter:title" content="1px != 1px -- 移动端适配浅析">
+<meta name="twitter:description" content="viewport
+物理像素(physical pixel)    设别像素，显示设备
+设备独立像素(density-independent pixel)
+设备像素比(device pixel ratio)    设备像素比 ＝ 物理像素 / 设备独立像素">
 <meta name="twitter:image" content="https://luyi10year.github.io/assets/blogImg/rem-dpr.png">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
@@ -151,7 +162,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      移动端Rem布局
+      1px != 1px -- 移动端适配浅析
     </h1>
   
 
@@ -162,13 +173,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/rem-dpr.png" alt="dpr"></p>
-<a id="more"></a>
-<p><img src="/assets/blogImg/timeout.gif" alt="dpr"></p>
-<blockquote>
-<p>h</p>
-</blockquote>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=65355&auto=0&height=66"></iframe>
 
+<p><img src="/assets/blogImg/rem-dpr.png" alt="dpr"></p>
+<p>viewport</p>
+<p>物理像素(physical pixel)<br>    设别像素，显示设备</p>
+<p>设备独立像素(density-independent pixel)</p>
+<p>设备像素比(device pixel ratio)<br>    设备像素比 ＝ 物理像素 / 设备独立像素</p>
+<a id="more"></a>
+<blockquote>
+<p>data-dpr</p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> px2rem(<span class="variable">$name</span>,<span class="variable">$px</span>) &#123;</div><div class="line">   <span class="selector-attr">[data-dpr="2"]</span> &amp; &#123;</div><div class="line">     #&#123;<span class="variable">$name</span>&#125;: <span class="variable">$px</span>*<span class="number">2</span>/<span class="number">2</span>+px;</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -198,14 +214,14 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          一些想法
+          谈谈
         
       </div>
     </a>
   
   
-    <a href="/2016/12/15/aliyun/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">学点运维，配个服务器</div>
+    <a href="/2016/12/18/react/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">react</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -218,7 +234,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="rem-layout" data-title="移动端Rem布局" data-url="https://luyi10year.github.io/2016/12/19/rem-layout/"></div>
+	<div class="ds-thread" data-thread-key="rem-layout" data-title="1px != 1px -- 移动端适配浅析" data-url="https://luyi10year.github.io/2016/12/19/rem-layout/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -312,11 +328,23 @@
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">react</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">rem</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">H5</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">webpack</a>
               </li>
             
             <div class="clearfix"></div>
