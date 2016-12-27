@@ -145,6 +145,59 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-websockt-chat-node" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/26/websockt-chat-node/">Let Chat</a>
+    </h1>
+  
+
+        <a href="/2016/12/26/websockt-chat-node/" class="archive-article-date">
+  	<time datetime="2016-12-26T04:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/websocket/">websocket</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/26/websockt-chat-node/#more">展开全文 </a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-automated-deployment" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -272,9 +325,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=65355&auto=0&height=66"></iframe>
-
-<p><img src="/assets/blogImg/rem-dpr.png" alt="dpr"></p>
+        <p><img src="/assets/blogImg/rem-dpr.png" alt="dpr"></p>
 <p>viewport</p>
 <p>物理像素(physical pixel)<br>    设别像素，显示设备</p>
 <p>设备独立像素(density-independent pixel)</p>
@@ -289,7 +340,7 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5/">H5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rem/">rem</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5/">H5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rem/">Rem</a></li></ul>
 	</div>
 
       
@@ -440,7 +491,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>整理整理思绪</p>
+        <p>entry</p>
+<p>output</p>
+<p>module<br>loaders<br> url-loader<br> test: /.(gif|jpg|png)$/,<br> loader: ‘url-loader?limit=1024&amp;name=img/[name].[ext]’<br> 小于1024字节 采用base64<br> 大于1024字节 正常打包到output目录下img文件夹中</p>
+<p> js-loader<br> babel<br> 配置 .babelrc<br> .rc run command 程序启动阶段被调用<br> 执行babal-loader时自动执行<br> <figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"presets"</span>: [<span class="string">"es2015"</span>, <span class="string">"stage-2"</span>],</div><div class="line">  <span class="string">"plugins"</span>: [</div><div class="line">    <span class="string">"transform-class-properties"</span>,</div><div class="line">    <span class="string">"transform-runtime"</span></div><div class="line">  ]</div><div class="line">&#125;</div><div class="line"><span class="comment">//webpack.config.js</span></div><div class="line">&#123;</div><div class="line">   test: <span class="regexp">/\.js$/</span>,</div><div class="line">   <span class="keyword">exclude</span>: <span class="regexp">/node_modules/</span>,</div><div class="line">   loader:<span class="string">'babel'</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p> 另一种<br> <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attribute">test</span>: /\.js$/,</div><div class="line">  exclude: /node_modules/,</div><div class="line">  loader: <span class="string">'babel'</span>,</div><div class="line">  query: &#123;</div><div class="line">      presets: [<span class="string">"es2015"</span>, <span class="string">"stage-2"</span>],</div><div class="line">      plugins: [</div><div class="line">          <span class="string">"transform-class-properties"</span>,</div><div class="line">          <span class="string">"transform-runtime"</span></div><div class="line">          ]</div><div class="line">       &#125;</div><div class="line">  &#125;,</div></pre></td></tr></table></figure></p>
+<p> css-loader</p>
+<p> loader 采取管道流</p>
+ <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">loader: [<span class="string">'style'</span>,<span class="string">'css'</span>,<span class="string">'scss'</span>].<span class="keyword">join</span>(<span class="string">'!'</span>)</div></pre></td></tr></table></figure>
+<p> 提取样式到单独文件<br> 插件 extract-text-webpack-plugin<br> <figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> ExtractTextPlugin = <span class="keyword">require</span>(<span class="string">'extract-text-webpack-plugin'</span>);</div><div class="line"></div><div class="line"><span class="params">...</span><span class="params">...</span></div><div class="line"></div><div class="line">&#123;</div><div class="line">   test: /\.(scss|sass|css)$/,</div><div class="line">   loader: ExtractTextPlugin.extract(<span class="string">'style-loader'</span>, <span class="string">'css-loader'</span>)</div><div class="line">&#125;</div><div class="line">plugins: <span class="meta">[</span></div><div class="line">        <span class="literal">new</span> ExtractTextPlugin(<span class="string">'[name].css'</span>)</div><div class="line">        <span class="comment">//output目录下</span></div><div class="line">  <span class="meta">]</span>,</div></pre></td></tr></table></figure></p>
+<p> css样式自动 fix<br> 插件 autoprefixer(postcss插件)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">test</span>: <span class="regexp">/\.(scss|sass|css)$/</span>,</div><div class="line">    <span class="attr">loader</span>: ExtractTextPlugin.extract(<span class="string">'style-loader'</span>, [<span class="string">'css-loader'</span>, <span class="string">'postcss-loader'</span>])</div><div class="line"> &#125;</div><div class="line"></div><div class="line"> postcss: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">         <span class="keyword">return</span> [autoprefixer];</div><div class="line">   &#125;,</div></pre></td></tr></table></figure>
+<p>file-loader<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">      <span class="attribute">test</span>: /\.(woff|svg|eot|ttf).$/,</div><div class="line">      loader: <span class="string">"file-loader?name=fonts/[name].[ext]"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>resolve<br>别名</p>
+<p>var moment = require(‘moment’);<br>编译很慢 也就是说，请求的是 moment 的源码。实际上，通过 NPM 安装 moment 的时候会同时安装 moment 的源码和压缩后的代码<br>var moment = require(‘moment/min/moment-with-locales.min.js’);<br>只不过这样改，可读性会有所下降，<br>而且每一个用到 moment 的地方都得这么写。<br>另外，如果同样的问题出现在第三方模块中，修改别人代码就不那么方便了。<br>下面来看看用 Webpack 怎么解决这个问题。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">resolve</span>: &#123;</div><div class="line">    <span class="attribute">alias</span>: &#123;</div><div class="line">        moment: <span class="string">"moment/min/moment-with-locales.min.js"</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>module.noParse 是 webpack 的另一个很有用的配置项，<br>如果你 确定一个模块中没有其它新的依赖 就可以配置这项，<br>webpack 将不再扫描这个文件中的依赖。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">module</span>: &#123;</div><div class="line">   <span class="attribute">noParse</span>: [/moment-with-locales/]</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>通常，JavaScript的解释器会告诉你，第几行第几列代码出错。<br>但是，这对于转换后的代码毫无用处。举例来说，jQuery 1.9压缩后只有3行，每行3万个字符，所有内部变量都改了名字。<br>你看着报错信息，感到毫无头绪，根本不知道它所对应的原始位置。<br>这就是Source map想要解决的问题。</p>
+<p>devtool: ‘#source-map’,</p>
+<p>多看文档！</p>
 
       
 
@@ -531,61 +599,6 @@
 
 
   
-    <article id="post-in-city" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/14/in-city/">In city</a>
-    </h1>
-  
-
-        <a href="/2016/12/14/in-city/" class="archive-article-date">
-  	<time datetime="2016-12-14T10:40:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-14</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/assets/blogImg/city.jpg" alt="City"></p>
-<p>悠然<br>随心<br>随性<br>随缘<br>
-        <a class="article-more-a" class="hidden" href="/2016/12/14/in-city/#more"> </a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/14/in-city/#more">展开全文 </a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -647,6 +660,14 @@
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">杂谈</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Node</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">Linux</a>
               </li>
             
@@ -659,27 +680,23 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂谈</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">node</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">react</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">rem</a>
+                <a href="javascript:void(0)">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Rem</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">H5</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">vue</a>
               </li>
             
               <li class="article-tag-list-item">
