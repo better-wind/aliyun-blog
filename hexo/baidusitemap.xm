@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://luyi10year.github.io/2016/12/16/webpack/</loc>
-    <lastmod>2016-12-26T10:33:35.197Z</lastmod>
+    <lastmod>2016-12-27T10:56:44.982Z</lastmod>
     <data>
         <display>
         <title>webpack</title>
