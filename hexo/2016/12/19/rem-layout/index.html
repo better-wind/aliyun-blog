@@ -8,26 +8,17 @@
   <link rel="dns-prefetch" href="https://luyi10year.github.io">
   <title>1px != 1px -- 移动端适配浅析 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="viewport
-物理像素(physical pixel)    设别像素，显示设备
-设备独立像素(density-independent pixel)
-设备像素比(device pixel ratio)    设备像素比 ＝ 物理像素 / 设备独立像素">
+  <meta name="description" content="css中我们一般使用px作为单位在pc上css中的1个像素往往对应着电脑屏幕中的1个物理像素这可能会给我们造成一个错觉css中的像素等于设备的物理像素但实际情况却并非如此css中的像素只是一个抽象的单位在不同的设备或不同的环境中css中的1px所代表的设备物理像素是不同的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1px != 1px -- 移动端适配浅析">
 <meta property="og:url" content="https://luyi10year.github.io/2016/12/19/rem-layout/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="viewport
-物理像素(physical pixel)    设别像素，显示设备
-设备独立像素(density-independent pixel)
-设备像素比(device pixel ratio)    设备像素比 ＝ 物理像素 / 设备独立像素">
+<meta property="og:description" content="css中我们一般使用px作为单位在pc上css中的1个像素往往对应着电脑屏幕中的1个物理像素这可能会给我们造成一个错觉css中的像素等于设备的物理像素但实际情况却并非如此css中的像素只是一个抽象的单位在不同的设备或不同的环境中css中的1px所代表的设备物理像素是不同的">
 <meta property="og:image" content="https://luyi10year.github.io/assets/blogImg/rem-dpr.png">
-<meta property="og:updated_time" content="2016-12-26T06:11:29.122Z">
+<meta property="og:updated_time" content="2016-12-29T10:08:34.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1px != 1px -- 移动端适配浅析">
-<meta name="twitter:description" content="viewport
-物理像素(physical pixel)    设别像素，显示设备
-设备独立像素(density-independent pixel)
-设备像素比(device pixel ratio)    设备像素比 ＝ 物理像素 / 设备独立像素">
+<meta name="twitter:description" content="css中我们一般使用px作为单位在pc上css中的1个像素往往对应着电脑屏幕中的1个物理像素这可能会给我们造成一个错觉css中的像素等于设备的物理像素但实际情况却并非如此css中的像素只是一个抽象的单位在不同的设备或不同的环境中css中的1px所代表的设备物理像素是不同的">
 <meta name="twitter:image" content="https://luyi10year.github.io/assets/blogImg/rem-dpr.png">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
@@ -173,16 +164,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/assets/blogImg/rem-dpr.png" alt="dpr"></p>
-<p>viewport</p>
-<p>物理像素(physical pixel)<br>    设别像素，显示设备</p>
-<p>设备独立像素(density-independent pixel)</p>
-<p>设备像素比(device pixel ratio)<br>    设备像素比 ＝ 物理像素 / 设备独立像素</p>
-<a id="more"></a>
-<blockquote>
-<p>data-dpr</p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> px2rem(<span class="variable">$name</span>,<span class="variable">$px</span>) &#123;</div><div class="line">   <span class="selector-attr">[data-dpr="2"]</span> &amp; &#123;</div><div class="line">     #&#123;<span class="variable">$name</span>&#125;: <span class="variable">$px</span>*<span class="number">2</span>/<span class="number">2</span>+px;</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+        <p><img src="/assets/blogImg/rem-dpr.png" alt="dpr"><br>css中我们一般使用px作为单位<br>在pc上css中的1个像素往往对应着电脑屏幕中的1个物理像素<br>这可能会给我们造成一个错觉<br>css中的像素等于设备的物理像素<br>但实际情况却并非如此<br>css中的像素只是一个抽象的单位<br>在不同的设备或不同的环境中<br>css中的1px所代表的设备物理像素是不同的<br><a id="more"></a><br>典型的就是retina屏</p>
+<p>首先我们先了解几个概念</p>
+<h5 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h5><p>viewport 是用户网页的可视区域<br>pc中就是屏幕宽度<br>移动设备中viewport(这个虚拟窗口)比屏幕宽 一般为980<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=<span class="string">"viewport"</span> <span class="built_in">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</div><div class="line">移动端布局viewport的宽度设为理想宽度</div><div class="line">layout viewport 默认的viewport 比屏幕宽 document.documentElement.clientWidth</div><div class="line">visual viewport  浏览器可视区域的大小 window.innerWidth</div><div class="line">ideal viewport 最适合移动设备的viewport</div><div class="line"><span class="built_in">width</span>：控制 viewport 的大小，可以指定的一个值，如果 <span class="number">600</span>，或者特殊的值，如 device-<span class="built_in">width</span> 为设备的宽度（单位为缩放为 <span class="number">100</span><span class="symbol">%</span> 时的 CSS 的像素）。</div><div class="line"><span class="built_in">height</span>：和 <span class="built_in">width</span> 相对应，指定高度。</div><div class="line">initial-<span class="built_in">scale</span>：初始缩放比例，也即是当页面第一次 <span class="built_in">load</span> 的时候缩放比例。</div><div class="line">maximum-<span class="built_in">scale</span>：允许用户缩放到的最大比例。</div><div class="line">minimum-<span class="built_in">scale</span>：允许用户缩放到的最小比例。</div><div class="line">user-scalable：用户是否可以手动缩放。</div></pre></td></tr></table></figure></p>
+<h5 id="物理像素-physical-pixel"><a href="#物理像素-physical-pixel" class="headerlink" title="物理像素(physical pixel)"></a>物理像素(physical pixel)</h5><p>一个物理像素是显示器(手机屏幕)上最小的物理显示单元<br>在操作系统的调度下<br>每一个设备像素都有自己的颜色值和亮度值。</p>
+<h5 id="设备独立像素-density-independent-pixel"><a href="#设备独立像素-density-independent-pixel" class="headerlink" title="设备独立像素(density-independent pixel)"></a>设备独立像素(density-independent pixel)</h5><p>设备独立像素(也叫密度无关像素)<br>可以认为是计算机坐标系统中得一个点<br>这个点代表一个可以由程序使用的虚拟像素(比如: css像素)<br>简单点就是屏幕宽高</p>
+<h5 id="设备像素比-device-pixel-ratio"><a href="#设备像素比-device-pixel-ratio" class="headerlink" title="设备像素比(device pixel ratio)"></a>设备像素比(device pixel ratio)</h5><p>设备像素比 ＝ 物理像素 / 设备独立像素<br>5,6的dpr=2，1个css像素等于2个物理像素<br>6p的dpr=3,1个css像素等于3个物理像素</p>
+<p>那首先我们在移动端布局，viewport肯定不能是默认的值<br>最终viewport宽度等于应该等于设备的宽度<br>我们的布局视图应该是 按照物理像素来布局<br>设备独立像素可获得<br>设备像素比 window.devicePixelRatio<br>现在假设 在iphone6上布局</p>
+<p>此时dpr = 2,<br>dip = 375<br>物理像素应该是 dpr * dip = 750<br>div{<br>    border-top:1px solid #000;<br>}<br>现在在页面上要实现一个1px的上边框<br>由于移动端布局viewport缩成设备宽度<br>而分辨率没有变<br>所以这时的1px会有2px的效果</p>
+<p>这个时候可以手动将viewport 宽度设成物理像素的宽度，然后将整个页面缩小 dpr 倍</p>
+<meta name="viewport" content="dpr*dip, initial-scale= 1/dpr ,maximum-scale= 1/dpr ,minimum-scale=1/dpr ,user-scalable=no">
+
+<p>1px 的问题解决了，那如何解决在不同手机显示设计稿中的一个100x100的div<br>设计稿 750<br>其中div 100x100<br>750的设计稿对应的是iPhone6<br>结合上面viewport的缩放<br>div{<br>    width:100px;<br>    height:100px;<br>}<br>在6上跟设计稿是完全相同的<br>而在5(640)上会变大</p>
+<p>这个时候可以通过rem在不同设备上动态计算出比例值</p>
+<p>假设在750设计稿中 1rem = 100px<br>那么在640设计稿中 1rem = 640/750*100px<br>此时1rem 不管在5上还是6上显示都完全跟在设计稿中显示效果相同<br><figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//html</span></div><div class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</div><div class="line"></div><div class="line"><span class="comment">//动态计算rem</span></div><div class="line"><span class="keyword">var</span> domDocEL = <span class="built_in">window</span>.<span class="built_in">document</span>.documentElement,</div><div class="line">    mateViewPort = <span class="built_in">window</span>.<span class="built_in">document</span>.<span class="built_in">querySelector</span>(<span class="string">'meta[name="viewport"]'</span>),</div><div class="line">    nBasePsdWidth = <span class="number">750</span> / <span class="number">100</span>,</div><div class="line">    nDpr = <span class="built_in">window</span>.devicePixelRatio,</div><div class="line">    nScale = <span class="number">1</span> / nDpr,</div><div class="line">    nLayout = domDocEL.clientWidth,</div><div class="line">    nRem = nLayout * nDpr / nBasePsdWidth;</div><div class="line"></div><div class="line">domDocEL.style.fontSize = rem +<span class="string">'px'</span>;</div><div class="line">mateViewPort.setAttribute(<span class="string">'content'</span>,<span class="string">'width='</span>+nDpr*nLayout+<span class="string">',initial-scale='</span>+nScale+<span class="string">',maximum-scale='</span>+nScale+<span class="string">',minimum-scale='</span>+nScale+<span class="string">',user-scalable=no'</span>);</div></pre></td></tr></table></figure></p>
+<p>对于字体可以用写个mixin方法<br>根据不同的dpr设置字号<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> px2rem(<span class="variable">$name</span>,<span class="variable">$px</span>) &#123;</div><div class="line">   <span class="selector-attr">[data-dpr="2"]</span> &amp; &#123;</div><div class="line">     #&#123;<span class="variable">$name</span>&#125;: <span class="variable">$px</span>*<span class="number">2</span>/<span class="number">2</span>+px;</div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>移动端布局将viewport设成物理像素的大小,然后在缩放为dpr的倒数倍。<br>dpr不存在？<br>简单点~~~<br>那就指定为1！</p>
+
       
 
       
@@ -306,7 +304,19 @@
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Linux</a>
+                <a href="javascript:void(0)">杂谈</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">react</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Node</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -318,15 +328,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂谈</a>
+                <a href="javascript:void(0)">Linux</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Node</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">react</a>
+                <a href="javascript:void(0)">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -335,14 +341,6 @@
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">H5</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">webpack</a>
               </li>
             
               <li class="article-tag-list-item">

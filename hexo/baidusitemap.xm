@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2016/12/16/webpack/</loc>
-    <lastmod>2016-12-27T10:56:44.982Z</lastmod>
+    <loc>https://luyi10year.github.io/2016/12/19/rem-layout/</loc>
+    <lastmod>2016-12-29T10:08:34.181Z</lastmod>
     <data>
         <display>
-        <title>webpack</title>
-        <pubTime>2016-12-16T06:29:27.000Z</pubTime>
+        <title>1px != 1px -- 移动端适配浅析</title>
+        <pubTime>2016-12-19T09:28:08.000Z</pubTime>
         
-        <tag>webpack</tag>
+        <tag>Rem</tag>
+         
+        <tag>H5</tag>
          
          
            
@@ -21,16 +23,35 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2016/12/19/rem-layout/</loc>
-    <lastmod>2016-12-26T06:11:29.122Z</lastmod>
+    <loc>https://luyi10year.github.io/2016/12/22/automated-deployment/</loc>
+    <lastmod>2016-12-28T04:35:23.528Z</lastmod>
     <data>
         <display>
-        <title>1px != 1px -- 移动端适配浅析</title>
-        <pubTime>2016-12-19T09:28:08.000Z</pubTime>
+        <title>Git自动化部署</title>
+        <pubTime>2016-12-22T09:42:46.000Z</pubTime>
         
-        <tag>Rem</tag>
+        <tag>Git</tag>
          
-        <tag>H5</tag>
+        <tag>服务器</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/16/webpack/</loc>
+    <lastmod>2016-12-28T03:51:27.389Z</lastmod>
+    <data>
+        <display>
+        <title>webpack</title>
+        <pubTime>2016-12-16T06:29:27.000Z</pubTime>
+        
+        <tag>webpack</tag>
          
          
            
@@ -76,27 +97,6 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2016/12/22/automated-deployment/</loc>
-    <lastmod>2016-12-22T11:05:00.338Z</lastmod>
-    <data>
-        <display>
-        <title>Git自动化部署</title>
-        <pubTime>2016-12-22T09:42:46.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Git</tag>
-         
-        <tag>服务器</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://luyi10year.github.io/2016/12/14/in-city/</loc>
     <lastmod>2016-12-22T07:04:36.524Z</lastmod>
     <data>
@@ -121,11 +121,11 @@
         <title>学点运维，配个服务器</title>
         <pubTime>2016-12-15T09:08:08.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Git</tag>
          
         <tag>服务器</tag>
+         
+        <tag>Linux</tag>
          
          
            
