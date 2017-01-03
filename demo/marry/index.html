@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .snow{
+            width: 100%;
+            height: 100%;
+            /*background-color: rgb(0,0,0);*/
+        }
+        canvas{
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<div id="snowView" class="snow">
+    <canvas id="snowCanvas"></canvas>
+</div>
+<script>
+    {
+
+        let snowView = document.querySelector('#snowView'),
+            canvas = document.querySelector("#snowCanvas"),
+            context = canvas.getContext("2d"),
+            requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame ||
+                function(callback) {
+                    setTimeout(callback, 1000 / 60);
+                },
+            SnowsImg = [
+                '/aliyun-blog/demo/marry/snow/1.png',
+                '/aliyun-blog/demo/marry/snow/2.png',
+                '/aliyun-blog/demo/marry/snow/3.png',
+                '/aliyun-blog/demo/marry/snow/4.png',
+                '/aliyun-blog/demo/marry/snow/5.png',
+                '/aliyun-blog/demo/marry/snow/6.png'
+            ]
+            Snows = [],
+            settings = {};
+        function Snow(){
+            this.x = getMinRandom(settings.viewWidth);
+            this.y = getMinRandom(settings.snowStartView);
+            this.r = getMinRandom(settings.maxSnowWidth,settings.minSnowWidth);
+            this.speed = getMinRandom(settings.snowSpeed,1)/10;
+            this.img = new Image()
+            this.img.src = SnowsImg[getMinRandom(SnowsImg.length-1)]
+            Snows.push(this);
+
+        }
+        Snow.prototype.drop = function(){
+            var self = this;
+            self.y += self.speed;
+            self.x += settings.snowWind;
+//            this.img.onload = function(){
+            if (self.x + (self.r) >= settings.viewWidth) {
+                self.x = self.x - settings.viewWidth;
+            }
+            if (self.y + (self.r) >= settings.viewHeight) {
+                self.y = self.y - settings.viewHeight;
+            }
+                context.drawImage(self.img, self.x, self.y, self.r,self.r);
+
+//            }
+
+        }
+        getMinRandom = (max,min) =>{
+            var rand = Math.ceil(Math.random()*max);
+            return min? min+rand : rand;
+        };
+        redraw=()=>{
+            context.clearRect(0, 0, canvas.width, canvas.height);
+//            context.fillStyle = "rgba(0,0,0,0)";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+        }
+        resizeCanvas = ()=>{
+            Snows = []
+            settings = {
+                maxSnow:300,
+                snowStartView:snowView.clientHeight*.05,
+                viewWidth:snowView.clientWidth,
+                viewHeight:snowView.clientHeight,
+                maxSnowWidth:20,
+                minSnowWidth:6,
+                snowSpeed:5,
+                snowWind:0.08,
+            }
+            canvas.width = settings.viewWidth;
+            canvas.height = settings.viewHeight;
+            redraw();
+        }
+        render = ()=>{
+            redraw();
+            if(Snows.length <= settings.maxSnow){
+                new Snow()
+            }
+            Snows.forEach(function(snow){
+                snow.drop();
+            })
+            requestAnimationFrame(render);
+        }
+
+        resizeCanvas();
+        render();
+        window.addEventListener('resize',function(){
+            resizeCanvas();
+        })
+    }
+
+</script>
+</body>
+</html>
