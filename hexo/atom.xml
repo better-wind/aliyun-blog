@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2016-12-26T04:23:22.919Z</updated>
+  <updated>2017-01-04T11:21:54.871Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
@@ -16,13 +16,138 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>谈谈js的继承</title>
+    <link href="https://luyi10year.github.io/2017/01/03/es5-es6-extends/"/>
+    <id>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</id>
+    <published>2017-01-03T03:53:25.000Z</published>
+    <updated>2017-01-04T11:21:54.871Z</updated>
+    
+    <content type="html"><![CDATA[<p>js中的继承<br><a id="more"></a></p>
+<h5 id="类式继承"><a href="#类式继承" class="headerlink" title="类式继承"></a>类式继承</h5><h5 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h5><h5 id="Es6-extends"><a href="#Es6-extends" class="headerlink" title="Es6 extends"></a>Es6 extends</h5>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;js中的继承&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Es6" scheme="https://luyi10year.github.io/tags/Es6/"/>
+    
+      <category term="js" scheme="https://luyi10year.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js中的设计模式</title>
+    <link href="https://luyi10year.github.io/2017/01/01/js-design-patterns/"/>
+    <id>https://luyi10year.github.io/2017/01/01/js-design-patterns/</id>
+    <published>2017-01-01T10:09:48.000Z</published>
+    <updated>2017-01-03T10:11:02.790Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://luyi10year.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js中的作用域和闭包</title>
+    <link href="https://luyi10year.github.io/2016/12/30/es5-scope-closure/"/>
+    <id>https://luyi10year.github.io/2016/12/30/es5-scope-closure/</id>
+    <published>2016-12-30T10:06:06.000Z</published>
+    <updated>2017-01-03T10:07:36.897Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://luyi10year.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ECMA-prototype</title>
+    <link href="https://luyi10year.github.io/2016/12/28/js-object-prototype/"/>
+    <id>https://luyi10year.github.io/2016/12/28/js-object-prototype/</id>
+    <published>2016-12-28T10:00:00.000Z</published>
+    <updated>2017-01-04T11:20:56.309Z</updated>
+    
+    <content type="html"><![CDATA[<p>要学好Js，首先必须得先理解原型(prototype)<br>why？<br>js作为面向对象的语言，实现面向对象的机制就是原型！</p>
+<a id="more"></a>
+<p>都说js中一切皆对象,那到底什么是对象呢？</p>
+<blockquote>
+<p>对象是属性的集合，并有一个原型对象。原型对象可以是空值。<br>按宿主环境分可以分为<br>原生对象：由ECMAScript规范定义其语义的对象<br>内置对象：由ECMAScript实现提供，独立于宿主环境的对象，ECMAScript程序开始执行时就存在(所有内置对象是原生对象)<br>宿主对象：由宿主环境提供的对象，用于完善ECMAScript执行环境(DOM,BOM)<br>按功能分可以分为：<br>普通对象：无原型对象<br>函数对象：有原型对象(函数对象的一个实例)</p>
+</blockquote>
+<p>我们这里只关注函数对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//凡是通过new Function() 创建的对象都是函数对象</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> baz = <span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="comment">//Bar foo baz 都是函数对象</span></div><div class="line"></div><div class="line"><span class="comment">//原型对象本质是函数对象的一个实例</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line">Bar.prototype</div><div class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> Bar();</div><div class="line">Bar.prototype = temp;</div><div class="line"></div><div class="line"><span class="comment">//构造器：创建和初始化对象的函数对象(在原型对象prototype中,prototype.constructor)</span></div><div class="line"><span class="comment">//原型对象prototype中都有个预定义的constructor属性，用来引用它的函数对象</span></div><div class="line"><span class="comment">//每个由构造器创建的对象拥有一个执行构造器prototype的属性值的隐式引用</span></div><div class="line"><span class="comment">//这个引用称之为原型</span></div><div class="line"><span class="comment">//每个原型可以拥有指向自己原型的隐式引用(原型的原型),就是所谓的原型链</span></div><div class="line"><span class="comment">//每个对象都有一个__proto__属性来实现对原型的隐式引用</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'Louis'</span>,</div><div class="line">    <span class="attr">age</span>:<span class="string">'24'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</div><div class="line">person.__proto__ = Person.prototype</div><div class="line">Person.prototype.__proto__ = <span class="built_in">Object</span>.prototype</div><div class="line"><span class="built_in">Object</span>.prototype.__proto__ = <span class="literal">null</span></div><div class="line"><span class="comment">//person对象由构造器Person创建</span></div><div class="line"><span class="comment">//所以person对Person.prototype有隐式引用(__proto__)</span></div><div class="line"><span class="comment">//Person对象又是由构造器Object创建</span></div><div class="line"><span class="comment">//所以Person对Object.prototype有隐式引用(__proto__)</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;要学好Js，首先必须得先理解原型(prototype)&lt;br&gt;why？&lt;br&gt;js作为面向对象的语言，实现面向对象的机制就是原型！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://luyi10year.github.io/tags/js/"/>
+    
+      <category term="原型" scheme="https://luyi10year.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你真的学好Js了吗</title>
+    <link href="https://luyi10year.github.io/2016/12/27/js-base/"/>
+    <id>https://luyi10year.github.io/2016/12/27/js-base/</id>
+    <published>2016-12-27T02:48:41.000Z</published>
+    <updated>2017-01-04T09:34:59.691Z</updated>
+    
+    <content type="html"><![CDATA[<p>在我看来前端(Js)就好比是个剑客江湖<br>江湖中有人练react宝典，有人练vue神功<br>有人锻造webpack利剑<br>…<br>而Js就是这些的基础心法，决定这些宝典,神功最后在你手上的杀伤力<br>那么作为最基础的心法，你真的参透的了吗？</p>
+<a id="more"></a>
+<blockquote>
+<p>这里简单的记录些Js的一些特点</p>
+</blockquote>
+<h5 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h5><p>什么是面向对象</p>
+<ul>
+<li>一切事物皆对象</li>
+<li>对象具有封装和继承特性</li>
+<li>对象与对象之间使用消息通信，各自存在信息隐藏</li>
+</ul>
+<p>众所周知Java采用面向对象思想构造其语言，它实现了类、继承、多态、接口等机制。<br>但是这些机制，只是实现面向对象编程的一种方式<br>实际上，Js是通过原型的方式来实现面向对象编程的<br>Js中的对象是依靠构造器(constructor)利用原型(prototype)构造出来的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对象的声明</span></div><div class="line"><span class="comment">//字面式对象声明</span></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'Louis'</span>,</div><div class="line">    <span class="attr">age</span>:<span class="string">'24'</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//使用函数构造器构造对象</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'Louis'</span>,</div><div class="line">    <span class="attr">age</span>:<span class="string">'24'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</div><div class="line"><span class="comment">//这里的new关键字跟java中 的new毫无关系</span></div><div class="line"><span class="comment">//只是借用了它的关键字new</span></div><div class="line"><span class="comment">//用来表示调用构造器创建对象</span></div></pre></td></tr></table></figure></p>
+<h5 id="弱类型语言"><a href="#弱类型语言" class="headerlink" title="弱类型语言"></a>弱类型语言</h5><p>在Js中，定义变量不必声明其类型。但这不意味着变量没有类型。<br>原始类型：布尔型、数值型、字符串类型<br>引用类型：对象类型(数组是一种特殊的对象)、函数类型<br>其他类型：空类型和未定义类型<br>js中的变量可以根据所附的值改变类型<br>原始类型按值传送，在栈内存中存的是变量的值<br>引用类型则按引用传送，在栈内存中存的是 引用对象在堆内存中的地址<br>所以这里涉及到引用类型深拷贝和浅拷贝的问题<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//浅拷贝 把父对象的属性全部拷贝给子对象</span></div><div class="line"><span class="comment">//如果父元素的属性对应的值是引用类型，那子对象对应的属性的值还是引用类型的内存地址</span></div><div class="line"><span class="comment">//这个时候就需要深拷贝</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span>(<span class="params">pre</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> ch = pre.constructor === <span class="built_in">Array</span> ? [] : &#123;&#125;;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> pre !== <span class="string">'object'</span>)&#123;</div><div class="line">            ch = pre;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.JSON)&#123;</div><div class="line">            ch = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(pre))</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> pre)&#123;</div><div class="line">                ch[i] = <span class="keyword">typeof</span> pre[i] === <span class="string">'object'</span> ?</div><div class="line">                (pre[i].constructor === <span class="built_in">Array</span> ? pre[i].slice() : deepCopy(pre[i]))</div><div class="line">                : pre[i]</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ch;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="函数是一等对象"><a href="#函数是一等对象" class="headerlink" title="函数是一等对象"></a>函数是一等对象</h5><h5 id="对象易变"><a href="#对象易变" class="headerlink" title="对象易变"></a>对象易变</h5><h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在我看来前端(Js)就好比是个剑客江湖&lt;br&gt;江湖中有人练react宝典，有人练vue神功&lt;br&gt;有人锻造webpack利剑&lt;br&gt;…&lt;br&gt;而Js就是这些的基础心法，决定这些宝典,神功最后在你手上的杀伤力&lt;br&gt;那么作为最基础的心法，你真的参透的了吗？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://luyi10year.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Let Chat</title>
     <link href="https://luyi10year.github.io/2016/12/26/websockt-chat-node/"/>
     <id>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</id>
     <published>2016-12-26T04:20:16.000Z</published>
-    <updated>2016-12-26T04:23:22.919Z</updated>
+    <updated>2017-01-04T11:22:36.563Z</updated>
+    
+    <content type="html"><![CDATA[<p>简易聊天</p>
+<a id="more"></a>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket</a></p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;简易聊天&lt;/p&gt;
     
     </summary>
     
@@ -63,11 +188,11 @@
     </summary>
     
     
+      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
+    
       <category term="Git" scheme="https://luyi10year.github.io/tags/Git/"/>
     
       <category term="服务器" scheme="https://luyi10year.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -254,11 +379,11 @@
     </summary>
     
     
+      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
+    
       <category term="Git" scheme="https://luyi10year.github.io/tags/Git/"/>
     
       <category term="服务器" scheme="https://luyi10year.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
     
   </entry>
   

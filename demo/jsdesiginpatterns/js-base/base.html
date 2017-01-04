@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var person = {
+        name:'Louis',
+        age:'24'
+    }
+    function Person(){
+    }
+    Person.prototype = {
+        name:'Louis',
+        age:'24'
+    }
+    var person2 = new Person();
+//    console.log(typeof person);
+//    console.log(typeof person2);
+//    console.log(Person.prototype);
+//    console.log(person2.__proto__);
+    function deepCopy(pre){
+        var ch = pre.constructor === Array ? [] : {};
+        if(typeof pre !== 'object'){
+            ch = pre;
+        }
+        else if(window.JSON){
+            ch = JSON.parse(JSON.stringify(pre))
+        }
+        else{
+            for(var i in pre){
+                ch[i] = typeof pre[i] === 'object' ? (pre[i].constructor === Array ? pre[i].slice() : deepCopy(pre[i])): pre[i]
+            }
+        }
+        return ch;
+    }
+    var a = 2;
+    var b = deepCopy(a);
+    console.log(b);
+    var c = {
+        obj:{
+            a:1
+        },
+        arr:[1,2,3],
+        s:2
+    }
+    var d = deepCopy(c);
+    d.arr.push(4);
+    d.obj.a = 2;
+    console.log(d);
+    console.log(c);
+//    console.log(typeof a.ac);
+//    console.log(a.ac.constructor === Array);
+</script>
+</body>
+</html>

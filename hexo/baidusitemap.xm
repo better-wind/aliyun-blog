@@ -4,6 +4,114 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
+    <lastmod>2017-01-04T11:22:36.563Z</lastmod>
+    <data>
+        <display>
+        <title>Let Chat</title>
+        <pubTime>2016-12-26T04:20:16.000Z</pubTime>
+        
+        <tag>Node</tag>
+         
+        <tag>websocket</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
+    <lastmod>2017-01-04T11:21:54.871Z</lastmod>
+    <data>
+        <display>
+        <title>谈谈js的继承</title>
+        <pubTime>2017-01-03T03:53:25.000Z</pubTime>
+        
+        <tag>Es6</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/28/js-object-prototype/</loc>
+    <lastmod>2017-01-04T11:20:56.309Z</lastmod>
+    <data>
+        <display>
+        <title>ECMA-prototype</title>
+        <pubTime>2016-12-28T10:00:00.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>原型</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/27/js-base/</loc>
+    <lastmod>2017-01-04T09:34:59.691Z</lastmod>
+    <data>
+        <display>
+        <title>你真的学好Js了吗</title>
+        <pubTime>2016-12-27T02:48:41.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/01/js-design-patterns/</loc>
+    <lastmod>2017-01-03T10:11:02.790Z</lastmod>
+    <data>
+        <display>
+        <title>Js中的设计模式</title>
+        <pubTime>2017-01-01T10:09:48.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/30/es5-scope-closure/</loc>
+    <lastmod>2017-01-03T10:07:36.897Z</lastmod>
+    <data>
+        <display>
+        <title>Js中的作用域和闭包</title>
+        <pubTime>2016-12-30T10:06:06.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2016/12/19/rem-layout/</loc>
     <lastmod>2016-12-29T10:08:34.181Z</lastmod>
     <data>
@@ -30,11 +138,11 @@
         <title>Git自动化部署</title>
         <pubTime>2016-12-22T09:42:46.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Git</tag>
          
         <tag>服务器</tag>
-         
-        <tag>Linux</tag>
          
          
            
@@ -52,25 +160,6 @@
         <pubTime>2016-12-16T06:29:27.000Z</pubTime>
         
         <tag>webpack</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
-    <lastmod>2016-12-26T04:23:22.919Z</lastmod>
-    <data>
-        <display>
-        <title>Let Chat</title>
-        <pubTime>2016-12-26T04:20:16.000Z</pubTime>
-        
-        <tag>Node</tag>
-         
-        <tag>websocket</tag>
          
          
            
@@ -121,11 +210,11 @@
         <title>学点运维，配个服务器</title>
         <pubTime>2016-12-15T09:08:08.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Git</tag>
          
         <tag>服务器</tag>
-         
-        <tag>Linux</tag>
          
          
            
