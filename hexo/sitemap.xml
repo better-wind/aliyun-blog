@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyi10year.github.io/2016/12/27/js-base/</loc>
+    
+    <lastmod>2017-01-05T11:46:23.001Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/30/es5-scope-closure/</loc>
+    
+    <lastmod>2017-01-05T11:31:30.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
+    
+    <lastmod>2017-01-05T11:27:41.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/28/js-object-prototype/</loc>
+    
+    <lastmod>2017-01-05T05:46:26.832Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
     
     <lastmod>2017-01-04T11:22:36.563Z</lastmod>
@@ -9,37 +37,9 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
-    
-    <lastmod>2017-01-04T11:21:54.871Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/28/js-object-prototype/</loc>
-    
-    <lastmod>2017-01-04T11:20:56.309Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/27/js-base/</loc>
-    
-    <lastmod>2017-01-04T09:34:59.691Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/2017/01/01/js-design-patterns/</loc>
     
     <lastmod>2017-01-03T10:11:02.790Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/30/es5-scope-closure/</loc>
-    
-    <lastmod>2017-01-03T10:07:36.897Z</lastmod>
     
   </url>
   
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/hack_demo.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/border1px.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/hack_demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -219,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/assets/demo/pre_css3_demo/demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -233,7 +226,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/jiugongge_demo.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/border1px.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     

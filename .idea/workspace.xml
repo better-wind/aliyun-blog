@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/你的项目/静态资源目录/js目录/公共js资源目录/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/你的项目/静态资源目录/js目录/单独页面js目录/你自己的js.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html" afterPath="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,34 +23,24 @@
     <favorites_list name="aliyun-blog" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6252159">
+    <splitter split-orientation="horizontal" split-proportion="0.75015384">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="websockt-chat-node.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="websockt-chat-node.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/websockt-chat-node.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="243">
-                  <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state relative-caret-position="351">
+                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="js-base.md" pinned="false" current-in-tab="false">
+          <file leaf-file-name="js-base.md" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/js-base.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="559">
-                  <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="js-object-prototype.md" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/js-object-prototype.md">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="478">
-                  <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+                <state relative-caret-position="370">
+                  <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
@@ -62,8 +49,18 @@
           <file leaf-file-name="es5-es6-extends.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/es5-es6-extends.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+                <state relative-caret-position="297">
+                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="es5-scope-closure.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/es5-scope-closure.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="316">
+                  <caret line="146" column="16" lean-forward="false" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -72,7 +69,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -86,9 +83,26 @@
           <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="606">
-                  <caret line="38" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-                  <folding />
+                <state relative-caret-position="637">
+                  <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#134#180#0" expanded="false" />
+                    <element signature="e#202#209#0" expanded="false" />
+                    <element signature="e#233#279#0" expanded="false" />
+                    <element signature="e#482#917#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="star.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/demo/star/star.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="891">
+                  <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#1365#2102#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -194,15 +208,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/demo/jsdesiginpatterns/after.html" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/javascript-object-prototype.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/es5-scope-closure.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/js-design-patterns.md" />
         <option value="$PROJECT_DIR$/hexo-blog/_config.yml" />
         <option value="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.js" />
-        <option value="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/js-base.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/websockt-chat-node.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/js-object-prototype.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/es5-es6-extends.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/websockt-chat-node.md" />
+        <option value="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/es5-scope-closure.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/js-base.md" />
       </list>
     </option>
   </component>
@@ -244,8 +258,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -312,13 +324,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebTry" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="D:/Install/tools/node/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -330,18 +376,18 @@
     <property name="SearchEverywhereHistoryKey" value="ven&#9;FILE&#9;file://F:/github/aliyun-blog/demo/webpack/dist/vendor-2-54e173.js" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\github\aliyun-blog\demo\rem" />
-      <recent name="F:\github\aliyun-blog\demo\webpack\dev" />
-      <recent name="F:\github\aliyun-blog\demo\webpack" />
-      <recent name="F:\github\aliyun-blog\demo\webpack\dev\img" />
-      <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\github\aliyun-blog\demo\star" />
       <recent name="F:\github\aliyun-blog\demo\marry" />
       <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\img" />
       <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src\css\fonts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\blogImg" />
+      <recent name="F:\github\aliyun-blog\demo\rem" />
+      <recent name="F:\github\aliyun-blog\demo\webpack\dev" />
+      <recent name="F:\github\aliyun-blog\demo\webpack" />
+      <recent name="F:\github\aliyun-blog\demo\webpack\dev\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -448,18 +494,21 @@
       <workItem from="1483076592295" duration="626000" />
       <workItem from="1483085830870" duration="1664000" />
       <workItem from="1483409740123" duration="6521000" />
-      <workItem from="1483496349801" duration="23214000" />
+      <workItem from="1483496349801" duration="23305000" />
+      <workItem from="1483583574953" duration="17698000" />
+      <workItem from="1483612987822" duration="657000" />
+      <workItem from="1483613762919" duration="3039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181281000" />
+    <option name="totallyTimeSpent" value="202766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="32" width="1936" height="1176" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14383562" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -508,18 +557,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo/img/bgMoon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hexo/img/city.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -713,7 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1566">
           <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,31 +757,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2882">
           <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/jsdesiginpatterns/after.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/es5-scope-closure.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/jsdesiginpatterns/after.html" />
     <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/js-design-patterns.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,7 +786,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/in-city.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/websockt-chat-node.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/star/star.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <element signature="e#1365#2102#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -781,42 +822,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/js-object-prototype.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="640">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/js-base.md">
+    <entry file="file://$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="637">
+          <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding>
+            <element signature="e#134#180#0" expanded="false" />
+            <element signature="e#202#209#0" expanded="false" />
+            <element signature="e#233#279#0" expanded="false" />
+            <element signature="e#482#917#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/es5-scope-closure.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="146" column="16" lean-forward="false" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/es5-es6-extends.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="297">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/websockt-chat-node.md">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/js-base.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="370">
+          <caret line="104" column="20" lean-forward="false" selection-start-line="104" selection-start-column="20" selection-end-line="104" selection-end-column="20" />
           <folding />
         </state>
       </provider>

@@ -4,6 +4,78 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2016/12/27/js-base/</loc>
+    <lastmod>2017-01-05T11:46:23.001Z</lastmod>
+    <data>
+        <display>
+        <title>你真的学好Js了吗</title>
+        <pubTime>2016-12-27T02:48:41.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/30/es5-scope-closure/</loc>
+    <lastmod>2017-01-05T11:31:30.574Z</lastmod>
+    <data>
+        <display>
+        <title>彻底理解Js中的作用域和上下文</title>
+        <pubTime>2016-12-30T10:06:06.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
+    <lastmod>2017-01-05T11:27:41.485Z</lastmod>
+    <data>
+        <display>
+        <title>谈谈js的继承</title>
+        <pubTime>2017-01-03T03:53:25.000Z</pubTime>
+        
+        <tag>Es6</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/28/js-object-prototype/</loc>
+    <lastmod>2017-01-05T05:46:26.832Z</lastmod>
+    <data>
+        <display>
+        <title>ECMA-prototype</title>
+        <pubTime>2016-12-28T10:00:00.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>原型</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
     <lastmod>2017-01-04T11:22:36.563Z</lastmod>
     <data>
@@ -23,84 +95,12 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
-    <lastmod>2017-01-04T11:21:54.871Z</lastmod>
-    <data>
-        <display>
-        <title>谈谈js的继承</title>
-        <pubTime>2017-01-03T03:53:25.000Z</pubTime>
-        
-        <tag>Es6</tag>
-         
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/28/js-object-prototype/</loc>
-    <lastmod>2017-01-04T11:20:56.309Z</lastmod>
-    <data>
-        <display>
-        <title>ECMA-prototype</title>
-        <pubTime>2016-12-28T10:00:00.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-        <tag>原型</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/27/js-base/</loc>
-    <lastmod>2017-01-04T09:34:59.691Z</lastmod>
-    <data>
-        <display>
-        <title>你真的学好Js了吗</title>
-        <pubTime>2016-12-27T02:48:41.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://luyi10year.github.io/2017/01/01/js-design-patterns/</loc>
     <lastmod>2017-01-03T10:11:02.790Z</lastmod>
     <data>
         <display>
         <title>Js中的设计模式</title>
         <pubTime>2017-01-01T10:09:48.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/30/es5-scope-closure/</loc>
-    <lastmod>2017-01-03T10:07:36.897Z</lastmod>
-    <data>
-        <display>
-        <title>Js中的作用域和闭包</title>
-        <pubTime>2016-12-30T10:06:06.000Z</pubTime>
         
         <tag>js</tag>
          

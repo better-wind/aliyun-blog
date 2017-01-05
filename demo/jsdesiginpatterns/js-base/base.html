@@ -54,6 +54,35 @@
     console.log(c);
 //    console.log(typeof a.ac);
 //    console.log(a.ac.constructor === Array);
+    console.log(Object.prototype.constructor);
+
+    var Obj = {
+        con:function(x){
+            console.log(x)
+        },
+        forEa:function(){
+            [1,2,3].forEach((item)=>this.con(item))
+        }
+    }
+    Obj.forEa();
+    function afoo(){
+        console.log([].slice.apply(arguments));
+        console.log([].sort.apply(arguments,function(a,b){
+            return a>b;
+        }))
+    }
+    afoo(1,8,7,6,2);
+    var baz;
+    (function(){
+        var foo = 10;
+        var bar = 2;
+        baz = function(){
+            return foo * bar;
+        }
+    })()
+    console.log(baz());
+
+
 </script>
 </body>
 </html>
