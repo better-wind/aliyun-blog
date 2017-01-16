@@ -4,8 +4,152 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2017/01/16/weapp-login-vs-web-login/</loc>
+    <lastmod>2017-01-16T06:04:38.197Z</lastmod>
+    <data>
+        <display>
+        <title>从微信小程序的登录谈谈前端的登录机制</title>
+        <pubTime>2017-01-16T06:00:56.000Z</pubTime>
+        
+        <tag>微信小程序</tag>
+         
+        <tag>session</tag>
+         
+        <tag>cookie</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/13/node-spider/</loc>
+    <lastmod>2017-01-16T02:38:15.856Z</lastmod>
+    <data>
+        <display>
+        <title>Node-Spider</title>
+        <pubTime>2016-12-13T10:41:55.000Z</pubTime>
+        
+        <tag>Node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/13/node-server/</loc>
+    <lastmod>2017-01-10T02:44:07.011Z</lastmod>
+    <data>
+        <display>
+        <title>Node-server</title>
+        <pubTime>2016-12-13T07:43:25.000Z</pubTime>
+        
+        <tag>Node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/13/node-module-api/</loc>
+    <lastmod>2017-01-09T02:19:58.869Z</lastmod>
+    <data>
+        <display>
+        <title>Node-Module-API</title>
+        <pubTime>2016-12-13T08:12:42.000Z</pubTime>
+        
+        <tag>Node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
+    <lastmod>2017-01-06T10:46:16.728Z</lastmod>
+    <data>
+        <display>
+        <title>从实时聊天谈谈通信协议</title>
+        <pubTime>2016-12-26T04:20:16.000Z</pubTime>
+        
+        <tag>Node</tag>
+         
+        <tag>websocket</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/12/node-base/</loc>
+    <lastmod>2017-01-06T10:43:19.360Z</lastmod>
+    <data>
+        <display>
+        <title>Node-各个模块</title>
+        <pubTime>2016-12-12T10:41:55.000Z</pubTime>
+        
+        <tag>Node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/01/js-design-patterns/</loc>
+    <lastmod>2017-01-06T07:26:25.310Z</lastmod>
+    <data>
+        <display>
+        <title>Js中的设计模式</title>
+        <pubTime>2017-01-01T10:09:48.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
+    <lastmod>2017-01-06T07:23:20.124Z</lastmod>
+    <data>
+        <display>
+        <title>谈谈js的继承</title>
+        <pubTime>2017-01-03T03:53:25.000Z</pubTime>
+        
+        <tag>Es6</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2016/12/27/js-base/</loc>
-    <lastmod>2017-01-05T11:46:23.001Z</lastmod>
+    <lastmod>2017-01-06T07:23:20.121Z</lastmod>
     <data>
         <display>
         <title>你真的学好Js了吗</title>
@@ -38,25 +182,6 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
-    <lastmod>2017-01-05T11:27:41.485Z</lastmod>
-    <data>
-        <display>
-        <title>谈谈js的继承</title>
-        <pubTime>2017-01-03T03:53:25.000Z</pubTime>
-        
-        <tag>Es6</tag>
-         
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://luyi10year.github.io/2016/12/28/js-object-prototype/</loc>
     <lastmod>2017-01-05T05:46:26.832Z</lastmod>
     <data>
@@ -67,42 +192,6 @@
         <tag>js</tag>
          
         <tag>原型</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
-    <lastmod>2017-01-04T11:22:36.563Z</lastmod>
-    <data>
-        <display>
-        <title>Let Chat</title>
-        <pubTime>2016-12-26T04:20:16.000Z</pubTime>
-        
-        <tag>Node</tag>
-         
-        <tag>websocket</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2017/01/01/js-design-patterns/</loc>
-    <lastmod>2017-01-03T10:11:02.790Z</lastmod>
-    <data>
-        <display>
-        <title>Js中的设计模式</title>
-        <pubTime>2017-01-01T10:09:48.000Z</pubTime>
-        
-        <tag>js</tag>
          
          
            
@@ -160,23 +249,6 @@
         <pubTime>2016-12-16T06:29:27.000Z</pubTime>
         
         <tag>webpack</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/13/node/</loc>
-    <lastmod>2016-12-26T04:22:21.829Z</lastmod>
-    <data>
-        <display>
-        <title>Node</title>
-        <pubTime>2016-12-13T10:41:55.000Z</pubTime>
-        
-        <tag>Node</tag>
          
          
            

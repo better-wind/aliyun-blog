@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://luyi10year.github.io">
-  <title>Archives: 2017/1 | Louis Blog</title>
+  <title>Node-server | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端之路，渐行渐远。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Louis Blog">
-<meta property="og:url" content="https://luyi10year.github.io/archives/2017/01/index.html">
+  <meta name="description" content="用Node搭建一个静态资源访问服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node-server">
+<meta property="og:url" content="https://luyi10year.github.io/2016/12/13/node-server/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="前端之路，渐行渐远。">
+<meta property="og:description" content="用Node搭建一个静态资源访问服务器">
+<meta property="og:updated_time" content="2017-01-10T02:44:07.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Louis Blog">
-<meta name="twitter:description" content="前端之路，渐行渐远。">
+<meta name="twitter:title" content="Node-server">
+<meta name="twitter:description" content="用Node搭建一个静态资源访问服务器">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -143,121 +144,100 @@
             <!--<canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>-->
           <!--</div>-->
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-node-server" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Node-server
+    </h1>
+  
+
+        <a href="/2016/12/13/node-server/" class="archive-article-date">
+  	<time datetime="2016-12-13T07:43:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+</a>
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>用Node搭建一个静态资源访问服务器</p>
+<a id="more"></a>
+<p>用到的模块<br><figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</div><div class="line">    <span class="built_in">url</span> = <span class="built_in">require</span>(<span class="string">'url'</span>),</div><div class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>),</div><div class="line">    fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div></pre></td></tr></table></figure></p>
+<p>思路 获取访问路径，以文件后缀判断文件类型<br><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var mimetype = &#123;</div><div class="line">    <span class="symbol">'txt'</span>: <span class="symbol">'text</span>/plain',</div><div class="line">    <span class="symbol">'html'</span>: <span class="symbol">'text</span>/html',</div><div class="line">    <span class="symbol">'css'</span>: <span class="symbol">'text</span>/css',</div><div class="line">    <span class="symbol">'xml'</span>: <span class="symbol">'application</span>/xml',</div><div class="line">    <span class="symbol">'json'</span>: <span class="symbol">'application</span>/json',</div><div class="line">    <span class="symbol">'js'</span>: <span class="symbol">'application</span>/javascript',</div><div class="line">    <span class="symbol">'jpg'</span>: <span class="symbol">'image</span>/jpeg',</div><div class="line">    <span class="symbol">'jpeg'</span>: <span class="symbol">'image</span>/jpeg',</div><div class="line">    <span class="symbol">'gif'</span>: <span class="symbol">'image</span>/gif',</div><div class="line">    <span class="symbol">'png'</span>: <span class="symbol">'image</span>/png',</div><div class="line">    <span class="symbol">'svg'</span>: <span class="symbol">'image</span>/svg+xml'</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>获取请求的时候判断请求文件是否存在，决定返回的类型</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</div><div class="line">    <span class="keyword">var</span> pathname = url.parse(req.url).pathname,</div><div class="line">        realPath = path.join(__dirname,<span class="string">'/static'</span>,pathname);</div><div class="line">    <span class="keyword">var</span> body = [];</div><div class="line">    req.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span><span class="params">(data)</span></span>&#123;</div><div class="line">        body.push(data);</div><div class="line">    &#125;)</div><div class="line">    req.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">        body = Buffer.concat(body);</div><div class="line">    &#125;)</div><div class="line">    fs.exists(realPath,<span class="function"><span class="keyword">function</span><span class="params">(ex)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(ex)&#123;</div><div class="line">            <span class="keyword">var</span> rs = fs.createReadStream(realPath);</div><div class="line">            res.writeHead(<span class="number">200</span>,&#123;</div><div class="line">                <span class="string">'Content-Type'</span>:mimetype[realPath.split(<span class="string">'.'</span>).pop()] || <span class="string">'text/plain'</span></div><div class="line">            &#125;)</div><div class="line">            rs.on(<span class="string">'data'</span>,res.write.bind(res))</div><div class="line">            rs.on(<span class="string">'close'</span>,res.end.bind(res));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            page_404(req,res,realPath); <span class="comment">//错误页面</span></div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;).listen(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
+<p>请求不存在</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="xml">function page_404(req,res,path)</span><span class="template-variable">&#123;</span></div><div class="line">    res.writeHead(404,&#123;</div><div class="line">        'Content-Type':'text/html'</div><div class="line">    &#125;<span class="xml">)</span></div><div class="line">    res.write('<span class="meta">&lt;!doctype html&gt;</span>\n');</div><div class="line">    res.write('<span class="tag">&lt;<span class="name">title</span>&gt;</span>404 Not Found<span class="tag">&lt;/<span class="name">title</span>&gt;</span>\n');</div><div class="line">    res.write('<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Not Found<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>');</div><div class="line">    res.write(</div><div class="line">        '<span class="tag">&lt;<span class="name">p</span>&gt;</span>The requested URL ' +</div><div class="line">        path +</div><div class="line">        ' was not found on this server.<span class="tag">&lt;/<span class="name">p</span>&gt;</span>'</div><div class="line">    );</div><div class="line">    res.end();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017/" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/16/weapp-login-vs-web-login/" class="archive-article-date">
-  	<time datetime="2017-01-16T06:00:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-16</time>
-</a>
-        </div>
-        
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/16/weapp-login-vs-web-login/">从微信小程序的登录谈谈前端的登录机制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie/">cookie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/session/">session</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
 
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/03/es5-es6-extends/" class="archive-article-date">
-  	<time datetime="2017-01-03T03:53:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-03</time>
-</a>
-        </div>
+<nav id="article-nav">
+  
+    <a href="/2016/12/13/node-module-api/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/03/es5-es6-extends/">谈谈js的继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Es6/">Es6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/01/js-design-patterns/" class="archive-article-date">
-  	<time datetime="2017-01-01T10:09:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
-</a>
-        </div>
+          Node-Module-API
         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/01/js-design-patterns/">Js中的设计模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/12/12/node-base/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Node-各个模块</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
 
-    
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="node-server" data-title="Node-server" data-url="https://luyi10year.github.io/2016/12/13/node-server/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"luyi10year"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
 
 
 
@@ -283,8 +263,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

@@ -2,9 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyi10year.github.io/2017/01/16/weapp-login-vs-web-login/</loc>
+    
+    <lastmod>2017-01-16T06:04:38.197Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/13/node-spider/</loc>
+    
+    <lastmod>2017-01-16T02:38:15.856Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/13/node-server/</loc>
+    
+    <lastmod>2017-01-10T02:44:07.011Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/13/node-module-api/</loc>
+    
+    <lastmod>2017-01-09T02:19:58.869Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
+    
+    <lastmod>2017-01-06T10:46:16.728Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/12/node-base/</loc>
+    
+    <lastmod>2017-01-06T10:43:19.360Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/01/js-design-patterns/</loc>
+    
+    <lastmod>2017-01-06T07:26:25.310Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
+    
+    <lastmod>2017-01-06T07:23:20.124Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/2016/12/27/js-base/</loc>
     
-    <lastmod>2017-01-05T11:46:23.001Z</lastmod>
+    <lastmod>2017-01-06T07:23:20.121Z</lastmod>
     
   </url>
   
@@ -16,30 +72,9 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/2017/01/03/es5-es6-extends/</loc>
-    
-    <lastmod>2017-01-05T11:27:41.485Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/2016/12/28/js-object-prototype/</loc>
     
     <lastmod>2017-01-05T05:46:26.832Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/26/websockt-chat-node/</loc>
-    
-    <lastmod>2017-01-04T11:22:36.563Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/2017/01/01/js-design-patterns/</loc>
-    
-    <lastmod>2017-01-03T10:11:02.790Z</lastmod>
     
   </url>
   
@@ -61,13 +96,6 @@
     <loc>https://luyi10year.github.io/2016/12/16/webpack/</loc>
     
     <lastmod>2016-12-28T03:51:27.389Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/13/node/</loc>
-    
-    <lastmod>2016-12-26T04:22:21.829Z</lastmod>
     
   </url>
   
@@ -107,6 +135,13 @@
   </url>
   
   <url>
+    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -114,14 +149,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/hack_demo.html</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/border1px.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -149,14 +177,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/css/reset.css</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/css/reset.css</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -170,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/main.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/main.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -191,13 +219,6 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -205,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/mediator/demo.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -219,7 +240,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/pre_css3_demo/demo.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/mediator/demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -233,7 +254,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/border1px.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/pre_css3_demo/demo.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/hack_demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
