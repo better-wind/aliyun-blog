@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+//    对象冒充
+//    function Person(name){
+//        this.name = name;
+//        this.sayName=function(){
+//            console.log(this.name);
+//        }
+//    }
+//    function Author(name,book){
+//        this.book = book;
+//        this.Person = Person;
+//        this.Person(name);
+//        delete this.Person;
+//        this.sayBook = function(){
+//            console.log(this.book)
+//        }
+//    }
+// call&& apply
+//    function Person(name){
+//        this.name = name;
+//        this.sayName=function(){
+//            console.log(this.name);
+//        }
+//    }
+//    function Author(name,book){
+//        this.book = book;
+//        Person.apply(this,[name])
+//        this.sayBook = function(){
+//            console.log(this.book)
+//        }
+//    }
+//var Ls = new Author('Ls','My Book');
+//Ls.sayName();
+//Ls.sayBook();
+// 原型链
+//function Person(){
+//}
+//Person.prototype.sName = '';
+//Person.prototype.sayName = function () {
+//    console.log(this.sName);
+//};
+//
+//function Author(book){
+//    this.book = book;
+//}
+//Author.prototype = new Person();
+//Author.prototype.sayBook= function(){
+//    console.log(this.book);
+//};
+//var Ls = new Author('My book');
+//Ls.sName = 'Ls';
+//Ls.sayName();
+//Ls.sayBook();
+    //混合类式
+//function Person(name){
+//    this.name = name;
+//}
+//Person.prototype.sayName = function () {
+//    console.log(this.name);
+//};
+//
+//function Author(name,book){
+//    Person.call(this,name);
+//    this.book = book;
+//}
+//Author.prototype = new Person();
+//Author.prototype.sayBook = function(){
+//    console.log(this.book);
+//}
+//var Ls = new Author('Ls','My Book');
+//Ls.sayName();
+//Ls.sayBook();
+    //原型式继承
+//var Person = {
+//    name:'default name',
+//    sayName:function(){
+//        console.log(this.name);
+//    }
+//}
+//var Author = clone(Person);
+//Author.book = 'default book';
+//Author.sayBook = function(){
+//    console.log(this.book);
+//}
+//var Ls = clone(Author);
+//Ls.name = 'Ls';
+//Ls.book = 'My Book';
+//Ls.sayName();
+//Ls.sayBook();
+//function clone(obj){
+//    function F(){}
+//    F.prototype = obj;
+//    return new F();
+//}
+    //Es6 继承
+//    class Person{
+//        constructor(name){
+//            this.name = name;
+//        }
+//        sayName(){
+//            console.log(this.name)
+//        }
+//        _sayN(){
+//            console.log('1233');
+//        }
+//    }
+//    class Author extends Person{
+//        constructor(name,book){
+//            super(name);
+//            this.book = book;
+//        }
+//        sayBook(){
+//            console.log(this.book);
+//        }
+//    }
+//    var Ls = new Author('Ls','My Book');
+//    Ls.sayName();
+//    Ls.sayBook();
+//    Ls._sayN();
+    console.log(WebSocket.OPEN);
+</script>
+</body>
+</html>
