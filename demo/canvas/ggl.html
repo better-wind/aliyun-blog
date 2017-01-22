@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas-GGL</title>
+</head>
+<body>
+<canvas id="GGL"></canvas>
+
+<script>
+    {
+        let domCanvas = document.querySelector('#GGL'),
+            context = domCanvas.getContext('2d');
+        /*
+        * 构建对象
+        * width
+        * height
+        * filter 取消遮罩百分比
+        * */
+        let clipImage = function(height,width,filter){
+            this.width = width;
+            this.height = height;
+            this.filter = filter;
+            domCanvas.width = this.width;
+            domCanvas.height = this.height;
+        }
+        clipImage.prototype = {
+            /*
+            * 函数入口
+            * 开始监听事件
+            * */
+            start:function(){
+                context.fillStyle = 'gray';
+                context.fillRect(0,0,this.width,this.height);
+                context.globalCompositeOperation = 'destination-out';
+                this.bindEventMove = this.eventMove.bind(this);
+                this.bindEventUp= this.eventUp.bind(this);
+                domCanvas.addEventListener('touchstart',this.eventDown)
+                domCanvas.addEventListener('touchmove',this.bindEventMove)
+                domCanvas.addEventListener('touchend',this.bindEventUp)
+            },
+            eventDown:function(){
+                console.log('Down')
+            },
+            eventMove:function(e){
+                console.log('Move');
+                let target = e.changedTouches[e.changedTouches.length-1];
+                this.clearMove(target)
+            },
+            eventUp:function(){
+                console.log('Up');
+                this.clearMask();
+            },
+            /*
+            * 清除划过画布
+            * */
+            clearMove:function(target){
+                let nX = target.clientX,
+                    nY = target.clientY;
+                context.beginPath();
+                context.arc(nX,nY,15,0,Math.PI * 2);
+                context.fill();
+            },
+            /*
+            * 判断像素点清除数是否到达指定百分比
+            * */
+            clearMask:function(){
+                let nNum = 0,
+                    aImageData = context.getImageData(0,0,this.width,this.height).data,
+                    nLength = aImageData.length;
+                aImageData.forEach((item)=>{
+                    if(item == 0){
+                        nNum++;
+                    }
+                })
+                if(nNum >= nLength * this.filter){
+                    this.finish();
+                }
+            },
+            /*
+            * 完成刮奖
+            * */
+            finish:function(){
+                context.beginPath();
+                context.rect(0,0,this.width,this.height);
+                context.fill();
+                domCanvas.removeEventListener('touchstart',this.eventDown);
+                domCanvas.removeEventListener('touchmove',this.bindEventMove);
+                domCanvas.removeEventListener('touchend',this.bindEventUp);
+            }
+
+        }
+        let clip = new clipImage(400,400,.3);
+        clip.start();
+
+    }
+</script>
+</body>
+</html>

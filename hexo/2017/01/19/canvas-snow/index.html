@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://luyi10year.github.io">
+  <title>Canvas--星空 | Louis Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Canvas 星空效果嗯 是的 就是左上方的星空效果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas--星空">
+<meta property="og:url" content="https://luyi10year.github.io/2017/01/19/canvas-snow/index.html">
+<meta property="og:site_name" content="Louis Blog">
+<meta property="og:description" content="Canvas 星空效果嗯 是的 就是左上方的星空效果">
+<meta property="og:updated_time" content="2017-01-22T08:57:50.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Canvas--星空">
+<meta name="twitter:description" content="Canvas 星空效果嗯 是的 就是左上方的星空效果">
+  
+    <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/assets/img/favor.ico">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <!--<canvas id="anm-canvas" class="anm-canvas"></canvas>-->
+    <div class="header-star-col" id="starCanvasWrapWeb">
+      <canvas id="starCanvasWeb"></canvas>
+    </div>
+    <div class="footer-star-col">
+      <img src="/img/bgTree.png" alt="">
+    </div>
+    <div class="left-col" q-class="show:isShow">
+      <!--<div class="overlay" id="starCanvasWrapWeb">-->
+  <!--<canvas id="starCanvasWeb"></canvas>-->
+<!--</div>-->
+<div class="overlay">
+</div>
+<div class="moon">
+
+</div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/assets/img/avatar.jpg" class="js-avatar">
+		</a>
+
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Louis</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Louis/十年</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/luyi10year" title="github"><i class="icon-github"></i></a>
+		        
+			</div>
+		</nav>
+	</header>
+</div>
+<!--<div class="floresta">-->
+  <!--<img src="/img/bgTree2.png" alt="" />-->
+<!--</div>-->
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay" id="starCanvasWrapMobile">
+      <canvas id="starCanvasMobile"></canvas>
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Louis</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/assets/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Louis</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Louis/十年</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/luyi10year" title="github"><i class="icon-github"></i></a>
+			        
+				</div>
+			</nav>
+		</header>
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <!--<div class="canvas-wrap">-->
+            <!--<canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>-->
+          <!--</div>-->
+          <div id="js-content" class="content-ll">
+            <article id="post-canvas-snow" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Canvas--星空
+    </h1>
+  
+
+        <a href="/2017/01/19/canvas-snow/" class="archive-article-date">
+  	<time datetime="2017-01-19T02:43:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-19</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Canvas 星空效果<br>嗯 是的 就是左上方的星空效果</p>
+<a id="more"></a>
+<h4 id="星空效果"><a href="#星空效果" class="headerlink" title="星空效果"></a>星空效果</h4><h5 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h5><p>其实星空在实现上很简单<br>一个星星就是一个星星对象实例<br>有属性x坐标，y坐标，半径，移动速度和透明度<br>有方法生成坐标，绘制星星</p>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">        <span class="comment">/*</span></div><div class="line">        * 配置选项</div><div class="line">        * width:画布宽</div><div class="line">        * height:画布高</div><div class="line">        * splitHeight:星星密集分割</div><div class="line">        * stars:星星数量</div><div class="line">        * maxStar:星星最大半径</div><div class="line">        * minStar:星星最小半径</div><div class="line">        * maxSpeed:星星最大移动速度</div><div class="line">        * minSpeed:星星最小移动速度</div><div class="line">        * */</div><div class="line">        <span class="keyword">let</span> SkySetting = &#123;</div><div class="line">                <span class="attr">width</span>:<span class="number">800</span>,</div><div class="line">                <span class="attr">height</span>:<span class="number">300</span>,</div><div class="line">                <span class="attr">splitHeight</span>:<span class="number">200</span>,</div><div class="line">                <span class="attr">stars</span>:<span class="number">400</span>,</div><div class="line">                <span class="attr">maxStar</span>:<span class="number">1.2</span>,</div><div class="line">                <span class="attr">minStar</span>:<span class="number">0.6</span>,</div><div class="line">                <span class="attr">maxSpeed</span>:<span class="number">0.1</span>,</div><div class="line">                <span class="attr">minSpeed</span>:<span class="number">0.02</span>,</div><div class="line"></div><div class="line">        &#125;,</div><div class="line">            domCanvas = <span class="built_in">document</span>.querySelector(<span class="string">'#Star'</span>),</div><div class="line">            context = domCanvas.getContext(<span class="string">'2d'</span>);</div><div class="line">        <span class="comment">/*</span></div><div class="line">        * 画布实例</div><div class="line">        * */</div><div class="line">        <span class="keyword">let</span> starSky = <span class="function"><span class="keyword">function</span>(<span class="params">width,height,stars</span>)</span>&#123;</div><div class="line">            <span class="keyword">this</span>.width = width;</div><div class="line">            <span class="keyword">this</span>.height = height;</div><div class="line">            <span class="keyword">this</span>.stars = stars;</div><div class="line">            <span class="keyword">this</span>.aStars = [];</div><div class="line">        &#125;</div><div class="line">        starSky.prototype = &#123;</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 入口</div><div class="line">            * */</div><div class="line">            start:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                domCanvas.width = <span class="keyword">this</span>.width;</div><div class="line">                domCanvas.height = <span class="keyword">this</span>.height;</div><div class="line">                context.fillStyle = <span class="string">'rgba(0,0,0,1)'</span>;</div><div class="line">                context.fillRect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height);</div><div class="line">                <span class="keyword">this</span>.render();</div><div class="line">            &#125;,</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 重绘</div><div class="line">            * */</div><div class="line">            redraw:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                context.clearRect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height);</div><div class="line">                context.fillStyle = <span class="string">'rgba(0,0,0,1)'</span>;</div><div class="line">                context.fillRect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height);</div><div class="line">            &#125;,</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 新建星星实例</div><div class="line">            * 绘制星星</div><div class="line">            * window.requestAnimationFrame 动画函数</div><div class="line">            * */</div><div class="line">            render:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="keyword">this</span>.redraw();</div><div class="line">                <span class="keyword">if</span>(<span class="keyword">this</span>.aStars.length &lt;= <span class="keyword">this</span>.stars)&#123;</div><div class="line">                    <span class="keyword">let</span> star = <span class="keyword">new</span> Star();</div><div class="line">                    <span class="keyword">this</span>.aStars.push(star);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">this</span>.aStars.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">star</span>)</span>&#123;</div><div class="line">                    star.draw();</div><div class="line">                &#125;)</div><div class="line">                <span class="built_in">window</span>.requestAnimationFrame(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">                    <span class="keyword">this</span>.render();</div><div class="line">                &#125;);</div><div class="line">            &#125;,</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        <span class="comment">/*</span></div><div class="line">        * 星星构造器</div><div class="line">        * */</div><div class="line">        <span class="keyword">let</span> Star = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">this</span>.randomPoint();</div><div class="line">        &#125;</div><div class="line">        Star.prototype = &#123;</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 随机星星数据</div><div class="line">            * */</div><div class="line">            randomPoint:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="keyword">let</span> _x = <span class="built_in">Math</span>.random()*SkySetting.width,</div><div class="line">                    _r = SkySetting.minStar + <span class="built_in">Math</span>.random()*(SkySetting.maxStar - SkySetting.minStar),</div><div class="line">                    _ran = <span class="built_in">Math</span>.random()*<span class="number">10</span>,</div><div class="line">                    _rx = <span class="built_in">Math</span>.random()*(SkySetting.maxSpeed-SkySetting.minSpeed) + SkySetting.minSpeed,</div><div class="line">                    _y = _ran &gt; <span class="number">2</span> ? <span class="built_in">Math</span>.random()*SkySetting.splitHeight: <span class="built_in">Math</span>.random()*SkySetting.height,</div><div class="line">                    _alphaMax = <span class="built_in">Math</span>.random()*<span class="number">0.8</span> + <span class="number">0.2</span>,</div><div class="line">                    _alphaMin = <span class="number">0.2</span>,</div><div class="line">                    _alpha = <span class="number">0</span>;</div><div class="line">                <span class="keyword">this</span>.x = _x;</div><div class="line">                <span class="keyword">this</span>.y = _y;</div><div class="line">                <span class="keyword">this</span>.r = _r;</div><div class="line">                <span class="keyword">this</span>.rx = _rx;</div><div class="line">                <span class="keyword">this</span>.alpha = _alpha;</div><div class="line">                <span class="keyword">this</span>.alphaMax = _alphaMax;</div><div class="line">                <span class="keyword">this</span>.alphaMin = _alphaMin;</div><div class="line">                <span class="keyword">this</span>.alphaAction = <span class="literal">true</span>;</div><div class="line">            &#125;,</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 绘制星星</div><div class="line">            * 星星变化</div><div class="line">            * */</div><div class="line">            draw:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="keyword">this</span>.x += <span class="keyword">this</span>.rx;</div><div class="line">                <span class="keyword">if</span>(<span class="keyword">this</span>.x + <span class="keyword">this</span>.r &gt;= SkySetting.width)&#123;</div><div class="line">                    <span class="keyword">this</span>.x = <span class="number">0</span>;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">if</span>(<span class="keyword">this</span>.alphaAction)&#123;</div><div class="line">                    <span class="keyword">if</span>(<span class="keyword">this</span>.alpha &lt; <span class="keyword">this</span>.alphaMax)&#123;</div><div class="line">                        <span class="keyword">this</span>.alpha += <span class="number">0.05</span>;</div><div class="line">                    &#125;<span class="keyword">else</span>&#123;</div><div class="line">                        <span class="keyword">this</span>.alphaAction = <span class="literal">false</span></div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">if</span>(!<span class="keyword">this</span>.alphaAction)&#123;</div><div class="line">                    <span class="keyword">if</span>(<span class="keyword">this</span>.alpha &gt; <span class="keyword">this</span>.alphaMin)&#123;</div><div class="line">                        <span class="keyword">this</span>.alpha -= <span class="number">0.02</span>;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">else</span>&#123;</div><div class="line">                        <span class="keyword">this</span>.alphaAction = <span class="literal">true</span>;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">                context.beginPath();</div><div class="line">                context.fillStyle = <span class="string">'rgba(255,255,255,'</span>+<span class="keyword">this</span>.alpha.toString()+<span class="string">')'</span>;</div><div class="line">                context.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</div><div class="line">                context.closePath();</div><div class="line">                context.fill();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">/*</span></div><div class="line">        * 构造星空实例</div><div class="line">        * */</div><div class="line">        <span class="keyword">let</span> sky = <span class="keyword">new</span> starSky(SkySetting.width,SkySetting.height,SkySetting.stars);</div><div class="line">        sky.start();</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Canvas/">Canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5/">H5</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/01/20/canvas-fonts-image/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Canvas--黑凤梨
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/18/canvas-xiaoxiaole/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Canvas--刮刮卡</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="canvas-snow" data-title="Canvas--星空" data-url="https://luyi10year.github.io/2017/01/19/canvas-snow/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"luyi10year"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+
+    	</div>
+      	<div class="footer-right">
+      		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
+          &copy; 2017 Louis
+        </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Git</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">服务器</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Canvas</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">H5</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">杂谈</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">原型</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Node</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">react</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Rem</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">微信小程序</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">session</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">cookie</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">websocket</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat"  class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">竹杖芒鞋轻似马&lt;br&gt;谁怕？&lt;br&gt;一蓑烟雨任平生。</div>
+  	  	
+    	</section>
+    
+  </div>
+
+</div>
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

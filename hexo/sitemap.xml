@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyi10year.github.io/2017/01/21/canvas-fonts-book/</loc>
+    
+    <lastmod>2017-01-22T08:59:28.995Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/20/canvas-fonts-image/</loc>
+    
+    <lastmod>2017-01-22T08:59:20.104Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/19/canvas-snow/</loc>
+    
+    <lastmod>2017-01-22T08:57:50.852Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/18/canvas-xiaoxiaole/</loc>
+    
+    <lastmod>2017-01-22T07:23:45.585Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/2017/01/16/weapp-login-vs-web-login/</loc>
     
     <lastmod>2017-01-16T06:04:38.197Z</lastmod>
@@ -135,14 +163,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/jiugongge_demo.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/hack_demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -150,6 +171,13 @@
   
   <url>
     <loc>https://luyi10year.github.io/assets/demo/border1px.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/jiugongge_demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -177,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/assets/demo/gift/css/reset.css</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -191,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -212,7 +233,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -226,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/mediator/mediator.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -247,7 +268,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/mediator/mediator.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -261,7 +282,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/hack_demo.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     

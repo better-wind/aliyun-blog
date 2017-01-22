@@ -4,6 +4,82 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2017/01/21/canvas-fonts-book/</loc>
+    <lastmod>2017-01-22T08:59:28.995Z</lastmod>
+    <data>
+        <display>
+        <title>Canvas--书法毛笔字</title>
+        <pubTime>2017-01-21T02:43:53.000Z</pubTime>
+        
+        <tag>Canvas</tag>
+         
+        <tag>H5</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/20/canvas-fonts-image/</loc>
+    <lastmod>2017-01-22T08:59:20.104Z</lastmod>
+    <data>
+        <display>
+        <title>Canvas--黑凤梨</title>
+        <pubTime>2017-01-20T02:43:38.000Z</pubTime>
+        
+        <tag>Canvas</tag>
+         
+        <tag>H5</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/19/canvas-snow/</loc>
+    <lastmod>2017-01-22T08:57:50.852Z</lastmod>
+    <data>
+        <display>
+        <title>Canvas--星空</title>
+        <pubTime>2017-01-19T02:43:25.000Z</pubTime>
+        
+        <tag>Canvas</tag>
+         
+        <tag>H5</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/01/18/canvas-xiaoxiaole/</loc>
+    <lastmod>2017-01-22T07:23:45.585Z</lastmod>
+    <data>
+        <display>
+        <title>Canvas--刮刮卡</title>
+        <pubTime>2017-01-18T02:43:15.000Z</pubTime>
+        
+        <tag>Canvas</tag>
+         
+        <tag>H5</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2017/01/16/weapp-login-vs-web-login/</loc>
     <lastmod>2017-01-16T06:04:38.197Z</lastmod>
     <data>
@@ -208,9 +284,9 @@
         <title>1px != 1px -- 移动端适配浅析</title>
         <pubTime>2016-12-19T09:28:08.000Z</pubTime>
         
-        <tag>Rem</tag>
-         
         <tag>H5</tag>
+         
+        <tag>Rem</tag>
          
          
            
