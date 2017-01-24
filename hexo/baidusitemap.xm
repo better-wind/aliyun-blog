@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://luyi10year.github.io/2017/01/21/canvas-fonts-book/</loc>
-    <lastmod>2017-01-22T08:59:28.995Z</lastmod>
+    <lastmod>2017-01-23T08:17:07.997Z</lastmod>
     <data>
         <display>
         <title>Canvas--书法毛笔字</title>
@@ -24,7 +24,7 @@
     
   <url>
     <loc>https://luyi10year.github.io/2017/01/20/canvas-fonts-image/</loc>
-    <lastmod>2017-01-22T08:59:20.104Z</lastmod>
+    <lastmod>2017-01-23T06:52:30.808Z</lastmod>
     <data>
         <display>
         <title>Canvas--黑凤梨</title>
@@ -303,11 +303,11 @@
         <title>Git自动化部署</title>
         <pubTime>2016-12-22T09:42:46.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Git</tag>
          
         <tag>服务器</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -358,11 +358,11 @@
         <title>学点运维，配个服务器</title>
         <pubTime>2016-12-15T09:08:08.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Git</tag>
          
         <tag>服务器</tag>
+         
+        <tag>Linux</tag>
          
          
            
