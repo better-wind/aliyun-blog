@@ -4,6 +4,57 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2017/02/04/react-flux/</loc>
+    <lastmod>2017-02-05T02:48:35.594Z</lastmod>
+    <data>
+        <display>
+        <title>react-flux</title>
+        <pubTime>2017-02-04T02:46:33.000Z</pubTime>
+        
+        <tag>react</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/02/03/react-immutable/</loc>
+    <lastmod>2017-02-05T02:48:30.403Z</lastmod>
+    <data>
+        <display>
+        <title>react-immutable</title>
+        <pubTime>2017-02-03T02:45:40.000Z</pubTime>
+        
+        <tag>react</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/02/05/react-redux/</loc>
+    <lastmod>2017-02-05T02:48:13.327Z</lastmod>
+    <data>
+        <display>
+        <title>react-redux</title>
+        <pubTime>2017-02-05T02:46:42.000Z</pubTime>
+        
+        <tag>react</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2017/01/21/canvas-fonts-book/</loc>
     <lastmod>2017-01-23T08:17:07.997Z</lastmod>
     <data>
@@ -303,11 +354,11 @@
         <title>Git自动化部署</title>
         <pubTime>2016-12-22T09:42:46.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Git</tag>
          
         <tag>服务器</tag>
-         
-        <tag>Linux</tag>
          
          
            
@@ -358,11 +409,11 @@
         <title>学点运维，配个服务器</title>
         <pubTime>2016-12-15T09:08:08.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Git</tag>
          
         <tag>服务器</tag>
-         
-        <tag>Linux</tag>
          
          
            

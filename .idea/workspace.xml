@@ -2,8 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/canvas/calligraphy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/12/node-base/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/12/node-base/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/13/node-module-api/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/13/node-module-api/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/13/node-server/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/13/node-server/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/13/node-spider/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/13/node-spider/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/14/in-city/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/14/in-city/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/15/aliyun/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/15/aliyun/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/16/webpack/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/16/webpack/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/17/vue/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/17/vue/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/18/react/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/18/react/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/19/rem-layout/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/19/rem-layout/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/20/diary-2016-1220-1430/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/20/diary-2016-1220-1430/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/22/automated-deployment/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/22/automated-deployment/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/26/websockt-chat-node/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/26/websockt-chat-node/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/27/js-base/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/27/js-base/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/28/js-object-prototype/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/28/js-object-prototype/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/30/es5-scope-closure/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/30/es5-scope-closure/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/01/js-design-patterns/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/01/js-design-patterns/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/03/es5-es6-extends/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/03/es5-es6-extends/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/16/weapp-login-vs-web-login/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/16/weapp-login-vs-web-login/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/18/canvas-xiaoxiaole/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/18/canvas-xiaoxiaole/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/19/canvas-snow/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/19/canvas-snow/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/20/canvas-fonts-image/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/20/canvas-fonts-image/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/21/canvas-fonts-book/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/21/canvas-fonts-book/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/01/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/index.html" afterPath="$PROJECT_DIR$/hexo/archives/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/border1px.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/border1px.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/coffee_pc_demo/pro-con.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/coffee_pc_demo/pro-con.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/gift/index.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/gift/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/hack_demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/hack_demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo2.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/jiugongge_demo2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/mediator/demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/mediator/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/my_news_reader/index.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/my_news_reader/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/assets/demo/pre_css3_demo/demo.html" afterPath="$PROJECT_DIR$/hexo/assets/demo/pre_css3_demo/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/atom.xml" afterPath="$PROJECT_DIR$/hexo/atom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/baidusitemap.xm" afterPath="$PROJECT_DIR$/hexo/baidusitemap.xm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/content.json" afterPath="$PROJECT_DIR$/hexo/content.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/feed.json" afterPath="$PROJECT_DIR$/hexo/feed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/index.html" afterPath="$PROJECT_DIR$/hexo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/page/2/index.html" afterPath="$PROJECT_DIR$/hexo/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/page/3/index.html" afterPath="$PROJECT_DIR$/hexo/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/sitemap.xml" afterPath="$PROJECT_DIR$/hexo/sitemap.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Canvas/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Canvas/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Es6/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Es6/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Git/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Git/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/H5/index.html" afterPath="$PROJECT_DIR$/hexo/tags/H5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Linux/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Linux/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/cookie/index.html" afterPath="$PROJECT_DIR$/hexo/tags/cookie/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/js/index.html" afterPath="$PROJECT_DIR$/hexo/tags/js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/react/index.html" afterPath="$PROJECT_DIR$/hexo/tags/react/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/session/index.html" afterPath="$PROJECT_DIR$/hexo/tags/session/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/vue/index.html" afterPath="$PROJECT_DIR$/hexo/tags/vue/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/webpack/index.html" afterPath="$PROJECT_DIR$/hexo/tags/webpack/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/websocket/index.html" afterPath="$PROJECT_DIR$/hexo/tags/websocket/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/原型/index.html" afterPath="$PROJECT_DIR$/hexo/tags/原型/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/微信小程序/index.html" afterPath="$PROJECT_DIR$/hexo/tags/微信小程序/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/服务器/index.html" afterPath="$PROJECT_DIR$/hexo/tags/服务器/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/杂谈/index.html" afterPath="$PROJECT_DIR$/hexo/tags/杂谈/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,7 +83,38 @@
     <favorites_list name="aliyun-blog" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="react-redux.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react-redux.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="react-immutable.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react-immutable.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="react-flux.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react-flux.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,9 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/in-city.md" />
-        <option value="$PROJECT_DIR$/demo/marry/n/a.html" />
-        <option value="$PROJECT_DIR$/demo/marry/index.html" />
         <option value="$PROJECT_DIR$/demo/marry/snow/abc.html" />
         <option value="$PROJECT_DIR$/demo/marry/a.css" />
         <option value="$PROJECT_DIR$/demo/marry/abc.html" />
@@ -131,6 +219,9 @@
         <option value="$PROJECT_DIR$/demo/canvas/calligraphy.html" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/canvas-fonts-book.md" />
         <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/react-redux.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/react-immutable.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/react-flux.md" />
       </list>
     </option>
   </component>
@@ -172,7 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,12 +277,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-tetris" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="D:/Install/tools/node/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -347,23 +438,25 @@
       <workItem from="1485056117934" duration="11697000" />
       <workItem from="1485139437915" duration="5081000" />
       <workItem from="1485155008523" duration="4863000" />
-      <workItem from="1485226356720" duration="5346000" />
+      <workItem from="1485226356720" duration="5433000" />
+      <workItem from="1485313636626" duration="28000" />
+      <workItem from="1486262551306" duration="497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278542000" />
+    <option name="totallyTimeSpent" value="279154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="32" width="1936" height="1176" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15068494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18756586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214971" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3214971" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -407,16 +500,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/b.js" />
-    <entry file="file://$PROJECT_DIR$/demo/marry/a.css" />
-    <entry file="file://$PROJECT_DIR$/demo/marry/abc.html" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/tags.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/webpack/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -696,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1487">
           <caret line="117" column="24" lean-forward="false" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,7 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,6 +808,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
           <caret line="68" column="31" lean-forward="true" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react-redux.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react-immutable.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react-flux.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding />
         </state>
       </provider>
