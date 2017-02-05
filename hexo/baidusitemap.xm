@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2017/02/05/react-redux/</loc>
+    <lastmod>2017-02-05T09:44:37.811Z</lastmod>
+    <data>
+        <display>
+        <title>Redux</title>
+        <pubTime>2017-02-05T02:46:42.000Z</pubTime>
+        
+        <tag>react</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/18/react/</loc>
+    <lastmod>2017-02-05T08:30:03.326Z</lastmod>
+    <data>
+        <display>
+        <title>react</title>
+        <pubTime>2016-12-18T05:50:35.000Z</pubTime>
+        
+        <tag>react</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2017/02/04/react-flux/</loc>
     <lastmod>2017-02-05T02:48:35.594Z</lastmod>
     <data>
@@ -27,23 +61,6 @@
         <display>
         <title>react-immutable</title>
         <pubTime>2017-02-03T02:45:40.000Z</pubTime>
-        
-        <tag>react</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2017/02/05/react-redux/</loc>
-    <lastmod>2017-02-05T02:48:13.327Z</lastmod>
-    <data>
-        <display>
-        <title>react-redux</title>
-        <pubTime>2017-02-05T02:46:42.000Z</pubTime>
         
         <tag>react</tag>
          
@@ -414,23 +431,6 @@
         <tag>Git</tag>
          
         <tag>服务器</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2016/12/18/react/</loc>
-    <lastmod>2016-12-22T07:04:19.209Z</lastmod>
-    <data>
-        <display>
-        <title>react</title>
-        <pubTime>2016-12-18T05:50:35.000Z</pubTime>
-        
-        <tag>react</tag>
          
          
            

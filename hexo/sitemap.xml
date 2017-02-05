@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyi10year.github.io/2017/02/05/react-redux/</loc>
+    
+    <lastmod>2017-02-05T09:44:37.811Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/2016/12/18/react/</loc>
+    
+    <lastmod>2017-02-05T08:30:03.326Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/2017/02/04/react-flux/</loc>
     
     <lastmod>2017-02-05T02:48:35.594Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://luyi10year.github.io/2017/02/03/react-immutable/</loc>
     
     <lastmod>2017-02-05T02:48:30.403Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/2017/02/05/react-redux/</loc>
-    
-    <lastmod>2017-02-05T02:48:13.327Z</lastmod>
     
   </url>
   
@@ -163,13 +170,6 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/2016/12/18/react/</loc>
-    
-    <lastmod>2016-12-22T07:04:19.209Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/2016/12/17/vue/</loc>
     
     <lastmod>2016-12-22T07:02:52.315Z</lastmod>
@@ -184,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/pre_css3_demo/demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -212,6 +212,13 @@
   </url>
   
   <url>
+    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/assets/demo/gift/js/index.main.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -233,14 +240,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/main.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -248,6 +248,13 @@
   
   <url>
     <loc>https://luyi10year.github.io/assets/demo/border1px.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/shake.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -268,14 +275,14 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/gift/index.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -303,14 +310,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/pre_css3_demo/demo.html</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/main.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
