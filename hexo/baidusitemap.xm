@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2017/02/13/wx-js-sdk-location-url/</loc>
+    <lastmod>2017-02-13T03:54:54.462Z</lastmod>
+    <data>
+        <display>
+        <title>wx签名出错-URL</title>
+        <pubTime>2017-02-13T02:16:29.000Z</pubTime>
+        
+        <tag>wx</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2017/02/05/react-redux/</loc>
     <lastmod>2017-02-05T09:44:37.811Z</lastmod>
     <data>

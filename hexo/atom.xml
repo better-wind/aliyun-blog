@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2017-02-05T09:44:37.811Z</updated>
+  <updated>2017-02-13T03:54:54.462Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wx签名出错-URL</title>
+    <link href="https://luyi10year.github.io/2017/02/13/wx-js-sdk-location-url/"/>
+    <id>https://luyi10year.github.io/2017/02/13/wx-js-sdk-location-url/</id>
+    <published>2017-02-13T02:16:29.000Z</published>
+    <updated>2017-02-13T03:54:54.462Z</updated>
+    
+    <content type="html"><![CDATA[<p>上周调试wx收货地址的时候<br>碰到一个签名出错的问题<br>invalid signature</p>
+<a id="more"></a>
+<h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><p>为了增强用户体验<br>在下单页选择收货地址的时候<br>如果是微信用户<br>新增添加微信地址的功能</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>调用wxAPI获取地址信息<br>转换地址信息格式<br>将新地址保存</p>
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><p>wx.openAddress方法中<br>cancel回调是取消选项</p>
+<p>wx地址选择中北京天津等自治区<br>新增县选项<br>北京市 北京市 朝阳区<br>北京市 县     密云县</p>
+<h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>因为方便测试<br>打开页面的方式都是通过<br>打开指定连接的形式<br><a href="http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1</a><br>一切OK<br>但是从商品详情页进入<br>在选择SKU下单的时候<br>wx.openAddress会调用不了<br>也就是 直接打开 <a href="http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1</a> 正常<br>先进商品详情页 ==&gt; <a href="http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1</a> 异常<br>invalid signature</p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p>直接打开链接<br>wx浏览器会对url连接进行转码(encode)<br>wx浏览器内部连接跳转<br>不会对url进行转码处理</p>
+<p>wx验证签名信息的时候<br>会将当前页面的链接进行转码处理(encode)</p>
+<p>所以<br>直接打开 <a href="http://www.xiangqu.com/order/submit/view?skuMap[q90060" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap[q90060</a>] = 1<br>wx的验证的URL = <a href="http://www.xiangqu.com/order/submit/view?skuMap%5Bq90060%5D=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap%5Bq90060%5D=1</a><br>服务端验证的URL = <a href="http://www.xiangqu.com/order/submit/view?skuMap%5Bq90060%5D=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap%5Bq90060%5D=1</a></p>
+<p>间接打开的 <a href="http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1</a><br>wx的验证的URL = <a href="http://www.xiangqu.com/order/submit/view?skuMap%5Bq90060%5D=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap%5Bq90060%5D=1</a><br>服务端验证的URL = <a href="http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1" target="_blank" rel="external">http://www.xiangqu.com/order/submit/view?skuMap[q90060]=1</a></p>
+<p>解决方法很简单<br>在跳转的时候<br>js先对链接进行转码</p>
+<h4 id="延伸"><a href="#延伸" class="headerlink" title="延伸"></a>延伸</h4><p>在处理url编码问题的时候<br>最好的方法就是Javascript先对URL进行编码<br>不通过浏览器编码<br>保证输出结果和服务器得到数据的一致</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上周调试wx收货地址的时候&lt;br&gt;碰到一个签名出错的问题&lt;br&gt;invalid signature&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="wx" scheme="https://luyi10year.github.io/tags/wx/"/>
+    
+  </entry>
   
   <entry>
     <title>Redux</title>

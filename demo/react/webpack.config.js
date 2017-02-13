@@ -4,7 +4,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        index:__dirname + '/dev/js/demo.js'
+        index:__dirname + '/dev/js/demo.js',
+        immu:__dirname + '/dev/js/immudemo.js',
+        reduxdemo:__dirname + '/dev/js/reduxdemo.js',
     },
     output: {
         path: __dirname + '/dist',
