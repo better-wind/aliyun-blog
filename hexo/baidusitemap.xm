@@ -4,13 +4,76 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2017/02/13/PReact/</loc>
-    <lastmod>2017-02-13T07:08:18.925Z</lastmod>
+    <loc>https://luyi10year.github.io/2017/02/27/vue-xq-cps/</loc>
+    <lastmod>2017-02-27T08:14:28.143Z</lastmod>
     <data>
         <display>
-        <title>'PReact'</title>
+        <title>基于Vue的CPS后台</title>
+        <pubTime>2017-02-27T08:12:34.000Z</pubTime>
+        
+        <tag>webpack</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/02/17/alibab-react-rax/</loc>
+    <lastmod>2017-02-27T08:11:54.174Z</lastmod>
+    <data>
+        <display>
+        <title>Rax</title>
+        <pubTime>2017-02-17T05:01:30.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>Rax</tag>
+         
+        <tag>React</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/02/21/alibab-weex/</loc>
+    <lastmod>2017-02-27T08:10:49.122Z</lastmod>
+    <data>
+        <display>
+        <title>Weex</title>
+        <pubTime>2017-02-21T08:09:34.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>Weex</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/02/13/PReact/</loc>
+    <lastmod>2017-02-27T08:07:51.685Z</lastmod>
+    <data>
+        <display>
+        <title>PReact</title>
         <pubTime>2017-02-13T07:08:18.000Z</pubTime>
         
+        <tag>RReact</tag>
+         
+        <tag>js</tag>
+         
          
            
         </display>
@@ -312,9 +375,9 @@
         <title>谈谈js的继承</title>
         <pubTime>2017-01-03T03:53:25.000Z</pubTime>
         
-        <tag>Es6</tag>
-         
         <tag>js</tag>
+         
+        <tag>Es6</tag>
          
          
            
