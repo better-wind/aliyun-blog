@@ -4,27 +4,8 @@
 
     
   <url>
-    <loc>https://luyi10year.github.io/2017/02/27/vue-xq-cps/</loc>
-    <lastmod>2017-02-27T08:14:28.143Z</lastmod>
-    <data>
-        <display>
-        <title>基于Vue的CPS后台</title>
-        <pubTime>2017-02-27T08:12:34.000Z</pubTime>
-        
-        <tag>webpack</tag>
-         
-        <tag>vue</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://luyi10year.github.io/2017/02/17/alibab-react-rax/</loc>
-    <lastmod>2017-02-27T08:11:54.174Z</lastmod>
+    <lastmod>2017-02-27T11:31:38.841Z</lastmod>
     <data>
         <display>
         <title>Rax</title>
@@ -35,6 +16,25 @@
         <tag>Rax</tag>
          
         <tag>React</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://luyi10year.github.io/2017/02/27/vue-xq-cps/</loc>
+    <lastmod>2017-02-27T08:14:28.143Z</lastmod>
+    <data>
+        <display>
+        <title>基于Vue的CPS后台</title>
+        <pubTime>2017-02-27T08:12:34.000Z</pubTime>
+        
+        <tag>webpack</tag>
+         
+        <tag>vue</tag>
          
          
            

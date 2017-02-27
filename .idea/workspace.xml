@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/alibab-react-rax.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -138,8 +138,8 @@
         <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/PReact.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/alibab-weex.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/alibab-react-rax.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/vue-xq-cps.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/alibab-react-rax.md" />
       </list>
     </option>
   </component>
@@ -205,24 +205,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,12 +388,12 @@
       <workItem from="1488161971272" duration="756000" />
       <workItem from="1488163285147" duration="3000" />
       <workItem from="1488181545540" duration="2607000" />
-      <workItem from="1488194712680" duration="270000" />
+      <workItem from="1488194712680" duration="413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337234000" />
+    <option name="totallyTimeSpent" value="337377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="32" width="1936" height="1176" extended-state="6" />
@@ -466,11 +448,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/assets/img/alipay.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
@@ -804,10 +781,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/alibab-react-rax.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding />
         </state>
       </provider>
