@@ -32,6 +32,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <!--<canvas id="anm-canvas" class="anm-canvas"></canvas>-->
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+      <img src='/img/wx-share.jpg' />
+    </div>
     <div class="header-star-col" id="starCanvasWrapWeb">
       <canvas id="starCanvasWeb"></canvas>
     </div>
@@ -167,7 +170,7 @@
 <p>用到的模块<br><figure class="highlight qml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</div><div class="line">    <span class="built_in">url</span> = <span class="built_in">require</span>(<span class="string">'url'</span>),</div><div class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>),</div><div class="line">    fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div></pre></td></tr></table></figure></p>
 <p>思路 获取访问路径，以文件后缀判断文件类型<br><figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var mimetype = &#123;</div><div class="line">    <span class="symbol">'txt'</span>: <span class="symbol">'text</span>/plain',</div><div class="line">    <span class="symbol">'html'</span>: <span class="symbol">'text</span>/html',</div><div class="line">    <span class="symbol">'css'</span>: <span class="symbol">'text</span>/css',</div><div class="line">    <span class="symbol">'xml'</span>: <span class="symbol">'application</span>/xml',</div><div class="line">    <span class="symbol">'json'</span>: <span class="symbol">'application</span>/json',</div><div class="line">    <span class="symbol">'js'</span>: <span class="symbol">'application</span>/javascript',</div><div class="line">    <span class="symbol">'jpg'</span>: <span class="symbol">'image</span>/jpeg',</div><div class="line">    <span class="symbol">'jpeg'</span>: <span class="symbol">'image</span>/jpeg',</div><div class="line">    <span class="symbol">'gif'</span>: <span class="symbol">'image</span>/gif',</div><div class="line">    <span class="symbol">'png'</span>: <span class="symbol">'image</span>/png',</div><div class="line">    <span class="symbol">'svg'</span>: <span class="symbol">'image</span>/svg+xml'</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>获取请求的时候判断请求文件是否存在，决定返回的类型</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(req,res)</span></span>&#123;</div><div class="line">    <span class="keyword">var</span> pathname = url.parse(req.url).pathname,</div><div class="line">        realPath = path.join(__dirname,<span class="string">'/static'</span>,pathname);</div><div class="line">    <span class="keyword">var</span> body = [];</div><div class="line">    req.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span><span class="params">(data)</span></span>&#123;</div><div class="line">        body.push(data);</div><div class="line">    &#125;)</div><div class="line">    req.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">        body = Buffer.concat(body);</div><div class="line">    &#125;)</div><div class="line">    fs.exists(realPath,<span class="function"><span class="keyword">function</span><span class="params">(ex)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(ex)&#123;</div><div class="line">            <span class="keyword">var</span> rs = fs.createReadStream(realPath);</div><div class="line">            res.writeHead(<span class="number">200</span>,&#123;</div><div class="line">                <span class="string">'Content-Type'</span>:mimetype[realPath.split(<span class="string">'.'</span>).pop()] || <span class="string">'text/plain'</span></div><div class="line">            &#125;)</div><div class="line">            rs.on(<span class="string">'data'</span>,res.write.bind(res))</div><div class="line">            rs.on(<span class="string">'close'</span>,res.end.bind(res));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            page_404(req,res,realPath); <span class="comment">//错误页面</span></div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;).listen(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> pathname = url.parse(req.url).pathname,</div><div class="line">        realPath = path.join(__dirname,<span class="string">'/static'</span>,pathname);</div><div class="line">    <span class="keyword">var</span> body = [];</div><div class="line">    req.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">        body.push(data);</div><div class="line">    &#125;)</div><div class="line">    req.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        body = Buffer.concat(body);</div><div class="line">    &#125;)</div><div class="line">    fs.exists(realPath,<span class="function"><span class="keyword">function</span>(<span class="params">ex</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span>(ex)&#123;</div><div class="line">            <span class="keyword">var</span> rs = fs.createReadStream(realPath);</div><div class="line">            res.writeHead(<span class="number">200</span>,&#123;</div><div class="line">                <span class="string">'Content-Type'</span>:mimetype[realPath.split(<span class="string">'.'</span>).pop()] || <span class="string">'text/plain'</span></div><div class="line">            &#125;)</div><div class="line">            rs.on(<span class="string">'data'</span>,res.write.bind(res))</div><div class="line">            rs.on(<span class="string">'close'</span>,res.end.bind(res));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            page_404(req,res,realPath); <span class="comment">//错误页面</span></div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;).listen(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
 <p>请求不存在</p>
 <figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="xml">function page_404(req,res,path)</span><span class="template-variable">&#123;</span></div><div class="line">    res.writeHead(404,&#123;</div><div class="line">        'Content-Type':'text/html'</div><div class="line">    &#125;<span class="xml">)</span></div><div class="line">    res.write('<span class="meta">&lt;!doctype html&gt;</span>\n');</div><div class="line">    res.write('<span class="tag">&lt;<span class="name">title</span>&gt;</span>404 Not Found<span class="tag">&lt;/<span class="name">title</span>&gt;</span>\n');</div><div class="line">    res.write('<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Not Found<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>');</div><div class="line">    res.write(</div><div class="line">        '<span class="tag">&lt;<span class="name">p</span>&gt;</span>The requested URL ' +</div><div class="line">        path +</div><div class="line">        ' was not found on this server.<span class="tag">&lt;/<span class="name">p</span>&gt;</span>'</div><div class="line">    );</div><div class="line">    res.end();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
@@ -318,6 +321,10 @@
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Node</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">Es6</a>
               </li>
             
@@ -330,15 +337,7 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Node</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Rem</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -358,7 +357,7 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">webpack</a>
+                <a href="javascript:void(0)">Rem</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -367,6 +366,10 @@
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">webpack</a>
               </li>
             
             <div class="clearfix"></div>

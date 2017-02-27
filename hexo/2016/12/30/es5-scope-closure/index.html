@@ -32,6 +32,9 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <!--<canvas id="anm-canvas" class="anm-canvas"></canvas>-->
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+      <img src='/img/wx-share.jpg' />
+    </div>
     <div class="header-star-col" id="starCanvasWrapWeb">
       <canvas id="starCanvasWeb"></canvas>
     </div>
@@ -164,7 +167,7 @@
       
         <p>函数的每次调用都有与之紧密相关的作用域和上下文<br>这俩者是完全不同的<br>作用域(Scope) 是基于函数的<br>作用域涉及到所被调用函数中的变量访问，并且不同的调用场景是不一样的<br>而上下文(Context)是基于对象的<br>上下文始终是this关键字的值，它是拥有(控制)当前所执行代码的对象的引用。</p>
 <a id="more"></a>
-<h5 id="作用域-Scope"><a href="#作用域-Scope" class="headerlink" title="作用域(Scope)"></a>作用域(Scope)</h5><p>首先只有函数具有作用域<br>也就是说，在一个函数内部声明的变量在函数外部无法访问<br>JavaScript的作用域是词法性质的<br>这这意味着函数运行在定义它的作用域中<br>而不是在调用它的作用域中<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">10</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span><span class="params">()</span></span>&#123;</div><div class="line">        a *= <span class="number">2</span>;</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> bar;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> baz = foo();</div><div class="line">baz(); <span class="comment">//20</span></div></pre></td></tr></table></figure></p>
+<h5 id="作用域-Scope"><a href="#作用域-Scope" class="headerlink" title="作用域(Scope)"></a>作用域(Scope)</h5><p>首先只有函数具有作用域<br>也就是说，在一个函数内部声明的变量在函数外部无法访问<br>JavaScript的作用域是词法性质的<br>这这意味着函数运行在定义它的作用域中<br>而不是在调用它的作用域中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="number">10</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        a *= <span class="number">2</span>;</div><div class="line">        <span class="keyword">return</span> a;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> bar;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> baz = foo();</div><div class="line">baz(); <span class="comment">//20</span></div></pre></td></tr></table></figure></p>
 <p>Es6之前 局部变量只能存在于函数体中<br>Es6开始支持let声明变量 局部变量能存在于块级作用域<br>通过var声明的变量会出现变量提升的问题</p>
 <blockquote>
 <p>变量的 声明周期<br>声明阶段(Declaration phase)<br>初始化阶段(Initialization phase)<br>   初始化阶段：variable = undefined<br>赋值阶段(Assignment phase)<br>   赋值阶段后：variable = ‘value’</p>
@@ -325,6 +328,10 @@
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">Node</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">Es6</a>
               </li>
             
@@ -337,15 +344,7 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Node</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">Rem</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -365,7 +364,7 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">webpack</a>
+                <a href="javascript:void(0)">Rem</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -374,6 +373,10 @@
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">webpack</a>
               </li>
             
             <div class="clearfix"></div>

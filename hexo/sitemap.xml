@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://luyi10year.github.io/2017/02/13/PReact/</loc>
+    
+    <lastmod>2017-02-13T07:08:18.925Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/2017/02/13/wx-js-sdk-location-url/</loc>
     
     <lastmod>2017-02-13T03:54:54.462Z</lastmod>
@@ -191,6 +198,13 @@
   </url>
   
   <url>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/assets/demo/hack_demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -212,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/jiugongge_demo2.html</loc>
+    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -247,14 +261,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/jquery.js</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/js/tagConfig.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/jiugongge_demo2.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -268,7 +275,28 @@
   </url>
   
   <url>
+    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://luyi10year.github.io/assets/demo/coffee_pc_demo/pro-con.html</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/mediator/mediator.js</loc>
+    
+    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://luyi10year.github.io/assets/demo/mediator/demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     
@@ -289,27 +317,6 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/mediator/demo.html</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/mediator/mediator.js</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
-    
-    <lastmod>2016-12-04T00:51:20.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://luyi10year.github.io/assets/demo/pre_css3_demo/demo.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
@@ -317,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://luyi10year.github.io/assets/demo/gift/js/zepto.min.js</loc>
+    <loc>https://luyi10year.github.io/assets/demo/my_news_reader/index.html</loc>
     
     <lastmod>2016-12-04T00:51:20.000Z</lastmod>
     

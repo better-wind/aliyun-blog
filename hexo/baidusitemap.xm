@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2017/02/13/PReact/</loc>
+    <lastmod>2017-02-13T07:08:18.925Z</lastmod>
+    <data>
+        <display>
+        <title>'PReact'</title>
+        <pubTime>2017-02-13T07:08:18.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2017/02/13/wx-js-sdk-location-url/</loc>
     <lastmod>2017-02-13T03:54:54.462Z</lastmod>
     <data>

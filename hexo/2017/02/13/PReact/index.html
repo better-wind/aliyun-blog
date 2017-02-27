@@ -6,20 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://luyi10year.github.io">
-  <title>ECMA-prototype | Louis Blog</title>
+  <title>&#39;PReact&#39; | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="要学好Js，首先必须得先理解原型(prototype)why？js作为面向对象的语言，实现面向对象的机制就是原型！">
+  <meta name="description" content="前端之路，渐行渐远。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ECMA-prototype">
-<meta property="og:url" content="https://luyi10year.github.io/2016/12/28/js-object-prototype/index.html">
+<meta property="og:title" content="'PReact'">
+<meta property="og:url" content="https://luyi10year.github.io/2017/02/13/PReact/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="要学好Js，首先必须得先理解原型(prototype)why？js作为面向对象的语言，实现面向对象的机制就是原型！">
-<meta property="og:image" content="https://luyi10year.github.io/assets/blogImg/prototype.png">
-<meta property="og:updated_time" content="2017-01-05T05:46:26.832Z">
+<meta property="og:description" content="前端之路，渐行渐远。">
+<meta property="og:updated_time" content="2017-02-13T07:08:18.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECMA-prototype">
-<meta name="twitter:description" content="要学好Js，首先必须得先理解原型(prototype)why？js作为面向对象的语言，实现面向对象的机制就是原型！">
-<meta name="twitter:image" content="https://luyi10year.github.io/assets/blogImg/prototype.png">
+<meta name="twitter:title" content="'PReact'">
+<meta name="twitter:description" content="前端之路，渐行渐远。">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -149,33 +147,25 @@
             <!--<canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>-->
           <!--</div>-->
           <div id="js-content" class="content-ll">
-            <article id="post-js-object-prototype" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-PReact" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ECMA-prototype
+      &#39;PReact&#39;
     </h1>
   
 
-        <a href="/2016/12/28/js-object-prototype/" class="archive-article-date">
-  	<time datetime="2016-12-28T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-28</time>
+        <a href="/2017/02/13/PReact/" class="archive-article-date">
+  	<time datetime="2017-02-13T07:08:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>要学好Js，首先必须得先理解原型(prototype)<br>why？<br>js作为面向对象的语言，实现面向对象的机制就是原型！</p>
-<a id="more"></a>
-<p>都说js中一切皆对象,那到底什么是对象呢？</p>
-<blockquote>
-<p>对象是属性的集合，并有一个原型对象。原型对象可以是空值。<br>按宿主环境分可以分为<br>原生对象：由ECMAScript规范定义其语义的对象<br>内置对象：由ECMAScript实现提供，独立于宿主环境的对象，ECMAScript程序开始执行时就存在(所有内置对象是原生对象)<br>宿主对象：由宿主环境提供的对象，用于完善ECMAScript执行环境(DOM,BOM)<br>按功能分可以分为：<br>普通对象：无原型对象<br>函数对象：有原型对象(函数对象的一个实例)</p>
-</blockquote>
-<p>我们这里只关注函数对象<br>那么到底什么是原型呢？<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//凡是通过new Function() 创建的对象都是函数对象</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> baz = <span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="comment">//Bar foo baz 都是函数对象</span></div><div class="line"></div><div class="line"><span class="comment">//原型对象本质是函数对象的一个实例</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line">Bar.prototype</div><div class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> Bar();</div><div class="line">Bar.prototype = temp;</div><div class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="built_in">Function</span>.prototype = temp</div><div class="line"><span class="comment">//构造器：创建和初始化对象的函数对象(在原型对象prototype中,prototype.constructor)</span></div><div class="line"><span class="comment">//原型对象prototype中都有个预定义的constructor属性，用来引用它的函数对象</span></div><div class="line"><span class="comment">//每个由构造器创建的对象拥有一个执行构造器prototype的属性值的隐式引用</span></div><div class="line"><span class="comment">//这个引用称之为原型</span></div><div class="line"><span class="comment">//每个原型可以拥有指向自己原型的隐式引用(原型的原型),就是所谓的原型链</span></div><div class="line"><span class="comment">//每个对象都有一个__proto__属性来实现对原型的隐式引用</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'Louis'</span>,</div><div class="line">    <span class="attr">age</span>:<span class="string">'24'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</div><div class="line">person.__proto__ = Person.prototype</div><div class="line">Person.prototype.__proto__ = <span class="built_in">Object</span>.prototype</div><div class="line"><span class="built_in">Object</span>.prototype.__proto__ = <span class="literal">null</span></div><div class="line"><span class="comment">//person对象由构造器Person创建</span></div><div class="line"><span class="comment">//所以person对Person.prototype有隐式引用(__proto__)</span></div><div class="line"><span class="comment">//Person对象又是由构造器Object创建</span></div><div class="line"><span class="comment">//所以Person对Object.prototype有隐式引用(__proto__)</span></div></pre></td></tr></table></figure></p>
-<p><img src="/assets/blogImg/prototype.png" alt="Prototype"></p>
-
+        
       
 
       
@@ -183,11 +173,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li></ul>
-	</div>
-
       
 
       
@@ -201,18 +186,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/30/es5-scope-closure/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          彻底理解Js中的作用域和上下文
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/12/27/js-base/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">你真的学好Js了吗</div>
+    <a href="/2017/02/13/wx-js-sdk-location-url/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">wx签名出错-URL</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -225,7 +201,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="js-object-prototype" data-title="ECMA-prototype" data-url="https://luyi10year.github.io/2016/12/28/js-object-prototype/"></div>
+	<div class="ds-thread" data-thread-key="PReact" data-title="&#39;PReact&#39;" data-url="https://luyi10year.github.io/2017/02/13/PReact/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
