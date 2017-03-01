@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://luyi10year.github.io/"/>
-  <updated>2017-02-27T08:14:28.143Z</updated>
+  <updated>2017-03-01T04:18:21.708Z</updated>
   <id>https://luyi10year.github.io/</id>
   
   <author>
@@ -20,15 +20,22 @@
     <link href="https://luyi10year.github.io/2017/02/27/vue-xq-cps/"/>
     <id>https://luyi10year.github.io/2017/02/27/vue-xq-cps/</id>
     <published>2017-02-27T08:12:34.000Z</published>
-    <updated>2017-02-27T08:14:28.143Z</updated>
+    <updated>2017-03-01T04:18:21.708Z</updated>
     
-    <content type="html"><![CDATA[<p>webpack 2.X vuex vue-router<br>整理中</p>
+    <content type="html"><![CDATA[<p>上周结束了在想去的最后一个项目<br>公众号联盟的推广后台<br><a id="more"></a></p>
+<h3 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h3><p>vue<br>应该不需要介绍<br>vuex<br>巴拉巴拉巴拉<br>vue-router<br>。。。。<br>webpack<br>这次用的版本是2.x跟1.x的配置还是有点出入</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>将整个后台按功能抽离成单独的模块<br>header 模块<br>footer 模块<br>menu 模块<br>page 分页模块<br>and 具体功能模块<br>balabalabalabala~~~<br>其实也没什么好说的。。。</p>
+<h3 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h3><p>还是有不少值得注意的地方的</p>
+<blockquote>
+<p>路由切换中页面的刷新<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//监听路由变化</span></div><div class="line">watch: &#123;</div><div class="line">      <span class="string">'$route'</span> (to, <span class="keyword">from</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (to.fullPath !== <span class="keyword">from</span>.fullPath) &#123;</div><div class="line">          <span class="keyword">this</span>.pageInt() <span class="comment">// 刷新处理</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>store交互数据的延迟<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回异步操作</span></div><div class="line"><span class="comment">//actions</span></div><div class="line">getOrder (&#123;commit&#125;, data) &#123;</div><div class="line">    <span class="keyword">const</span> opts = &#123;</div><div class="line">      <span class="attr">type</span>: <span class="string">'POST'</span>,</div><div class="line">      <span class="attr">url</span>: <span class="string">'/union/order/list'</span>,</div><div class="line">      <span class="attr">data</span>: data</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fetchLoading(commit, <span class="string">'SET_ORDER'</span>, opts)</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> fetchLoading = <span class="function">(<span class="params">commit, fn, opts</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">    beginLoading(commit)</div><div class="line">    Util.fetch(opts)</div><div class="line">      .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</div><div class="line">        stopLoading(commit)</div><div class="line">        <span class="keyword">if</span> (fn) &#123;</div><div class="line">          commit(fn, response)</div><div class="line">          resolve()</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          resolve(response)</div><div class="line">        &#125;</div><div class="line">      &#125;, error =&gt; &#123;</div><div class="line">        stopLoading(commit)</div><div class="line">        <span class="keyword">const</span> config = &#123;</div><div class="line">          <span class="attr">isShow</span>: <span class="literal">true</span>,</div><div class="line">          <span class="attr">isToast</span>: <span class="literal">true</span>,</div><div class="line">          <span class="attr">toastConfig</span>: &#123;</div><div class="line">            <span class="attr">toastMsg</span>: <span class="string">'系统繁忙,请稍后再试'</span></div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">        commit(<span class="string">'SET_POP'</span>, config)</div><div class="line">        <span class="built_in">console</span>.error(error)</div><div class="line">      &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">//模块中调用actions中方法</span></div><div class="line"><span class="keyword">this</span>.getOrder(opts)</div><div class="line">          .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="keyword">this</span>.getPaging(opts)</div><div class="line">          &#125;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>估计这周就离职了<br>额，就这样吧</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;webpack 2.X vuex vue-router&lt;br&gt;整理中&lt;/p&gt;
-
+      &lt;p&gt;上周结束了在想去的最后一个项目&lt;br&gt;公众号联盟的推广后台&lt;br&gt;
     
     </summary>
     
@@ -582,11 +589,11 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
-    
       <category term="Git" scheme="https://luyi10year.github.io/tags/Git/"/>
     
       <category term="服务器" scheme="https://luyi10year.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -773,11 +780,11 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
-    
       <category term="Git" scheme="https://luyi10year.github.io/tags/Git/"/>
     
       <category term="服务器" scheme="https://luyi10year.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="Linux" scheme="https://luyi10year.github.io/tags/Linux/"/>
     
   </entry>
   

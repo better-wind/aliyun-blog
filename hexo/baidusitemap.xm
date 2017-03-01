@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>https://luyi10year.github.io/2017/02/27/vue-xq-cps/</loc>
+    <lastmod>2017-03-01T04:18:21.708Z</lastmod>
+    <data>
+        <display>
+        <title>基于Vue的CPS后台</title>
+        <pubTime>2017-02-27T08:12:34.000Z</pubTime>
+        
+        <tag>webpack</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://luyi10year.github.io/2017/02/17/alibab-react-rax/</loc>
     <lastmod>2017-02-27T11:31:38.841Z</lastmod>
     <data>
@@ -16,25 +35,6 @@
         <tag>Rax</tag>
          
         <tag>React</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://luyi10year.github.io/2017/02/27/vue-xq-cps/</loc>
-    <lastmod>2017-02-27T08:14:28.143Z</lastmod>
-    <data>
-        <display>
-        <title>基于Vue的CPS后台</title>
-        <pubTime>2017-02-27T08:12:34.000Z</pubTime>
-        
-        <tag>webpack</tag>
-         
-        <tag>vue</tag>
          
          
            
@@ -466,11 +466,11 @@
         <title>Git自动化部署</title>
         <pubTime>2016-12-22T09:42:46.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Git</tag>
          
         <tag>服务器</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -521,11 +521,11 @@
         <title>学点运维，配个服务器</title>
         <pubTime>2016-12-15T09:08:08.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Git</tag>
          
         <tag>服务器</tag>
+         
+        <tag>Linux</tag>
          
          
            
