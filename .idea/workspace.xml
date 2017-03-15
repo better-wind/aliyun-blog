@@ -1,127 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/prototype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/source/assets/img/avatar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/source/assets/img/wxpay.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/bgMoon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/bgTree.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/star.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/_posts/a-chrismas-ico.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/BLbaFJDAJ1i.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/aj.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/border1px.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/browser-history.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/browser-history2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/changbaishan-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/changbaishan-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/chord1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/chord2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/css3_anm.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/css_hack.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/dragon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/gulangyu.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/immersion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/imp_search.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/instagram1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/instagram2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/lazyload.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/lijiang.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/litten.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/mediator1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/myReader0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/nginx0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/nginx1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/nginx2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/rabbit.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/reduce-http.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_001.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_002.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_003.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_004.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_005.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/up1_tips.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/volunteer1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/volunteer2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/volunteer3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/web_worker1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/web_worker2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/img/alipay.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/img/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/img/weixin.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/_config.yml" afterPath="$PROJECT_DIR$/hexo-blog/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/article.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/article.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/css.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/css.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/footer.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/footer.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/head.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/head.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/left-col.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/left-col.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/mobile-nav.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/mobile-nav.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/post/duoshuo.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/post/duoshuo.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/script.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/script.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/package.json" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/article-main.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/article-main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/grid.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/left.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/left.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile-slider.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile-slider.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/mobile.js" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/slider.js" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/slider.js" />
-    </list>
+    <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -359,84 +239,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yilia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yilia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source-src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yilia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source-src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliyun-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexo-blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="source" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -486,6 +288,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -682,12 +498,12 @@
       <workItem from="1488796824733" duration="869000" />
       <workItem from="1488938919879" duration="468000" />
       <workItem from="1488966209542" duration="1393000" />
-      <workItem from="1489561255113" duration="20302000" />
+      <workItem from="1489561255113" duration="20515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="376808000" />
+    <option name="totallyTimeSpent" value="377021000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -702,14 +518,14 @@
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19915701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19915701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28858024" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2654388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2654388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
