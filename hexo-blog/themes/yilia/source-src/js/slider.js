@@ -1,5 +1,5 @@
 // 动画
-import Anm from './anm'
+import Star from './star'
 // 浏览器判断
 import Browser from './browser'
 // Q 基础库
@@ -194,7 +194,11 @@ function init() {
 
 init()
 if (!isMobile) {
-	Anm.init()
+	// Anm.init()
+  Star.init(180,1000,200);
+} else{
+  Star.init(window.innerHeight*.8,500,window.innerHeight*.8*.8);
 }
+
 
 module.exports = {}

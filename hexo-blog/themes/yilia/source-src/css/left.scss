@@ -1,13 +1,44 @@
 .left-col {
-	background: #fff;
+	//background: #fff;
 	width: 300px;
 	position:fixed;
 	opacity:1;
 	transition:all .2s ease-in;
 	height:100%;
 	z-index: 999;
+  .moon {
+    position: absolute;
+    top: 112px;
+    left: 86px;
+    width: 128px;
+    height: 128px;
+    background-color: white;
+    opacity: 0;
+    border-radius: 50%;
+    transition: opacity 0.8s linear;
+    -webkit-transition: opacity 0.8s linear;
+  }
 	&.show {
 		@extend %shadow;
+    #header .profilepic{
+      opacity: 0;
+    }
+    .moon{
+      opacity: 1;
+      box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+      background-color: #fff;
+      -webkit-animation-name: lua;
+      animation-name: lua;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-duration: 10s;
+      animation-duration: 10s;
+      background: url('/img/bgMoon.png') no-repeat;
+      background-size: contain;
+      z-index: 10;
+    }
 	}
 	.overlay{
 		width: 100%;
@@ -81,7 +112,7 @@
 		.profilepic{
 			text-align: center;
 			display: block;
-			border: 5px solid #fff;
+			//border: 5px solid #fff;
 			border-radius: 300px;
 			width: 128px;
 			height: 128px;
@@ -95,6 +126,7 @@
 			-webkit-box-pack: center;
 			-webkit-box-align: center;
 			text-align: center;
+      opacity: 1;
 			img{
 				border-radius: 300px;
 				opacity: 1;

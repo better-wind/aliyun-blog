@@ -12,7 +12,7 @@
       <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
         <% if (theme.excerpt_link) { %>
-          <a class="article-more-a" href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %> >></a>
+          <!--<a class="article-more-a" href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>-->
         <% } %>
       <% } else { %>
         <%- post.content %>
@@ -28,7 +28,7 @@
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i><%= theme.reward_wording%><i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><%= theme.reward_wording%></p>
                   <div class="reward-box">
                     <% if(theme.alipay) {%>
                     <div class="reward-box-item">
@@ -62,7 +62,7 @@
       <%- partial('post/category') %>
       <% if (index && theme.show_all_link){ %>
         <p class="article-more-link">
-          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= theme.show_all_link %> >></a>
+          <a class="article-more-a" href="<%- url_for(post.path) %>"><%= theme.show_all_link %></a>
         </p>
       <% } %>
 

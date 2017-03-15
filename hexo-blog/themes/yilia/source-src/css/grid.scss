@@ -20,15 +20,28 @@ html, body, #container {
 #container{
 	position:relative;
 	min-height:100%;
-	.anm-canvas {
+  background: -webkit-linear-gradient(top, black 20%, #191327 80%, #2b2048);
+  .anm-canvas {
 		display: none;
 	}
 	&.show {
-		.anm-canvas {
-			display: block;
-			position: fixed;
-		}
+    background: -webkit-linear-gradient(top, black 20%, #191327 80%, #2b2048);
 	}
+}
+.header-star-col{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+}
+.footer-star-col{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 .body-wrap{
   margin-bottom: 80px;

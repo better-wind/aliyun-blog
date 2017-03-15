@@ -3,6 +3,10 @@ html, body, #container {
     overflow-x: hidden;
     overflow-y: auto;
 }
+.header-star-col{
+  height: 80%;
+}
+.footer-star-col{display: none}
 #mobile-nav {
 	display: block;
 }
@@ -15,6 +19,7 @@ html, body, #container {
 .mid-col {
     left: 0;
     position: relative;
+    background: -webkit-linear-gradient(top, black 20%, #191327 80%, #2b2048);
 }
 #header{
     .header-nav{
@@ -292,11 +297,11 @@ html, body, #container {
         color: #424242;
     }
 	.overlay{
-		height: 110px;
+		height: 150px;
 		position: absolute;
 		width: 100%;
-        z-index: 2;
-		background: #4d4d4d;
+    z-index: 2;
+    background: -webkit-linear-gradient(top, #2b2048 20%, #191327 80%, black);
 	}
 	#header{
 		padding: 10px 0 0 0;
@@ -307,7 +312,6 @@ html, body, #container {
 		}
 	}
 }
-
 .header-menu{
     height: auto;
     margin: 10px 0 20px;
@@ -325,7 +329,7 @@ html, body, #container {
             a {
                 color: #fff;
                 &.active {
-                    background: #81b5cc;
+                    //background: #81b5cc;
                 }
             }
         }
@@ -359,7 +363,7 @@ html, body, #container {
             color: #a0a0a0;
             &.active {
                 color: #eaeaea;
-                background: #a0a0a0;
+                //background: #a0a0a0;
             }
         }
     }

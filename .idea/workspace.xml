@@ -2,14 +2,130 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/你的项目/静态资源目录/js目录/公共js资源目录/angular.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/你的项目/静态资源目录/js目录/单独页面js目录/你自己的js.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/prototype.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/source/assets/img/avatar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/source/assets/img/wxpay.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/bgMoon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/bgTree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/star.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/_posts/a-chrismas-ico.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/BLbaFJDAJ1i.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/aj.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/border1px.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/browser-history.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/browser-history2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/bys3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/changbaishan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/changbaishan-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/chord1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/chord2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/ckxt4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/css3_anm.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/css_hack.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/diary-9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/dragon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/fengshui6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/gulangyu.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/immersion.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/imp_search.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/instagram1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/instagram2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/jiugongge9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/lazyload.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/lijiang.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/litten.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/localstorage5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/mediator1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/myReader0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/nginx0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/nginx1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/nginx2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/rabbit.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/reduce-http.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_002.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_004.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/safety_005.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/up1_tips.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/volunteer1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/volunteer2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/volunteer3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/web_worker1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/web_worker2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/blogImg/xmas_ico3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/img/alipay.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/img/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hexo-blog/source/assets/img/weixin.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/_config.yml" afterPath="$PROJECT_DIR$/hexo-blog/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/article.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/article.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/css.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/css.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/footer.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/footer.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/head.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/head.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/left-col.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/left-col.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/mobile-nav.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/mobile-nav.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/post/duoshuo.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/post/duoshuo.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/script.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/script.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/package.json" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/article-main.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/article-main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/grid.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/grid.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/left.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/left.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile-slider.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile-slider.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile.scss" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/mobile.js" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/mobile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/slider.js" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/slider.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +141,28 @@
     <favorites_list name="aliyun-blog" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="slider.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/slider.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="199" column="33" lean-forward="false" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="star.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/star.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,20 +173,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/tooltip.svg</find>
-      <find>stars</find>
-      <find>window.requestAnimationFrame</find>
-      <find>&lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;</find>
-      <find>id=&quot;container&quot;</find>
-      <find>#container</find>
-      <find>line-bg</find>
-      <find>js-mobile-aboutme</find>
-      <find>/img/city</find>
-      <find>/img/city-</find>
-      <find>article-tag-list-item</find>
       <find>colo</find>
       <find>left-col</find>
-      <find>container</find>
       <find>canvas-wrap</find>
       <find>viewer-box-l</find>
       <find>overlay</find>
@@ -62,10 +187,22 @@
       <find>400/q/75</find>
       <find>w/751/q/90</find>
       <find>data-src=&quot;</find>
-      <find>profilepic</find>
       <find>DemoModule</find>
       <find>Person</find>
       <find>/assets/img/avatar.jpg</find>
+      <find>container</find>
+      <find>.show</find>
+      <find>Anm</find>
+      <find>article-more-a</find>
+      <find>profilepic</find>
+      <find>.over</find>
+      <find>mobile-nav</find>
+      <find>active</find>
+      <find>SkySetting.height</find>
+      <find>SkySetting.spl</find>
+      <find>this.splitHeight</find>
+      <find>starSky</find>
+      <find>more</find>
     </findStrings>
     <dirStrings>
       <dir>F:\github\aliyun-blog\hexo-blog\themes</dir>
@@ -75,65 +212,71 @@
       <dir>F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src</dir>
       <dir>F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src\css</dir>
       <dir>F:\github\aliyun-blog\hexo-blog</dir>
+      <dir>E:\github\aliyun-blog\hexo-blog\themes\yilia\source-src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/js-object-prototype.md" />
-        <option value="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/es5-scope-closure.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/js-base.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/es5-es6-extends.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/js-design-patterns.md" />
-        <option value="$PROJECT_DIR$/demo/jsdesiginpatterns/js-base/base.js" />
-        <option value="$PROJECT_DIR$/demo/jsdesiginpatterns/extend/extend.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/node-base.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/websockt-chat-node.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/node-module-api.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/node-server.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/node-spider.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/weapp-login-vs-web-login.md" />
-        <option value="$PROJECT_DIR$/demo/canvas/ggl.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/canvas-xiaoxiaole.md" />
-        <option value="$PROJECT_DIR$/demo/canvas/star.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/canvas-snow.md" />
-        <option value="$PROJECT_DIR$/demo/canvas/canvasImage.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/canvas-fonts-image.md" />
-        <option value="$PROJECT_DIR$/demo/canvas/calligraphy.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/canvas-fonts-book.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/react-immutable.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/react-flux.md" />
-        <option value="$PROJECT_DIR$/demo/react/dev/js/banner.js" />
-        <option value="$PROJECT_DIR$/demo/react/.babelrc" />
-        <option value="$PROJECT_DIR$/demo/react/html/index.html" />
-        <option value="$PROJECT_DIR$/demo/react/package.json" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/react.md" />
-        <option value="$PROJECT_DIR$/demo/react/dev/js/demo.js" />
-        <option value="$PROJECT_DIR$/demo/react/.eslintrc.js" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/react-redux.md" />
-        <option value="$PROJECT_DIR$/demo/react/html/immutable.html" />
-        <option value="$PROJECT_DIR$/demo/react/dev/js/person.js" />
-        <option value="$PROJECT_DIR$/demo/react/dev/js/immudemo.js" />
-        <option value="$PROJECT_DIR$/demo/react/webpack.config.js" />
-        <option value="$PROJECT_DIR$/demo/react/html/redux.html" />
-        <option value="$PROJECT_DIR$/demo/react/dev/js/reduxdemo.js" />
-        <option value="$PROJECT_DIR$/demo/canvas/a.html" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/wx-js-sdk-location-url.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" />
-        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/PReact.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/alibab-weex.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/alibab-react-rax.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/vue-xq-cps.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/goodbye.md" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/time-say-bye-xq.md" />
-        <option value="$PROJECT_DIR$/hexo-blog/_config.yml" />
         <option value="$PROJECT_DIR$/hexo-blog/source/_posts/hello-world.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/head.ejs" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/article-main.scss" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/grid.scss" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/left-col.ejs" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/left.scss" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/a-chrismas-ico.markdown" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/footer.ejs" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/blog-find.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/post/duoshuo.ejs" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile-slider.scss" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/mobile.js" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/mobile-nav.ejs" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile.scss" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/slider.js" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/article.ejs" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-27-基于Vue的CPS后台.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-21-Weex.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-17-Rax.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-13-wx签名出错-URL.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-13-PReact.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-05-react-redux.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-04-react-flux.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-03-react-immutable.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-21-Canvas毛笔字书法.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-20-Canvas黑凤梨.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-19-Canvas星空.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-18-Canvas刮刮卡.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-03-谈谈js的继承.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-30-彻底理解Js中的作用域和上下文.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-28-ECMA-prototype.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-27-你真的学好Js.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-26-实时聊天谈谈通信协议.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-22-git自动化部署.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-19-移动端适配.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-18-react.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-16-webpack.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-15-aliyun-yunwei.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-14-incity.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-13-node-spider.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-13-node-server.md" />
+        <option value="$PROJECT_DIR$/hexo-blog/_config.yml" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml" />
+        <option value="$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/star.js" />
       </list>
     </option>
   </component>
@@ -151,11 +294,12 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/hexo-blog/node_modules" />
+    <handled-path value="$PROJECT_DIR$/hexo-blog/themes/yilia/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-10" />
-    <option name="y" value="44" />
-    <option name="width" value="1932" />
+    <option name="x" value="-8" />
+    <option name="y" value="32" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
@@ -201,8 +345,153 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yilia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yilia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source-src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yilia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source-src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aliyun-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,20 +506,22 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="ven&#9;FILE&#9;file://F:/github/aliyun-blog/demo/webpack/dist/vendor-2-54e173.js" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source\img" />
-      <recent name="F:\github\aliyun-blog\demo\react\dev\js" />
-      <recent name="F:\github\aliyun-blog\demo\react" />
-      <recent name="F:\github\aliyun-blog\demo\canvas" />
-      <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\blogImg" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\github\aliyun-blog\hexo-blog\source\assets\img" />
       <recent name="F:\github\aliyun-blog\demo\star" />
       <recent name="F:\github\aliyun-blog\demo\marry" />
       <recent name="F:\github\aliyun-blog\hexo-blog\source\assets\img" />
       <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source-src\css\fonts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\github\aliyun-blog\hexo-blog\source\assets\blogImg" />
+      <recent name="E:\github\aliyun-blog\hexo-blog\source\assets\img" />
+      <recent name="E:\github\aliyun-blog\hexo-blog\themes\yilia\source\img" />
+      <recent name="F:\github\aliyun-blog\hexo-blog\themes\yilia\source\img" />
+      <recent name="F:\github\aliyun-blog\demo\react\dev\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -388,33 +679,53 @@
       <workItem from="1488783576528" duration="4230000" />
       <workItem from="1488794200325" duration="315000" />
       <workItem from="1488795014566" duration="1775000" />
-      <workItem from="1488796824733" duration="632000" />
+      <workItem from="1488796824733" duration="869000" />
+      <workItem from="1488938919879" duration="468000" />
+      <workItem from="1488966209542" duration="1393000" />
+      <workItem from="1489561255113" duration="20302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354408000" />
+    <option name="totallyTimeSpent" value="376808000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-10" y="44" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26927137" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19915701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28858024" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5308776" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2654388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41074857" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -448,207 +759,422 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/webpack/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="29" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/dist/index.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/fix.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1488781997840" expanded="true" signature="216:223" ph="«" />
+            <marker date="1488781997840" expanded="true" signature="405:412" ph="»" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react.md" />
-    <entry file="file://$PROJECT_DIR$/demo/react/.babelrc">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/script.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/viewer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="1" />
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#init#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/react-redux.md" />
-    <entry file="file://$PROJECT_DIR$/demo/react/dev/js/index.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/dev/js/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1701">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#101#128#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/dev/js/banner.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/anm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+        <state relative-caret-position="213">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!block;n#addListeners#0;n#!!block;n#init#0" expanded="false" />
+            <element signature="n#!!block;n#scrollCheck#0;n#!!block;n#init#0" expanded="false" />
+            <element signature="n#!!block;n#resize#0;n#!!block;n#init#0" expanded="false" />
+            <element signature="n#!!block;n#Circle#0;n#!!block;n#init#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/dev/js/person.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/grid.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="292">
+          <caret line="27" column="78" lean-forward="false" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
+          <folding>
+            <element signature="e#592#613#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/dev/js/immudemo.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/viewer.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="n#div#3;n#div#0;n#body#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/a-chrismas-ico.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/footer.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/html/immutable.html">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/blog-find.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="162">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/html/index.html">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/mobile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="49" />
+        <state relative-caret-position="225">
+          <caret line="77" column="52" lean-forward="false" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/dev/js/demo.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+        <state relative-caret-position="162">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="e#5764#5869#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/star.js" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/main.js" />
-    <entry file="file://$PROJECT_DIR$/demo/react/package.json">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/left-col.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+        <state relative-caret-position="171">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/webpack.config.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/mobile-nav.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="179">
+          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding>
+            <element signature="n#div#1;n#nav#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#3;n#nav#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/html/redux.html">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/mobile-slider.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/react/.eslintrc.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/css/left.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="152">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/canvas/a.html">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/post/duoshuo.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="108">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/websockt-chat-node.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/wx-js-sdk-location-url.md" />
-    <entry file="file://$PROJECT_DIR$/demo/react/dev/js/reduxdemo.js">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/assets/img/weixin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/assets/img/alipay.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/article.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="223">
+          <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/index.ejs" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/left-col.ejs" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/_partial/viewer.ejs" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/city.jpg" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/preloader.gif" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/scrollbar_arrow.png" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/con_bg.jpg" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source/img/default-skin.png" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/alibab-weex.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/PReact.md" />
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-27-基于Vue的CPS后台.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-13-wx签名出错-URL.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="70" column="17" lean-forward="false" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-17-Rax.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-21-Weex.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-13-PReact.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-05-react-redux.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-04-react-flux.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-02-03-react-immutable.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-21-Canvas毛笔字书法.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-20-Canvas黑凤梨.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="131" column="13" lean-forward="false" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-19-Canvas星空.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-18-Canvas刮刮卡.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/alibab-react-rax.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/webpack.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/vue-xq-cps.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/goodbye.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/time-say-bye-xq.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/webpack.config.js" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/hello-world.md" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/db.json" />
-    <entry file="file://$PROJECT_DIR$/hexo/index.html">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2017-01-03-谈谈js的继承.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="292">
+          <caret line="217" column="0" lean-forward="true" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/package.json">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-30-彻底理解Js中的作用域和上下文.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="292">
+          <caret line="226" column="1" lean-forward="false" selection-start-line="226" selection-start-column="1" selection-end-line="226" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/_config.yml" />
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/_config.yml">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-28-ECMA-prototype.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="212">
+          <caret line="57" column="11" lean-forward="false" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/README.md">
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-27-你真的学好Js.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="136" column="3" lean-forward="true" selection-start-line="136" selection-start-column="3" selection-end-line="136" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-26-实时聊天谈谈通信协议.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="151" column="0" lean-forward="true" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-16-webpack.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="247" column="0" lean-forward="true" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-15-aliyun-yunwei.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-18-react.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-19-移动端适配.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="123" column="6" lean-forward="true" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-22-git自动化部署.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="71" column="14" lean-forward="false" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-14-incity.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-13-node-spider.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="180" column="3" lean-forward="true" selection-start-line="180" selection-start-column="3" selection-end-line="180" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/_posts/2016-12-13-node-server.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="129" column="18" lean-forward="true" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/source/assets/img/favor.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="199" column="33" lean-forward="false" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/source-src/js/star.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server-blog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hexo-blog/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding />
         </state>
       </provider>

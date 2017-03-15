@@ -1,7 +1,13 @@
 <%- partial('_partial/head') %>
 <body>
   <div id="container" q-class="show:isCtnShow">
-    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="header-star-col" id="starCanvasWrapWeb">
+      <canvas id="starCanvasWeb"></canvas>
+    </div>
+    <div class="footer-star-col">
+      <img src="/img/bgTree.png" alt="">
+    </div>
+    <!--<canvas id="anm-canvas" class="anm-canvas"></canvas>-->
     <div class="left-col" q-class="show:isShow">
       <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
     </div>
