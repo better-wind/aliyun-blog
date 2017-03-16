@@ -6,7 +6,12 @@ html, body, #container {
 .header-star-col{
   height: 80%;
 }
-.footer-star-col{display: none}
+#container {
+
+}
+.footer-mask{
+  background: -webkit-linear-gradient(top, black 60%, #191327 90%, #2b2048);
+}
 #mobile-nav {
 	display: block;
 }
@@ -19,7 +24,7 @@ html, body, #container {
 .mid-col {
     left: 0;
     position: relative;
-    background: -webkit-linear-gradient(top, black 20%, #191327 80%, #2b2048);
+    background: black;
 }
 #header{
     .header-nav{

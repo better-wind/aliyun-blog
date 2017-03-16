@@ -1,12 +1,18 @@
 <%- partial('_partial/head') %>
 <body>
   <div id="container" q-class="show:isCtnShow">
-    <div class="header-star-col" id="starCanvasWrapWeb">
-      <canvas id="starCanvasWeb"></canvas>
+    <div style="display: none">
+      <img src="/img/share.jpg" alt="">
     </div>
-    <div class="footer-star-col">
-      <img src="/img/bgTree.png" alt="">
+    <div class="footer-mask">
+      <div class="header-star-col" id="starCanvasWrapWeb">
+        <canvas id="starCanvasWeb"></canvas>
+      </div>
+      <div class="footer-star-col">
+        <img src="/img/bgTree.png" alt="">
+      </div>
     </div>
+
     <!--<canvas id="anm-canvas" class="anm-canvas"></canvas>-->
     <div class="left-col" q-class="show:isShow">
       <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>

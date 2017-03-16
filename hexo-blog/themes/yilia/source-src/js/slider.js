@@ -197,7 +197,7 @@ if (!isMobile) {
 	// Anm.init()
   Star.init(180,1000,200);
 } else{
-  Star.init(window.innerHeight*.8,500,window.innerHeight*.8*.8);
+  Star.init(200,500,window.innerHeight*.8*.8);
 }
 
 
