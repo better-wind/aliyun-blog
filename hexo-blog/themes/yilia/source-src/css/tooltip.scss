@@ -105,7 +105,7 @@
     .tooltip-east .tooltip-content::after {
         -webkit-transform: scale3d(-1,1,1);
         transform: scale3d(-1,1,1);
-    }    
+    }
 }
 
 .tooltip-top {
@@ -186,6 +186,7 @@
 
     .tooltip-inner {
         background: rgba(36,193,246,0.9);
+        //background: -webkit-linear-gradient(top, rgba(43,32,72,.9) 20%, rgba(25,19,39,.9) 80%, rgba(0,0,0,1));
         padding: 40px;
         -webkit-transform: translate3d(0,100%,0);
         transform: translate3d(0,100%,0);
