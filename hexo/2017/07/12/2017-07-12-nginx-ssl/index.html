@@ -6,24 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.fenghou.site">
-  <title>2017-07-12-nginx-ssl | Louis Blog</title>
+  <title>nginx配置https | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记一发网站升级（http—&amp;gt;https）
-linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
-这个openssl 是真坑服务器一般是自带opensslnginx配饰https 需要早编译时 将ssl模块打包进来./configure –with-http_ssl_module会报错 找不到openssl whatfuck ？换下面的方法./configure –wi">
+  <meta name="description" content="记一发网站升级（http—&amp;gt;https）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017-07-12-nginx-ssl">
+<meta property="og:title" content="nginx配置https">
 <meta property="og:url" content="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="记一发网站升级（http—&amp;gt;https）
-linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
-这个openssl 是真坑服务器一般是自带opensslnginx配饰https 需要早编译时 将ssl模块打包进来./configure –with-http_ssl_module会报错 找不到openssl whatfuck ？换下面的方法./configure –wi">
-<meta property="og:updated_time" content="2017-07-12T10:18:04.114Z">
+<meta property="og:description" content="记一发网站升级（http—&amp;gt;https）">
+<meta property="og:updated_time" content="2017-07-12T10:44:14.419Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017-07-12-nginx-ssl">
-<meta name="twitter:description" content="记一发网站升级（http—&amp;gt;https）
-linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
-这个openssl 是真坑服务器一般是自带opensslnginx配饰https 需要早编译时 将ssl模块打包进来./configure –with-http_ssl_module会报错 找不到openssl whatfuck ？换下面的方法./configure –wi">
+<meta name="twitter:title" content="nginx配置https">
+<meta name="twitter:description" content="记一发网站升级（http—&amp;gt;https）">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -154,7 +148,7 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
         
   
     <h1 class="article-title" itemprop="name">
-      2017-07-12-nginx-ssl
+      nginx配置https
     </h1>
   
 
@@ -167,13 +161,11 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>记一发网站升级（http—&gt;https）</p>
-<h3 id="linux-amp-nginx"><a href="#linux-amp-nginx" class="headerlink" title="linux&amp;nginx"></a>linux&amp;nginx</h3><h4 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h4><p>tar xvzf  压缩<br>rz<br>cp</p>
-<p>这个openssl 是真坑<br>服务器一般是自带openssl<br>nginx配饰https 需要早编译时 将ssl模块打包进来<br>./configure –with-http_ssl_module<br>会报错 找不到openssl whatfuck ？<br>换下面的方法<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>–with-openssl=应该为源文件目录 不是安装目录<br>如果不加 –with-openssl=/usr/bin/openssl 编译不会通过<br>但是可以通过修改 ssl配置文件修改</p>
-<h1 id="vi-auto-lib-openssl-conf"><a href="#vi-auto-lib-openssl-conf" class="headerlink" title="vi auto/lib/openssl/conf"></a>vi auto/lib/openssl/conf</h1><p>CORE_INCS=”$CORE_INCS $OPENSSL/.openssl/include”<br>CORE_DEPS=”$CORE_DEPS $OPENSSL/.openssl/include/openssl/ssl.h”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/.openssl/lib/libssl.a”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/.openssl/lib/libcrypto.a”<br>改为：<br>CORE_INCS=”$CORE_INCS $OPENSSL/include”<br>CORE_DEPS=”$CORE_DEPS $OPENSSL/include/openssl/ssl.h”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/lib/libssl.a”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/lib/libcrypto.a”</p>
+        <p>记一发网站升级（http—&gt;https）<br><a id="more"></a></p>
+<h3 id="linux-amp-nginx"><a href="#linux-amp-nginx" class="headerlink" title="linux&amp;nginx"></a>linux&amp;nginx</h3><p>这个openssl 是真坑<br>服务器一般是自带openssl<br>nginx配饰https 需要早编译时 将ssl模块打包进来<br>./configure –with-http_ssl_module<br>会报错 找不到openssl whatfuck ？<br>换下面的方法<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>–with-openssl=应该为源文件目录 不是安装目录<br>如果不加 –with-openssl=/usr/bin/openssl 编译不会通过<br>但是可以通过修改 ssl配置文件修改<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># vi auto/lib/openssl/conf</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/.openssl/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/.openssl/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libcrypto.a"</div><div class="line">改为：</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libcrypto.a"</div></pre></td></tr></table></figure></p>
 <p>但最后make 还是会报错</p>
 <p>注意这边重新编译nginx 只需要make<br>make之后 新编译的 nginx在objs下  将它拷贝到 nginx配置目录下的sbin即可</p>
-<h3 id="ssl配置"><a href="#ssl配置" class="headerlink" title="ssl配置"></a>ssl配置</h3><p>listen 443;<br>ssl on;<br>ssl_certificate /admin/ali-ssl/fenghou_site.pem;<br>ssl_certificate_key /admin/ali-ssl/fenghou_site.key;<br>ssl_session_timeout 5m;<br>ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;<br>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;<br>ssl_prefer_server_ciphers on;</p>
+<h3 id="ssl配置"><a href="#ssl配置" class="headerlink" title="ssl配置"></a>ssl配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">listen <span class="number">443</span>;</div><div class="line">ssl on;</div><div class="line">ssl_certificate /admin/ali-ssl/fenghou_site.pem;</div><div class="line">ssl_certificate_key /admin/ali-ssl/fenghou_site.key;</div><div class="line">ssl_session_timeout <span class="number">5</span>m;</div><div class="line">ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</div><div class="line">ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>;</div><div class="line">ssl_prefer_server_ciphers on;</div></pre></td></tr></table></figure>
 <p>nginx: [emerg] getpwnam(“www”) failed 错误处理方法</p>
 <p>方法一：在nginx.conf中 把user nobody的注释去掉既可</p>
 <p>方法二：错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令：<br>1 /usr/sbin/groupadd -f www<br>2 /usr/sbin/useradd -g www www</p>
@@ -307,7 +299,7 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
   
   <div class="duoshuo">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="2017-07-12-nginx-ssl" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>
+  <div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="nginx配置https" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -323,7 +315,7 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
   </script>
   <!-- 多说公共JS代码 end -->
 	<!--&lt;!&ndash; 多说评论框 start &ndash;&gt;-->
-	<!--<div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="2017-07-12-nginx-ssl" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>-->
+	<!--<div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="nginx配置https" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>-->
 	<!--&lt;!&ndash; 多说评论框 end &ndash;&gt;-->
 	<!--&lt;!&ndash; 多说公共JS代码 start (一个网页只需插入一次) &ndash;&gt;-->
 	<!--<script type="text/javascript">-->
@@ -428,6 +420,22 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
@@ -436,23 +444,7 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -464,11 +456,15 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">canvas</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -480,22 +476,6 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">https</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
@@ -504,7 +484,19 @@ linux&amp;amp;nginxopenssltar xvzf  压缩rzcp
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
             <div class="clearfix"></div>

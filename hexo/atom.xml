@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2017-07-12T10:18:04.114Z</updated>
+  <updated>2017-07-12T10:44:14.419Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -16,19 +16,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2017-07-12-nginx-ssl</title>
+    <title>nginx配置https</title>
     <link href="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"/>
     <id>//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</id>
     <published>2017-07-12T09:40:27.000Z</published>
-    <updated>2017-07-12T10:18:04.114Z</updated>
+    <updated>2017-07-12T10:44:14.419Z</updated>
     
-    <content type="html"><![CDATA[<p>记一发网站升级（http—&gt;https）</p>
-<h3 id="linux-amp-nginx"><a href="#linux-amp-nginx" class="headerlink" title="linux&amp;nginx"></a>linux&amp;nginx</h3><h4 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h4><p>tar xvzf  压缩<br>rz<br>cp</p>
-<p>这个openssl 是真坑<br>服务器一般是自带openssl<br>nginx配饰https 需要早编译时 将ssl模块打包进来<br>./configure –with-http_ssl_module<br>会报错 找不到openssl whatfuck ？<br>换下面的方法<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>–with-openssl=应该为源文件目录 不是安装目录<br>如果不加 –with-openssl=/usr/bin/openssl 编译不会通过<br>但是可以通过修改 ssl配置文件修改</p>
-<h1 id="vi-auto-lib-openssl-conf"><a href="#vi-auto-lib-openssl-conf" class="headerlink" title="vi auto/lib/openssl/conf"></a>vi auto/lib/openssl/conf</h1><p>CORE_INCS=”$CORE_INCS $OPENSSL/.openssl/include”<br>CORE_DEPS=”$CORE_DEPS $OPENSSL/.openssl/include/openssl/ssl.h”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/.openssl/lib/libssl.a”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/.openssl/lib/libcrypto.a”<br>改为：<br>CORE_INCS=”$CORE_INCS $OPENSSL/include”<br>CORE_DEPS=”$CORE_DEPS $OPENSSL/include/openssl/ssl.h”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/lib/libssl.a”<br>CORE_LIBS=”$CORE_LIBS $OPENSSL/lib/libcrypto.a”</p>
+    <content type="html"><![CDATA[<p>记一发网站升级（http—&gt;https）<br><a id="more"></a></p>
+<h3 id="linux-amp-nginx"><a href="#linux-amp-nginx" class="headerlink" title="linux&amp;nginx"></a>linux&amp;nginx</h3><p>这个openssl 是真坑<br>服务器一般是自带openssl<br>nginx配饰https 需要早编译时 将ssl模块打包进来<br>./configure –with-http_ssl_module<br>会报错 找不到openssl whatfuck ？<br>换下面的方法<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>–with-openssl=应该为源文件目录 不是安装目录<br>如果不加 –with-openssl=/usr/bin/openssl 编译不会通过<br>但是可以通过修改 ssl配置文件修改<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># vi auto/lib/openssl/conf</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/.openssl/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/.openssl/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libcrypto.a"</div><div class="line">改为：</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libcrypto.a"</div></pre></td></tr></table></figure></p>
 <p>但最后make 还是会报错</p>
 <p>注意这边重新编译nginx 只需要make<br>make之后 新编译的 nginx在objs下  将它拷贝到 nginx配置目录下的sbin即可</p>
-<h3 id="ssl配置"><a href="#ssl配置" class="headerlink" title="ssl配置"></a>ssl配置</h3><p>listen 443;<br>ssl on;<br>ssl_certificate /admin/ali-ssl/fenghou_site.pem;<br>ssl_certificate_key /admin/ali-ssl/fenghou_site.key;<br>ssl_session_timeout 5m;<br>ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;<br>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;<br>ssl_prefer_server_ciphers on;</p>
+<h3 id="ssl配置"><a href="#ssl配置" class="headerlink" title="ssl配置"></a>ssl配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">listen <span class="number">443</span>;</div><div class="line">ssl on;</div><div class="line">ssl_certificate /admin/ali-ssl/fenghou_site.pem;</div><div class="line">ssl_certificate_key /admin/ali-ssl/fenghou_site.key;</div><div class="line">ssl_session_timeout <span class="number">5</span>m;</div><div class="line">ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</div><div class="line">ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>;</div><div class="line">ssl_prefer_server_ciphers on;</div></pre></td></tr></table></figure>
 <p>nginx: [emerg] getpwnam(“www”) failed 错误处理方法</p>
 <p>方法一：在nginx.conf中 把user nobody的注释去掉既可</p>
 <p>方法二：错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令：<br>1 /usr/sbin/groupadd -f www<br>2 /usr/sbin/useradd -g www www</p>
@@ -37,8 +35,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;记一发网站升级（http—&amp;gt;https）&lt;/p&gt;
-&lt;h3 id=&quot;linux-amp-nginx&quot;&gt;&lt;a href=&quot;#linux-amp-nginx&quot; class=&quot;headerlink&quot; title=&quot;linux&amp;amp;nginx&quot;&gt;&lt;/a&gt;linux&amp;amp;
+      &lt;p&gt;记一发网站升级（http—&amp;gt;https）&lt;br&gt;
     
     </summary>
     
@@ -54,9 +51,15 @@
     <link href="//blog.fenghou.site/2017/05/17/2017-05-17-content-type/"/>
     <id>//blog.fenghou.site/2017/05/17/2017-05-17-content-type/</id>
     <published>2017-05-17T03:28:09.000Z</published>
-    <updated>2017-05-19T06:51:43.965Z</updated>
+    <updated>2017-07-12T10:45:49.231Z</updated>
+    
+    <content type="html"><![CDATA[<p>暂无查看权限</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;暂无查看权限&lt;/p&gt;
+
     
     </summary>
     
@@ -70,9 +73,15 @@
     <link href="//blog.fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/"/>
     <id>//blog.fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/</id>
     <published>2017-03-31T01:55:58.000Z</published>
-    <updated>2017-05-17T03:30:04.257Z</updated>
+    <updated>2017-07-12T10:45:49.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>暂无查看权限</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;暂无查看权限&lt;/p&gt;
+
     
     </summary>
     
@@ -86,9 +95,9 @@
     <link href="//blog.fenghou.site/2017/03/23/2017-03-23-love/"/>
     <id>//blog.fenghou.site/2017/03/23/2017-03-23-love/</id>
     <published>2017-03-23T02:22:59.000Z</published>
-    <updated>2017-03-23T04:29:09.779Z</updated>
+    <updated>2017-07-12T10:44:31.324Z</updated>
     
-    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=406346853&auto=0&height=66"></iframe><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=406346853&auto=0&height=66"></iframe><br><a id="more"></a></p>
 <p>八年<br>九十六个月<br>两千九百二十二天</p>
 <p><img src="/assets/blogImg/love/IMG_0053.PNG" alt="love"></p>
 <p>那会还很瘦的陈妞妞(当然现在也不怎么胖)<br><img src="/assets/blogImg/love/IMG_0045.JPG" alt="love"></p>
@@ -108,7 +117,7 @@
     <summary type="html">
     
       &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86
-src=&quot;http://music.163.com/outchain/player?type=2&amp;id=406346853&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+src=&quot;https://music.163.com/outchain/player?type=2&amp;id=406346853&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
     
     </summary>
     
@@ -122,9 +131,9 @@ src=&quot;http://music.163.com/outchain/player?type=2&amp;id=406346853&amp;auto=
     <link href="//blog.fenghou.site/2017/03/22/2017-03-21-diary/"/>
     <id>//blog.fenghou.site/2017/03/22/2017-03-21-diary/</id>
     <published>2017-03-22T06:05:31.000Z</published>
-    <updated>2017-03-23T02:38:49.657Z</updated>
+    <updated>2017-07-12T10:44:45.177Z</updated>
     
-    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=187908&auto=0&height=66"></iframe><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=187908&auto=0&height=66"></iframe><br><a id="more"></a></p>
 <p>昨天跟同事一起去打球<br>还没开始打，热身阶段投了会儿球<br>完了，跟跑完1000米一样一样的<br>后来还硬是打了快俩小时<br>今天全身酸爽的不行<br>连走路都走不顺</p>
 <p>唉 老是真的老了<br>想想上次打球<br>还是去年毕业前最后的寝室南北对抗赛</p>
 <p><img src="/assets/blogImg/2017-03-21-basekitball.jpg" alt="脆皮鸡"><br>(拍照那小子，问什么不把我照进去)</p>
@@ -137,7 +146,7 @@ src=&quot;http://music.163.com/outchain/player?type=2&amp;id=406346853&amp;auto=
     <summary type="html">
     
       &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86
-src=&quot;http://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
     
     </summary>
     
