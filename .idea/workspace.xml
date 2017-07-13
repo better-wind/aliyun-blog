@@ -2,7 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278117ba-5792-459e-8138-6c9b853aeda8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" afterPath="$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/13/2016-12-13-node-server/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/13/2016-12-13-node-server/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/13/2016-12-13-node-spider/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/13/2016-12-13-node-spider/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/14/2016-12-14-incity/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/14/2016-12-14-incity/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/15/2016-12-15-aliyun-yunwei/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/15/2016-12-15-aliyun-yunwei/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/16/2016-12-16-webpack/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/16/2016-12-16-webpack/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/18/2016-12-18-react/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/18/2016-12-18-react/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/19/2016-12-19-移动端适配/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/19/2016-12-19-移动端适配/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/22/2016-12-22-git自动化部署/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/22/2016-12-22-git自动化部署/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/26/2016-12-26-实时聊天谈谈通信协议/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/26/2016-12-26-实时聊天谈谈通信协议/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/27/2016-12-27-你真的学好Js/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/27/2016-12-27-你真的学好Js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/28/2016-12-28-ECMA-prototype/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/28/2016-12-28-ECMA-prototype/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2016/12/30/2016-12-30-彻底理解Js中的作用域和上下文/index.html" afterPath="$PROJECT_DIR$/hexo/2016/12/30/2016-12-30-彻底理解Js中的作用域和上下文/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/03/2017-01-03-谈谈js的继承/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/03/2017-01-03-谈谈js的继承/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/18/2017-01-18-Canvas刮刮卡/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/18/2017-01-18-Canvas刮刮卡/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/19/2017-01-19-Canvas星空/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/19/2017-01-19-Canvas星空/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/20/2017-01-20-Canvas黑凤梨/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/20/2017-01-20-Canvas黑凤梨/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/01/21/2017-01-21-Canvas毛笔字书法/index.html" afterPath="$PROJECT_DIR$/hexo/2017/01/21/2017-01-21-Canvas毛笔字书法/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/03/2017-02-03-react-immutable/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/03/2017-02-03-react-immutable/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/04/2017-02-04-react-flux/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/04/2017-02-04-react-flux/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/05/2017-02-05-react-redux/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/05/2017-02-05-react-redux/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/13/2017-02-13-PReact/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/13/2017-02-13-PReact/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/13/2017-02-13-wx签名出错-URL/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/13/2017-02-13-wx签名出错-URL/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/17/2017-02-17-Rax/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/17/2017-02-17-Rax/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/21/2017-02-21-Weex/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/21/2017-02-21-Weex/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/02/27/2017-02-27-基于Vue的CPS后台/index.html" afterPath="$PROJECT_DIR$/hexo/2017/02/27/2017-02-27-基于Vue的CPS后台/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/03/22/2017-03-21-diary/index.html" afterPath="$PROJECT_DIR$/hexo/2017/03/22/2017-03-21-diary/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/03/23/2017-03-23-love/index.html" afterPath="$PROJECT_DIR$/hexo/2017/03/23/2017-03-23-love/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/03/31/2017-03-31-nginx-proxy-vue/index.html" afterPath="$PROJECT_DIR$/hexo/2017/03/31/2017-03-31-nginx-proxy-vue/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/04/15/2017-04-15-vue-observe-watch/index.html" afterPath="$PROJECT_DIR$/hexo/2017/04/15/2017-04-15-vue-observe-watch/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/05/17/2017-05-17-content-type/index.html" afterPath="$PROJECT_DIR$/hexo/2017/05/17/2017-05-17-content-type/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/06/20/2017-06-20-node-simple-netease-cloud-music/index.html" afterPath="$PROJECT_DIR$/hexo/2017/06/20/2017-06-20-node-simple-netease-cloud-music/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/06/25/2017-06-25-vue-modules/index.html" afterPath="$PROJECT_DIR$/hexo/2017/06/25/2017-06-25-vue-modules/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/2017/07/12/2017-07-12-nginx-ssl/index.html" afterPath="$PROJECT_DIR$/hexo/2017/07/12/2017-07-12-nginx-ssl/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/12/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2016/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2016/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/01/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/01/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/02/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/02/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/03/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/03/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/04/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/04/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/05/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/05/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/06/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/06/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/07/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/07/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/2017/index.html" afterPath="$PROJECT_DIR$/hexo/archives/2017/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/archives/index.html" afterPath="$PROJECT_DIR$/hexo/archives/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/feed.json" afterPath="$PROJECT_DIR$/hexo/feed.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/index.html" afterPath="$PROJECT_DIR$/hexo/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/page/2/index.html" afterPath="$PROJECT_DIR$/hexo/page/2/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/page/3/index.html" afterPath="$PROJECT_DIR$/hexo/page/3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/page/4/index.html" afterPath="$PROJECT_DIR$/hexo/page/4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/page/5/index.html" afterPath="$PROJECT_DIR$/hexo/page/5/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Es6/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Es6/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Git/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Git/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Linux/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Linux/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/PReact/index.html" afterPath="$PROJECT_DIR$/hexo/tags/PReact/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Rax/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Rax/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/Weex/index.html" afterPath="$PROJECT_DIR$/hexo/tags/Weex/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/css/index.html" afterPath="$PROJECT_DIR$/hexo/tags/css/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/http/index.html" afterPath="$PROJECT_DIR$/hexo/tags/http/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/https/index.html" afterPath="$PROJECT_DIR$/hexo/tags/https/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/js/index.html" afterPath="$PROJECT_DIR$/hexo/tags/js/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/nginx/index.html" afterPath="$PROJECT_DIR$/hexo/tags/nginx/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/node/index.html" afterPath="$PROJECT_DIR$/hexo/tags/node/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/react/index.html" afterPath="$PROJECT_DIR$/hexo/tags/react/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/rem/index.html" afterPath="$PROJECT_DIR$/hexo/tags/rem/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/vue/index.html" afterPath="$PROJECT_DIR$/hexo/tags/vue/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/vuex/index.html" afterPath="$PROJECT_DIR$/hexo/tags/vuex/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/webpack/index.html" afterPath="$PROJECT_DIR$/hexo/tags/webpack/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/websocket/index.html" afterPath="$PROJECT_DIR$/hexo/tags/websocket/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/wx/index.html" afterPath="$PROJECT_DIR$/hexo/tags/wx/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/随想/index.html" afterPath="$PROJECT_DIR$/hexo/tags/随想/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/tags/随笔/index.html" afterPath="$PROJECT_DIR$/hexo/tags/随笔/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +99,8 @@
       <file leaf-file-name="layout.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="91" lean-forward="false" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
+            <state relative-caret-position="108">
+              <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -506,12 +578,12 @@
       <workItem from="1499852317406" duration="2167000" />
       <workItem from="1499855892355" duration="930000" />
       <workItem from="1499861531035" duration="2063000" />
-      <workItem from="1499911011307" duration="7902000" />
+      <workItem from="1499911011307" duration="8294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431256000" />
+    <option name="totallyTimeSpent" value="431648000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -906,8 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hexo-blog/themes/yilia/layout/layout.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="91" lean-forward="false" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
+        <state relative-caret-position="108">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
