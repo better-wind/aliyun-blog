@@ -1,6 +1,6 @@
-title: 'Content-type'
+title: '谈前端的请求'
 date: 2017-05-17 11:28:09
 tags:
     http
 ---
-暂无查看权限
+私人文章--暂无阅读权限

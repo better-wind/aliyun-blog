@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.fenghou.site">
-  <title>nginx配置https | Louis Blog</title>
+  <title>Nginx配置https | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记一发网站升级（http—&amp;gt;https）">
+  <meta name="description" content="最近刚续费阿里云服务器，肉疼中。。。今天先尝试了下 把http改成https 在这里记录一下">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx配置https">
+<meta property="og:title" content="Nginx配置https">
 <meta property="og:url" content="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="记一发网站升级（http—&amp;gt;https）">
-<meta property="og:updated_time" content="2017-07-12T10:44:14.419Z">
+<meta property="og:description" content="最近刚续费阿里云服务器，肉疼中。。。今天先尝试了下 把http改成https 在这里记录一下">
+<meta property="og:updated_time" content="2017-07-13T06:18:29.394Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nginx配置https">
-<meta name="twitter:description" content="记一发网站升级（http—&amp;gt;https）">
+<meta name="twitter:title" content="Nginx配置https">
+<meta name="twitter:description" content="最近刚续费阿里云服务器，肉疼中。。。今天先尝试了下 把http改成https 在这里记录一下">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -148,7 +148,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      nginx配置https
+      Nginx配置https
     </h1>
   
 
@@ -161,15 +161,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>记一发网站升级（http—&gt;https）<br><a id="more"></a></p>
-<h3 id="linux-amp-nginx"><a href="#linux-amp-nginx" class="headerlink" title="linux&amp;nginx"></a>linux&amp;nginx</h3><p>这个openssl 是真坑<br>服务器一般是自带openssl<br>nginx配饰https 需要早编译时 将ssl模块打包进来<br>./configure –with-http_ssl_module<br>会报错 找不到openssl whatfuck ？<br>换下面的方法<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>–with-openssl=应该为源文件目录 不是安装目录<br>如果不加 –with-openssl=/usr/bin/openssl 编译不会通过<br>但是可以通过修改 ssl配置文件修改<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># vi auto/lib/openssl/conf</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/.openssl/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/.openssl/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/.openssl/lib/libcrypto.a"</div><div class="line">改为：</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libcrypto.a"</div></pre></td></tr></table></figure></p>
-<p>但最后make 还是会报错</p>
-<p>注意这边重新编译nginx 只需要make<br>make之后 新编译的 nginx在objs下  将它拷贝到 nginx配置目录下的sbin即可</p>
-<h3 id="ssl配置"><a href="#ssl配置" class="headerlink" title="ssl配置"></a>ssl配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">listen <span class="number">443</span>;</div><div class="line">ssl on;</div><div class="line">ssl_certificate /admin/ali-ssl/fenghou_site.pem;</div><div class="line">ssl_certificate_key /admin/ali-ssl/fenghou_site.key;</div><div class="line">ssl_session_timeout <span class="number">5</span>m;</div><div class="line">ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</div><div class="line">ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>;</div><div class="line">ssl_prefer_server_ciphers on;</div></pre></td></tr></table></figure>
-<p>nginx: [emerg] getpwnam(“www”) failed 错误处理方法</p>
-<p>方法一：在nginx.conf中 把user nobody的注释去掉既可</p>
-<p>方法二：错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令：<br>1 /usr/sbin/groupadd -f www<br>2 /usr/sbin/useradd -g www www</p>
-<h3 id="证书来源"><a href="#证书来源" class="headerlink" title="证书来源"></a>证书来源</h3><p>startSSL<br>捣腾很久 终于配置成功 微信打开失败<br>。。。。<br>微信不认证<br>重新申请阿里云的 免费ssl证书<br>阿里云 受认证单个域名<br>申请 fenghou.site<br>blog.fenghou.site 还是空白<br>最后 修改ngixn配置<br>。。<br>暂时解决</p>
+        <p>最近刚续费阿里云服务器，肉疼中。。。<br>今天先尝试了下 把http改成https 在这里记录一下<br><a id="more"></a></p>
+<h3 id="Http和Https"><a href="#Http和Https" class="headerlink" title="Http和Https"></a>Http和Https</h3><p>关于http和https的差别 就不说了<br>反正不是只多了个s就对了~~</p>
+<h3 id="Linux中配置nginx"><a href="#Linux中配置nginx" class="headerlink" title="Linux中配置nginx"></a>Linux中配置nginx</h3><p>服务器上的项目是通过nginx跑起来的<br>所以主要还是围绕着nginx配置展开</p>
+<blockquote>
+<p>ssl on ;<br>我服务器上nginx配置编译的时候没有把ssl的模块编译进去<br>所以在这里报了缺少ssl指令的错误</p>
+</blockquote>
+<p>so 需要重新编译nginx<br>找到nginx下载目录 没了就就重新下~~</p>
+<blockquote>
+<p>./configure –with-http_ssl_module<br>很好 如果服务器上面已经安装了openssl 那么基本可以编译通过<br>yum install openssl openssl-devel<br>恩 如果编译的时候没有加载默认的 那么就需要手动配置<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>敲黑板 这么写 编译的时候openssl会去从–with-openssl 那里取<br>所以这里必须是源码目录 不应该安装目录</p>
+</blockquote>
+<p>补充：填了安装目录 编译失败 竟然也找到了编译通过的方法。。<br>修改方法<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># vi auto/lib/openssl/conf</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/openssl/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/openssl/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/openssl/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/openssl/lib/libcrypto.a"</div><div class="line">改为：</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libcrypto.a"</div></pre></td></tr></table></figure></p>
+<p>但是 make 的时候还是会报错 so~~</p>
+<p>make 打包成功后会在nginx源码目录的objs下生成nginx</p>
+<blockquote>
+<p>cp objs/nginx nginx配置目录/sbin<br>拷贝覆盖 即可</p>
+</blockquote>
+<p>然后配置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">listen <span class="number">443</span>;</div><div class="line">ssl on;</div><div class="line">ssl_certificate /---------------------.pem;</div><div class="line">ssl_certificate_key /-----------------.key;</div><div class="line">ssl_session_timeout <span class="number">5</span>m;</div><div class="line">ssl_ciphers -----------------------------------------------;</div><div class="line">ssl_protocols ------------------------;</div><div class="line">ssl_prefer_server_ciphers on;</div></pre></td></tr></table></figure></p>
+<p>配置ssl证书 基本就ok了</p>
+<blockquote>
+<p>sbin/nginx -t<br>  nginx: [emerg] getpwnam(“www”) failed</p>
+</blockquote>
+<p>错误的原因是没有创建www这个用户 解决办法</p>
+<blockquote>
+<p>1 在nginx.conf中 把user nobody的注释去掉既可<br>2 /usr/sbin/groupadd -f www<br>    /usr/sbin/useradd -g www www</p>
+</blockquote>
+<h3 id="关于证书"><a href="#关于证书" class="headerlink" title="关于证书"></a>关于证书</h3><p>生成步骤 百度。。。</p>
+<blockquote>
+<p>startSSL</p>
+</blockquote>
+<p>注册申请 生成ctr…<br>捣腾许久 终于配置成功 微信打开失败 不被认证</p>
+<blockquote>
+<p>Symantec Ltd</p>
+</blockquote>
+<p>在阿里云 免费申请ssl证书<br>nginx如果配置是全局https<br>but 受认证只能是 申请ssl时填写的域名<br>xx.xx 申请<br>xx.xx.xx 不被认证</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>解决问题的过程 很烦<br>解决完问题后  感觉很棒<br>不想搞运维的前端不是个好架构</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>今天下班 被分配到 小黑屋封闭开发<br>没空调。。<br>产品大哥 搞了3个立体风扇 设计了一套 小黑屋空气交换系统 棒！<br>but 网慢的代码都提交不了 是什么鬼</p>
 
       
 
@@ -284,8 +311,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2017/05/17/2017-05-17-content-type/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Content-type</div>
+    <a href="/2017/06/25/2017-06-25-vue-modules/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">谈谈我的vue项目架构</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -299,7 +326,7 @@
   
   <div class="duoshuo">
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="nginx配置https" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>
+  <div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="Nginx配置https" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -315,7 +342,7 @@
   </script>
   <!-- 多说公共JS代码 end -->
 	<!--&lt;!&ndash; 多说评论框 start &ndash;&gt;-->
-	<!--<div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="nginx配置https" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>-->
+	<!--<div class="ds-thread" data-thread-key="2017-07-12-nginx-ssl" data-title="Nginx配置https" data-url="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"></div>-->
 	<!--&lt;!&ndash; 多说评论框 end &ndash;&gt;-->
 	<!--&lt;!&ndash; 多说公共JS代码 start (一个网页只需插入一次) &ndash;&gt;-->
 	<!--<script type="text/javascript">-->
@@ -420,6 +447,10 @@
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -428,19 +459,15 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -476,6 +503,10 @@
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
@@ -484,15 +515,15 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
