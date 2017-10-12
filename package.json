@@ -1,0 +1,19 @@
+{
+  "name": "aliyun-blog",
+  "version": "1.0.0",
+  "description": "aliyun,blog",
+  "main": "server-blog.js",
+  "scripts": {
+    "build": "node server-blog.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luyi10year/aliyun-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luyi10year/aliyun-blog/issues"
+  },
+  "homepage": "https://github.com/luyi10year/aliyun-blog#readme"
+}

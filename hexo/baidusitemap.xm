@@ -4,6 +4,150 @@
 
     
   <url>
+    <loc>//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</loc>
+    <lastmod>2017-10-12T03:45:16.536Z</lastmod>
+    <data>
+        <display>
+        <title>canvas 图片裁剪</title>
+        <pubTime>2017-10-10T08:50:07.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</loc>
+    <lastmod>2017-09-30T07:49:37.627Z</lastmod>
+    <data>
+        <display>
+        <title>Js异步编程</title>
+        <pubTime>2017-08-02T02:19:25.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/07/20/2017-07-20-vue-event/</loc>
+    <lastmod>2017-09-30T03:35:49.219Z</lastmod>
+    <data>
+        <display>
+        <title>Vue事件</title>
+        <pubTime>2017-07-20T02:18:56.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/</loc>
+    <lastmod>2017-09-30T02:29:45.171Z</lastmod>
+    <data>
+        <display>
+        <title>MarkDown语法</title>
+        <pubTime>2016-12-12T02:25:27.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/</loc>
+    <lastmod>2017-09-30T02:28:09.603Z</lastmod>
+    <data>
+        <display>
+        <title>Js类型</title>
+        <pubTime>2017-09-19T02:02:58.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/</loc>
+    <lastmod>2017-09-30T02:24:21.610Z</lastmod>
+    <data>
+        <display>
+        <title>Linux 使用 Mysql</title>
+        <pubTime>2017-08-18T02:20:08.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>mysql</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/</loc>
+    <lastmod>2017-09-30T02:24:21.594Z</lastmod>
+    <data>
+        <display>
+        <title>Node-Session</title>
+        <pubTime>2017-08-20T02:20:32.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</loc>
+    <lastmod>2017-09-30T02:08:20.620Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx配置https</title>
+        <pubTime>2017-07-12T09:40:27.000Z</pubTime>
+        
+        <tag>nginx</tag>
+         
+        <tag>https</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/</loc>
     <lastmod>2017-07-13T06:36:54.660Z</lastmod>
     <data>
@@ -82,25 +226,6 @@
         <pubTime>2017-05-17T03:28:09.000Z</pubTime>
         
         <tag>http</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</loc>
-    <lastmod>2017-07-13T06:18:29.394Z</lastmod>
-    <data>
-        <display>
-        <title>Nginx配置https</title>
-        <pubTime>2017-07-12T09:40:27.000Z</pubTime>
-        
-        <tag>nginx</tag>
-         
-        <tag>https</tag>
          
          
            

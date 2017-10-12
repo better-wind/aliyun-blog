@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2017-07-13T06:18:29.394Z</updated>
+  <updated>2017-10-12T03:45:16.536Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -16,11 +16,153 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>canvas 图片裁剪</title>
+    <link href="//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/"/>
+    <id>//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</id>
+    <published>2017-10-10T08:50:07.000Z</published>
+    <updated>2017-10-12T03:45:16.536Z</updated>
+    
+    <content type="html"><![CDATA[<p>心血来潮想实现一个图片编辑器<br><a id="more"></a></p>
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>实现图片根据选择区域裁剪<br>选择区域大小可以拖动改变</p>
+<h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><blockquote>
+<p>裁切drawImage(image,x,y,w,h,_x,_y,_w,_h)</p>
+</blockquote>
+<p>x 裁切图片中x坐标<br>y 裁切图片中y坐标<br>w 裁切图片中的宽<br>h 裁切图片中的高<br>_x canvas中显示的x坐标<br>_y canvas中显示的y坐标<br>_w canvas中显示的宽<br>_h canvas中显示的高</p>
+<p>所以思路是 在图片上显示一个选择区域 可以拖动 获取相对于图片的位置 在canvas中加载图片</p>
+<blockquote>
+<p>拉伸大小</p>
+</blockquote>
+<p>宽度拉伸 可以通过在选择区域中绝对定位一个元素来模拟边框 监听它上面的move事件来处理</p>
+<blockquote>
+<p>旋转</p>
+</blockquote>
+<p>通过控制Img旋转来控制<br>一开始的想法是通过旋转选择区域来选取，但这样选择区域的获取图片数据会很繁琐而且意义不大<br>旋转通过样式transform:rotate(0deg)<br>在js获取样式时 要通过getComputedStyle这个API来获取<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clipV = <span class="built_in">window</span>.getComputedStyle(clip,<span class="literal">null</span>)</div><div class="line"><span class="keyword">var</span> clipTrans = clip.getPropertyValue(<span class="string">'transform'</span>)</div><div class="line"><span class="comment">// or var clipTrans = clip.transform</span></div><div class="line"><span class="comment">// 这时候获取的是一个二维矩阵</span></div><div class="line"><span class="comment">// 型如 matrix(20, 10, 10, 10, 0, 0)</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>关于matrix</p>
+</blockquote>
+<p>matrix(a,b,c,d,e,f)<br>e,f 控制 x, y轴的偏移位置</p>
+<p>a,b,c,d 控制旋转 旋转的角度(θ) matrix(cosθ,sinθ,-sinθ,cosθ,0,0)</p>
+<p>角度计算 angle = Math.round(Math.atan2(b, a) <em> (180 / Math.PI))<br>缩放计算<br><code>有旋转时</code><br>x轴缩放  scaleX = Math.sqrt(a </em> a + b <em> b)<br>y轴缩放  scaleY = Math.sqrt(c </em> c + d * d)<br><code>无旋转时</code><br>x轴缩放  scaleX = a<br>y轴缩放  scaleY = b</p>
+<p>matrix(1,tan(θy),tan(θx),1,0,0)<br>拉伸计算<br>x轴拉伸角度 skewX = Math.atan(c)<br>y轴拉伸角度 skewX = Math.atan(b)</p>
+<blockquote>
+<p>css动画界三巨头 transform transitions animation<br>举个例子<br>王者农药 新出一个英雄 <code>浪</code><br><code>一技能(transition)</code> 标记敌人 设置过度效果<br><code>二技能(transform)</code> 命中敌人 变化敌人<br><code>三技能(animation)</code> 命中目标 设置过度效果 变化敌人并带有过度效果(只产生效果)<br><code>被动(style.)</code>   二技能命中标记一技能的目标 会使二技能有过度效果；普攻第三次 变化敌人</p>
+<p>硝烟弥漫的峡谷中 刚刚结束一场战斗 我方四名英雄死于敌方小兵之手<br>这时。。。<br>我方<code>浪</code>出现在中路 对线敌方诸葛亮 李白 红蓝双buff在手<br>一技能 成功标记诸葛亮(李白逃脱)  transition:transform 100ms linear<br>反手 一个二技能  transform:translate(0px,100px)(移动到我方中路一塔下) 命中对方诸葛亮 和 李白<br>李白唰一下出现在我方塔下(效果如闪现) 诸葛亮也慢跑到塔下…<br><code>浪</code> double kill<br>对面鲁班 苏烈过来支援 反手一个 大招  animation:scale_leg(腿缩短至十分之一) 100ms 4  alternate linear<br>只见 鲁班 苏烈一会变高 一会变矮 …<br><code>浪</code> quadra kill<br>木兰从草丛杀出 一技能 怼脸上  transition:display 100ms linear 蓝条空了<br>普攻 普攻 丝血 闪现接普攻 触发被动<br>缓缓的消失吧，木兰！！ document.querySelector(‘花木兰’).style.display = ‘none’<br><code>浪</code> penta kill</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>css相关的还是要经常温故温故 不然真的容易忘了</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;心血来潮想实现一个图片编辑器&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js类型</title>
+    <link href="//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/"/>
+    <id>//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/</id>
+    <published>2017-09-19T02:02:58.000Z</published>
+    <updated>2017-09-30T02:28:09.603Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node-Session</title>
+    <link href="//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/"/>
+    <id>//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/</id>
+    <published>2017-08-20T02:20:32.000Z</published>
+    <updated>2017-09-30T02:24:21.594Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+    
+      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 使用 Mysql</title>
+    <link href="//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/"/>
+    <id>//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/</id>
+    <published>2017-08-18T02:20:08.000Z</published>
+    <updated>2017-09-30T02:24:21.610Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="//blog.fenghou.site/tags/linux/"/>
+    
+      <category term="mysql" scheme="//blog.fenghou.site/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Js异步编程</title>
+    <link href="//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/"/>
+    <id>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</id>
+    <published>2017-08-02T02:19:25.000Z</published>
+    <updated>2017-09-30T07:49:37.627Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue事件</title>
+    <link href="//blog.fenghou.site/2017/07/20/2017-07-20-vue-event/"/>
+    <id>//blog.fenghou.site/2017/07/20/2017-07-20-vue-event/</id>
+    <published>2017-07-20T02:18:56.000Z</published>
+    <updated>2017-09-30T03:35:49.219Z</updated>
+    
+    <content type="html"><![CDATA[<p>vue 中通过[$on]注册事件[$emit]来触发事件<br>这里来模拟一下它内部的实现机制<br>超简易<br><a id="more"></a></p>
+<h3 id="初始化Vue"><a href="#初始化Vue" class="headerlink" title="初始化Vue"></a>初始化Vue</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">V</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>._init()</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMixin</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">    v.prototype._init = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        initEvent(<span class="keyword">this</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">initMixin(V)</div></pre></td></tr></table></figure>
+<h3 id="初始化事件"><a href="#初始化事件" class="headerlink" title="初始化事件"></a>初始化事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initEvent</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">    v._events = <span class="built_in">Object</span>.create(<span class="literal">null</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="混合事件"><a href="#混合事件" class="headerlink" title="混合事件"></a>混合事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventsMixin</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">    v.prototype.$on = <span class="function"><span class="keyword">function</span>(<span class="params">name,fn</span>)</span>&#123;</div><div class="line">        <span class="keyword">this</span>._events[name] = fn</div><div class="line">    &#125;</div><div class="line">    v.prototype.$emit = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">        <span class="keyword">let</span> cbs = <span class="keyword">this</span>._events[event]</div><div class="line">        <span class="keyword">let</span> args = toArray(<span class="built_in">arguments</span>,<span class="number">1</span>)</div><div class="line">        cbs.apply(<span class="keyword">this</span>,args)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">eventsMixin(V)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toArray</span> (<span class="params">list, start</span>) </span>&#123;</div><div class="line">    start = start || <span class="number">0</span></div><div class="line">    <span class="keyword">let</span> i = list.length - start</div><div class="line">    <span class="keyword">const</span> ret = <span class="keyword">new</span> <span class="built_in">Array</span>(i)</div><div class="line">    <span class="keyword">while</span> (i--) &#123;</div><div class="line">        ret[i] = list[i + start]</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ret</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> V()</div><div class="line">v.$on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(msg)</div><div class="line">&#125;)</div><div class="line">v.$emit(<span class="string">'click'</span>,<span class="string">'emit'</span>)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vue 中通过[$on]注册事件[$emit]来触发事件&lt;br&gt;这里来模拟一下它内部的实现机制&lt;br&gt;超简易&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+    
+      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Nginx配置https</title>
     <link href="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"/>
     <id>//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</id>
     <published>2017-07-12T09:40:27.000Z</published>
-    <updated>2017-07-13T06:18:29.394Z</updated>
+    <updated>2017-09-30T02:08:20.620Z</updated>
     
     <content type="html"><![CDATA[<p>最近刚续费阿里云服务器，肉疼中。。。<br>今天先尝试了下 把http改成https 在这里记录一下<br><a id="more"></a></p>
 <h3 id="Http和Https"><a href="#Http和Https" class="headerlink" title="Http和Https"></a>Http和Https</h3><p>关于http和https的差别 就不说了<br>反正不是只多了个s就对了~~</p>
@@ -56,7 +198,7 @@
 <p>Symantec Ltd</p>
 </blockquote>
 <p>在阿里云 免费申请ssl证书<br>nginx如果配置是全局https<br>but 受认证只能是 申请ssl时填写的域名<br>xx.xx 申请<br>xx.xx.xx 不被认证</p>
-<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>解决问题的过程 很烦<br>解决完问题后  感觉很棒<br>不想搞运维的前端不是个好架构</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>不想搞运维的前端不是个好架构</p>
 <h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>今天下班 被分配到 小黑屋封闭开发<br>没空调。。<br>产品大哥 搞了3个立体风扇 设计了一套 小黑屋空气交换系统 棒！<br>but 网慢的代码都提交不了 是什么鬼</p>
 ]]></content>
     
@@ -985,6 +1127,79 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     
     
       <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MarkDown语法</title>
+    <link href="//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/"/>
+    <id>//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/</id>
+    <published>2016-12-12T02:25:27.000Z</published>
+    <updated>2017-09-30T02:29:45.171Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><hr>
+<p><code>亮不亮</code></p>
+<p><a href="http://blog.csdn.net/guodongxiaren" title="悬停显示" target="_blank" rel="external">我的博客</a></p>
+<ul>
+<li>ES<ul>
+<li>JS<ul>
+<li>JS1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>数据结构</p>
+<blockquote>
+<p>树</p>
+<blockquote>
+<p>二叉树</p>
+<blockquote>
+<p>平衡二叉树</p>
+<blockquote>
+<p>满二叉树</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>第一格表头</th>
+<th>第二格表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容单元格 第一列第一格</td>
+<td>内容单元格第二列第一格</td>
+</tr>
+<tr>
+<td>内容单元格 第一列第二格 多加文字</td>
+<td>内容单元格第二列第二格</td>
+</tr>
+</tbody>
+</table>
+<p>加删除线像这样用： <del>删除这些</del></p>
+<ul>
+<li>[x] 支持 @提到某人、#引用、<a href="">链接</a>、<strong>格式化</strong> 和 <del>标签</del> 等语法</li>
+<li>[x] 需要使用列表语法来激活（无序或有序列表均可）</li>
+<li>[x] 这是一个已完成项目</li>
+<li>[ ] 这是一个未完成项目</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;A&quot;&gt;&lt;a href=&quot;#A&quot; class=&quot;headerlink&quot; title=&quot;A&quot;&gt;&lt;/a&gt;A&lt;/h1&gt;&lt;h2 id=&quot;B&quot;&gt;&lt;a href=&quot;#B&quot; class=&quot;headerlink&quot; title=&quot;B&quot;&gt;&lt;/a&gt;B&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;
+    
+    </summary>
+    
+    
+      <category term="markdown" scheme="//blog.fenghou.site/tags/markdown/"/>
     
   </entry>
   
