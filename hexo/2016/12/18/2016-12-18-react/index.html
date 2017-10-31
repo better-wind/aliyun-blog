@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="//blog.fenghou.site">
   <title>react | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="react">
+  <meta name="description" content="React相关-整理中">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react">
 <meta property="og:url" content="//blog.fenghou.site/2016/12/18/2016-12-18-react/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="react">
-<meta property="og:updated_time" content="2017-03-15T12:10:35.960Z">
+<meta property="og:description" content="React相关-整理中">
+<meta property="og:updated_time" content="2017-10-31T09:47:38.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react">
-<meta name="twitter:description" content="react">
+<meta name="twitter:description" content="React相关-整理中">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -162,7 +162,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>react<br><a id="more"></a></p>
+        <p>React相关-整理中<br><a id="more"></a></p>
 <p>在props里使用 onClick={ this.handleClick.bind(this) }<br>或者 onClick={ (e) =&gt; this.handleClick(e) }<br>或者 onClick={ ::this.handleClick }<br>都会产生性能问题，所以现在eslint在语法检查时就会阻止这几种写法，<br>问题原因是每一次render的时候如果遇到这些写法，<br>都会重新用handleClick函数与this去绑定从而重新创建一个新的函数，影响性能。<br>如果使用下面的写法则不会每次都创建：<br>// 1.<br>constructor() {<br>this.handleClick = this.handleClick.bind(this);<br>}<br>handleClick(e) { / … / }<br>// 2.<br>handleClick = (e) =&gt; { / … / };</p>
 <p>箭头函数不能用？<br>Parsing error: Unexpected token =<br>babel-eslint</p>
 
@@ -386,15 +386,7 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -402,11 +394,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -415,6 +407,10 @@
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -438,15 +434,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -466,15 +458,23 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">https</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">https</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
             <div class="clearfix"></div>

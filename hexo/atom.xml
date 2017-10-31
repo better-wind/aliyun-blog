@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2017-10-12T03:45:16.536Z</updated>
+  <updated>2017-10-30T10:19:45.277Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -16,11 +16,56 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>从源码看webpack</title>
+    <link href="//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/"/>
+    <id>//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/</id>
+    <published>2017-10-25T02:21:01.000Z</published>
+    <updated>2017-10-30T10:19:45.277Z</updated>
+    
+    <content type="html"><![CDATA[<p>研究研究 源码<br>总结总结 心得<br><a id="more"></a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>webpack 这边的配置<br>主要还是根据项目来灵活的配置<br>大的项目根据运行环境来区分 开发 测试 线上<br>本地的调试通过node来搭建<br>小的项目可以通过命令行的形式直接敲命令</p>
+<blockquote>
+<p>devServer</p>
+</blockquote>
+<p>devServer可以用来配置热加载 请求代理 静态资源访问等<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 可以配置在webpack配置对象里的devServer里面</span></div><div class="line">devServer: &#123;</div><div class="line">        <span class="attr">hot</span>:<span class="literal">true</span>,</div><div class="line">        <span class="attr">contentBase</span>:path.resolve(__dirname,<span class="string">'../'</span>),</div><div class="line">        <span class="attr">publicPath</span>:path.resolve(__dirname,<span class="string">'../assets/'</span>)</div><div class="line">    &#125;</div><div class="line"><span class="comment">// 或者在调用的时候传入</span></div><div class="line"><span class="keyword">var</span> server = <span class="keyword">new</span> WebpackDevServer(compiler,devServer)</div></pre></td></tr></table></figure></p>
+<p>通过 <code>webpack-dev-server</code>的源码可以看到<br>热加载是通过 <code>sockjs</code>来实现的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//实现原理 server.js</span></div><div class="line"><span class="keyword">var</span> sockjs_opts = &#123;<span class="attr">sockjs_url</span>: <span class="string">"http://cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js"</span>&#125;;</div><div class="line"><span class="keyword">var</span> sockjs = sockjs.createServer(sockjs_opts);</div><div class="line">sockjs.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">conn</span>) </span>&#123;</div><div class="line">    conn.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">message</span>) </span>&#123;</div><div class="line">        conn.write(message); <span class="comment">// 向客户端 发送</span></div><div class="line">    &#125;)</div><div class="line">&#125;);</div><div class="line"><span class="keyword">var</span> app = express(); </div><div class="line"><span class="keyword">var</span> server = http.createServer(app);</div><div class="line">sockjs.installHandlers(server, &#123;<span class="attr">prefix</span>:<span class="string">'/demo'</span>&#125;);</div><div class="line"><span class="comment">// client.js</span></div><div class="line"><span class="keyword">var</span> sockjs_url = <span class="string">'/demo'</span>;</div><div class="line"><span class="keyword">var</span> sockjs = <span class="keyword">new</span> SockJS(sockjs_url);</div><div class="line">sockjs.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="comment">// e.data</span></div><div class="line">    <span class="built_in">window</span>.location.reload()</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>这也是为什么 要在 entry中将 <code>webpack-dev-server/client?http://localhost:8080/</code>引进来的原因</p>
+<p>devServer的proxy是依赖<code>http-proxy-middleware</code>实现</p>
+<p>而 devServer中的publicPath指定的是根据 dev-server服务请求中的静态资源的目录</p>
+<blockquote>
+<p>devtool</p>
+</blockquote>
+<p>source-map 几种模式 主要还是解决 多模块文件的调试和明确报错提示</p>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>webpack 的启动可以通过命令行调用</p>
+<blockquote>
+<p><code>webpack --w --config --progress --color</code></p>
+</blockquote>
+<p>通过这个命令可以启动webpack 监听 配置文件config路径 以及进程和颜色<br>具体的实现过程 输入命令行后会 执行 <code>node_modules/.bin/webpack</code> 这个脚本<br>然后会启动 <code>node_modules/webpack/bin/webpack.js</code><br>通过 yargs 这个node插件可以获取 在命令行中输入的参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//config-yargs.js</span></div><div class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">yargs</span>) </span>&#123;</div><div class="line">    yargs</div><div class="line">        .help(<span class="string">"help"</span>)</div><div class="line">    	.alias(<span class="string">"help"</span>, <span class="string">"h"</span>)</div><div class="line">    	.version()</div><div class="line">    	.alias(<span class="string">"version"</span>, <span class="string">"v"</span>)</div><div class="line">    	.options(&#123;</div><div class="line">            <span class="string">"watch"</span>: &#123;</div><div class="line">            	<span class="attr">type</span>: <span class="string">"boolean"</span>,</div><div class="line">            	<span class="attr">alias</span>: <span class="string">"w"</span>,</div><div class="line">            	<span class="attr">describe</span>: <span class="string">"Watch the filesystem for changes"</span>,</div><div class="line">            	<span class="attr">group</span>: BASIC_GROUP</div><div class="line">            &#125;,</div><div class="line">            ...</div><div class="line">    	&#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//webpack.js</span></div><div class="line"><span class="keyword">var</span> options = <span class="built_in">require</span>(<span class="string">"./convert-argv"</span>)(yargs, argv);</div><div class="line"><span class="comment">//通过convert-argv.js 进行加工 返回一个混合配置文件的最终 options</span></div><div class="line">processOptions(options);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">processOptions</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">"../lib/webpack.js"</span>);</div><div class="line">    <span class="keyword">var</span> compiler = webpack(options);</div><div class="line">    <span class="keyword">if</span>(options.watch) &#123;</div><div class="line">    	compiler.watch(watchOptions, compilerCallback);</div><div class="line">    &#125; <span class="keyword">else</span></div><div class="line">    	compiler.run(compilerCallback);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="node"><a href="#node" class="headerlink" title="node"></a>node</h3><p>通过vue-cli构建的vue项目 开发是依赖 webpack<br>他是通过自己启动服务 将webpack作为中间件来运行<br>然后通过各种插件实现 代理 热加载等功能<br>通过express 来实现热加载 是依赖 <code>webpack-hot-middleware</code>实现<br>通过webpack构建的实例是继承<code>tapable</code>的<br><code>tapable</code> 用于事件发布执行的插件<br>通过 <code>plugin</code>注册事件<br>通过<code>applyPlugin</code>等响应事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> webpackConfig = <span class="built_in">require</span>(<span class="string">'./webpack.config'</span>)</div><div class="line"><span class="keyword">var</span> compiler = webpack(webpackConfig)</div><div class="line"><span class="keyword">var</span> hotMiddleware = <span class="built_in">require</span>(<span class="string">'webpack-hot-middleware'</span>)(compiler,&#123;</div><div class="line">    <span class="attr">log</span>:<span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">//通过 html-webpack-plugin-after-emit 来触发 行为</span></div><div class="line">compiler.plugin(<span class="string">'compilation'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">compilation</span>) </span>&#123;</div><div class="line">    compilation.plugin(<span class="string">'html-webpack-plugin-after-emit'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data, cb</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'------------'</span>)</div><div class="line">        hotMiddleware.publish(&#123; <span class="attr">action</span>: <span class="string">'reload'</span> &#125;)</div><div class="line">        cb()</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//client</span></div><div class="line"><span class="built_in">require</span>(<span class="string">'eventsource-polyfill'</span>)</div><div class="line"><span class="keyword">var</span> hotClient = <span class="built_in">require</span>(<span class="string">'webpack-hot-middleware/client?noInfo=true&amp;reload=true'</span>)</div><div class="line"><span class="comment">// 响应 刷新页面</span></div><div class="line">hotClient.subscribe(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (event.action === <span class="string">'reload'</span>) &#123;</div><div class="line">    <span class="built_in">window</span>.location.reload()</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>通过webpack的源码可以看到 webpack启动时 根据watch参数和回调来判断是否开启监听<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> mergeConfig = merge(webpackConfig,&#123;</div><div class="line">    <span class="attr">watch</span>:<span class="literal">true</span></div><div class="line">&#125;)</div><div class="line">webpack(mergeConfig)  <span class="comment">//监听</span></div><div class="line">webpack(mergeConfig,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;) <span class="comment">//监听</span></div><div class="line"><span class="comment">// 没有 回调 没有watch 执行watch</span></div><div class="line">compiler = webpack(mergeConfig)</div><div class="line">compiler.watch()</div></pre></td></tr></table></figure></p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>可以看到<code>webpack</code>的流程都是基于<code>tapable</code>订阅和发布机制来实现<br>而<code>tapable</code>的设计思想 是面向切面的编程设计aop<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//例子 统计A方法的调用次数</span></div><div class="line"><span class="comment">// 直接写在A方法里 耦合了A的业务逻辑</span></div><div class="line"><span class="comment">// 通过回调参数解决 增加后期维护难度</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'执行A的逻辑'</span>)   </div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">B</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'执行B的逻辑'</span>)  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//AOP</span></div><div class="line"><span class="built_in">Function</span>.prototype.logCount = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> _self = <span class="keyword">this</span></div><div class="line">     <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        fn.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>)</div><div class="line">        <span class="keyword">return</span> _self.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>)</div><div class="line">     &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> A_log = A.logCount(B)</div><div class="line">A_log()</div><div class="line"><span class="comment">// 业务解耦 面向切面进行拓展</span></div><div class="line"></div><div class="line"><span class="string">`tapable`</span>就是一句这种思想进行设计</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ComP</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>._plugins = &#123;&#125;</div><div class="line">&#125;</div><div class="line">ComP.prototype.plugin = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">ComP.prototype.applyPlugins = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">//webpack 的plugins 提供一个 apply 方法作为插件的入口</span></div><div class="line"><span class="comment">//并在这个方法中 发布时间</span></div><div class="line"><span class="comment">//在webpack构建时 调用apply方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">WebP</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> compiler = <span class="keyword">new</span> ComP();</div><div class="line">    compiler.apply.apply(compiler,options.plugins)</div><div class="line">    compiler.run();</div><div class="line">&#125;</div><div class="line"><span class="comment">// options.plugins 是个数组 这里使用apply的技巧 第二个参数接受数组 在调用的方法里转成列表</span></div><div class="line">ComP.prototype.apply = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</div><div class="line">            <span class="built_in">arguments</span>[i].apply(<span class="keyword">this</span>);</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">plugDemo</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="comment">//plugDemo 订阅emit事件 当webpack的构建流程到emit时执行</span></div><div class="line">plugDemo.prototype.apply = <span class="function"><span class="keyword">function</span>(<span class="params">compiler</span>)</span>&#123;</div><div class="line">    compiler.plugin(<span class="string">"emit"</span>, (callback) =&gt; &#123;</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'第一次执行'</span>)</div><div class="line">            callback()</div><div class="line">        &#125;,<span class="number">1500</span>)</div><div class="line"></div><div class="line">    &#125;);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> _obj = &#123;</div><div class="line">    <span class="attr">plugins</span>:[</div><div class="line">        <span class="keyword">new</span> plugDemo()</div><div class="line">    ],</div><div class="line">&#125;</div><div class="line">WebP(_obj)</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;研究研究 源码&lt;br&gt;总结总结 心得&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
     <title>canvas 图片裁剪</title>
     <link href="//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/"/>
     <id>//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</id>
     <published>2017-10-10T08:50:07.000Z</published>
-    <updated>2017-10-12T03:45:16.536Z</updated>
+    <updated>2017-10-12T08:16:50.138Z</updated>
     
     <content type="html"><![CDATA[<p>心血来潮想实现一个图片编辑器<br><a id="more"></a></p>
 <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>实现图片根据选择区域裁剪<br>选择区域大小可以拖动改变</p>
@@ -32,11 +77,12 @@
 <blockquote>
 <p>拉伸大小</p>
 </blockquote>
-<p>宽度拉伸 可以通过在选择区域中绝对定位一个元素来模拟边框 监听它上面的move事件来处理</p>
+<p>宽度拉伸 可以通过在选择区域中绝对定位一个元素来模拟边框 监听它上面的move事件来处理<br>这里注意事件的执行机制<br>事件的执行机制分为冒泡型和捕获型<br>冒泡型事件 从当前节点开始执行 一路传递给绑定当前事件的父元素 知道根节点为止<br>捕获型事件 从最外层绑定该事件的元素往子元素传递<br>addEventListener第三个参数默认false true表示冒泡事件 false表示捕获事件<br>可以通过<br>event.stopPropagation()<br>来阻止事件的冒泡<br>event.preventDefault()<br>这个是用来阻止事件的默认操作</p>
 <blockquote>
 <p>旋转</p>
 </blockquote>
-<p>通过控制Img旋转来控制<br>一开始的想法是通过旋转选择区域来选取，但这样选择区域的获取图片数据会很繁琐而且意义不大<br>旋转通过样式transform:rotate(0deg)<br>在js获取样式时 要通过getComputedStyle这个API来获取<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clipV = <span class="built_in">window</span>.getComputedStyle(clip,<span class="literal">null</span>)</div><div class="line"><span class="keyword">var</span> clipTrans = clip.getPropertyValue(<span class="string">'transform'</span>)</div><div class="line"><span class="comment">// or var clipTrans = clip.transform</span></div><div class="line"><span class="comment">// 这时候获取的是一个二维矩阵</span></div><div class="line"><span class="comment">// 型如 matrix(20, 10, 10, 10, 0, 0)</span></div></pre></td></tr></table></figure></p>
+<p>通过控制Img旋转来控制<br>一开始的想法是通过旋转选择区域来选取，但这样选择区域的获取图片数据会很繁琐而且意义不大<br>旋转通过样式transform:rotate(0deg)<br>在js获取样式时 要通过getComputedStyle这个API来获取<br>style获取的是元素style属性中的样式 可读可写<br>所以通过style设置的元素回出现在元素的style属性中<br>getComputedStyle 获取的是最终作用在节点上的样式 只读<br>currentStyle IE自娱自乐产物 语法跟style类似 功能跟 getComputedStyle类似</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clipV = <span class="built_in">window</span>.getComputedStyle(clip,<span class="literal">null</span>)</div><div class="line"><span class="keyword">var</span> clipTrans = clip.getPropertyValue(<span class="string">'transform'</span>)</div><div class="line"><span class="comment">// or var clipTrans = clip.transform</span></div><div class="line"><span class="comment">// 这时候获取的是一个二维矩阵</span></div><div class="line"><span class="comment">// 型如 matrix(20, 10, 10, 10, 0, 0)</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>关于matrix</p>
 </blockquote>
@@ -67,9 +113,57 @@
     <link href="//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/"/>
     <id>//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/</id>
     <published>2017-09-19T02:02:58.000Z</published>
-    <updated>2017-09-30T02:28:09.603Z</updated>
+    <updated>2017-10-23T06:16:49.433Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结一些输入框中类型的判断<br><a id="more"></a></p>
+<p>列举几个常用判断为空的情况<code>以下等于(==)不等于(!=)</code></p>
+<table>
+<thead>
+<tr>
+<th>对象</th>
+<th>不等于</th>
+<th>等于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>‘’ false 0 []</td>
+<td>null</td>
+</tr>
+<tr>
+<td>null</td>
+<td>‘’ false 0 []</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>‘’</td>
+<td>null undefined</td>
+<td>false 0 []</td>
+</tr>
+<tr>
+<td>0</td>
+<td>null undefined</td>
+<td>false ‘’ []</td>
+</tr>
+<tr>
+<td>false</td>
+<td>null undefined</td>
+<td>0 ‘’ []</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>null undefined</td>
+<td>false 0 ‘’</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="literal">undefined</span> || <span class="literal">null</span> || <span class="string">''</span> || <span class="number">0</span> || <span class="literal">false</span></div><div class="line"><span class="keyword">if</span>(!a)&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'会执行'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> b = a || <span class="string">'test'</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">// test</span></div><div class="line"><span class="comment">//判断是否输入了</span></div><div class="line"><span class="comment">//转成string 一来replace可以调用 而来 如果数据是一开始写入的0</span></div><div class="line"><span class="keyword">var</span> _s = (inputVal+<span class="string">''</span>).replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>,<span class="string">''</span>)</div><div class="line"><span class="keyword">if</span>(_s)&#123;</div><div class="line">    <span class="comment">//输入有效</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;总结一些输入框中类型的判断&lt;br&gt;
     
     </summary>
     
@@ -83,9 +177,14 @@
     <link href="//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/"/>
     <id>//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/</id>
     <published>2017-08-20T02:20:32.000Z</published>
-    <updated>2017-09-30T02:24:21.594Z</updated>
+    <updated>2017-10-31T09:49:58.787Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;整理中&lt;br&gt;
     
     </summary>
     
@@ -101,9 +200,14 @@
     <link href="//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/"/>
     <id>//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/</id>
     <published>2017-08-18T02:20:08.000Z</published>
-    <updated>2017-09-30T02:24:21.610Z</updated>
+    <updated>2017-10-31T09:49:53.344Z</updated>
+    
+    <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt;整理中&lt;br&gt;
     
     </summary>
     
@@ -115,13 +219,56 @@
   </entry>
   
   <entry>
+    <title>eventLoop</title>
+    <link href="//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/"/>
+    <id>//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/</id>
+    <published>2017-08-08T08:28:27.000Z</published>
+    <updated>2017-10-31T09:43:28.471Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录事件循环机制<br><a id="more"></a></p>
+<h3 id="alert引起的争论"><a href="#alert引起的争论" class="headerlink" title="alert引起的争论"></a>alert引起的争论</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">0</span></div><div class="line"><span class="keyword">var</span> inter = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(count == <span class="number">100</span>)&#123;</div><div class="line">        <span class="built_in">document</span>.querySelector(<span class="string">'#process'</span>).innerText = count+<span class="string">'%'</span></div><div class="line">        <span class="built_in">console</span>.log(count)</div><div class="line">        alert(<span class="string">'加载完成'</span>)</div><div class="line">        clearInterval(inter)</div><div class="line">    &#125;</div><div class="line">&#125;,<span class="number">100</span>)</div><div class="line"><span class="comment">//弹框时 页面上process显示的是什么？ 输出的count是什么？</span></div></pre></td></tr></table></figure>
+<p>要解决这个问题要理解js的事件循环机制是怎么实现的</p>
+<h3 id="单线程-amp-amp-任务队列-amp-amp-eventLoop"><a href="#单线程-amp-amp-任务队列-amp-amp-eventLoop" class="headerlink" title="单线程 &amp;&amp; 任务队列 &amp;&amp; eventLoop"></a>单线程 &amp;&amp; 任务队列 &amp;&amp; eventLoop</h3><p>首先Js是单线程的<br>主线程运行的时候，产生堆(heap)和栈(stack)<br>Js执行过程中将执行函数推入 执行栈中 执行结束后 弹出执行<br>当碰到js执行外部的API时会 js会将它当做任务源来处理 他返回的是一个待执行的任务<br>当这个任务满足执行条件时 js会将它推进一个 任务队列当中<br>当执行栈 为空时 js会去调取任务队列中任务 推入 执行栈中执行 这个过程就是 eventLoop<br>任务队列 分为 宏任务队列(macro-task)(task) 微任务队列(micro-task)(jobs)<br>当执行栈为空时 先回执行 微任务 然后再执行 宏任务</p>
+<blockquote>
+<p>触发任务的API<br>DOM(DOCUMENT),AJAX,setTimeOut,setInterval,Promise,process.nextTick,setImmediate<br>其中 加入宏队列中任务 DOM(DOCUMENT),AJAX,setTimeOut,setInterval,setImmediate<br>加入微任务队列中的任务 Promise,process.nextTick</p>
+</blockquote>
+<h3 id="真相"><a href="#真相" class="headerlink" title="真相"></a>真相</h3><blockquote>
+<p><img src="/assets/blogImg/2017-08-08-js-event-loop.png" alt="eventLoop"><br>图片来自Philip Roberts的演讲《Help, I’m stuck in an event-loop》</p>
+</blockquote>
+<p>所以 上面的js在执行中<br>遇到 <code>document.querySelector(&#39;#process&#39;).innerText = count+&#39;%&#39;</code><br>推入执行栈 由于是DOM操作判定为任务源 推出执行栈<br>加入到 宏任务队列<br>遇到 <code>console.log(count)</code><br>推入执行栈 控制台输出 100 推出执行栈<br>遇到 <code>alert(&#39;加载完成&#39;)</code><br>推入执行栈 弹窗确认后 推出执行栈<br>遇到 <code>clearInterval(inter)</code><br>推入执行栈 执行 推出执行栈<br>此时执行栈为空 开始调用 任务队列<br>微任务队列为空 直接调用宏任务队列<br>将 <code>document.querySelector(&#39;#process&#39;).innerText = count+&#39;%&#39;</code> dom操作推入执行栈<br>渲染页面 推出执行栈</p>
+<p>这里有个问题就是 碰到这个外部API时 并不是把 这些外部API推入任务队列<br>在执行栈中 这些API还是立即执行的 它分发的任务 才是延迟执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//譬如</span></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'log'</span>)</div><div class="line">&#125;,<span class="number">1000</span>)</div><div class="line"><span class="comment">//setTimeOut 会立即进入执行栈 并且执行</span></div><div class="line"><span class="comment">//它的第一个参数就是他要分发的任务 会在满足它的分发条件后进入任务队列 </span></div><div class="line"><span class="comment">// 上例就是1000ms后进入任务队列</span></div></pre></td></tr></table></figure></p>
+<p>再看下面的两个例子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//demo 1</span></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">B</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">8</span>);&#125;,<span class="number">0</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">5</span>);</div><div class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="number">7</span>);</div><div class="line">    &#125;)</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">6</span>)</div><div class="line">&#125;,<span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span>)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">reslove</span>)</span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="number">2</span>);</div><div class="line">     reslove()</div><div class="line">&#125;).then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="number">4</span>)</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(<span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment">//demo 2</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params">x</span>)</span>&#123;</div><div class="line">   setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="number">2.2</span>+x)</div><div class="line">   &#125;,<span class="number">0</span>)</div><div class="line">   <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="number">2.1</span>+x);</div><div class="line">   &#125;)</div><div class="line">   <span class="built_in">console</span>.log(<span class="number">1</span>+x)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">B</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    A(<span class="string">'B'</span>)</div><div class="line">&#125;</div><div class="line">A(<span class="string">'A'</span>)</div><div class="line">B()</div></pre></td></tr></table></figure></p>
+<p>联系上面的分析<br>第一题的输出 应该是 1 2 3 4 5 6 7 8</p>
+<p>第二题的输出 应该是 1A 1B 2.1A 2.1B 2.2A 2.2B</p>
+<p>写在一块输出 应该是 1 2 1A 1B 3 4 2.1A 2.1B 5 6 7 2.2A 2.2B 8</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录事件循环机制&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Js异步编程</title>
     <link href="//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/"/>
     <id>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</id>
     <published>2017-08-02T02:19:25.000Z</published>
-    <updated>2017-09-30T07:49:37.627Z</updated>
+    <updated>2017-10-25T02:12:25.780Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<h3 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h3><h3 id="generator"><a href="#generator" class="headerlink" title="generator"></a>generator</h3><h3 id="async-await"><a href="#async-await" class="headerlink" title="async await"></a>async await</h3><p>可以理解为generator 的语法糖<br>实现过程将generator 的表述移到语法内部实现(await)</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;promise&quot;&gt;&lt;a href=&quot;#promise&quot; class=&quot;headerlink&quot; title=&quot;promise&quot;&gt;&lt;/a&gt;promise&lt;/h3&gt;&lt;h3 id=&quot;generator&quot;&gt;&lt;a href=&quot;#genera
     
     </summary>
     
@@ -220,15 +367,14 @@
     <link href="//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/"/>
     <id>//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/</id>
     <published>2017-06-25T12:17:35.000Z</published>
-    <updated>2017-07-13T06:36:54.660Z</updated>
+    <updated>2017-10-31T09:49:41.918Z</updated>
     
-    <content type="html"><![CDATA[<p>私人文章–暂无阅读权限</p>
+    <content type="html"><![CDATA[<p>Vue相关-整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;私人文章–暂无阅读权限&lt;/p&gt;
-
+      &lt;p&gt;Vue相关-整理中&lt;br&gt;
     
     </summary>
     
@@ -244,15 +390,14 @@
     <link href="//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/"/>
     <id>//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</id>
     <published>2017-06-20T08:30:19.000Z</published>
-    <updated>2017-07-13T06:36:54.656Z</updated>
+    <updated>2017-10-31T09:49:41.902Z</updated>
     
-    <content type="html"><![CDATA[<p>私人文章–暂无阅读权限</p>
+    <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;私人文章–暂无阅读权限&lt;/p&gt;
-
+      &lt;p&gt;整理中&lt;br&gt;
     
     </summary>
     
@@ -266,15 +411,14 @@
     <link href="//blog.fenghou.site/2017/05/17/2017-05-17-content-type/"/>
     <id>//blog.fenghou.site/2017/05/17/2017-05-17-content-type/</id>
     <published>2017-05-17T03:28:09.000Z</published>
-    <updated>2017-07-13T06:36:54.644Z</updated>
+    <updated>2017-10-31T09:49:41.902Z</updated>
     
-    <content type="html"><![CDATA[<p>私人文章–暂无阅读权限</p>
+    <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;私人文章–暂无阅读权限&lt;/p&gt;
-
+      &lt;p&gt;整理中&lt;br&gt;
     
     </summary>
     
@@ -288,15 +432,14 @@
     <link href="//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/"/>
     <id>//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</id>
     <published>2017-04-15T12:16:29.000Z</published>
-    <updated>2017-07-13T06:36:54.648Z</updated>
+    <updated>2017-10-31T09:49:41.887Z</updated>
     
-    <content type="html"><![CDATA[<p>私人文章–暂无阅读权限</p>
+    <content type="html"><![CDATA[<p>Vue相关-整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;私人文章–暂无阅读权限&lt;/p&gt;
-
+      &lt;p&gt;Vue相关-整理中&lt;br&gt;
     
     </summary>
     
@@ -310,15 +453,14 @@
     <link href="//blog.fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/"/>
     <id>//blog.fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/</id>
     <published>2017-03-31T01:55:58.000Z</published>
-    <updated>2017-07-13T06:36:54.652Z</updated>
+    <updated>2017-10-31T09:48:48.870Z</updated>
     
-    <content type="html"><![CDATA[<p>私人文章–暂无阅读权限</p>
+    <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;私人文章–暂无阅读权限&lt;/p&gt;
-
+      &lt;p&gt;整理中&lt;br&gt;
     
     </summary>
     
@@ -432,15 +574,14 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/21/2017-02-21-Weex/"/>
     <id>//blog.fenghou.site/2017/02/21/2017-02-21-Weex/</id>
     <published>2017-02-21T11:17:14.000Z</published>
-    <updated>2017-03-21T06:07:06.855Z</updated>
+    <updated>2017-10-31T09:48:34.651Z</updated>
     
-    <content type="html"><![CDATA[<p>我就是个标题</p>
+    <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我就是个标题&lt;/p&gt;
-
+      &lt;p&gt;整理中&lt;br&gt;
     
     </summary>
     
@@ -454,15 +595,14 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/17/2017-02-17-Rax/"/>
     <id>//blog.fenghou.site/2017/02/17/2017-02-17-Rax/</id>
     <published>2017-02-17T11:16:59.000Z</published>
-    <updated>2017-03-21T06:07:06.842Z</updated>
+    <updated>2017-10-31T09:48:23.308Z</updated>
     
-    <content type="html"><![CDATA[<p>我就是个标题</p>
+    <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我就是个标题&lt;/p&gt;
-
+      &lt;p&gt;整理中&lt;br&gt;
     
     </summary>
     
@@ -476,15 +616,14 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/13/2017-02-13-PReact/"/>
     <id>//blog.fenghou.site/2017/02/13/2017-02-13-PReact/</id>
     <published>2017-02-13T11:16:39.000Z</published>
-    <updated>2017-03-21T06:07:11.041Z</updated>
+    <updated>2017-10-31T09:48:23.290Z</updated>
     
-    <content type="html"><![CDATA[<p>我就是个标题</p>
+    <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我就是个标题&lt;/p&gt;
-
+      &lt;p&gt;React相关-整理中&lt;br&gt;
     
     </summary>
     
@@ -530,15 +669,14 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/"/>
     <id>//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/</id>
     <published>2017-02-05T11:15:42.000Z</published>
-    <updated>2017-03-21T06:07:15.334Z</updated>
+    <updated>2017-10-31T09:48:23.299Z</updated>
     
-    <content type="html"><![CDATA[<p>我就是个标题</p>
+    <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我就是个标题&lt;/p&gt;
-
+      &lt;p&gt;React相关-整理中&lt;br&gt;
     
     </summary>
     
@@ -552,15 +690,14 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/04/2017-02-04-react-flux/"/>
     <id>//blog.fenghou.site/2017/02/04/2017-02-04-react-flux/</id>
     <published>2017-02-04T11:15:20.000Z</published>
-    <updated>2017-03-21T06:07:19.920Z</updated>
+    <updated>2017-10-31T09:48:23.272Z</updated>
     
-    <content type="html"><![CDATA[<p>我就是个标题</p>
+    <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我就是个标题&lt;/p&gt;
-
+      &lt;p&gt;React相关-整理中&lt;br&gt;
     
     </summary>
     
@@ -574,15 +711,14 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/03/2017-02-03-react-immutable/"/>
     <id>//blog.fenghou.site/2017/02/03/2017-02-03-react-immutable/</id>
     <published>2017-02-03T11:14:58.000Z</published>
-    <updated>2017-03-21T06:07:24.440Z</updated>
+    <updated>2017-10-31T09:47:54.639Z</updated>
     
-    <content type="html"><![CDATA[<p>我就是个标题</p>
+    <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我就是个标题&lt;/p&gt;
-
+      &lt;p&gt;React相关-整理中&lt;br&gt;
     
     </summary>
     
@@ -947,16 +1083,16 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2016/12/18/2016-12-18-react/"/>
     <id>//blog.fenghou.site/2016/12/18/2016-12-18-react/</id>
     <published>2016-12-18T11:06:01.000Z</published>
-    <updated>2017-03-15T12:10:35.960Z</updated>
+    <updated>2017-10-31T09:47:38.079Z</updated>
     
-    <content type="html"><![CDATA[<p>react<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>
 <p>在props里使用 onClick={ this.handleClick.bind(this) }<br>或者 onClick={ (e) =&gt; this.handleClick(e) }<br>或者 onClick={ ::this.handleClick }<br>都会产生性能问题，所以现在eslint在语法检查时就会阻止这几种写法，<br>问题原因是每一次render的时候如果遇到这些写法，<br>都会重新用handleClick函数与this去绑定从而重新创建一个新的函数，影响性能。<br>如果使用下面的写法则不会每次都创建：<br>// 1.<br>constructor() {<br>this.handleClick = this.handleClick.bind(this);<br>}<br>handleClick(e) { / … / }<br>// 2.<br>handleClick = (e) =&gt; { / … / };</p>
 <p>箭头函数不能用？<br>Parsing error: Unexpected token =<br>babel-eslint</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;react&lt;br&gt;
+      &lt;p&gt;React相关-整理中&lt;br&gt;
     
     </summary>
     
@@ -1135,9 +1271,10 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/"/>
     <id>//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/</id>
     <published>2016-12-12T02:25:27.000Z</published>
-    <updated>2017-09-30T02:29:45.171Z</updated>
+    <updated>2017-10-31T09:46:47.563Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><hr>
+    <content type="html"><![CDATA[<p>markdown 语法<br><a id="more"></a></p>
+<h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><hr>
 <p><code>亮不亮</code></p>
 <p><a href="http://blog.csdn.net/guodongxiaren" title="悬停显示" target="_blank" rel="external">我的博客</a></p>
 <ul>
@@ -1193,8 +1330,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     
     <summary type="html">
     
-      &lt;h1 id=&quot;A&quot;&gt;&lt;a href=&quot;#A&quot; class=&quot;headerlink&quot; title=&quot;A&quot;&gt;&lt;/a&gt;A&lt;/h1&gt;&lt;h2 id=&quot;B&quot;&gt;&lt;a href=&quot;#B&quot; class=&quot;headerlink&quot; title=&quot;B&quot;&gt;&lt;/a&gt;B&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;&lt;code&gt;
+      &lt;p&gt;markdown 语法&lt;br&gt;
     
     </summary>
     

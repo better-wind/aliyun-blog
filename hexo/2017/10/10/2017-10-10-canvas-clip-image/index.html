@@ -14,7 +14,7 @@
 <meta property="og:url" content="//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="心血来潮想实现一个图片编辑器">
-<meta property="og:updated_time" content="2017-10-12T03:45:16.536Z">
+<meta property="og:updated_time" content="2017-10-12T08:16:50.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas 图片裁剪">
 <meta name="twitter:description" content="心血来潮想实现一个图片编辑器">
@@ -172,11 +172,12 @@
 <blockquote>
 <p>拉伸大小</p>
 </blockquote>
-<p>宽度拉伸 可以通过在选择区域中绝对定位一个元素来模拟边框 监听它上面的move事件来处理</p>
+<p>宽度拉伸 可以通过在选择区域中绝对定位一个元素来模拟边框 监听它上面的move事件来处理<br>这里注意事件的执行机制<br>事件的执行机制分为冒泡型和捕获型<br>冒泡型事件 从当前节点开始执行 一路传递给绑定当前事件的父元素 知道根节点为止<br>捕获型事件 从最外层绑定该事件的元素往子元素传递<br>addEventListener第三个参数默认false true表示冒泡事件 false表示捕获事件<br>可以通过<br>event.stopPropagation()<br>来阻止事件的冒泡<br>event.preventDefault()<br>这个是用来阻止事件的默认操作</p>
 <blockquote>
 <p>旋转</p>
 </blockquote>
-<p>通过控制Img旋转来控制<br>一开始的想法是通过旋转选择区域来选取，但这样选择区域的获取图片数据会很繁琐而且意义不大<br>旋转通过样式transform:rotate(0deg)<br>在js获取样式时 要通过getComputedStyle这个API来获取<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clipV = <span class="built_in">window</span>.getComputedStyle(clip,<span class="literal">null</span>)</div><div class="line"><span class="keyword">var</span> clipTrans = clip.getPropertyValue(<span class="string">'transform'</span>)</div><div class="line"><span class="comment">// or var clipTrans = clip.transform</span></div><div class="line"><span class="comment">// 这时候获取的是一个二维矩阵</span></div><div class="line"><span class="comment">// 型如 matrix(20, 10, 10, 10, 0, 0)</span></div></pre></td></tr></table></figure></p>
+<p>通过控制Img旋转来控制<br>一开始的想法是通过旋转选择区域来选取，但这样选择区域的获取图片数据会很繁琐而且意义不大<br>旋转通过样式transform:rotate(0deg)<br>在js获取样式时 要通过getComputedStyle这个API来获取<br>style获取的是元素style属性中的样式 可读可写<br>所以通过style设置的元素回出现在元素的style属性中<br>getComputedStyle 获取的是最终作用在节点上的样式 只读<br>currentStyle IE自娱自乐产物 语法跟style类似 功能跟 getComputedStyle类似</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clipV = <span class="built_in">window</span>.getComputedStyle(clip,<span class="literal">null</span>)</div><div class="line"><span class="keyword">var</span> clipTrans = clip.getPropertyValue(<span class="string">'transform'</span>)</div><div class="line"><span class="comment">// or var clipTrans = clip.transform</span></div><div class="line"><span class="comment">// 这时候获取的是一个二维矩阵</span></div><div class="line"><span class="comment">// 型如 matrix(20, 10, 10, 10, 0, 0)</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p>关于matrix</p>
 </blockquote>
@@ -298,6 +299,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2017/10/25/2017-10-25-webpack-source-code/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          从源码看webpack
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/09/19/2017-09-19-js-input-check/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Js类型</div>
@@ -401,15 +411,7 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -417,11 +419,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -430,6 +432,10 @@
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -453,15 +459,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -481,15 +483,23 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">https</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">https</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
             <div class="clearfix"></div>

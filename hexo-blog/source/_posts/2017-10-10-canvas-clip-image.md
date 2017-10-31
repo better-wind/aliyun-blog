@@ -27,6 +27,16 @@ _h canvas中显示的高
 > 拉伸大小
 
 宽度拉伸 可以通过在选择区域中绝对定位一个元素来模拟边框 监听它上面的move事件来处理
+这里注意事件的执行机制
+事件的执行机制分为冒泡型和捕获型
+冒泡型事件 从当前节点开始执行 一路传递给绑定当前事件的父元素 知道根节点为止
+捕获型事件 从最外层绑定该事件的元素往子元素传递
+addEventListener第三个参数默认false true表示冒泡事件 false表示捕获事件
+可以通过
+event.stopPropagation()
+来阻止事件的冒泡
+event.preventDefault()
+这个是用来阻止事件的默认操作
 
 
 > 旋转
@@ -35,6 +45,11 @@ _h canvas中显示的高
 一开始的想法是通过旋转选择区域来选取，但这样选择区域的获取图片数据会很繁琐而且意义不大
 旋转通过样式transform:rotate(0deg)
 在js获取样式时 要通过getComputedStyle这个API来获取
+style获取的是元素style属性中的样式 可读可写
+所以通过style设置的元素回出现在元素的style属性中
+getComputedStyle 获取的是最终作用在节点上的样式 只读
+currentStyle IE自娱自乐产物 语法跟style类似 功能跟 getComputedStyle类似
+
 ```javascript
 var clipV = window.getComputedStyle(clip,null)
 var clipTrans = clip.getPropertyValue('transform')

@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="//blog.fenghou.site">
   <title>Js类型 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客">
+  <meta name="description" content="总结一些输入框中类型的判断">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Js类型">
 <meta property="og:url" content="//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="博客">
-<meta property="og:updated_time" content="2017-09-30T02:28:09.603Z">
+<meta property="og:description" content="总结一些输入框中类型的判断">
+<meta property="og:updated_time" content="2017-10-23T06:16:49.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js类型">
-<meta name="twitter:description" content="博客">
+<meta name="twitter:description" content="总结一些输入框中类型的判断">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -162,7 +162,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>总结一些输入框中类型的判断<br><a id="more"></a></p>
+<p>列举几个常用判断为空的情况<code>以下等于(==)不等于(!=)</code></p>
+<table>
+<thead>
+<tr>
+<th>对象</th>
+<th>不等于</th>
+<th>等于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>‘’ false 0 []</td>
+<td>null</td>
+</tr>
+<tr>
+<td>null</td>
+<td>‘’ false 0 []</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>‘’</td>
+<td>null undefined</td>
+<td>false 0 []</td>
+</tr>
+<tr>
+<td>0</td>
+<td>null undefined</td>
+<td>false ‘’ []</td>
+</tr>
+<tr>
+<td>false</td>
+<td>null undefined</td>
+<td>0 ‘’ []</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>null undefined</td>
+<td>false 0 ‘’</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="literal">undefined</span> || <span class="literal">null</span> || <span class="string">''</span> || <span class="number">0</span> || <span class="literal">false</span></div><div class="line"><span class="keyword">if</span>(!a)&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'会执行'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> b = a || <span class="string">'test'</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">// test</span></div><div class="line"><span class="comment">//判断是否输入了</span></div><div class="line"><span class="comment">//转成string 一来replace可以调用 而来 如果数据是一开始写入的0</span></div><div class="line"><span class="keyword">var</span> _s = (inputVal+<span class="string">''</span>).replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>,<span class="string">''</span>)</div><div class="line"><span class="keyword">if</span>(_s)&#123;</div><div class="line">    <span class="comment">//输入有效</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
 
       
@@ -383,15 +427,7 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -399,11 +435,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -412,6 +448,10 @@
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -435,15 +475,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -463,15 +499,23 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">https</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">https</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
             <div class="clearfix"></div>
