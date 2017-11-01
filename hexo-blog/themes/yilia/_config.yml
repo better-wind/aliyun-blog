@@ -59,7 +59,7 @@ favicon: /assets/img/favor.ico
 avatar: /assets/img/avatar-small.jpg
 
 #是否开启分享
-share_jia: true
+share_jia: false
 
 
 
