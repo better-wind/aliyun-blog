@@ -223,7 +223,7 @@
     <link href="//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/"/>
     <id>//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/</id>
     <published>2017-08-08T08:28:27.000Z</published>
-    <updated>2017-10-31T09:43:28.471Z</updated>
+    <updated>2017-11-01T03:24:33.338Z</updated>
     
     <content type="html"><![CDATA[<p>记录事件循环机制<br><a id="more"></a></p>
 <h3 id="alert引起的争论"><a href="#alert引起的争论" class="headerlink" title="alert引起的争论"></a>alert引起的争论</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">0</span></div><div class="line"><span class="keyword">var</span> inter = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(count == <span class="number">100</span>)&#123;</div><div class="line">        <span class="built_in">document</span>.querySelector(<span class="string">'#process'</span>).innerText = count+<span class="string">'%'</span></div><div class="line">        <span class="built_in">console</span>.log(count)</div><div class="line">        alert(<span class="string">'加载完成'</span>)</div><div class="line">        clearInterval(inter)</div><div class="line">    &#125;</div><div class="line">&#125;,<span class="number">100</span>)</div><div class="line"><span class="comment">//弹框时 页面上process显示的是什么？ 输出的count是什么？</span></div></pre></td></tr></table></figure>
@@ -241,6 +241,9 @@
 <p>联系上面的分析<br>第一题的输出 应该是 1 2 3 4 5 6 7 8</p>
 <p>第二题的输出 应该是 1A 1B 2.1A 2.1B 2.2A 2.2B</p>
 <p>写在一块输出 应该是 1 2 1A 1B 3 4 2.1A 2.1B 5 6 7 2.2A 2.2B 8</p>
+<blockquote>
+<p>参考文章<br><a href="http://www.cnblogs.com/woodyblog/p/6061671.html" target="_blank" rel="external">js的单线程和异步</a><br><a href="http://www.ruanyifeng.com/blog/2014/10/event-loop.html" target="_blank" rel="external">JavaScript 运行机制详解：再谈Event Loop</a><br><a href="http://www.jianshu.com/p/12b9f73c5a4f" target="_blank" rel="external">前端基础进阶（十二）：深入核心，详解事件循环机制</a></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">

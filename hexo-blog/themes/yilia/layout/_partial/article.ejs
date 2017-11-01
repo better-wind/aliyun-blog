@@ -82,8 +82,8 @@
 <% } %>
 
 <% if (!index){ %>
-  <% if (theme.duoshuo && post.comments){ %>
-  <%- partial('post/duoshuo', {
+  <% if (theme.changyan && post.comments){ %>
+  <%- partial('post/changyan', {
       key: post.slug,
       title: post.title,
       url: config.url+url_for(post.path)

@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="记录事件循环机制">
 <meta property="og:image" content="//blog.fenghou.site/assets/blogImg/2017-08-08-js-event-loop.png">
-<meta property="og:updated_time" content="2017-10-31T09:43:28.471Z">
+<meta property="og:updated_time" content="2017-11-01T03:24:33.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="eventLoop">
 <meta name="twitter:description" content="记录事件循环机制">
@@ -180,6 +180,9 @@
 <p>联系上面的分析<br>第一题的输出 应该是 1 2 3 4 5 6 7 8</p>
 <p>第二题的输出 应该是 1A 1B 2.1A 2.1B 2.2A 2.2B</p>
 <p>写在一块输出 应该是 1 2 1A 1B 3 4 2.1A 2.1B 5 6 7 2.2A 2.2B 8</p>
+<blockquote>
+<p>参考文章<br><a href="http://www.cnblogs.com/woodyblog/p/6061671.html" target="_blank" rel="external">js的单线程和异步</a><br><a href="http://www.ruanyifeng.com/blog/2014/10/event-loop.html" target="_blank" rel="external">JavaScript 运行机制详解：再谈Event Loop</a><br><a href="http://www.jianshu.com/p/12b9f73c5a4f" target="_blank" rel="external">前端基础进阶（十二）：深入核心，详解事件循环机制</a></p>
+</blockquote>
 
       
 
@@ -312,7 +315,18 @@
 
 
   
-    <div class="duoshuo"></div>
+  <div class="duoshuo">
+  <!--PC和WAP自适应版-->
+  <div id="SOHUCS" sid="eventLoop" ></div>
+  <script type="text/javascript">
+    (function(){
+      var appid = 'cytiftFRT';
+      var conf = 'prod_f5e998d9b3eff429bcfbb306cdc89e14';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</div>
+
   
 
 
@@ -401,6 +415,10 @@
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
@@ -409,11 +427,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -445,15 +463,19 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -465,11 +487,11 @@
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -482,14 +504,6 @@
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
             <div class="clearfix"></div>

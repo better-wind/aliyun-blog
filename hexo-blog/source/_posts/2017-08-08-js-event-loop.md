@@ -108,5 +108,8 @@ B()
  
 写在一块输出 应该是 1 2 1A 1B 3 4 2.1A 2.1B 5 6 7 2.2A 2.2B 8
 
-
+> 参考文章
+[js的单线程和异步](http://www.cnblogs.com/woodyblog/p/6061671.html)
+[JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
+[前端基础进阶（十二）：深入核心，详解事件循环机制](http://www.jianshu.com/p/12b9f73c5a4f)
 
