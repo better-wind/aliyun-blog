@@ -3,7 +3,7 @@ date: 2017-08-08 16:28:27
 tags:
     - js
 ---
-总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正
+总结一下 浏览器中js事件运行机制
 <!--more-->
 起因是女票今天问我一个问题
 问题如下
@@ -129,5 +129,3 @@ B()
 [js的单线程和异步](http://www.cnblogs.com/woodyblog/p/6061671.html)
 [JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
 [前端基础进阶（十二）：深入核心，详解事件循环机制](http://www.jianshu.com/p/12b9f73c5a4f)
-
-欢迎大家~~友善的互吹~~评论

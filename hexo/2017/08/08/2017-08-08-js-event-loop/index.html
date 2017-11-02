@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="//blog.fenghou.site">
   <title>浏览器中js事件运行机制 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正">
+  <meta name="description" content="总结一下 浏览器中js事件运行机制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器中js事件运行机制">
 <meta property="og:url" content="//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正">
+<meta property="og:description" content="总结一下 浏览器中js事件运行机制">
 <meta property="og:image" content="//blog.fenghou.site/assets/blogImg/2017-08-08-js-event-loop.png">
-<meta property="og:updated_time" content="2017-11-02T07:39:55.923Z">
+<meta property="og:updated_time" content="2017-11-02T08:48:38.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器中js事件运行机制">
-<meta name="twitter:description" content="总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正">
+<meta name="twitter:description" content="总结一下 浏览器中js事件运行机制">
 <meta name="twitter:image" content="//blog.fenghou.site/assets/blogImg/2017-08-08-js-event-loop.png">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
@@ -174,7 +174,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正<br><a id="more"></a><br>起因是女票今天问我一个问题<br>问题如下</p>
+        <p>总结一下 浏览器中js事件运行机制<br><a id="more"></a><br>起因是女票今天问我一个问题<br>问题如下</p>
 <h3 id="alert引起的争论"><a href="#alert引起的争论" class="headerlink" title="alert引起的争论"></a>alert引起的争论</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">0</span>,</div><div class="line">    domProcess = <span class="built_in">document</span>.querySelector(<span class="string">'#process'</span>),</div><div class="line">    inter = <span class="literal">null</span></div><div class="line">inter = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(count == <span class="number">100</span>)&#123;</div><div class="line">        domProcess.innerText = count+<span class="string">'%'</span></div><div class="line">        <span class="built_in">console</span>.log(count)</div><div class="line">        alert(<span class="string">'加载完成'</span>)</div><div class="line">        clearInterval(inter)</div><div class="line">    &#125;</div><div class="line">&#125;,<span class="number">100</span>)</div><div class="line"><span class="comment">//弹框时 为什么页面上process显示的是99%？</span></div></pre></td></tr></table></figure>
 <p>因为前段时间了解过Event-Loop的机制 知道怎么去解决它<br>但是要跟女票讲清楚 还是得在总结总结 毕竟自己也是了解的不深</p>
 <h3 id="单线程-amp-amp-任务队列-amp-amp-Event-Loop"><a href="#单线程-amp-amp-任务队列-amp-amp-Event-Loop" class="headerlink" title="单线程 &amp;&amp; 任务队列 &amp;&amp; Event-Loop"></a>单线程 &amp;&amp; 任务队列 &amp;&amp; Event-Loop</h3><blockquote>
@@ -194,7 +194,6 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>参考文章<br><a href="http://www.cnblogs.com/woodyblog/p/6061671.html" target="_blank" rel="external">js的单线程和异步</a><br><a href="http://www.ruanyifeng.com/blog/2014/10/event-loop.html" target="_blank" rel="external">JavaScript 运行机制详解：再谈Event Loop</a><br><a href="http://www.jianshu.com/p/12b9f73c5a4f" target="_blank" rel="external">前端基础进阶（十二）：深入核心，详解事件循环机制</a></p>
 </blockquote>
-<p>欢迎大家<del>友善的互吹</del>评论</p>
 
       
 
@@ -372,15 +371,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -396,15 +395,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -424,15 +423,19 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rax</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -441,10 +444,6 @@ var _hmt = _hmt || [];
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">

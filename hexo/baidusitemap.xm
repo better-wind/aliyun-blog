@@ -5,7 +5,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/</loc>
-    <lastmod>2017-11-02T07:39:55.923Z</lastmod>
+    <lastmod>2017-11-02T08:48:38.456Z</lastmod>
     <data>
         <display>
         <title>浏览器中js事件运行机制</title>
