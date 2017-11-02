@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="//blog.fenghou.site">
   <title>Nginx在前端 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="整理中">
+  <meta name="description" content="总结一些我碰到的Nginx在前端的应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx在前端">
 <meta property="og:url" content="//blog.fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="整理中">
-<meta property="og:updated_time" content="2017-10-31T09:48:48.870Z">
+<meta property="og:description" content="总结一些我碰到的Nginx在前端的应用">
+<meta property="og:updated_time" content="2017-11-02T03:39:36.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx在前端">
-<meta name="twitter:description" content="整理中">
+<meta name="twitter:description" content="总结一些我碰到的Nginx在前端的应用">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -172,7 +172,10 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>整理中<br><a id="more"></a></p>
+        <p>总结一些我碰到的Nginx在前端的应用<br><a id="more"></a></p>
+<h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><p>nginx可以用来当做静态文件的服务器<br>如 本文所在的博客 就是通过nginx来部署的<br>通过root来指定 访问的静态资源的目录<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">       listen <span class="number">443</span>;</div><div class="line">       ssl on;</div><div class="line">       ssl_certificate /admin/ali-ssl/fenghou_site.pem;</div><div class="line">       ssl_certificate_key /admin/ali-ssl/fenghou_site.key;</div><div class="line">       ssl_session_timeout <span class="number">5</span>m;</div><div class="line">       ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</div><div class="line">       ssl_protocols TLSv1 TLSv1<span class="number">.1</span> TLSv1<span class="number">.2</span>;</div><div class="line">       ssl_prefer_server_ciphers on;</div><div class="line">       server_name fenghou.site;</div><div class="line">       root /admin/fenghou/www/aliyun-blog/hexo;         </div><div class="line">       location / &#123;</div><div class="line">                index index.html;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><p>前后端分离的项目中<br>nginx除了起到服务器的作用<br>还可以用来做请求代理 解决一系列的跨域问题<br>说道代理 有的叫正向代理 有的叫反向代理<br>那么是怎么区分的呢？ 很简单<br>正向代理 服务器不知道 真实的用户<br>反向代理 用户不知道 真实的服务器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">       listen <span class="number">80</span>;</div><div class="line">       server_name demo.fenghou.site;</div><div class="line">       root /admin/fenghou/www/demo/view/dist;</div><div class="line">        location / &#123;</div><div class="line">            index index.html;</div><div class="line">        &#125;</div><div class="line">        location /demoAPI/ &#123;</div><div class="line">            proxy_pass http:<span class="comment">//localhost:4000;</span></div><div class="line">        &#125;</div><div class="line">        location /logAPI/ &#123;</div><div class="line">            proxy_pass http:<span class="comment">//localhost:5000/;</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
 
@@ -350,19 +353,19 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -374,19 +377,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -398,6 +397,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">canvas</a>
               </li>
             
@@ -406,15 +409,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -426,6 +425,14 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
@@ -434,15 +441,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
             <div class="clearfix"></div>

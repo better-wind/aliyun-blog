@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.fenghou.site">
-  <title>eventLoop | Louis Blog</title>
+  <title>浏览器中js事件运行机制 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录事件循环机制">
+  <meta name="description" content="总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正">
 <meta property="og:type" content="article">
-<meta property="og:title" content="eventLoop">
+<meta property="og:title" content="浏览器中js事件运行机制">
 <meta property="og:url" content="//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="记录事件循环机制">
+<meta property="og:description" content="总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正">
 <meta property="og:image" content="//blog.fenghou.site/assets/blogImg/2017-08-08-js-event-loop.png">
-<meta property="og:updated_time" content="2017-11-01T03:24:33.338Z">
+<meta property="og:updated_time" content="2017-11-02T07:39:55.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="eventLoop">
-<meta name="twitter:description" content="记录事件循环机制">
+<meta name="twitter:title" content="浏览器中js事件运行机制">
+<meta name="twitter:description" content="总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正">
 <meta name="twitter:image" content="//blog.fenghou.site/assets/blogImg/2017-08-08-js-event-loop.png">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
@@ -161,7 +161,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      eventLoop
+      浏览器中js事件运行机制
     </h1>
   
 
@@ -174,18 +174,19 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>记录事件循环机制<br><a id="more"></a></p>
-<h3 id="alert引起的争论"><a href="#alert引起的争论" class="headerlink" title="alert引起的争论"></a>alert引起的争论</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">0</span></div><div class="line"><span class="keyword">var</span> inter = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(count == <span class="number">100</span>)&#123;</div><div class="line">        <span class="built_in">document</span>.querySelector(<span class="string">'#process'</span>).innerText = count+<span class="string">'%'</span></div><div class="line">        <span class="built_in">console</span>.log(count)</div><div class="line">        alert(<span class="string">'加载完成'</span>)</div><div class="line">        clearInterval(inter)</div><div class="line">    &#125;</div><div class="line">&#125;,<span class="number">100</span>)</div><div class="line"><span class="comment">//弹框时 页面上process显示的是什么？ 输出的count是什么？</span></div></pre></td></tr></table></figure>
-<p>要解决这个问题要理解js的事件循环机制是怎么实现的</p>
-<h3 id="单线程-amp-amp-任务队列-amp-amp-eventLoop"><a href="#单线程-amp-amp-任务队列-amp-amp-eventLoop" class="headerlink" title="单线程 &amp;&amp; 任务队列 &amp;&amp; eventLoop"></a>单线程 &amp;&amp; 任务队列 &amp;&amp; eventLoop</h3><p>首先Js是单线程的<br>主线程运行的时候，产生堆(heap)和栈(stack)<br>Js执行过程中将执行函数推入 执行栈中 执行结束后 弹出执行<br>当碰到js执行外部的API时会 js会将它当做任务源来处理 他返回的是一个待执行的任务<br>当这个任务满足执行条件时 js会将它推进一个 任务队列当中<br>当执行栈 为空时 js会去调取任务队列中任务 推入 执行栈中执行 这个过程就是 eventLoop<br>任务队列 分为 宏任务队列(macro-task)(task) 微任务队列(micro-task)(jobs)<br>当执行栈为空时 先回执行 微任务 然后再执行 宏任务</p>
+        <p>总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正<br><a id="more"></a><br>起因是女票今天问我一个问题<br>问题如下</p>
+<h3 id="alert引起的争论"><a href="#alert引起的争论" class="headerlink" title="alert引起的争论"></a>alert引起的争论</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">0</span>,</div><div class="line">    domProcess = <span class="built_in">document</span>.querySelector(<span class="string">'#process'</span>),</div><div class="line">    inter = <span class="literal">null</span></div><div class="line">inter = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(count == <span class="number">100</span>)&#123;</div><div class="line">        domProcess.innerText = count+<span class="string">'%'</span></div><div class="line">        <span class="built_in">console</span>.log(count)</div><div class="line">        alert(<span class="string">'加载完成'</span>)</div><div class="line">        clearInterval(inter)</div><div class="line">    &#125;</div><div class="line">&#125;,<span class="number">100</span>)</div><div class="line"><span class="comment">//弹框时 为什么页面上process显示的是99%？</span></div></pre></td></tr></table></figure>
+<p>因为前段时间了解过Event-Loop的机制 知道怎么去解决它<br>但是要跟女票讲清楚 还是得在总结总结 毕竟自己也是了解的不深</p>
+<h3 id="单线程-amp-amp-任务队列-amp-amp-Event-Loop"><a href="#单线程-amp-amp-任务队列-amp-amp-Event-Loop" class="headerlink" title="单线程 &amp;&amp; 任务队列 &amp;&amp; Event-Loop"></a>单线程 &amp;&amp; 任务队列 &amp;&amp; Event-Loop</h3><blockquote>
+<p><img src="/assets/blogImg/2017-08-08-js-event-loop.png" alt="eventLoop"><br>图片来自Philip Roberts的演讲《Help, I’m stuck in an event-loop》<br><a href="http://v.youku.com/v_show/id_XMjY5MTkwMDYzNg==.html" target="_blank" rel="external">Help, I’m stuck in an event-loop优酷地址</a></p>
+</blockquote>
+<p>首先Js是单线程的 异步是浏览器的事(宿主环境)<br>主线程运行的时候 产生堆(heap)和栈(stack)<br>主线程将运行中碰到的事件推入 执行栈中 开始执行<br>执行结束后 弹出执行栈 推入下一个事件<br>当执行到webAPI时 会将它当做任务源(相当于是分发任务)来执行 并且弹出<br>这时候会产生一个待执行的任务<br>当这个任务满足执行条件时 会进入到任务队列当中<br>当执行栈 为空时 主线程会不断的去调取任务队列中任务 推入 执行栈中执行 这个运行机制就是 Event-Loop<br>而任务队列 可以分为 宏任务队列(macro-task) 和 微任务队列(micro-task)<br>当执行栈为空时 主线程会先去micro-task中调取任务 micro-task为空时才会去 macro-task调取任务执行</p>
 <blockquote>
-<p>触发任务的API<br>DOM(DOCUMENT),AJAX,setTimeOut,setInterval,Promise,process.nextTick,setImmediate<br>其中 加入宏队列中任务 DOM(DOCUMENT),AJAX,setTimeOut,setInterval,setImmediate<br>加入微任务队列中的任务 Promise,process.nextTick</p>
+<p>触发任务的webAPI<br>DOM(DOCUMENT),AJAX,setTimeOut,setInterval,Promise,process.nextTick,setImmediate<br>其中 加入宏队列中任务 DOM(DOCUMENT),AJAX,setTimeOut,setInterval,setImmediate<br>加入微任务队列中的任务 Promise,process.nextTick</p>
 </blockquote>
-<h3 id="真相"><a href="#真相" class="headerlink" title="真相"></a>真相</h3><blockquote>
-<p><img src="/assets/blogImg/2017-08-08-js-event-loop.png" alt="eventLoop"><br>图片来自Philip Roberts的演讲《Help, I’m stuck in an event-loop》</p>
-</blockquote>
-<p>所以 上面的js在执行中<br>遇到 <code>document.querySelector(&#39;#process&#39;).innerText = count+&#39;%&#39;</code><br>推入执行栈 由于是DOM操作判定为任务源 推出执行栈<br>加入到 宏任务队列<br>遇到 <code>console.log(count)</code><br>推入执行栈 控制台输出 100 推出执行栈<br>遇到 <code>alert(&#39;加载完成&#39;)</code><br>推入执行栈 弹窗确认后 推出执行栈<br>遇到 <code>clearInterval(inter)</code><br>推入执行栈 执行 推出执行栈<br>此时执行栈为空 开始调用 任务队列<br>微任务队列为空 直接调用宏任务队列<br>将 <code>document.querySelector(&#39;#process&#39;).innerText = count+&#39;%&#39;</code> dom操作推入执行栈<br>渲染页面 推出执行栈</p>
-<p>这里有个问题就是 碰到这个外部API时 并不是把 这些外部API推入任务队列<br>在执行栈中 这些API还是立即执行的 它分发的任务 才是延迟执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//譬如</span></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'log'</span>)</div><div class="line">&#125;,<span class="number">1000</span>)</div><div class="line"><span class="comment">//setTimeOut 会立即进入执行栈 并且执行</span></div><div class="line"><span class="comment">//它的第一个参数就是他要分发的任务 会在满足它的分发条件后进入任务队列 </span></div><div class="line"><span class="comment">// 上例就是1000ms后进入任务队列</span></div></pre></td></tr></table></figure></p>
+<h3 id="真相"><a href="#真相" class="headerlink" title="真相"></a>真相</h3><p>所以 上面的js在执行中<br>遇到 <code>document.querySelector(&#39;#process&#39;).innerText = count+&#39;%&#39;</code><br>推入执行栈 由于是DOM操作判定为任务源 推出执行栈<br>满足执行条件 加入到 宏任务队列<br>遇到 <code>console.log(count)</code><br>推入执行栈 控制台输出 100 推出执行栈<br>遇到 <code>alert(&#39;加载完成&#39;)</code><br>推入执行栈 开始执行 主线程挂起 等待弹框确认<br>弹窗确认后 推出执行栈<br>遇到 <code>clearInterval(inter)</code><br>推入执行栈 执行 推出执行栈<br>此时执行栈为空 开始调用 任务队列<br>微任务队列为空 直接调用宏任务队列<br>将 <code>document.querySelector(&#39;#process&#39;).innerText = count+&#39;%&#39;</code> dom操作分发的执行任务推入执行栈<br>渲染页面数据 推出执行栈</p>
+<p>所以要解决这个问题 只需要加个setTimeout就能解决问题<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">   alert(<span class="string">'加载完成'</span>) </div><div class="line">&#125;,<span class="number">0</span>)</div></pre></td></tr></table></figure></p>
+<p>这里有个问题就是 碰到这个webAPI时 并不是把 这些webAPI推入任务队列<br>在执行栈中 这些webAPI还是立即执行的 是把它分发的任务 推入任务队列<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//譬如</span></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'log'</span>)</div><div class="line">&#125;,<span class="number">1000</span>)</div><div class="line"><span class="comment">//setTimeOut 会立即进入执行栈 并且执行</span></div><div class="line"><span class="comment">//它的第一个参数就是他要分发的任务 会在满足它的分发条件后进入任务队列 </span></div><div class="line"><span class="comment">// 上例就是1000ms后进入任务队列</span></div></pre></td></tr></table></figure></p>
 <p>再看下面的两个例子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//demo 1</span></div><div class="line">setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> <span class="title">B</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="number">8</span>);&#125;,<span class="number">0</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">5</span>);</div><div class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="number">7</span>);</div><div class="line">    &#125;)</div><div class="line">    <span class="built_in">console</span>.log(<span class="number">6</span>)</div><div class="line">&#125;,<span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span>)</div><div class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">reslove</span>)</span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="number">2</span>);</div><div class="line">     reslove()</div><div class="line">&#125;).then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">     <span class="built_in">console</span>.log(<span class="number">4</span>)</div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(<span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment">//demo 2</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params">x</span>)</span>&#123;</div><div class="line">   setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="number">2.2</span>+x)</div><div class="line">   &#125;,<span class="number">0</span>)</div><div class="line">   <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(<span class="number">2.1</span>+x);</div><div class="line">   &#125;)</div><div class="line">   <span class="built_in">console</span>.log(<span class="number">1</span>+x)</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">B</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    A(<span class="string">'B'</span>)</div><div class="line">&#125;</div><div class="line">A(<span class="string">'A'</span>)</div><div class="line">B()</div></pre></td></tr></table></figure></p>
 <p>联系上面的分析<br>第一题的输出 应该是 1 2 3 4 5 6 7 8</p>
 <p>第二题的输出 应该是 1A 1B 2.1A 2.1B 2.2A 2.2B</p>
@@ -193,6 +194,7 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>参考文章<br><a href="http://www.cnblogs.com/woodyblog/p/6061671.html" target="_blank" rel="external">js的单线程和异步</a><br><a href="http://www.ruanyifeng.com/blog/2014/10/event-loop.html" target="_blank" rel="external">JavaScript 运行机制详解：再谈Event Loop</a><br><a href="http://www.jianshu.com/p/12b9f73c5a4f" target="_blank" rel="external">前端基础进阶（十二）：深入核心，详解事件循环机制</a></p>
 </blockquote>
+<p>欢迎大家<del>友善的互吹</del>评论</p>
 
       
 
@@ -276,7 +278,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
   <!--PC和WAP自适应版-->
-  <div id="SOHUCS" sid="eventLoop" ></div>
+  <div id="SOHUCS" sid="浏览器中js事件运行机制" ></div>
   <script type="text/javascript">
     (function(){
       var appid = 'cytiftFRT';
@@ -370,19 +372,19 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -394,19 +396,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -418,6 +416,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">canvas</a>
               </li>
             
@@ -426,15 +428,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -446,6 +444,14 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
@@ -454,15 +460,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
             <div class="clearfix"></div>

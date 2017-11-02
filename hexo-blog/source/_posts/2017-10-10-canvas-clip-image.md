@@ -109,3 +109,7 @@ y轴拉伸角度 skewX = Math.atan(b)
 ### 总结
 css相关的还是要经常温故温故 不然真的容易忘了
 
+> 参考
+[获取元素CSS值之getComputedStyle方法熟悉](http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/)
+[理解CSS3 transform中的Matrix(矩阵)](http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/)
+

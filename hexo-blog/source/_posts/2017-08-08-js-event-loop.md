@@ -1,61 +1,78 @@
-title: 'eventLoop'
+title: '浏览器中js事件运行机制'
 date: 2017-08-08 16:28:27
 tags:
     - js
 ---
-记录事件循环机制
+总结一下 浏览器中js事件运行机制 有描述不对的地方 希望大家指正
 <!--more-->
-
+起因是女票今天问我一个问题
+问题如下
 ### alert引起的争论
 ```javascript
-var count = 0
-var inter = setInterval(function(){
+var count = 0,
+    domProcess = document.querySelector('#process'),
+    inter = null
+inter = setInterval(function(){
     if(count == 100){
-        document.querySelector('#process').innerText = count+'%'
+        domProcess.innerText = count+'%'
         console.log(count)
         alert('加载完成')
         clearInterval(inter)
     }
 },100)
-//弹框时 页面上process显示的是什么？ 输出的count是什么？
+//弹框时 为什么页面上process显示的是99%？
 ```
-要解决这个问题要理解js的事件循环机制是怎么实现的
-### 单线程 && 任务队列 && eventLoop
-首先Js是单线程的 
-主线程运行的时候，产生堆(heap)和栈(stack)
-Js执行过程中将执行函数推入 执行栈中 执行结束后 弹出执行
-当碰到js执行外部的API时会 js会将它当做任务源来处理 他返回的是一个待执行的任务
-当这个任务满足执行条件时 js会将它推进一个 任务队列当中
-当执行栈 为空时 js会去调取任务队列中任务 推入 执行栈中执行 这个过程就是 eventLoop
-任务队列 分为 宏任务队列(macro-task)(task) 微任务队列(micro-task)(jobs)
-当执行栈为空时 先回执行 微任务 然后再执行 宏任务
+因为前段时间了解过Event-Loop的机制 知道怎么去解决它
+但是要跟女票讲清楚 还是得在总结总结 毕竟自己也是了解的不深
 
-> 触发任务的API
+### 单线程 && 任务队列 && Event-Loop
+>![eventLoop](/assets/blogImg/2017-08-08-js-event-loop.png)
+图片来自Philip Roberts的演讲《Help, I'm stuck in an event-loop》
+[Help, I'm stuck in an event-loop优酷地址](http://v.youku.com/v_show/id_XMjY5MTkwMDYzNg==.html)
+
+首先Js是单线程的 异步是浏览器的事(宿主环境)
+主线程运行的时候 产生堆(heap)和栈(stack)
+主线程将运行中碰到的事件推入 执行栈中 开始执行 
+执行结束后 弹出执行栈 推入下一个事件
+当执行到webAPI时 会将它当做任务源(相当于是分发任务)来执行 并且弹出 
+这时候会产生一个待执行的任务
+当这个任务满足执行条件时 会进入到任务队列当中
+当执行栈 为空时 主线程会不断的去调取任务队列中任务 推入 执行栈中执行 这个运行机制就是 Event-Loop
+而任务队列 可以分为 宏任务队列(macro-task) 和 微任务队列(micro-task)
+当执行栈为空时 主线程会先去micro-task中调取任务 micro-task为空时才会去 macro-task调取任务执行
+
+> 触发任务的webAPI
 DOM(DOCUMENT),AJAX,setTimeOut,setInterval,Promise,process.nextTick,setImmediate
 其中 加入宏队列中任务 DOM(DOCUMENT),AJAX,setTimeOut,setInterval,setImmediate
 加入微任务队列中的任务 Promise,process.nextTick
 
 ### 真相
->![eventLoop](/assets/blogImg/2017-08-08-js-event-loop.png)
-图片来自Philip Roberts的演讲《Help, I'm stuck in an event-loop》
 
 所以 上面的js在执行中
 遇到 `document.querySelector('#process').innerText = count+'%'` 
 推入执行栈 由于是DOM操作判定为任务源 推出执行栈
-加入到 宏任务队列
+满足执行条件 加入到 宏任务队列
 遇到 `console.log(count)`
 推入执行栈 控制台输出 100 推出执行栈
 遇到 `alert('加载完成')`
-推入执行栈 弹窗确认后 推出执行栈
+推入执行栈 开始执行 主线程挂起 等待弹框确认
+弹窗确认后 推出执行栈
 遇到 `clearInterval(inter)`
 推入执行栈 执行 推出执行栈
 此时执行栈为空 开始调用 任务队列
 微任务队列为空 直接调用宏任务队列
-将 `document.querySelector('#process').innerText = count+'%'` dom操作推入执行栈
-渲染页面 推出执行栈
+将 `document.querySelector('#process').innerText = count+'%'` dom操作分发的执行任务推入执行栈
+渲染页面数据 推出执行栈
 
-这里有个问题就是 碰到这个外部API时 并不是把 这些外部API推入任务队列
-在执行栈中 这些API还是立即执行的 它分发的任务 才是延迟执行
+所以要解决这个问题 只需要加个setTimeout就能解决问题
+```javascript
+setTimeout(function(){
+   alert('加载完成') 
+},0)
+ ```
+
+这里有个问题就是 碰到这个webAPI时 并不是把 这些webAPI推入任务队列
+在执行栈中 这些webAPI还是立即执行的 是把它分发的任务 推入任务队列
 ```javascript
 //譬如
 setTimeout(function(){
@@ -113,3 +130,4 @@ B()
 [JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
 [前端基础进阶（十二）：深入核心，详解事件循环机制](http://www.jianshu.com/p/12b9f73c5a4f)
 
+欢迎大家~~友善的互吹~~评论

@@ -14,7 +14,7 @@
 <meta property="og:url" content="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="最近刚续费阿里云服务器，肉疼中。。。今天先尝试了下 把http改成https 在这里记录一下">
-<meta property="og:updated_time" content="2017-09-30T02:08:20.620Z">
+<meta property="og:updated_time" content="2017-11-02T03:13:52.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx配置https">
 <meta name="twitter:description" content="最近刚续费阿里云服务器，肉疼中。。。今天先尝试了下 把http改成https 在这里记录一下">
@@ -183,7 +183,7 @@ var _hmt = _hmt || [];
 <p>./configure –with-http_ssl_module<br>很好 如果服务器上面已经安装了openssl 那么基本可以编译通过<br>yum install openssl openssl-devel<br>恩 如果编译的时候没有加载默认的 那么就需要手动配置<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>敲黑板 这么写 编译的时候openssl会去从–with-openssl 那里取<br>所以这里必须是源码目录 不应该安装目录</p>
 </blockquote>
 <p>补充：填了安装目录 编译失败 竟然也找到了编译通过的方法。。<br>修改方法<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"># vi auto/lib/openssl/conf</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/openssl/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/openssl/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/openssl/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/openssl/lib/libcrypto.a"</div><div class="line">改为：</div><div class="line">CORE_INCS="$CORE_INCS $OPENSSL/include"</div><div class="line">CORE_DEPS="$CORE_DEPS $OPENSSL/include/openssl/ssl.h"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libssl.a"</div><div class="line">CORE_LIBS="$CORE_LIBS $OPENSSL/lib/libcrypto.a"</div></pre></td></tr></table></figure></p>
-<p>但是 make 的时候还是会报错 so~~</p>
+<p>但是 make 的时候还是会报错 </p>
 <p>make 打包成功后会在nginx源码目录的objs下生成nginx</p>
 <blockquote>
 <p>cp objs/nginx nginx配置目录/sbin<br>拷贝覆盖 即可</p>
@@ -205,9 +205,9 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>Symantec Ltd</p>
 </blockquote>
-<p>在阿里云 免费申请ssl证书<br>nginx如果配置是全局https<br>but 受认证只能是 申请ssl时填写的域名<br>xx.xx 申请<br>xx.xx.xx 不被认证</p>
+<p>在阿里云 免费申请ssl证书<br>nginx如果配置是全局https<br>受认证只能是 申请ssl时填写的域名<br>xx.xx 申请<br>xx.xx.xx 不被认证</p>
 <h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>不想搞运维的前端不是个好架构</p>
-<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>今天下班 被分配到 小黑屋封闭开发<br>没空调。。<br>产品大哥 搞了3个立体风扇 设计了一套 小黑屋空气交换系统 棒！<br>but 网慢的代码都提交不了 是什么鬼</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>今天下班 被分配到 小黑屋封闭开发<br>没空调。。</p>
 
       
 
@@ -281,7 +281,7 @@ var _hmt = _hmt || [];
   
   
     <a href="/2017/06/25/2017-06-25-vue-modules/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">谈谈我的vue项目架构</div>
+      <div class="article-nav-title">谈谈我的vue项目</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -389,19 +389,19 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -413,19 +413,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -437,6 +433,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">canvas</a>
               </li>
             
@@ -445,15 +445,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -465,6 +461,14 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
@@ -473,15 +477,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
             <div class="clearfix"></div>
