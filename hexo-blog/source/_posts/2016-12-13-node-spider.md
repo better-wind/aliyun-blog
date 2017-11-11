@@ -173,8 +173,7 @@ function downImg(list,dirName){
     }
     async.mapLimit(list,5,function(myUrl,callback){
         downUrl(myUrl,callback);
-    },function(err,result){
-    })
+    },function(err,result){})
 }
 
 

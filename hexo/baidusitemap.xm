@@ -4,8 +4,108 @@
 
     
   <url>
+    <loc>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</loc>
+    <lastmod>2017-11-11T02:24:10.440Z</lastmod>
+    <data>
+        <display>
+        <title>Js异步编程</title>
+        <pubTime>2017-08-02T02:19:25.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/11/07/2017-11-07-css-box-model/</loc>
+    <lastmod>2017-11-10T09:03:45.689Z</lastmod>
+    <data>
+        <display>
+        <title>css-Box-Model</title>
+        <pubTime>2017-11-07T01:56:43.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/</loc>
+    <lastmod>2017-11-10T09:03:13.080Z</lastmod>
+    <data>
+        <display>
+        <title>node-npm</title>
+        <pubTime>2017-11-08T08:25:10.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/11/07/2017-11-07-css-Specification/</loc>
+    <lastmod>2017-11-10T09:02:57.304Z</lastmod>
+    <data>
+        <display>
+        <title>Css-Specification</title>
+        <pubTime>2017-11-07T07:08:16.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2016/12/13/2016-12-13-node-spider/</loc>
+    <lastmod>2017-11-09T08:15:27.284Z</lastmod>
+    <data>
+        <display>
+        <title>Node-Spider</title>
+        <pubTime>2016-12-13T11:03:06.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/05/17/2017-05-17-content-type/</loc>
+    <lastmod>2017-11-03T02:25:03.670Z</lastmod>
+    <data>
+        <display>
+        <title>前端的请求</title>
+        <pubTime>2017-05-17T03:28:09.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/</loc>
-    <lastmod>2017-11-02T08:48:38.456Z</lastmod>
+    <lastmod>2017-11-02T08:48:38.457Z</lastmod>
     <data>
         <display>
         <title>浏览器中js事件运行机制</title>
@@ -27,23 +127,6 @@
         <display>
         <title>彻底理解Js中的作用域和上下文</title>
         <pubTime>2016-12-30T11:11:06.000Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</loc>
-    <lastmod>2017-11-02T03:46:35.179Z</lastmod>
-    <data>
-        <display>
-        <title>Js异步编程</title>
-        <pubTime>2017-08-02T02:19:25.000Z</pubTime>
         
         <tag>js</tag>
          
@@ -92,7 +175,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/</loc>
-    <lastmod>2017-11-02T03:14:21.985Z</lastmod>
+    <lastmod>2017-11-02T03:14:21.986Z</lastmod>
     <data>
         <display>
         <title>谈谈我的vue项目</title>
@@ -130,7 +213,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</loc>
-    <lastmod>2017-11-02T02:59:34.228Z</lastmod>
+    <lastmod>2017-11-02T02:59:34.229Z</lastmod>
     <data>
         <display>
         <title>canvas 图片裁剪</title>
@@ -147,7 +230,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/</loc>
-    <lastmod>2017-11-02T02:45:19.116Z</lastmod>
+    <lastmod>2017-11-02T02:45:19.117Z</lastmod>
     <data>
         <display>
         <title>MarkDown语法</title>
@@ -182,25 +265,8 @@
 
     
   <url>
-    <loc>//blog.fenghou.site/2017/05/17/2017-05-17-content-type/</loc>
-    <lastmod>2017-10-31T09:49:41.902Z</lastmod>
-    <data>
-        <display>
-        <title>谈前端的请求</title>
-        <pubTime>2017-05-17T03:28:09.000Z</pubTime>
-        
-        <tag>http</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</loc>
-    <lastmod>2017-10-31T09:49:41.902Z</lastmod>
+    <lastmod>2017-10-31T09:49:41.903Z</lastmod>
     <data>
         <display>
         <title>Node网易云音乐API</title>
@@ -234,7 +300,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/02/21/2017-02-21-Weex/</loc>
-    <lastmod>2017-10-31T09:48:34.651Z</lastmod>
+    <lastmod>2017-10-31T09:48:34.652Z</lastmod>
     <data>
         <display>
         <title>Weex</title>
@@ -251,7 +317,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/02/17/2017-02-17-Rax/</loc>
-    <lastmod>2017-10-31T09:48:23.308Z</lastmod>
+    <lastmod>2017-10-31T09:48:23.309Z</lastmod>
     <data>
         <display>
         <title>Rax</title>
@@ -268,7 +334,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/</loc>
-    <lastmod>2017-10-31T09:48:23.299Z</lastmod>
+    <lastmod>2017-10-31T09:48:23.300Z</lastmod>
     <data>
         <display>
         <title>react-redux</title>
@@ -285,7 +351,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/02/13/2017-02-13-PReact/</loc>
-    <lastmod>2017-10-31T09:48:23.290Z</lastmod>
+    <lastmod>2017-10-31T09:48:23.291Z</lastmod>
     <data>
         <display>
         <title>PReact</title>
@@ -353,7 +419,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/</loc>
-    <lastmod>2017-10-30T10:19:45.277Z</lastmod>
+    <lastmod>2017-10-30T10:19:45.278Z</lastmod>
     <data>
         <display>
         <title>从源码看webpack</title>
@@ -370,7 +436,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/</loc>
-    <lastmod>2017-10-23T06:16:49.433Z</lastmod>
+    <lastmod>2017-10-23T06:16:49.434Z</lastmod>
     <data>
         <display>
         <title>Js类型</title>
@@ -477,23 +543,6 @@
 
     
   <url>
-    <loc>//blog.fenghou.site/2016/12/13/2016-12-13-node-spider/</loc>
-    <lastmod>2017-03-15T12:23:35.958Z</lastmod>
-    <data>
-        <display>
-        <title>Node-Spider</title>
-        <pubTime>2016-12-13T11:03:06.000Z</pubTime>
-        
-        <tag>node</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>//blog.fenghou.site/2016/12/14/2016-12-14-incity/</loc>
     <lastmod>2017-03-15T12:21:11.534Z</lastmod>
     <data>
@@ -531,7 +580,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2016/12/16/2016-12-16-webpack/</loc>
-    <lastmod>2017-03-15T12:16:23.086Z</lastmod>
+    <lastmod>2017-03-15T12:16:23.087Z</lastmod>
     <data>
         <display>
         <title>webpack配置</title>
@@ -588,7 +637,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2016/12/27/2016-12-27-%E4%BD%A0%E7%9C%9F%E7%9A%84%E5%AD%A6%E5%A5%BDJs/</loc>
-    <lastmod>2017-03-15T11:58:07.909Z</lastmod>
+    <lastmod>2017-03-15T11:58:07.910Z</lastmod>
     <data>
         <display>
         <title>你真的学好Js了吗</title>
@@ -605,7 +654,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/</loc>
-    <lastmod>2017-03-15T11:52:29.208Z</lastmod>
+    <lastmod>2017-03-15T11:52:29.209Z</lastmod>
     <data>
         <display>
         <title>ECMA-prototype</title>
@@ -673,7 +722,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/01/20/2017-01-20-Canvas%E9%BB%91%E5%87%A4%E6%A2%A8/</loc>
-    <lastmod>2017-03-15T11:34:33.356Z</lastmod>
+    <lastmod>2017-03-15T11:34:33.357Z</lastmod>
     <data>
         <display>
         <title>Canvas--黑凤梨</title>
@@ -690,7 +739,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/01/21/2017-01-21-Canvas%E6%AF%9B%E7%AC%94%E5%AD%97%E4%B9%A6%E6%B3%95/</loc>
-    <lastmod>2017-03-15T11:31:18.251Z</lastmod>
+    <lastmod>2017-03-15T11:31:18.252Z</lastmod>
     <data>
         <display>
         <title>Canvas--毛笔字书法</title>
@@ -707,7 +756,7 @@
     
   <url>
     <loc>//blog.fenghou.site/2017/02/13/2017-02-13-wx%E7%AD%BE%E5%90%8D%E5%87%BA%E9%94%99-URL/</loc>
-    <lastmod>2017-03-15T11:26:35.691Z</lastmod>
+    <lastmod>2017-03-15T11:26:35.692Z</lastmod>
     <data>
         <display>
         <title>wx签名出错-URL</title>

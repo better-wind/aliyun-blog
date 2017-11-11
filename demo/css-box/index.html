@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .inline-box {
+            width: 1200px;
+            height: 200px;
+            border:1px solid #000;
+        }
+        .inline-box div{
+            vertical-align: top;
+        }
+        .inline-box .inline{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border:1px solid #333;
+            margin-right: 20px;
+            padding: 20px;
+
+        }
+        .inline-box .border{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border:1px solid #333;
+            margin-right: 20px;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: #000;
+            color: #FFF;
+
+        }
+        .inline-box .content{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border:1px solid #333;
+            margin-right: 20px;
+            box-sizing: content-box;
+            padding: 20px;
+            background-color: #000;
+            color: #FFF;
+
+        }
+        .inline-box .inherit{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border:1px solid #333;
+            margin-right: 20px;
+            box-sizing:inherit;
+            padding: 20px;
+            background-color: #000;
+            color: #FFF;
+
+        }
+        .inline-box .normal{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            margin-right: 20px;
+            padding: 20px;
+
+        }
+
+        .bg-box{
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            padding: 20px;
+            border:20px solid rgba(120,120,120,.5);
+            color: #999;
+            background:url(http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png) no-repeat,
+                    -webkit-linear-gradient(top, red 20%, blue 80%, green);
+
+            background-clip: content-box;
+            background-origin: content-box;
+            background-position: 10px;
+
+        }
+        .split-wrap div{
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+        }
+        .split-wrap .border{
+            border:20px solid blue;
+        }
+        .split-wrap .outline{
+            outline: 20px solid blue;
+        }
+        .split-wrap .shadow{
+            box-shadow: 0 0 0 20px blue;
+        }
+        .split-wrap .bg{
+            padding: 20px;
+            background: -webkit-linear-gradient(top, white 20%, white 80%, white) content-box,
+            -webkit-linear-gradient(top, blue 20px, blue 80%, blue);
+        }
+        .split-wrap .before-box{
+            margin: 0;
+            position: relative;
+        }
+        .split-wrap .before{
+            background-color: white;
+        }
+        .split-wrap .before:before{
+            position: absolute;
+            content: '';
+            top:-20px;
+            left: 10px;
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            background-color: blue;
+            z-index: -1;
+
+        }
+    </style>
+</head>
+<body>
+<div class="inline-box">
+    <div class="normal"></div>
+    <div class="border">border</div>
+    <div class="content">content</div>
+    <div class="inherit">inherit</div>
+    <div class="inline">232</div>
+</div>
+
+<div class="bg-box">Box</div>
+<div class="bg-box">Box</div>
+<div class="split-wrap">
+    <div class="border">border-Box</div>
+    <div class="outline">outline-Box</div>
+    <div class="shadow">shadow-Box</div>
+    <div class="bg">bg</div>
+    <div class="before-box">
+        <div class="before">before</div>
+    </div>
+
+</div>
+
+</body>
+</html>
