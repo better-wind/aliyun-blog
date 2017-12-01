@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.fenghou.site">
-  <title>Tag: linux | Louis Blog</title>
+  <title>node-webpack | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Louis Blog">
-<meta property="og:url" content="//blog.fenghou.site/tags/linux/index.html">
+  <meta name="description" content="webpack - 笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node-webpack">
+<meta property="og:url" content="//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="博客">
+<meta property="og:description" content="webpack - 笔记">
+<meta property="og:updated_time" content="2017-11-17T09:42:46.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Louis Blog">
-<meta name="twitter:description" content="博客">
+<meta name="twitter:title" content="node-webpack">
+<meta name="twitter:description" content="webpack - 笔记">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -151,116 +152,144 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2017-11-16-webpack-rules" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/18/2017-08-18-linux-mysql/" class="archive-article-date">
-  	<time datetime="2017-08-18T02:20:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/18/2017-08-18-linux-mysql/">Linux 使用 Mysql</a>
+    <h1 class="article-title" itemprop="name">
+      node-webpack
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/16/2017-11-16-webpack-rules/" class="archive-article-date">
+  	<time datetime="2017-11-16T03:29:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>webpack - 笔记<br><a id="more"></a></p>
+<h3 id="CSS样式表"><a href="#CSS样式表" class="headerlink" title="CSS样式表"></a>CSS样式表</h3><p>webpack可以做的<br>预处理语言转换 (scss-loader等)<br>提取样式表文件 (extract-text-webpack-plugin)<br>补全浏览器前缀 (postcss-loader autoprefixer)<br>打包压缩</p>
+<p>webpack 加载器的加载规则<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">model:&#123;</div><div class="line">   <span class="attr">rules</span>:[</div><div class="line">    &#123;</div><div class="line">       <span class="attr">test</span>:<span class="string">''</span>,</div><div class="line">       <span class="attr">use</span>:[</div><div class="line">        &#123;</div><div class="line">          <span class="attr">loader</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">options</span>:&#123;&#125;  </div><div class="line">        &#125;,</div><div class="line">        &#123;&#125;</div><div class="line">       ]</div><div class="line">    &#125;</div><div class="line">   ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可以考虑 将 css-loader 相关的加载处理抽出来处理<br>webpack 说到底就是一份配置文件<br>完全可以自由的拼拆(webpack-merge)</p>
+<blockquote>
+<p>extract-text-webpack-plugin<br>抽取样式 请配合 plugins使用<br>抽取样式 请配合 plugins使用<br>抽取样式 请配合 plugins使用 三遍<br>new ExtractTextPlugin(‘style.css’)</p>
+</blockquote>
+<h3 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h3><p>关于es6 babel的转换<br>transform-runtime 转换语法 ES6 的语法转换成ES5的<br>通俗理解为 转换语法糖<br>不转换新增API Map Set。。。includes等<br>如果需要实现 则需要通过引入 babel-polyfill来实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line">a.push(<span class="string">'5'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.includes(<span class="string">'5'</span>))</div><div class="line"></div><div class="line"><span class="comment">// 如上代码 会转换成</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">a.push(<span class="string">'5'</span>);</div><div class="line"><span class="built_in">console</span>.log(a.includes(<span class="string">'5'</span>));</div></pre></td></tr></table></figure></p>
+<h3 id="公共模块抽离"><a href="#公共模块抽离" class="headerlink" title="公共模块抽离"></a>公共模块抽离</h3><p>webpack抽离公共的模块</p>
+<blockquote>
+<p>name 打包的名称<br>  minChunks: number|Infinity|function(module, count) -&gt; boolean,<br>  // 在传入  公共chunk(commons chunk) 之前所需要包含的最少数量的 chunks 。<br>  // 数量必须大于等于2，或者少于等于 chunks的数量<br>  // 传入 <code>Infinity</code> 会马上生成 公共chunk，但里面没有模块。<br>  // 你可以传入一个 <code>function</code> ，以添加定制的逻辑（默认是 chunk 的数量）<br>      并且调用函数时会传入 module 和 count 参数。<br>      module 参数代表每个 chunks 里的模块，这些 chunks 是你通过 name/names 参数传入的<br>      module.context: The directory that stores the file. For example: ‘/my_project/node_modules/example-dependency’<br>      module.resource: The name of the file being processed. For example: ‘/my_project/node_modules/example-dependency/index.js’<br>      count 参数表示 module 被使用的 chunk 数量</p>
+</blockquote>
+<p>可以通过传参minChunks来控制你希望重复出现几次的module 被提取出来打包。<br>也就是说你自己可以控制当一个模块被引入几次可以被打包到共用的chunk中，<br>还可以规定如果这个公共模块小于一个值 minSize，<br>就不被提取出来这些都可以帮助你控制你想要的粒度。<br>当你改的不是公共模块的代码，理论上webpack 打包的时候本来就不会影响其他代码。<br>但是webpack 在使用 CommoChunkPlugin会生成一段 runtime 代码，<br>而哪怕你不改变common 里的代码这个 runtime 仍然是会跟随着打包变化的并且打入你的common 中，<br>所以你的common 的hash 就会开始变化了。<br>但是也有办法，就是独立把生成的runtime 代码抽出来。<br>（manifest）像下面一样，这个是从 vue-cli 中学习而来</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      <span class="attr">name</span>: <span class="string">'vendor'</span>,</div><div class="line">      <span class="attr">minChunks</span>: <span class="function"><span class="keyword">function</span> (<span class="params">module, count</span>) </span>&#123;</div><div class="line">        <span class="comment">// any required modules inside node_modules are extracted to vendor</span></div><div class="line">        <span class="keyword">return</span> (<span class="built_in">module</span>.resource &amp;&amp; <span class="regexp">/\.js$/</span>.test(<span class="built_in">module</span>.resource) &amp;&amp; <span class="built_in">module</span>.resource.indexOf(path.join(__dirname, <span class="string">'../node_modules'</span>)) === <span class="number">0</span></div><div class="line">        )</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line"> <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">       <span class="attr">name</span>: <span class="string">'mainfest'</span>,</div><div class="line">       <span class="attr">chunks</span>: [<span class="string">'vendor'</span>]</div><div class="line">     &#125;)</div></pre></td></tr></table></figure>
+<h3 id="模块异步加载"><a href="#模块异步加载" class="headerlink" title="模块异步加载"></a>模块异步加载</h3><p>第一个参数 依赖的文件 第二个参数回调 第三个参数 命名名称<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    <span class="attr">path</span>: config.build.assetsRoot,</div><div class="line">    <span class="attr">filename</span>: utils.assetsPath(<span class="string">'js/[name].[chunkhash].js'</span>),</div><div class="line">    <span class="attr">chunkFilename</span>: utils.assetsPath(<span class="string">'js/[name].[chunkhash].js'</span>)</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        <span class="built_in">require</span>(<span class="string">'../Component/Index'</span>)</div><div class="line">    &#125;,<span class="string">'Index'</span>)</div><div class="line"><span class="comment">// 传入第三个参数的  js/Index.xxxxxxxx.js</span></div><div class="line"><span class="comment">// 不传的           js/id.xxxxxxxx.js</span></div><div class="line"><span class="comment">// 第三个参数相同的会打包到一个js 中</span></div></pre></td></tr></table></figure></p>
+<p>Vue中路由实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Home = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>.ensure([],()=&gt;&#123;resolve(<span class="built_in">require</span>(<span class="string">'@/components/common/Home'</span>))&#125;)</div><div class="line">Home = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>.ensure([],()=&gt;&#123;resolve(<span class="built_in">require</span>(<span class="string">'@/components/common/Home'</span>)),<span class="string">'Home'</span>&#125;)</div><div class="line">Home = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>([<span class="string">'@/components/common/Home'</span>], resolve)</div></pre></td></tr></table></figure></p>
+<p>react中路由实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Home = <span class="function">(<span class="params">location, resolve</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        resolve(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../Component/Home'</span>).default)</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> Home = <span class="function">(<span class="params">location, resolve</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        resolve(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../Component/Home'</span>).default)</div><div class="line">    &#125;,<span class="string">'Home'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>普通js实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">load = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">              <span class="built_in">require</span>(<span class="string">'@/assets/js/demo'</span>)</div><div class="line">             &#125;)</div><div class="line">&#125;</div><div class="line">load()</div><div class="line"></div><div class="line"><span class="comment">//demo.js         </span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'I load'</span>)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">V</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'I will V'</span>)</div><div class="line">&#125;</div><div class="line">V()</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p">Gives the rose fragrance in hand</p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wxpay.jpg">
+                      <span class="reward-type">WeChat</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/15/2016-12-15-aliyun-yunwei/" class="archive-article-date">
-  	<time datetime="2016-12-15T11:04:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/15/2016-12-15-aliyun-yunwei/">学点运维，配个服务器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/11/17/2017-11-17-vue-about/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue-about
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/11/13/2017-11-13-node-sms-boom/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">node-sms-boom</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+  <!--PC和WAP自适应版-->
+  <div id="SOHUCS" sid="node-webpack" ></div>
+  <script type="text/javascript">
+    (function(){
+      var appid = 'cytiftFRT';
+      var conf = 'prod_f5e998d9b3eff429bcfbb306cdc89e14';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</div>
+
   
 
-    
+
 
 
           </div>
@@ -284,9 +313,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
