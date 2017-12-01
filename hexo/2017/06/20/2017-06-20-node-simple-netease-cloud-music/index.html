@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.fenghou.site">
-  <title>Node网易云音乐API | Louis Blog</title>
+  <title>XX云音乐 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="整理中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node网易云音乐API">
+<meta property="og:title" content="XX云音乐">
 <meta property="og:url" content="//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="整理中">
-<meta property="og:updated_time" content="2017-10-31T09:49:41.903Z">
+<meta property="og:updated_time" content="2017-11-15T08:02:21.104Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node网易云音乐API">
+<meta name="twitter:title" content="XX云音乐">
 <meta name="twitter:description" content="整理中">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      Node网易云音乐API
+      XX云音乐
     </h1>
   
 
@@ -173,6 +173,12 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>整理中<br><a id="more"></a></p>
+<p>前端 React<br>数据库 暂时不用<br>服务端 express —&gt; koa 迁移<br>API    (网易云Node音乐API)[<a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/" target="_blank" rel="external">https://binaryify.github.io/NeteaseCloudMusicApi/#/</a>]</p>
+<p>redux 中的 dispatch 行为会被所有的reducer 捕获<br>react-redux 的 connect 中 传入的 state 会混合在 组件的 props<br>传入的action 如果有值 会 传入调用 调用dispatch()的方法 如果不传 则会 传入 dispatch方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(</div><div class="line">    <span class="function">(<span class="params">state</span>)=&gt;</span>&#123;</div><div class="line">        <span class="keyword">let</span> &#123;count&#125; = state.User</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            count</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    (dispatch) =&gt; &#123;</div><div class="line">        <span class="keyword">const</span> type  = &#123; <span class="attr">type</span>: <span class="string">'CAT'</span> &#125;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">onIncreaseClick</span>: <span class="function"><span class="params">()</span> =&gt;</span> dispatch(type)</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">)(Index)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">constructor</span>()&#123;</div><div class="line">        <span class="keyword">super</span>()</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">const</span> &#123; count, onIncreaseClick &#125; = <span class="keyword">this</span>.props</div><div class="line">       </div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;span&gt;&#123;count&#125;&lt;/span&gt;</div><div class="line">                &lt;button onClick=&#123;onIncreaseClick&#125;&gt;Increase&lt;/button&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        )</div><div class="line">        <span class="comment">//如果不传第二个参数</span></div><div class="line">        <span class="keyword">const</span> &#123; count, dispatch &#125; = <span class="keyword">this</span>.props</div><div class="line">                </div><div class="line">                <span class="keyword">return</span> (</div><div class="line">                    &lt;div&gt;</div><div class="line">                        &lt;span&gt;&#123;count&#125;&lt;/span&gt;</div><div class="line">                        &lt;button onClick=&#123;()=&gt;&#123;</div><div class="line">                            const type  = &#123; type: 'CAT' &#125;</div><div class="line">                            dispatch(type)</div><div class="line">                        &#125;&#125;&gt;Increase&lt;/button&gt;</div><div class="line">                  &lt;/div&gt;</div><div class="line">                )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>react 中 默认props<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//way A</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> defaultProps = &#123; <span class="attr">demo</span> : <span class="number">12</span> &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// way B</span></div><div class="line">Index.defaultProps = &#123; <span class="attr">demo</span> : <span class="number">12</span> &#125;</div></pre></td></tr></table></figure></p>
+<p>react 中的 props 验证<br>React.PropTypes 自 React v15.5 起已弃用。请使用 prop-types 库代替<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Demo.propTypes = &#123;</div><div class="line">    <span class="attr">name</span>:  PropTypes.string.isRequired</div><div class="line">&#125;</div><div class="line"><span class="comment">// 是propTypes 不是PropTypes 也不是 propsTypes</span></div><div class="line"><span class="comment">// 是propTypes 不是PropTypes 也不是 propsTypes</span></div><div class="line"><span class="comment">// 是propTypes 不是PropTypes 也不是 propsTypes</span></div></pre></td></tr></table></figure></p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>react react-router react-redux </p>
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p>koa express pm2</p>
 
       
 
@@ -213,6 +219,10 @@ var _hmt = _hmt || [];
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
         		</li>
       		
 		</ul>
@@ -256,7 +266,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
   <!--PC和WAP自适应版-->
-  <div id="SOHUCS" sid="Node网易云音乐API" ></div>
+  <div id="SOHUCS" sid="XX云音乐" ></div>
   <script type="text/javascript">
     (function(){
       var appid = 'cytiftFRT';
@@ -354,11 +364,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -366,7 +380,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -382,7 +396,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -394,19 +408,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">PReact</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -414,15 +416,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">PReact</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">weex</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -430,7 +428,23 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">nginx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -438,11 +452,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>

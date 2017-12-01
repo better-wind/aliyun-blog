@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2017-11-10T09:03:13.080Z</updated>
+  <updated>2017-12-01T07:17:10.260Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -16,16 +16,178 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>根据图片色调生成渐变背景</title>
+    <link href="//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/"/>
+    <id>//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/</id>
+    <published>2017-12-01T02:00:00.000Z</published>
+    <updated>2017-12-01T07:17:10.260Z</updated>
+    
+    <content type="html"><![CDATA[<p>有这么个需求<br>有个容器 容器里面有个图片<br>容器的背景需要根据图片的颜色渐变显示<br>让整个风格不突兀<br><a id="more"></a></p>
+<h3 id="What-Color"><a href="#What-Color" class="headerlink" title="What Color"></a>What Color</h3><p>首先很明确 怎么提取图片中的颜色<br>canvas getImageData 可以获取图片中每个像素点的rgb值<br>通过一系列的 计算可以获取到 出现最多的几种颜色<br>此处省略好多字(代码下次补)</p>
+<h3 id="And-Then"><a href="#And-Then" class="headerlink" title="And Then"></a>And Then</h3><p>假设我们拿到颜色了 结束</p>
+<p>但是如果没拿到呢</p>
+<p>总所周知 canvas 的getImageData 是不能处理跨域图片<br>当然如果图片的服务器 指定了 Access-Control-Allow-Origin *<br>那么 通过 img.crossOrigin = “Anonymous” 就可以获取</p>
+<p>但是我的项目 需要的图片是某云音乐里拉出来图片<br>妥妥的跨域<br>好在 我的项目是通过node部署的<br>所以我是通过node中间转了一层<br>由node服务去请求 图片 然后再 返给前端<br>这样就不存在跨域的 行为了</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有这么个需求&lt;br&gt;有个容器 容器里面有个图片&lt;br&gt;容器的背景需要根据图片的颜色渐变显示&lt;br&gt;让整个风格不突兀&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+    
+      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git命令行</title>
+    <link href="//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/"/>
+    <id>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</id>
+    <published>2017-11-21T05:33:37.000Z</published>
+    <updated>2017-11-21T05:38:39.511Z</updated>
+    
+    <content type="html"><![CDATA[<p>Git命令行操作<br><a id="more"></a></p>
+<h3 id="About-分支"><a href="#About-分支" class="headerlink" title="About 分支"></a>About 分支</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> checkout &lt;<span class="keyword">branchName&gt; </span>切换分支</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>&lt;<span class="keyword">branchName&gt; </span>新建分支</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-a 本地分支列表</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-r 远程分支列表</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-D &lt;<span class="keyword">branchName&gt; </span>删除本地分支</div><div class="line"></div><div class="line"><span class="symbol">Git</span> <span class="built_in">v1</span>.<span class="number">7</span>.<span class="number">0</span> 之后</div><div class="line"><span class="symbol">git</span> <span class="keyword">push </span>origin --delete &lt;<span class="keyword">branchName&gt; </span>删除远程分支</div><div class="line"></div><div class="line">之前</div><div class="line"><span class="symbol">git</span> <span class="keyword">push </span>origin :&lt;<span class="keyword">branchName&gt;</span></div><div class="line"></div><div class="line"><span class="symbol">git</span> merge &lt;<span class="keyword">branchName&gt; </span>合并分支到当前分支</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git命令行操作&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="//blog.fenghou.site/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML标签语义</title>
+    <link href="//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/"/>
+    <id>//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/</id>
+    <published>2017-11-20T10:09:08.000Z</published>
+    <updated>2017-11-21T02:04:51.157Z</updated>
+    
+    <content type="html"><![CDATA[<p>HTML语义化整理<br><a id="more"></a><br>块级元素 常见的div p ul<br>行内元素 常见的span a </p>
+<p>元素间的嵌套<br>什么是语义化<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--会变成--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!--h1~h6 p 块级元素内不能再内嵌块级元素--&gt;</span></div></pre></td></tr></table></figure></p>
+<p>行内元素内 原则上不应该内嵌块级元素 但没有强制限制<br>‘奶制品：/范静/QQ:2367424715’,<br>            ‘茶饮酒水：/郑建邦/QQ:3410037920’,</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;HTML语义化整理&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="html" scheme="//blog.fenghou.site/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue-about</title>
+    <link href="//blog.fenghou.site/2017/11/17/2017-11-17-vue-about/"/>
+    <id>//blog.fenghou.site/2017/11/17/2017-11-17-vue-about/</id>
+    <published>2017-11-17T06:30:23.000Z</published>
+    <updated>2017-11-17T06:35:35.912Z</updated>
+    
+    <content type="html"><![CDATA[<p>VUE-ABOUT</p>
+<a id="more"></a>
+<h3 id="vue中-scope的实现"><a href="#vue中-scope的实现" class="headerlink" title=".vue中 scope的实现"></a>.vue中 scope的实现</h3><p>vue文件可以实现当前文件的css作用域<br>实现手法是通过vue-loader后生成一个<br>随机字符串属性 通过内置css属性选择器实现<br>like that<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scope-div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scope</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-class">.scope-div</span>&#123;</div><div class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--打包处理后--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-class">.scope-div</span><span class="selector-attr">[data-v-7af99ee4]</span>&#123;</div><div class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"scope-div"</span> <span class="attr">data-v-7af99ee4</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;VUE-ABOUT&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node-webpack</title>
+    <link href="//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/"/>
+    <id>//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/</id>
+    <published>2017-11-16T03:29:13.000Z</published>
+    <updated>2017-11-17T09:42:46.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>webpack - 笔记<br><a id="more"></a></p>
+<h3 id="CSS样式表"><a href="#CSS样式表" class="headerlink" title="CSS样式表"></a>CSS样式表</h3><p>webpack可以做的<br>预处理语言转换 (scss-loader等)<br>提取样式表文件 (extract-text-webpack-plugin)<br>补全浏览器前缀 (postcss-loader autoprefixer)<br>打包压缩</p>
+<p>webpack 加载器的加载规则<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">model:&#123;</div><div class="line">   <span class="attr">rules</span>:[</div><div class="line">    &#123;</div><div class="line">       <span class="attr">test</span>:<span class="string">''</span>,</div><div class="line">       <span class="attr">use</span>:[</div><div class="line">        &#123;</div><div class="line">          <span class="attr">loader</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">options</span>:&#123;&#125;  </div><div class="line">        &#125;,</div><div class="line">        &#123;&#125;</div><div class="line">       ]</div><div class="line">    &#125;</div><div class="line">   ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可以考虑 将 css-loader 相关的加载处理抽出来处理<br>webpack 说到底就是一份配置文件<br>完全可以自由的拼拆(webpack-merge)</p>
+<blockquote>
+<p>extract-text-webpack-plugin<br>抽取样式 请配合 plugins使用<br>抽取样式 请配合 plugins使用<br>抽取样式 请配合 plugins使用 三遍<br>new ExtractTextPlugin(‘style.css’)</p>
+</blockquote>
+<h3 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h3><p>关于es6 babel的转换<br>transform-runtime 转换语法 ES6 的语法转换成ES5的<br>通俗理解为 转换语法糖<br>不转换新增API Map Set。。。includes等<br>如果需要实现 则需要通过引入 babel-polyfill来实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line">a.push(<span class="string">'5'</span>)</div><div class="line"><span class="built_in">console</span>.log(a.includes(<span class="string">'5'</span>))</div><div class="line"></div><div class="line"><span class="comment">// 如上代码 会转换成</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line">a.push(<span class="string">'5'</span>);</div><div class="line"><span class="built_in">console</span>.log(a.includes(<span class="string">'5'</span>));</div></pre></td></tr></table></figure></p>
+<h3 id="公共模块抽离"><a href="#公共模块抽离" class="headerlink" title="公共模块抽离"></a>公共模块抽离</h3><p>webpack抽离公共的模块</p>
+<blockquote>
+<p>name 打包的名称<br>  minChunks: number|Infinity|function(module, count) -&gt; boolean,<br>  // 在传入  公共chunk(commons chunk) 之前所需要包含的最少数量的 chunks 。<br>  // 数量必须大于等于2，或者少于等于 chunks的数量<br>  // 传入 <code>Infinity</code> 会马上生成 公共chunk，但里面没有模块。<br>  // 你可以传入一个 <code>function</code> ，以添加定制的逻辑（默认是 chunk 的数量）<br>      并且调用函数时会传入 module 和 count 参数。<br>      module 参数代表每个 chunks 里的模块，这些 chunks 是你通过 name/names 参数传入的<br>      module.context: The directory that stores the file. For example: ‘/my_project/node_modules/example-dependency’<br>      module.resource: The name of the file being processed. For example: ‘/my_project/node_modules/example-dependency/index.js’<br>      count 参数表示 module 被使用的 chunk 数量</p>
+</blockquote>
+<p>可以通过传参minChunks来控制你希望重复出现几次的module 被提取出来打包。<br>也就是说你自己可以控制当一个模块被引入几次可以被打包到共用的chunk中，<br>还可以规定如果这个公共模块小于一个值 minSize，<br>就不被提取出来这些都可以帮助你控制你想要的粒度。<br>当你改的不是公共模块的代码，理论上webpack 打包的时候本来就不会影响其他代码。<br>但是webpack 在使用 CommoChunkPlugin会生成一段 runtime 代码，<br>而哪怕你不改变common 里的代码这个 runtime 仍然是会跟随着打包变化的并且打入你的common 中，<br>所以你的common 的hash 就会开始变化了。<br>但是也有办法，就是独立把生成的runtime 代码抽出来。<br>（manifest）像下面一样，这个是从 vue-cli 中学习而来</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      <span class="attr">name</span>: <span class="string">'vendor'</span>,</div><div class="line">      <span class="attr">minChunks</span>: <span class="function"><span class="keyword">function</span> (<span class="params">module, count</span>) </span>&#123;</div><div class="line">        <span class="comment">// any required modules inside node_modules are extracted to vendor</span></div><div class="line">        <span class="keyword">return</span> (<span class="built_in">module</span>.resource &amp;&amp; <span class="regexp">/\.js$/</span>.test(<span class="built_in">module</span>.resource) &amp;&amp; <span class="built_in">module</span>.resource.indexOf(path.join(__dirname, <span class="string">'../node_modules'</span>)) === <span class="number">0</span></div><div class="line">        )</div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line"> <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">       <span class="attr">name</span>: <span class="string">'mainfest'</span>,</div><div class="line">       <span class="attr">chunks</span>: [<span class="string">'vendor'</span>]</div><div class="line">     &#125;)</div></pre></td></tr></table></figure>
+<h3 id="模块异步加载"><a href="#模块异步加载" class="headerlink" title="模块异步加载"></a>模块异步加载</h3><p>第一个参数 依赖的文件 第二个参数回调 第三个参数 命名名称<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">output: &#123;</div><div class="line">    <span class="attr">path</span>: config.build.assetsRoot,</div><div class="line">    <span class="attr">filename</span>: utils.assetsPath(<span class="string">'js/[name].[chunkhash].js'</span>),</div><div class="line">    <span class="attr">chunkFilename</span>: utils.assetsPath(<span class="string">'js/[name].[chunkhash].js'</span>)</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        <span class="built_in">require</span>(<span class="string">'../Component/Index'</span>)</div><div class="line">    &#125;,<span class="string">'Index'</span>)</div><div class="line"><span class="comment">// 传入第三个参数的  js/Index.xxxxxxxx.js</span></div><div class="line"><span class="comment">// 不传的           js/id.xxxxxxxx.js</span></div><div class="line"><span class="comment">// 第三个参数相同的会打包到一个js 中</span></div></pre></td></tr></table></figure></p>
+<p>Vue中路由实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Home = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>.ensure([],()=&gt;&#123;resolve(<span class="built_in">require</span>(<span class="string">'@/components/common/Home'</span>))&#125;)</div><div class="line">Home = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>.ensure([],()=&gt;&#123;resolve(<span class="built_in">require</span>(<span class="string">'@/components/common/Home'</span>)),<span class="string">'Home'</span>&#125;)</div><div class="line">Home = <span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">require</span>([<span class="string">'@/components/common/Home'</span>], resolve)</div></pre></td></tr></table></figure></p>
+<p>react中路由实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> Home = <span class="function">(<span class="params">location, resolve</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        resolve(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../Component/Home'</span>).default)</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> Home = <span class="function">(<span class="params">location, resolve</span>) =&gt;</span> &#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">        resolve(<span class="literal">null</span>, <span class="built_in">require</span>(<span class="string">'../Component/Home'</span>).default)</div><div class="line">    &#125;,<span class="string">'Home'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>普通js实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">load = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">    <span class="built_in">require</span>.ensure([], <span class="built_in">require</span> =&gt; &#123;</div><div class="line">              <span class="built_in">require</span>(<span class="string">'@/assets/js/demo'</span>)</div><div class="line">             &#125;)</div><div class="line">&#125;</div><div class="line">load()</div><div class="line"></div><div class="line"><span class="comment">//demo.js         </span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'I load'</span>)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">V</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'I will V'</span>)</div><div class="line">&#125;</div><div class="line">V()</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;webpack - 笔记&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
+    
+      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node-sms-boom</title>
+    <link href="//blog.fenghou.site/2017/11/13/2017-11-13-node-sms-boom/"/>
+    <id>//blog.fenghou.site/2017/11/13/2017-11-13-node-sms-boom/</id>
+    <published>2017-11-13T01:27:44.000Z</published>
+    <updated>2017-11-13T09:58:42.051Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="puppeteer"><a href="#puppeteer" class="headerlink" title="puppeteer"></a>puppeteer</h3><p>安装<br>ERROR: Failed to download Chromium r508693! Set “PUPPETEER_SKIP_CHROMIUM_DOWNLOAD” env variable to skip download.</p>
+<p>原因 安装 puppeteer 时会去下载 chromium（实验版chrome），但是由于网络的原因，下载失败了</p>
+<p>解决<br>win npm config set PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true<br>linux export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = true</p>
+<p>linux centos 7.3 下载chromium 失败 待解决</p>
+<p><a href="http://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html" target="_blank" rel="external">http://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html</a><br>从这里下载 <a href="http://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/515411/" target="_blank" rel="external">http://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/515411/</a><br>/admin/fenghou/www/chrome/chrome-linux/chrome</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;puppeteer&quot;&gt;&lt;a href=&quot;#puppeteer&quot; class=&quot;headerlink&quot; title=&quot;puppeteer&quot;&gt;&lt;/a&gt;puppeteer&lt;/h3&gt;&lt;p&gt;安装&lt;br&gt;ERROR: Failed to download Chromium r
+    
+    </summary>
+    
+    
+      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
     <title>node-npm</title>
     <link href="//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/"/>
     <id>//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/</id>
     <published>2017-11-08T08:25:10.000Z</published>
-    <updated>2017-11-10T09:03:13.080Z</updated>
+    <updated>2017-11-16T03:28:34.961Z</updated>
     
     <content type="html"><![CDATA[<p>NPM - 笔记<br><a id="more"></a></p>
-<h3 id="切换npm源"><a href="#切换npm源" class="headerlink" title="切换npm源"></a>切换npm源</h3><p>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>npm config set disturl <a href="https://npm.taobao.org/dist" target="_blank" rel="external">https://npm.taobao.org/dist</a><br>npm config delete registry<br>npm config delete disturl<br>npm config list<br>npm config edit</p>
+<h3 id="切换npm源"><a href="#切换npm源" class="headerlink" title="切换npm源"></a>切换npm源</h3><p><a href="https://registry.npmjs.org/" target="_blank" rel="external">https://registry.npmjs.org/</a><br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>npm config set disturl <a href="https://npm.taobao.org/dist" target="_blank" rel="external">https://npm.taobao.org/dist</a><br>npm config delete registry<br>npm config delete disturl<br>npm config list<br>npm config edit</p>
 <h3 id="sass安装出错"><a href="#sass安装出错" class="headerlink" title="sass安装出错"></a>sass安装出错</h3><p>SASS_BINARY_SITE=<a href="https://npm.taobao.org/mirrors/node-sass/" target="_blank" rel="external">https://npm.taobao.org/mirrors/node-sass/</a> npm install node-sass –save-dev</p>
 <h3 id="更新node版本"><a href="#更新node版本" class="headerlink" title="更新node版本"></a>更新node版本</h3><p>window 官网下载.msi文件 安装覆盖老版本</p>
+<h3 id="npm-版本"><a href="#npm-版本" class="headerlink" title="npm 版本"></a>npm 版本</h3><p>npm版本5.5.1<br>会生成 package-lock.json 锁定当前安装的 package 包<br>rm -rf package-lock.json<br>管理员身份 npm install 还有有问题 没解决  版本回退到5之前</p>
 ]]></content>
     
     <summary type="html">
@@ -63,7 +225,7 @@
     <link href="//blog.fenghou.site/2017/11/07/2017-11-07-css-box-model/"/>
     <id>//blog.fenghou.site/2017/11/07/2017-11-07-css-box-model/</id>
     <published>2017-11-07T01:56:43.000Z</published>
-    <updated>2017-11-10T09:03:45.689Z</updated>
+    <updated>2017-11-10T09:03:45.688Z</updated>
     
     <content type="html"><![CDATA[<p>css-box 总结<br><a id="more"></a></p>
 <h3 id="盒模型的计算"><a href="#盒模型的计算" class="headerlink" title="盒模型的计算"></a>盒模型的计算</h3><p>盒模型 规定了元素框处理元素内容、内边距、边框 和 外边距 的方式 </p>
@@ -94,7 +256,7 @@
     <link href="//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/"/>
     <id>//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/</id>
     <published>2017-10-25T02:21:01.000Z</published>
-    <updated>2017-10-30T10:19:45.278Z</updated>
+    <updated>2017-10-30T10:19:45.277Z</updated>
     
     <content type="html"><![CDATA[<p>研究研究 源码<br>总结总结 心得<br><a id="more"></a></p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>webpack 这边的配置<br>主要还是根据项目来灵活的配置<br>大的项目根据运行环境来区分 开发 测试 线上<br>本地的调试通过node来搭建<br>小的项目可以通过命令行的形式直接敲命令</p>
@@ -139,7 +301,7 @@
     <link href="//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/"/>
     <id>//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</id>
     <published>2017-10-10T08:50:07.000Z</published>
-    <updated>2017-11-02T02:59:34.229Z</updated>
+    <updated>2017-11-02T02:59:34.228Z</updated>
     
     <content type="html"><![CDATA[<p>心血来潮想实现一个图片编辑器<br><a id="more"></a></p>
 <h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>实现图片根据选择区域裁剪<br>选择区域大小可以拖动改变</p>
@@ -190,7 +352,7 @@
     <link href="//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/"/>
     <id>//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/</id>
     <published>2017-09-19T02:02:58.000Z</published>
-    <updated>2017-10-23T06:16:49.434Z</updated>
+    <updated>2017-10-23T06:16:49.433Z</updated>
     
     <content type="html"><![CDATA[<p>总结一些输入框中类型的判断<br><a id="more"></a></p>
 <p>列举几个常用判断为空的情况<code>以下等于(==)不等于(!=)</code></p>
@@ -324,7 +486,7 @@
     <link href="//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/"/>
     <id>//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/</id>
     <published>2017-08-08T08:28:27.000Z</published>
-    <updated>2017-11-02T08:48:38.457Z</updated>
+    <updated>2017-11-02T08:48:38.456Z</updated>
     
     <content type="html"><![CDATA[<p>总结一下 浏览器中js事件运行机制<br><a id="more"></a><br>起因是女票今天问我一个问题<br>问题如下</p>
 <h3 id="alert引起的争论"><a href="#alert引起的争论" class="headerlink" title="alert引起的争论"></a>alert引起的争论</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">0</span>,</div><div class="line">    domProcess = <span class="built_in">document</span>.querySelector(<span class="string">'#process'</span>),</div><div class="line">    inter = <span class="literal">null</span></div><div class="line">inter = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(count == <span class="number">100</span>)&#123;</div><div class="line">        domProcess.innerText = count+<span class="string">'%'</span></div><div class="line">        <span class="built_in">console</span>.log(count)</div><div class="line">        alert(<span class="string">'加载完成'</span>)</div><div class="line">        clearInterval(inter)</div><div class="line">    &#125;</div><div class="line">&#125;,<span class="number">100</span>)</div><div class="line"><span class="comment">//弹框时 为什么页面上process显示的是99%？</span></div></pre></td></tr></table></figure>
@@ -480,7 +642,7 @@
     <link href="//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/"/>
     <id>//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/</id>
     <published>2017-06-25T12:17:35.000Z</published>
-    <updated>2017-11-02T03:14:21.986Z</updated>
+    <updated>2017-11-02T03:14:21.985Z</updated>
     
     <content type="html"><![CDATA[<p>Vue相关-整理中<br><a id="more"></a></p>
 ]]></content>
@@ -499,13 +661,19 @@
   </entry>
   
   <entry>
-    <title>Node网易云音乐API</title>
+    <title>XX云音乐</title>
     <link href="//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/"/>
     <id>//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</id>
     <published>2017-06-20T08:30:19.000Z</published>
-    <updated>2017-10-31T09:49:41.903Z</updated>
+    <updated>2017-11-15T08:02:21.104Z</updated>
     
     <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
+<p>前端 React<br>数据库 暂时不用<br>服务端 express —&gt; koa 迁移<br>API    (网易云Node音乐API)[<a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/" target="_blank" rel="external">https://binaryify.github.io/NeteaseCloudMusicApi/#/</a>]</p>
+<p>redux 中的 dispatch 行为会被所有的reducer 捕获<br>react-redux 的 connect 中 传入的 state 会混合在 组件的 props<br>传入的action 如果有值 会 传入调用 调用dispatch()的方法 如果不传 则会 传入 dispatch方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(</div><div class="line">    <span class="function">(<span class="params">state</span>)=&gt;</span>&#123;</div><div class="line">        <span class="keyword">let</span> &#123;count&#125; = state.User</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            count</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    (dispatch) =&gt; &#123;</div><div class="line">        <span class="keyword">const</span> type  = &#123; <span class="attr">type</span>: <span class="string">'CAT'</span> &#125;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">onIncreaseClick</span>: <span class="function"><span class="params">()</span> =&gt;</span> dispatch(type)</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">)(Index)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">constructor</span>()&#123;</div><div class="line">        <span class="keyword">super</span>()</div><div class="line">    &#125;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">const</span> &#123; count, onIncreaseClick &#125; = <span class="keyword">this</span>.props</div><div class="line">       </div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;span&gt;&#123;count&#125;&lt;/span&gt;</div><div class="line">                &lt;button onClick=&#123;onIncreaseClick&#125;&gt;Increase&lt;/button&gt;</div><div class="line">          &lt;/div&gt;</div><div class="line">        )</div><div class="line">        <span class="comment">//如果不传第二个参数</span></div><div class="line">        <span class="keyword">const</span> &#123; count, dispatch &#125; = <span class="keyword">this</span>.props</div><div class="line">                </div><div class="line">                <span class="keyword">return</span> (</div><div class="line">                    &lt;div&gt;</div><div class="line">                        &lt;span&gt;&#123;count&#125;&lt;/span&gt;</div><div class="line">                        &lt;button onClick=&#123;()=&gt;&#123;</div><div class="line">                            const type  = &#123; type: 'CAT' &#125;</div><div class="line">                            dispatch(type)</div><div class="line">                        &#125;&#125;&gt;Increase&lt;/button&gt;</div><div class="line">                  &lt;/div&gt;</div><div class="line">                )</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>react 中 默认props<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//way A</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> defaultProps = &#123; <span class="attr">demo</span> : <span class="number">12</span> &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// way B</span></div><div class="line">Index.defaultProps = &#123; <span class="attr">demo</span> : <span class="number">12</span> &#125;</div></pre></td></tr></table></figure></p>
+<p>react 中的 props 验证<br>React.PropTypes 自 React v15.5 起已弃用。请使用 prop-types 库代替<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Demo.propTypes = &#123;</div><div class="line">    <span class="attr">name</span>:  PropTypes.string.isRequired</div><div class="line">&#125;</div><div class="line"><span class="comment">// 是propTypes 不是PropTypes 也不是 propsTypes</span></div><div class="line"><span class="comment">// 是propTypes 不是PropTypes 也不是 propsTypes</span></div><div class="line"><span class="comment">// 是propTypes 不是PropTypes 也不是 propsTypes</span></div></pre></td></tr></table></figure></p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>react react-router react-redux </p>
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p>koa express pm2</p>
 ]]></content>
     
     <summary type="html">
@@ -517,6 +685,8 @@
     
       <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
     
+      <category term="react" scheme="//blog.fenghou.site/tags/react/"/>
+    
   </entry>
   
   <entry>
@@ -524,7 +694,7 @@
     <link href="//blog.fenghou.site/2017/05/17/2017-05-17-content-type/"/>
     <id>//blog.fenghou.site/2017/05/17/2017-05-17-content-type/</id>
     <published>2017-05-17T03:28:09.000Z</published>
-    <updated>2017-11-03T02:25:03.670Z</updated>
+    <updated>2017-11-03T02:25:03.669Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <h3 id="request-amp-amp-response"><a href="#request-amp-amp-response" class="headerlink" title="request &amp;&amp; response"></a>request &amp;&amp; response</h3><h3 id="content-type"><a href="#content-type" class="headerlink" title="content-type"></a>content-type</h3><blockquote>
@@ -694,7 +864,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/21/2017-02-21-Weex/"/>
     <id>//blog.fenghou.site/2017/02/21/2017-02-21-Weex/</id>
     <published>2017-02-21T11:17:14.000Z</published>
-    <updated>2017-10-31T09:48:34.652Z</updated>
+    <updated>2017-10-31T09:48:34.651Z</updated>
     
     <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
 ]]></content>
@@ -715,7 +885,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/17/2017-02-17-Rax/"/>
     <id>//blog.fenghou.site/2017/02/17/2017-02-17-Rax/</id>
     <published>2017-02-17T11:16:59.000Z</published>
-    <updated>2017-10-31T09:48:23.309Z</updated>
+    <updated>2017-10-31T09:48:23.308Z</updated>
     
     <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>
 ]]></content>
@@ -736,7 +906,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/13/2017-02-13-PReact/"/>
     <id>//blog.fenghou.site/2017/02/13/2017-02-13-PReact/</id>
     <published>2017-02-13T11:16:39.000Z</published>
-    <updated>2017-10-31T09:48:23.291Z</updated>
+    <updated>2017-10-31T09:48:23.290Z</updated>
     
     <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>
 ]]></content>
@@ -757,7 +927,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/13/2017-02-13-wx%E7%AD%BE%E5%90%8D%E5%87%BA%E9%94%99-URL/"/>
     <id>//blog.fenghou.site/2017/02/13/2017-02-13-wx签名出错-URL/</id>
     <published>2017-02-13T11:16:16.000Z</published>
-    <updated>2017-03-15T11:26:35.692Z</updated>
+    <updated>2017-03-15T11:26:35.691Z</updated>
     
     <content type="html"><![CDATA[<p>上周调试wx收货地址的时候<br>碰到一个签名出错的问题<br>invalid signature<br><a id="more"></a></p>
 <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>为了增强用户体验<br>在下单页选择收货地址的时候<br>如果是微信用户<br>新增添加微信地址的功能</p>
@@ -789,7 +959,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/"/>
     <id>//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/</id>
     <published>2017-02-05T11:15:42.000Z</published>
-    <updated>2017-10-31T09:48:23.300Z</updated>
+    <updated>2017-10-31T09:48:23.299Z</updated>
     
     <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>
 ]]></content>
@@ -852,7 +1022,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/01/21/2017-01-21-Canvas%E6%AF%9B%E7%AC%94%E5%AD%97%E4%B9%A6%E6%B3%95/"/>
     <id>//blog.fenghou.site/2017/01/21/2017-01-21-Canvas毛笔字书法/</id>
     <published>2017-01-21T11:14:18.000Z</published>
-    <updated>2017-03-15T11:31:18.252Z</updated>
+    <updated>2017-03-15T11:31:18.251Z</updated>
     
     <content type="html"><![CDATA[<p>继续Canvas<br>这次记录移动端手写书法的实现<br><a id="more"></a></p>
 <h3 id="抛出问题"><a href="#抛出问题" class="headerlink" title="抛出问题"></a>抛出问题</h3><p>canvas在移动端应用书法<br>需要解决两个问题<br>1.笔锋问题<br>2.连贯问题</p>
@@ -877,7 +1047,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2017/01/20/2017-01-20-Canvas%E9%BB%91%E5%87%A4%E6%A2%A8/"/>
     <id>//blog.fenghou.site/2017/01/20/2017-01-20-Canvas黑凤梨/</id>
     <published>2017-01-20T11:13:46.000Z</published>
-    <updated>2017-03-15T11:34:33.357Z</updated>
+    <updated>2017-03-15T11:34:33.356Z</updated>
     
     <content type="html"><![CDATA[<p>之前很火的黑凤梨生成性格图片<br>相信大家印象深刻<br>短时间拉了大量粉丝，同时自个儿也被微信封了<br><a id="more"></a><br>我们公司当时也做了一个类似的活动<br>想去治病！</p>
 <h3 id="活动流程"><a href="#活动流程" class="headerlink" title="活动流程"></a>活动流程</h3><p><img src="http://xqproduct.xiangqu.com/FqDKF5UELtMrxWcGd33YSKEVM3Xq?imageView2/2/w/250/q/90/format/jpg/1352x1580/" alt="黑凤梨"><br>通过输入生日年月，确定星座<br>每个新座对应几个不同的病症<br>每个病症对应几段不同的文案和商品<br>诊断结果可以分享</p>
@@ -1020,7 +1190,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/"/>
     <id>//blog.fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/</id>
     <published>2016-12-28T11:09:23.000Z</published>
-    <updated>2017-03-15T11:52:29.209Z</updated>
+    <updated>2017-03-15T11:52:29.208Z</updated>
     
     <content type="html"><![CDATA[<p>要学好Js，首先必须得先理解原型(prototype)<br>why？<br>js作为面向对象的语言，实现面向对象的机制就是原型！<br><a id="more"></a><br>都说js中一切皆对象,那到底什么是对象呢？</p>
 <blockquote>
@@ -1047,7 +1217,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2016/12/27/2016-12-27-%E4%BD%A0%E7%9C%9F%E7%9A%84%E5%AD%A6%E5%A5%BDJs/"/>
     <id>//blog.fenghou.site/2016/12/27/2016-12-27-你真的学好Js/</id>
     <published>2016-12-27T11:08:58.000Z</published>
-    <updated>2017-03-15T11:58:07.910Z</updated>
+    <updated>2017-03-15T11:58:07.909Z</updated>
     
     <content type="html"><![CDATA[<p>在我看来前端(Js)就好比是个剑客江湖<br>江湖中有人练react宝典，有人练vue神功<br>有人锻造webpack利剑<br>…<br><a id="more"></a><br>而Js就是这些的基础心法，决定这些宝典,神功最后在你手上的杀伤力<br>那么作为最基础的心法，你真的参透的了吗？</p>
 <blockquote>
@@ -1226,7 +1396,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2016/12/16/2016-12-16-webpack/"/>
     <id>//blog.fenghou.site/2016/12/16/2016-12-16-webpack/</id>
     <published>2016-12-16T11:05:13.000Z</published>
-    <updated>2017-03-15T12:16:23.087Z</updated>
+    <updated>2017-03-15T12:16:23.086Z</updated>
     
     <content type="html"><![CDATA[<p>关于webpack的教程网上一抓一大把<br>就不班门弄斧了<br>这里只是总结一些webpack的实用配置以及个人心得<br><a id="more"></a></p>
 <h3 id="entry-amp-output"><a href="#entry-amp-output" class="headerlink" title="entry&amp;output"></a>entry&amp;output</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">enpty:&#123;</div><div class="line">    <span class="attr">index</span>:<span class="string">'./index.js'</span>,</div><div class="line">    <span class="attr">more</span>:[<span class="string">'./more2.js'</span>,<span class="string">'./more.js'</span>],</div><div class="line">    <span class="attr">vendor</span>: [<span class="string">'react'</span>, <span class="string">'react-dom'</span>, <span class="string">'react-router'</span>]</div><div class="line">&#125;</div><div class="line">putput:&#123;</div><div class="line">    <span class="attr">path</span>:<span class="string">'./build'</span>,</div><div class="line">    <span class="attr">filename</span>:<span class="string">'[name]-[id].js'</span>,</div><div class="line">    <span class="attr">publicPath</span>:<span class="string">'/assets/'</span>,</div><div class="line">    <span class="attr">chunkFilename</span>:<span class="string">'[name]-[chunkhash]'</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//[id], chunk的id</span></div><div class="line"><span class="comment">//[name] ,chunk名</span></div><div class="line"><span class="comment">//[hash], 编译哈希值</span></div><div class="line"><span class="comment">//[chunkhash] , chunk的hash值  根据模块内容</span></div><div class="line"><span class="comment">//output.publicPath：设置为想要的资源访问路径。</span></div><div class="line"><span class="comment">//访问时，则需要通过类似http://localhost:8080/asstes/index-1.js来访问资源，</span></div><div class="line"><span class="comment">//如果没有设置，则默认从站点根目录加载。</span></div><div class="line"><span class="comment">//filename应该比较好理解，就是对应于entry里面生成出来的文件名。比如：</span></div><div class="line">&#123;</div><div class="line">    <span class="attr">entry</span>: &#123;</div><div class="line">        <span class="string">"index"</span>: <span class="string">"pages/index.jsx"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">        <span class="attr">filename</span>: <span class="string">"[name].min.js"</span>,</div><div class="line">        <span class="attr">chunkFilename</span>: <span class="string">"[name].min.js"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//生成出来的文件名为index.min.js。</span></div><div class="line"><span class="comment">//chunkname我的理解是未被列在entry中，</span></div><div class="line"><span class="comment">//却又需要被打包出来的文件命名配置。</span></div><div class="line"><span class="comment">//什么场景需要呢？我们项目就遇到过，在按需加载（异步）模块的时候，</span></div><div class="line"><span class="comment">//这样的文件是没有被列在entry中的，如使用CommonJS的方式异步加载模块：</span></div><div class="line"><span class="built_in">require</span>.ensure([<span class="string">"modules/tips.jsx"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">require</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">"modules/tips.jsx"</span>);</div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;, <span class="string">'tips'</span>);</div><div class="line"><span class="comment">//异步加载的模块是要以文件形式加载哦，</span></div><div class="line"><span class="comment">//所以这时生成的文件名是以chunkname配置的，</span></div><div class="line"><span class="comment">//生成出的文件名就是tips.min.js。</span></div><div class="line"><span class="comment">//（require.ensure() API的第三个参数是给这个模块命名，</span></div><div class="line"><span class="comment">//否则 chunkFilename: "[name].min.js" 中的 [name] 是一个自动分配的、可读性很差的id，</span></div><div class="line"><span class="comment">//这是我在文档很不起眼的地方788发现的。。。）</span></div><div class="line"><span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">          <span class="attr">names</span>: [<span class="string">'vendor'</span>],</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
@@ -1336,7 +1506,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2016/12/13/2016-12-13-node-spider/"/>
     <id>//blog.fenghou.site/2016/12/13/2016-12-13-node-spider/</id>
     <published>2016-12-13T11:03:06.000Z</published>
-    <updated>2017-11-09T08:15:27.284Z</updated>
+    <updated>2017-11-09T08:15:27.283Z</updated>
     
     <content type="html"><![CDATA[<p>Node学习入门，练习爬虫再适合不过了<br>这里通过爬区某图片网站近(10万张图片)的例子，介绍爬虫的过程<br><a id="more"></a></p>
 <h3 id="爬虫分析设计"><a href="#爬虫分析设计" class="headerlink" title="爬虫分析设计"></a>爬虫分析设计</h3><p>抓取的是 ‘<a href="http://www.mzitu.com‘" target="_blank" rel="external">http://www.mzitu.com‘</a> 网站<br>图片大致有五个类目<br>每个类目下分页规则<br><a href="http://www.mzitu.com/类目/page/1" target="_blank" rel="external">http://www.mzitu.com/类目/page/1</a><br><a href="http://www.mzitu.com/类目/page/2" target="_blank" rel="external">http://www.mzitu.com/类目/page/2</a></p>
@@ -1391,7 +1561,7 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     <link href="//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/"/>
     <id>//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/</id>
     <published>2016-12-12T02:25:27.000Z</published>
-    <updated>2017-11-02T02:45:19.117Z</updated>
+    <updated>2017-11-02T02:45:19.116Z</updated>
     
     <content type="html"><![CDATA[<p>markdown 语法<br><a id="more"></a></p>
 <h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><hr>
