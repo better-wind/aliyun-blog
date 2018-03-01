@@ -18,7 +18,7 @@ webpack 加载器的加载规则
 model:{
    rules:[
     {
-       test:'',
+       test:'', //多个loader建议配置
        use:[
         {
           loader:'',
@@ -26,10 +26,111 @@ model:{
         },
         {}
        ]
+    },
+    {
+       test:'',//单个loader建议配置
+       loader:'',
+       options:{}
     }
    ]
 }
 ```
+对于要抽离出来的css文件的配置
+```javascript
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+rules:[
+    {
+            test:/\.css$/,
+            use: ExtractTextPlugin.extract('css-loader','style-loader')
+    },
+    {
+           test:/\.css$/,
+           use: ExtractTextPlugin.extract({
+               use:[
+                   {
+                       loader:'css-loader',
+                       options:{
+                          sourceMap:true
+                       }
+                   }
+               ]
+           })
+    },
+    
+]
+```
+使用postcss-loader时需要配置 .postcssrc.js 
+安装 autoprefixer 并且指定兼容(package.json中配置) 
+```javascript
+//.postcssrc.js
+module.exports = {
+  "plugins": {
+    // to edit target browsers: use "browserlist" field in package.json
+    "autoprefixer": {}
+  }
+}
+//package.json
+"browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+/*
+last 2 versions: the last 2 versions for each browser.
+最后2个版本：每个浏览器的最后2个版本。
+
+last 2 Chrome versions: the last 2 versions of Chrome browser.
+最后2个chrome版本：chrome浏览器的最后2个版本。
+
+> 5%: versions selected by global usage statistics. >=, < and <= work too.
+> 5％：由全局使用统计选择的版本。> =，<和<=也工作。
+
+> 5% in US: uses USA usage statistics. It accepts two-letter country code.
+> 5% in US: 使用美国使用统计。它接受两个字母的国家代码。
+
+> 5% in alt-AS: uses Asia region usage statistics. List of all region codes can be found at caniuse-lite/data/regions.
+> 5% in alt-AS: 使用亚洲地区使用情况统计。所有地区代码清单可在caniuse-lite / data / regions中找到。
+
+> 5% in my stats: uses custom usage data.
+> 5% in my stats: 使用自定义使用数据
+
+extends browserslist-config-mycompany: take queries from browserslist-config-mycompany npm package.
+扩展browserslist-config-mycompany: 从browserslist-config-mycompany npm包中获取查询。
+
+ie 6-8: selects an inclusive range of versions.
+ie 6-8: 选择包含范围的版本
+
+Firefox > 20: versions of Firefox newer than 20. >=, < and <= work too.
+Firefox > 20: Firefox的版本比20更新。> =，<和<=也可以。
+
+iOS 7: the iOS browser version 7 directly.
+iOS 7: 直接使用ios浏览器版本7
+
+Firefox ESR: the latest [Firefox ESR] version.
+Firefox esr：最新的[firefox esr]版本。
+
+unreleased versions or unreleased Chrome versions: alpha and beta versions.
+未发布的版本或未发布的Chrome版本：alpha和beta版本。
+
+last 2 major versions or last 2 iOS major versions: all minor/patch releases of last 2 major versions.
+最后2个主要版本或最后2个主要版本: 最后2个主要版本的所有次要/补丁版本  
+
+since 2015 or last 2 years: all versions released since year 2015 (also since 2015-03 and since 2015-03-10).
+自2015年或最近2年以来: 自2015年以来发布的所有版本（自2015-03和2015-03-10以来）   
+
+dead: browsers from last 2 version query, but with less than 0.5% in global usage statistics and without official support or updates for 24 months. Right now it is IE 10, IE_Mob 10, BlackBerry 10, and BlackBerry 7.
+dead: 来自上次2版本查询的浏览器，但全球使用情况统计信息少于0.5％，并且24个月没有官方支持或更新
+
+defaults: Browserslist’s default browsers (> 0.5%, last 2 versions, Firefox ESR, not dead). 
+defaults://默认配置
+
+not ie <= 8: exclude browsers selected by previous queries. 
+not ie <= 8: 排除先前查询选择的浏览器 
+*/  
+
+
+```
+使用 optimize-css-assets-webpack-plugin 插件压缩css
 可以考虑 将 css-loader 相关的加载处理抽出来处理
 webpack 说到底就是一份配置文件
 完全可以自由的拼拆(webpack-merge)
@@ -155,6 +256,32 @@ function V(){
 }
 V()         
 ```
+
+### devServer
+关于webpack的devServer
+如下配置
+```javascript
+devServer:{
+        contentBase:path.resolve(__dirname,'../static'),
+        publicPath:'/',
+        port:8888,
+        open:true,
+        host:'192.168.0.246',
+        hot:true,
+    }
+/*
+* Project is running at http://192.168.0.246:8888/
+* webpack output is served from /
+* Content not from webpack is served from E:\github\firework\static
+* */
+```
+contentBase 指定的是 页面中引用的不是通过webpack打包的文件的 获取目录
+publicPath  指定的是 页面中引用的是通过webpack打包的文件的获取目录
+
+hot 指的是是否开启热重载 
+需要搭配 new webpack.HotModuleReplacementPlugin() 插件一起使用
+
+
 
 
 

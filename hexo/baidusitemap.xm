@@ -4,61 +4,8 @@
 
     
   <url>
-    <loc>//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/</loc>
-    <lastmod>2017-12-01T07:17:10.260Z</lastmod>
-    <data>
-        <display>
-        <title>根据图片色调生成渐变背景</title>
-        <pubTime>2017-12-01T02:00:00.000Z</pubTime>
-        
-        <tag>node</tag>
-         
-        <tag>canvas</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</loc>
-    <lastmod>2017-11-21T05:38:39.511Z</lastmod>
-    <data>
-        <display>
-        <title>Git命令行</title>
-        <pubTime>2017-11-21T05:33:37.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/</loc>
-    <lastmod>2017-11-21T02:04:51.157Z</lastmod>
-    <data>
-        <display>
-        <title>HTML标签语义</title>
-        <pubTime>2017-11-20T10:09:08.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/</loc>
-    <lastmod>2017-11-17T09:42:46.497Z</lastmod>
+    <lastmod>2018-02-26T08:44:33.612Z</lastmod>
     <data>
         <display>
         <title>node-webpack</title>
@@ -76,8 +23,46 @@
 
     
   <url>
+    <loc>//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/</loc>
+    <lastmod>2018-02-05T01:56:45.882Z</lastmod>
+    <data>
+        <display>
+        <title>2018-02-03-nginx-log</title>
+        <pubTime>2018-02-03T09:35:27.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</loc>
+    <lastmod>2018-01-09T08:13:42.209Z</lastmod>
+    <data>
+        <display>
+        <title>学点运维，配个服务器</title>
+        <pubTime>2016-12-15T11:04:25.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.fenghou.site/2017/11/17/2017-11-17-vue-about/</loc>
-    <lastmod>2017-11-17T06:35:35.912Z</lastmod>
+    <lastmod>2018-01-05T03:50:16.083Z</lastmod>
     <data>
         <display>
         <title>vue-about</title>
@@ -93,8 +78,44 @@
 
     
   <url>
+    <loc>//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</loc>
+    <lastmod>2018-01-05T02:19:58.440Z</lastmod>
+    <data>
+        <display>
+        <title>XX云音乐</title>
+        <pubTime>2017-06-20T08:30:19.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+        <tag>react</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/</loc>
+    <lastmod>2018-01-04T06:41:50.374Z</lastmod>
+    <data>
+        <display>
+        <title>HTML标签语义</title>
+        <pubTime>2017-11-20T10:09:08.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/</loc>
-    <lastmod>2017-11-16T03:28:34.961Z</lastmod>
+    <lastmod>2017-12-27T08:38:07.658Z</lastmod>
     <data>
         <display>
         <title>node-npm</title>
@@ -108,16 +129,52 @@
 
     
   <url>
-    <loc>//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</loc>
-    <lastmod>2017-11-15T08:02:21.104Z</lastmod>
+    <loc>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</loc>
+    <lastmod>2017-12-25T05:50:51.258Z</lastmod>
     <data>
         <display>
-        <title>XX云音乐</title>
-        <pubTime>2017-06-20T08:30:19.000Z</pubTime>
+        <title>Git命令行</title>
+        <pubTime>2017-11-21T05:33:37.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/12/11/2017-12-11-array-storage-memory/</loc>
+    <lastmod>2017-12-11T02:34:42.499Z</lastmod>
+    <data>
+        <display>
+        <title>巧用数组存储</title>
+        <pubTime>2017-12-11T01:43:41.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/</loc>
+    <lastmod>2017-12-01T07:17:10.260Z</lastmod>
+    <data>
+        <display>
+        <title>根据图片色调生成渐变背景</title>
+        <pubTime>2017-12-01T02:00:00.000Z</pubTime>
         
         <tag>node</tag>
          
-        <tag>react</tag>
+        <tag>canvas</tag>
          
          
            
@@ -586,9 +643,9 @@
         <title>此去经年@我才是香坊大呲花</title>
         <pubTime>2017-03-22T06:05:31.000Z</pubTime>
         
-        <tag>随想</tag>
-         
         <tag>js</tag>
+         
+        <tag>随想</tag>
          
          
            
@@ -659,25 +716,6 @@
         <pubTime>2016-12-14T11:03:52.000Z</pubTime>
         
         <tag>随想</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</loc>
-    <lastmod>2017-03-15T12:19:34.414Z</lastmod>
-    <data>
-        <display>
-        <title>学点运维，配个服务器</title>
-        <pubTime>2016-12-15T11:04:25.000Z</pubTime>
-        
-        <tag>node</tag>
-         
-        <tag>linux</tag>
          
          
            

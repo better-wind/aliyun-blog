@@ -84,10 +84,24 @@ Demo.propTypes = {
 // 是propTypes 不是PropTypes 也不是 propsTypes
 // 是propTypes 不是PropTypes 也不是 propsTypes
 ```
+### 关于路由
+react-router 版本 > 4.0
+exact 全匹配
+Switch 匹配一个后不向下匹配
 
+<Link to="/a/b"> 下面两个都会匹配
+<Route path="/a"></Route>
+<Route path="/a/b"></Route>
+可以通过 exact 和 Switch 解决
 
+strict 匹配链接的斜杠 
+true  /one 只匹配 /one 
+false /one 匹配  /one /one/ /one/two 
+Route component={XXX} render={()=> XXX}
 
+children 不管path是否被匹配 都会映射
 
+默认是链接渲染
 
 ### 前端
 react react-router react-redux 

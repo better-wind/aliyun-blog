@@ -2,51 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/</loc>
-    
-    <lastmod>2017-12-01T07:17:10.260Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</loc>
-    
-    <lastmod>2017-11-21T05:38:39.511Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/</loc>
-    
-    <lastmod>2017-11-21T02:04:51.157Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/</loc>
     
-    <lastmod>2017-11-17T09:42:46.497Z</lastmod>
+    <lastmod>2018-02-26T08:44:33.612Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/</loc>
+    
+    <lastmod>2018-02-05T01:56:45.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</loc>
+    
+    <lastmod>2018-01-09T08:13:42.209Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/11/17/2017-11-17-vue-about/</loc>
     
-    <lastmod>2017-11-17T06:35:35.912Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/</loc>
-    
-    <lastmod>2017-11-16T03:28:34.961Z</lastmod>
+    <lastmod>2018-01-05T03:50:16.083Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</loc>
     
-    <lastmod>2017-11-15T08:02:21.104Z</lastmod>
+    <lastmod>2018-01-05T02:19:58.440Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/</loc>
+    
+    <lastmod>2018-01-04T06:41:50.374Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/</loc>
+    
+    <lastmod>2017-12-27T08:38:07.658Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</loc>
+    
+    <lastmod>2017-12-25T05:50:51.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/12/11/2017-12-11-array-storage-memory/</loc>
+    
+    <lastmod>2017-12-11T02:34:42.499Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/</loc>
+    
+    <lastmod>2017-12-01T07:17:10.260Z</lastmod>
     
   </url>
   
@@ -264,13 +285,6 @@
     <loc>//blog.fenghou.site/2016/12/14/2016-12-14-incity/</loc>
     
     <lastmod>2017-03-15T12:21:11.534Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</loc>
-    
-    <lastmod>2017-03-15T12:19:34.414Z</lastmod>
     
   </url>
   
