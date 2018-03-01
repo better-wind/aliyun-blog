@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2018-02-05T01:56:45.882Z</updated>
+  <updated>2018-03-01T07:10:08.373Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2018-02-03-nginx-log</title>
+    <title>查看Nginx日志</title>
     <link href="//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/"/>
     <id>//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/</id>
     <published>2018-02-03T09:35:27.000Z</published>
-    <updated>2018-02-05T01:56:45.882Z</updated>
+    <updated>2018-03-01T07:10:08.373Z</updated>
     
     <content type="html"><![CDATA[<p>nginx 日志分析<br><a id="more"></a></p>
 <h3 id="日志组成"><a href="#日志组成" class="headerlink" title="日志组成"></a>日志组成</h3><p>nginx的默认日记位置<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log;</span></div><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log  notice;</span></div><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log  info;</span></div></pre></td></tr></table></figure></p>
@@ -64,16 +64,14 @@
     <link href="//blog.fenghou.site/2017/12/11/2017-12-11-array-storage-memory/"/>
     <id>//blog.fenghou.site/2017/12/11/2017-12-11-array-storage-memory/</id>
     <published>2017-12-11T01:43:41.000Z</published>
-    <updated>2017-12-11T02:34:42.499Z</updated>
+    <updated>2018-03-01T07:10:08.375Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cates = [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">label</span>:<span class="string">''</span>,</div><div class="line">      <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">      <span class="attr">cates</span>:[</div><div class="line">        &#123;</div><div class="line">          <span class="attr">label</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">cates</span>:[</div><div class="line">           &#123;</div><div class="line">              <span class="attr">label</span>:<span class="string">'me'</span>,</div><div class="line">              <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">              <span class="attr">cates</span>:[]</div><div class="line">           &#125;</div><div class="line">          ]</div><div class="line">        &#125;</div><div class="line">      ]  </div><div class="line">    &#125;</div><div class="line"> ]</div><div class="line"><span class="comment">//现在我想给label='me'的cates 复制怎么做</span></div><div class="line"><span class="comment">//假如我知道他的结构层级是[0,0,0]</span></div><div class="line">cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates = []</div><div class="line"><span class="keyword">let</span> _item = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</div><div class="line"><span class="keyword">let</span> _arr = []</div><div class="line">_item.map(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</div><div class="line">    _arr = cates[item]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">let</span> arr = cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<p>多重数组赋值<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cates = [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">label</span>:<span class="string">''</span>,</div><div class="line">      <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">      <span class="attr">cates</span>:[</div><div class="line">        &#123;</div><div class="line">          <span class="attr">label</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">cates</span>:[</div><div class="line">           &#123;</div><div class="line">              <span class="attr">label</span>:<span class="string">'me'</span>,</div><div class="line">              <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">              <span class="attr">cates</span>:[]</div><div class="line">           &#125;</div><div class="line">          ]</div><div class="line">        &#125;</div><div class="line">      ]  </div><div class="line">    &#125;</div><div class="line"> ]</div><div class="line"><span class="comment">//现在我想给label='me'的cates 复制怎么做</span></div><div class="line"><span class="comment">//假如我知道他的结构层级是[0,0,0]</span></div><div class="line">cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates = []</div><div class="line"><span class="keyword">let</span> _item = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</div><div class="line"><span class="keyword">let</span> _arr = []</div><div class="line">_item.map(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</div><div class="line">    _arr = cates[item]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">let</span> arr = cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;
+      &lt;p&gt;多重数组赋值&lt;br&gt;
     
     </summary>
     
@@ -910,9 +908,9 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
-    
       <category term="随想" scheme="//blog.fenghou.site/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
     
   </entry>
   
@@ -1559,9 +1557,9 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
-    
       <category term="linux" scheme="//blog.fenghou.site/tags/linux/"/>
+    
+      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
     
   </entry>
   

@@ -4,7 +4,7 @@ tags:
     - js
     - vue
 ---
-
+多重数组赋值
 <!--more-->
 ```javascript
 var cates = [
