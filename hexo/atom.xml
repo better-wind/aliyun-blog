@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2018-03-01T07:10:08.373Z</updated>
+  <updated>2018-03-01T07:15:15.170Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/"/>
     <id>//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/</id>
     <published>2018-02-03T09:35:27.000Z</published>
-    <updated>2018-03-01T07:10:08.373Z</updated>
+    <updated>2018-03-01T07:15:15.170Z</updated>
     
-    <content type="html"><![CDATA[<p>nginx 日志分析<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>Nginx 日志分析<br><a id="more"></a></p>
 <h3 id="日志组成"><a href="#日志组成" class="headerlink" title="日志组成"></a>日志组成</h3><p>nginx的默认日记位置<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log;</span></div><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log  notice;</span></div><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log  info;</span></div></pre></td></tr></table></figure></p>
 <p>nginx的默认日志配置文件</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">log_format</span>  main  <span class="string">'<span class="variable">$remote_addr</span> - <span class="variable">$remote_user</span> [<span class="variable">$time_local</span>] "<span class="variable">$request</span>" '</span></div><div class="line">                        <span class="string">'<span class="variable">$status</span> <span class="variable">$body_bytes_sent</span> "<span class="variable">$http_referer</span>" '</span></div><div class="line">                       <span class="string">'"<span class="variable">$http_user_agent</span>" "<span class="variable">$http_x_forwarded_for</span>"'</span>;</div><div class="line">                       </div><div class="line"><span class="attribute">access_log</span>  logs/access.log  main;</div></pre></td></tr></table></figure>
@@ -48,7 +48,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;nginx 日志分析&lt;br&gt;
+      &lt;p&gt;Nginx 日志分析&lt;br&gt;
     
     </summary>
     
@@ -224,9 +224,9 @@
     </summary>
     
     
-      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
-    
       <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+    
+      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
     
   </entry>
   
@@ -1557,9 +1557,9 @@ src=&quot;https://music.163.com/outchain/player?type=2&amp;id=187908&amp;auto=0&
     </summary>
     
     
-      <category term="linux" scheme="//blog.fenghou.site/tags/linux/"/>
-    
       <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+    
+      <category term="linux" scheme="//blog.fenghou.site/tags/linux/"/>
     
   </entry>
   

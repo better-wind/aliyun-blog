@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="//blog.fenghou.site">
   <title>查看Nginx日志 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nginx 日志分析">
+  <meta name="description" content="Nginx 日志分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="查看Nginx日志">
 <meta property="og:url" content="//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="nginx 日志分析">
-<meta property="og:updated_time" content="2018-03-01T07:10:08.373Z">
+<meta property="og:description" content="Nginx 日志分析">
+<meta property="og:updated_time" content="2018-03-01T07:15:15.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="查看Nginx日志">
-<meta name="twitter:description" content="nginx 日志分析">
+<meta name="twitter:description" content="Nginx 日志分析">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -172,7 +172,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>nginx 日志分析<br><a id="more"></a></p>
+        <p>Nginx 日志分析<br><a id="more"></a></p>
 <h3 id="日志组成"><a href="#日志组成" class="headerlink" title="日志组成"></a>日志组成</h3><p>nginx的默认日记位置<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log;</span></div><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log  notice;</span></div><div class="line"><span class="meta">#error_log  logs/<span class="meta-keyword">error</span>.log  info;</span></div></pre></td></tr></table></figure></p>
 <p>nginx的默认日志配置文件</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">log_format</span>  main  <span class="string">'<span class="variable">$remote_addr</span> - <span class="variable">$remote_user</span> [<span class="variable">$time_local</span>] "<span class="variable">$request</span>" '</span></div><div class="line">                        <span class="string">'<span class="variable">$status</span> <span class="variable">$body_bytes_sent</span> "<span class="variable">$http_referer</span>" '</span></div><div class="line">                       <span class="string">'"<span class="variable">$http_user_agent</span>" "<span class="variable">$http_x_forwarded_for</span>"'</span>;</div><div class="line">                       </div><div class="line"><span class="attribute">access_log</span>  logs/access.log  main;</div></pre></td></tr></table></figure>
@@ -366,11 +366,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -382,14 +386,6 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
@@ -398,11 +394,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -411,6 +407,10 @@ var _hmt = _hmt || [];
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -426,11 +426,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -442,19 +442,19 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
