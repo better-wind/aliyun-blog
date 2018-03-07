@@ -3,7 +3,8 @@ date: 2017-11-13 09:27:44
 tags:
     - node
 ---
-
+利用puppeteer进行短信轰炸
+<!--more-->
 ### puppeteer 
 安装 
 ERROR: Failed to download Chromium r508693! Set "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD" env variable to skip download.
