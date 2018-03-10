@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2018-03-07T08:23:18.862Z</updated>
+  <updated>2018-03-08T03:23:49.882Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -16,11 +16,149 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>prepare for the interview</title>
+    <title>Prepare for the interview</title>
+    <link href="//blog.fenghou.site/2018/03/09/2018-03-09-interview/"/>
+    <id>//blog.fenghou.site/2018/03/09/2018-03-09-interview/</id>
+    <published>2018-03-09T03:18:48.000Z</published>
+    <updated>2018-03-08T03:23:49.882Z</updated>
+    
+    <content type="html"><![CDATA[<p>MVVM<br><a id="more"></a></p>
+<h2 id="编译模板"><a href="#编译模板" class="headerlink" title="编译模板"></a>编译模板</h2><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MVVM&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="React" scheme="//blog.fenghou.site/tags/React/"/>
+    
+      <category term="Vue" scheme="//blog.fenghou.site/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Prepare for the interview</title>
+    <link href="//blog.fenghou.site/2018/03/08/2018-03-08-interview/"/>
+    <id>//blog.fenghou.site/2018/03/08/2018-03-08-interview/</id>
+    <published>2018-03-08T03:19:05.000Z</published>
+    <updated>2018-03-10T07:40:33.316Z</updated>
+    
+    <content type="html"><![CDATA[<p>Node &amp;&amp; Linux &amp;&amp; Nginx &amp;&amp; 自动化脚本<br><a id="more"></a></p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>依赖的安装 xshell链接的配置</p>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>nginx 反向代理<br>静态资源服务器</p>
+<h3 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h3><p>gzip 压缩</p>
+<h3 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h3><p>分析请求日志<br>前端异常监控</p>
+<h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><p>服务器</p>
+<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>express 服务 express-session</p>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>node 链接 mysql</p>
+<h3 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h3><p>远程文件拉取<br>脚手架配置</p>
+<h3 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h3><p>网络爬虫<br>puppeteer </p>
+<h3 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h3><p>gulp 前端自动化</p>
+<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><p>###配置<br>配置合并 分离<br>本质<br>实现原理</p>
+<p>###启动<br>命令行启动</p>
+<p>配合node启动</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Node &amp;amp;&amp;amp; Linux &amp;amp;&amp;amp; Nginx &amp;amp;&amp;amp; 自动化脚本&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Node" scheme="//blog.fenghou.site/tags/Node/"/>
+    
+      <category term="Linux" scheme="//blog.fenghou.site/tags/Linux/"/>
+    
+      <category term="Nginx" scheme="//blog.fenghou.site/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Prepare for the interview</title>
+    <link href="//blog.fenghou.site/2018/03/07/2018-03-07-interview/"/>
+    <id>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</id>
+    <published>2018-03-07T09:22:43.000Z</published>
+    <updated>2018-03-08T03:18:39.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>Canvas &amp;&amp; Js<br><a id="more"></a></p>
+<h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><p>颜色提取<br>毛笔字<br>连线小球<br>烟花<br>星空</p>
+<h2 id="Js"><a href="#Js" class="headerlink" title="Js"></a>Js</h2><h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><p>命名规范<br>命名<br>规范检查<br>eslint</p>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><p>ES5/ES6/ES7<br><a href="https://github.com/Chalarangelo/30-seconds-of-code" target="_blank" rel="external">30-seconds-of-code</a></p>
+<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p>类型<br>存储<br>对象</p>
+<h3 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h3><p>事件冒泡<br>事件捕获<br>事件委托</p>
+<h3 id="作用域和上下文"><a href="#作用域和上下文" class="headerlink" title="作用域和上下文"></a>作用域和上下文</h3><p>函数作用域<br>作用域链<br>执行环境<br>执行上下文</p>
+<h3 id="事件机制"><a href="#事件机制" class="headerlink" title="事件机制"></a>事件机制</h3><p>eventLoop</p>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>函数私有化<br>柯里化<br>IIFE</p>
+<h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><p>原型<br>原型链</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承方式</p>
+<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>apply call bind 剪头函数</p>
+<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p>commonJS<br>import</p>
+<h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>Promise<br>Generator<br>async await</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Canvas &amp;amp;&amp;amp; Js&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Prepare for the interview</title>
+    <link href="//blog.fenghou.site/2018/03/06/2018-03-06-interview/"/>
+    <id>//blog.fenghou.site/2018/03/06/2018-03-06-interview/</id>
+    <published>2018-03-06T02:45:29.000Z</published>
+    <updated>2018-03-10T07:12:32.337Z</updated>
+    
+    <content type="html"><![CDATA[<p>通信 &amp;&amp; 浏览器<br><a id="more"></a></p>
+<h2 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h2><h3 id="Http"><a href="#Http" class="headerlink" title="Http"></a>Http</h3><p>http协议<br>客户端请求 服务端响应 单次链接<br>无状态 对处理的事务没有记忆<br>request headers<br>content-type 请求传输的MIME类型<br>常用的<br>application/json json数据格式 {username:”name”,password:”pwd”}<br>application/x-www-from-urlencoded 经过编码的键值对请求字符串 username=name&amp;password=pwd<br>注意点：这边转换的时候需要进行encodeURIComponent转码处理</p>
+<p>response headers<br>content-type 返回资源的MIME类型<br>text/html<br>image/jpeg<br>application/javascript<br>text/css<br>application/json</p>
+<p>请求类<br>POST<br>GET<br><a href="https://zhuanlan.zhihu.com/p/25028045" target="_blank" rel="external">听说『99% 的人都理解错了 HTTP 中 GET 与 POST 的区别』？？</a><br><a href="https://juejin.im/entry/597ca6caf265da3e301e64db" target="_blank" rel="external">HTTP｜GET 和 POST 区别？网上多数答案都是错的！</a><br><a href="http://man.chinaunix.net/develop/rfc/default.htm" target="_blank" rel="external">rfc文档</a><br><a href="https://pan.baidu.com/s/1Or3_1gxChZi6SDffHpGqZQ" target="_blank" rel="external">HTTP权威指南pdf 密码 7p7m</a></p>
+<h3 id="Https"><a href="#Https" class="headerlink" title="Https"></a>Https</h3><p>Http协议的安全版本<br>在TCP协议删加了一层SSL协议<br>网络七层协议</p>
+<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><p>TCP协议连接时三次握手<br>TCP协议断开时四次握手</p>
+<h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><p>Asynchronous Javascript And XML 异步JavaScript和XML<br>XMLHttpRequest<br>API<br>事件<br>状态</p>
+<h3 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h3><p>双工通信<br>websocket协议本质上是一个基于TCP的协议<br>是先通过HTTP/HTTPS协议发起一条特殊的HTTP请求进行握手后创建一个用于交换数据的TCP连接<br>此后服务端与客户端通过此TCP连接进行实时通信</p>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><p>nginx 代理<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="section">server</span> &#123;</div><div class="line">       <span class="attribute">listen</span> <span class="number">80</span>;</div><div class="line">       <span class="attribute">server_name</span> music.fenghou.site;</div><div class="line">       <span class="attribute">root</span> /admin/fenghou/www/super_music/view/dist;</div><div class="line">       <span class="attribute">location</span> / &#123;</div><div class="line">            <span class="attribute">index</span> index.html;</div><div class="line">       &#125;</div><div class="line">       <span class="attribute">location</span> /nateAPI/ &#123;</div><div class="line">            <span class="attribute">proxy_pass</span> http://localhost:4000;</div><div class="line">       &#125;</div><div class="line">       <span class="attribute">location</span> /MusicAPI/ &#123;</div><div class="line">            <span class="attribute">proxy_pass</span> http://localhost:4000/;</div><div class="line">       &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>node 中间件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</div><div class="line"><span class="keyword">var</span> app = express()</div><div class="line"><span class="keyword">var</span> proxyMiddleware = <span class="built_in">require</span>(<span class="string">'http-proxy-middleware'</span>)</div><div class="line"><span class="keyword">let</span> _opts = &#123;</div><div class="line">                                <span class="attr">target</span>: <span class="string">'http://114.215.198.55:9004'</span>,</div><div class="line">                                <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</div><div class="line">                                <span class="attr">pathRewrite</span>: &#123;</div><div class="line">                                  <span class="string">'^/goodsAdmin'</span>: <span class="string">''</span></div><div class="line">                                &#125;,</div><div class="line">                              &#125;</div><div class="line">app.use(proxyMiddleware(<span class="string">'/goodsAdmin'</span>, _opts))</div><div class="line">app.listen()</div></pre></td></tr></table></figure></p>
+<p>webpack dev-server<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">devServer</span>: &#123;</div><div class="line">        <span class="attr">clientLogLevel</span>: <span class="string">'warning'</span>,</div><div class="line">        <span class="attr">historyApiFallback</span>: &#123;</div><div class="line">          <span class="attr">rewrites</span>: [</div><div class="line">            &#123; <span class="attr">from</span>: <span class="regexp">/.*/</span>, <span class="attr">to</span>: path.join(<span class="string">'/'</span>, <span class="string">'index.html'</span>) &#125;,</div><div class="line">          ],</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">hot</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">contentBase</span>: <span class="literal">false</span>, <span class="comment">// since we use CopyWebpackPlugin.</span></div><div class="line">        compress: <span class="literal">true</span>,</div><div class="line">        <span class="attr">host</span>: <span class="string">'localhost'</span>,</div><div class="line">        <span class="attr">port</span>: <span class="string">'8080'</span>,</div><div class="line">        <span class="attr">open</span>: <span class="literal">true</span>,</div><div class="line">        <span class="attr">overlay</span>: &#123; <span class="attr">warnings</span>: <span class="literal">false</span>, <span class="attr">errors</span>: <span class="literal">true</span> &#125;,</div><div class="line">        <span class="attr">publicPath</span>: <span class="string">'/'</span>,</div><div class="line">        <span class="attr">proxy</span>: &#123;</div><div class="line">            <span class="string">'/goodsAdmin'</span>: &#123;</div><div class="line">                    <span class="attr">target</span>: <span class="string">'http://114.215.198.55:9004'</span>,</div><div class="line">                    <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</div><div class="line">                    <span class="attr">pathRewrite</span>: &#123;</div><div class="line">                      <span class="string">'^/goodsAdmin'</span>: <span class="string">''</span></div><div class="line">                    &#125;,</div><div class="line">                  &#125;,</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">quiet</span>: <span class="literal">true</span>, <span class="comment">// necessary for FriendlyErrorsPlugin</span></div><div class="line">        watchOptions: &#123;</div><div class="line">          <span class="attr">poll</span>: <span class="literal">false</span>,</div><div class="line">        &#125;</div><div class="line">      &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>XSS：跨站脚本（Cross-site scripting）<br>CSRF：跨站请求伪造（Cross-site request forgery）</p>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>缓存主要设置在请求头<br>request header<br>Pragma<br>Cache-Control no-cache、no-store、max-age<br>if-none-match<br>if-modified-since</p>
+<p>response header<br>Etag<br>expires<br>last-modified</p>
+<h3 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h3><p>cookie<br>localStorage<br>localSession</p>
+<h3 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h3><p>页面加载<br>域名解析-页面解析-渲染<br>渲染流程<br>dom解析成 DOM Tree 此时遇到资源文件开始下载<br>遇到css下载 并且开始解析<br>遇到js文件下载 并且开始解析<br>遇到图片资源 开始下载<br>所以说js 放在头部加载 会阻塞 dom解析</p>
+<p>css 解析 CSS Rule Tree 并且合并到DOM Tree 成 Rendering Tree  这是用到的css 里的图片资源开始请求加载<br>Rendering Tree 渲染树并不等同于DOM树 因为一些像display:none的东西就没必要放在渲染树中了。<br>然后 计算每个Element的位置 又叫layout和reflow过程<br>最后通过调用操作系统Native GUI的API绘制</p>
+<p>js加载事件</p>
+<p>windows.onload dom节点 资源全部加载完成</p>
+<p>重排和重绘</p>
+<p>动画优化</p>
+<p><a href="https://pic1.zhimg.com/80/bef065b504473d590387ae37089a72c3_hd.jpg" target="_blank" rel="external">浏览器工作原理</a></p>
+<p><a href="https://www.paulirish.com/2013/webkit-for-developers/" target="_blank" rel="external">WebKit for Developers</a><br><a href="https://link.zhihu.com/?target=https%3A//speakerdeck.com/addyosmani/velocityconf-rendering-performance-case-studies" target="_blank" rel="external">VelocityConf: Rendering Performance Case Studies</a><br><a href="https://link.zhihu.com/?target=http%3A//www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome" target="_blank" rel="external">GPU Accelerated Compositing in Chrome</a><br><a href="https://link.zhihu.com/?target=http%3A//www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_blank" rel="external">High Performance Animations</a><br><a href="https://link.zhihu.com/?target=http%3A//wilsonpage.co.uk/preventing-layout-thrashing/" target="_blank" rel="external">Preventing layout thrashing</a><br><a href="https://link.zhihu.com/?target=http%3A//www.html5rocks.com/en/tutorials/internals/howbrowserswork/" target="_blank" rel="external">How Browsers Work: Behind the scenes of modern web browsers</a><br><a href="https://link.zhihu.com/?target=http%3A//velocity.oreilly.com.cn/2013/ppts/16_ms_optimization--web_front-end_performance_optimization.pdf" target="_blank" rel="external">16毫秒的优化——Web前端性能优化的微观分析</a><br><a href="https://link.zhihu.com/?target=http%3A//www.zhangxinxu.com/wordpress/2013/09/css3-animation-requestanimationframe-tween-%25E5%258A%25A8%25E7%2594%25BB%25E7%25AE%2597%25E6%25B3%2595/" target="_blank" rel="external">CSS3动画那么强，requestAnimationFrame还有毛线用？</a><br><a href="https://link.zhihu.com/?target=http%3A//flaminghorns.com/chromium_graphics/Compositing%2520in%2520Blink%2520-%2520WebCore-%2520From%2520WebCore--RenderLayer%2520to%2520cc-Layer.pdf" target="_blank" rel="external">Compositing in Blink / WebCore: FromWebCore::RenderLayer to cc:Layer</a><br><a href="https://link.zhihu.com/?target=http%3A//blog.csdn.net/milado_nju" target="_blank" rel="external">Webkit技术内幕</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通信 &amp;amp;&amp;amp; 浏览器&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="浏览器" scheme="//blog.fenghou.site/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Prepare for the interview</title>
     <link href="//blog.fenghou.site/2018/03/05/2018-03-05-interview/"/>
     <id>//blog.fenghou.site/2018/03/05/2018-03-05-interview/</id>
     <published>2018-03-05T01:29:55.000Z</published>
-    <updated>2018-03-07T08:23:18.862Z</updated>
+    <updated>2018-03-09T08:15:10.070Z</updated>
     
     <content type="html"><![CDATA[<p>Html &amp;&amp; Css<br><a id="more"></a></p>
 <h2 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h2><h3 id="html的规范"><a href="#html的规范" class="headerlink" title="html的规范"></a>html的规范</h3><p>首先是标签的语义化<br>语义化 顾名思义就是 什么时候该用什么标签 例如header section footer<br>接着是标签的嵌套规则<br>典型的就是 h1-h6 p 标签中不能再嵌套块级元素 原则上行内元素内不能嵌套块级元素</p>
@@ -33,7 +171,7 @@
 <h3 id="FC-Formatting-Context"><a href="#FC-Formatting-Context" class="headerlink" title="FC(Formatting Context)"></a>FC(Formatting Context)</h3><p>FC 格式化上下文<br>BFC 块级格式化上下文<br>内部的Box会在垂直方向 一个接一个地放置。<br>BFC就是页面上的一个隔离的独立容器 容器里面的子元素不会影响到外面的元素 反之也如此 例如 消除margin重叠<br>计算BFC的高度时 浮动元素也参与计算 例如 清除浮动<br>BFC的区域不会和 float Box 重合   例如 两列布局</p>
 <p>IFC 行内格式化上下文<br>IFC从包含块水平方向 一个接一个放置 margin padding在水平方向有效<br>IFC默认对齐方式 vertical-align:baseline 所以同时存在有内容的内联元素和没内容的内联元素 有内容的 会往下掉</p>
 <p>GFC 网格布局格式化上下文<br>display值为grid的元素将会获得一个独立的渲染区域<br>我们可以通过在网格容器（grid container）上定义网格定义行（grid definition rows）和网格定义列（grid definition columns）属性<br>在网格项目（grid item）上定义网格行（grid row）和网格列（grid columns）为每一个网格项目（grid item）定义位置和空间<br>FFC 自适应格式化上下文<br>display值为flex或者inline-flex的元素将会生成自适应容器（flex container）<br>Flex Box 由伸缩容器和伸缩项目组成<br>通过设置元素的 display 属性为 flex 或 inline-flex 可以得到一个伸缩容器<br>设置为 flex 的容器被渲染为一个块级元素，而设置为 inline-flex 的容器则渲染为一个行内元素。<br><a href="https://www.w3.org/TR/CSS2/visuren.html#block-formatting" target="_blank" rel="external">W3C文档BFC</a><br><a href="https://www.w3.org/TR/CSS2/visuren.html#inline-formatting" target="_blank" rel="external">W3C文档IFC</a><br><a href="http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html" target="_blank" rel="external">BFC 神奇背后的原理</a></p>
-<h3 id="布局之道"><a href="#布局之道" class="headerlink" title="布局之道"></a>布局之道</h3><p>布局 简单的可以理解为在文档流下 元素的排版规则<br>在传统的布局按照文档流正常排布<br>遇到需要脱离文档流的 一般通过absolute定位或float浮动来解决<br>为了解决程序员日益增长的精神需要同浏览器传统的布局之间的矛盾<br>css3中新增了 flex布局和grid布局 FFC和GFC 应运而生<br><a href="https://codepen.io/enxaneta/pen/adLPwv" target="_blank" rel="external">flexbox plyground</a><br><a href="http://www.css88.com/book/css/properties/flex/index.htm" target="_blank" rel="external">flex文档</a><br><a href="http://www.css88.com/archives/8510/comment-page-1" target="_blank" rel="external">grid布局指南</a></p>
+<h3 id="布局之道"><a href="#布局之道" class="headerlink" title="布局之道"></a>布局之道</h3><p>布局 简单的可以理解为在文档流下 元素的排版规则<br>在传统的布局按照文档流正常排布<br>遇到需要脱离文档流的 一般通过absolute定位或float浮动来解决<br>为了解决程序员日益增长的精神需要同浏览器传统的布局之间的矛盾<br>css3中新增了 flex布局和grid布局 FFC和GFC 应运而生<br><a href="https://codepen.io/enxaneta/pen/adLPwv" target="_blank" rel="external">flexbox plyground</a><br><a href="http://www.css88.com/book/css/properties/flex/index.htm" target="_blank" rel="external">flex文档</a><br><a href="http://www.css88.com/archives/8510/comment-page-1" target="_blank" rel="external">grid布局指南</a><br><a href="https://segmentfault.com/a/1190000013565024?utm_source=channel-hottest" target="_blank" rel="external">CSS布局解决方案（终结版）</a></p>
 <h3 id="移动端布局"><a href="#移动端布局" class="headerlink" title="移动端布局"></a>移动端布局</h3><p>移动端的布局跟pc基本一样<br>主要区别在于 移动端样式中的1px 不等于 屏幕上的1px<br><a href="https://fenghou.site/2016/12/19/2016-12-19-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/" target="_blank" rel="external">1px!=1px移动端rem布局</a><br>淘宝rem方案 是将页面划分为10rem 1rem表示的就是页面的1/10  但这对设计稿并不友好<br>可以自定义一个转换方法 准换为 设计稿的尺寸<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">@function remChange(<span class="variable">$args</span>) &#123;</div><div class="line">  @return  <span class="variable">$args</span> / 750 * 10rem;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="响应式和自适应"><a href="#响应式和自适应" class="headerlink" title="响应式和自适应"></a>响应式和自适应</h3><p>简单来说就是能适应不同的尺寸浏览器<br>常见的做法 根据屏幕宽度的100%来布局<br>淘宝的rem方案也是一种解决方案<br>跟rem方案异曲同工的是通过 可视单位 vw vh解决<br>vw 相对于视窗的宽度：视窗宽度是100vw<br>vh 相对于视窗的高度：视窗宽度是100vh<br>上面的做法严格上来说是自适应的范畴 在不同的终端显示相同</p>
 <p>而相应式 通俗的讲 就是大屏我能放下三个div 小点我能放下两个div<br>一般的做法是通过 css的媒体查询来配置不同尺寸下的样式<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> screen and (max-width: 1080px)&#123;</div><div class="line">  <span class="comment">//小于1080时代码生效</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -96,7 +234,6 @@
 <p>负边距<br>margin-top 设为负值 容器会往上<br>margin-bottom 设为赋值 容器会从下往上搜索</p>
 <p>拓展 俩容器内容不同 保证高度一致</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">10000px</span>;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10000px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h3><p><a href="https://link.zhihu.com/?target=http%3A//www.paulirish.com/2013/webkit-for-developers/&quot;" target="_blank" rel="external">WebKit for Developers</a><br><a href="https://link.zhihu.com/?target=https%3A//speakerdeck.com/addyosmani/velocityconf-rendering-performance-case-studies&quot;" target="_blank" rel="external">VelocityConf: Rendering Performance Case Studies</a><br><a href="https://link.zhihu.com/?target=http%3A//www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome&quot;" target="_blank" rel="external">GPU Accelerated Compositing in Chrome</a><br><a href="https://link.zhihu.com/?target=http%3A//www.html5rocks.com/en/tutorials/speed/high-performance-animations/&quot;" target="_blank" rel="external">High Performance Animations</a><br><a href="https://link.zhihu.com/?target=http%3A//wilsonpage.co.uk/preventing-layout-thrashing/&quot;" target="_blank" rel="external">Preventing layout thrashing</a><br><a href="https://link.zhihu.com/?target=http%3A//www.html5rocks.com/en/tutorials/internals/howbrowserswork/&quot;" target="_blank" rel="external">How Browsers Work: Behind the scenes of modern web browsers</a><br><a href="https://link.zhihu.com/?target=http%3A//velocity.oreilly.com.cn/2013/ppts/16_ms_optimization--web_front-end_performance_optimization.pdf&quot;" target="_blank" rel="external">16毫秒的优化——Web前端性能优化的微观分析</a><br><a href="https://link.zhihu.com/?target=http%3A//www.zhangxinxu.com/wordpress/2013/09/css3-animation-requestanimationframe-tween-%25E5%258A%25A8%25E7%2594%25BB%25E7%25AE%2597%25E6%25B3%2595/&quot;" target="_blank" rel="external">CSS3动画那么强，requestAnimationFrame还有毛线用？</a><br><a href="https://link.zhihu.com/?target=http%3A//flaminghorns.com/chromium_graphics/Compositing%2520in%2520Blink%2520-%2520WebCore-%2520From%2520WebCore--RenderLayer%2520to%2520cc-Layer.pdf&quot;" target="_blank" rel="external">Compositing in Blink / WebCore: FromWebCore::RenderLayer to cc:Layer</a><br><a href="https://link.zhihu.com/?target=http%3A//blog.csdn.net/milado_nju&quot;" target="_blank" rel="external">Webkit技术内幕</a></p>
 ]]></content>
     
     <summary type="html">

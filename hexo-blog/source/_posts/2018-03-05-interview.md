@@ -1,4 +1,4 @@
-title: prepare for the interview
+title: Prepare for the interview
 date: 2018-03-05 09:29:55
 tags:
     - html
@@ -105,6 +105,7 @@ css3中新增了 flex布局和grid布局 FFC和GFC 应运而生
 [flexbox plyground](https://codepen.io/enxaneta/pen/adLPwv)
 [flex文档](http://www.css88.com/book/css/properties/flex/index.htm)
 [grid布局指南](http://www.css88.com/archives/8510/comment-page-1)
+[CSS布局解决方案（终结版）](https://segmentfault.com/a/1190000013565024?utm_source=channel-hottest)
 
 ### 移动端布局
 移动端的布局跟pc基本一样
@@ -317,16 +318,4 @@ margin-bottom 设为赋值 容器会从下往上搜索
 </div>
 ```
 
-### 渲染
 
-
-[WebKit for Developers](https://link.zhihu.com/?target=http%3A//www.paulirish.com/2013/webkit-for-developers/")
-[VelocityConf: Rendering Performance Case Studies](https://link.zhihu.com/?target=https%3A//speakerdeck.com/addyosmani/velocityconf-rendering-performance-case-studies")
-[GPU Accelerated Compositing in Chrome](https://link.zhihu.com/?target=http%3A//www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome")
-[High Performance Animations](https://link.zhihu.com/?target=http%3A//www.html5rocks.com/en/tutorials/speed/high-performance-animations/")
-[Preventing layout thrashing](https://link.zhihu.com/?target=http%3A//wilsonpage.co.uk/preventing-layout-thrashing/")
-[How Browsers Work: Behind the scenes of modern web browsers](https://link.zhihu.com/?target=http%3A//www.html5rocks.com/en/tutorials/internals/howbrowserswork/")
-[16毫秒的优化——Web前端性能优化的微观分析](https://link.zhihu.com/?target=http%3A//velocity.oreilly.com.cn/2013/ppts/16_ms_optimization--web_front-end_performance_optimization.pdf")
-[CSS3动画那么强，requestAnimationFrame还有毛线用？](https://link.zhihu.com/?target=http%3A//www.zhangxinxu.com/wordpress/2013/09/css3-animation-requestanimationframe-tween-%25E5%258A%25A8%25E7%2594%25BB%25E7%25AE%2597%25E6%25B3%2595/")
-[Compositing in Blink / WebCore: FromWebCore::RenderLayer to cc:Layer](https://link.zhihu.com/?target=http%3A//flaminghorns.com/chromium_graphics/Compositing%2520in%2520Blink%2520-%2520WebCore-%2520From%2520WebCore--RenderLayer%2520to%2520cc-Layer.pdf")
-[Webkit技术内幕](https://link.zhihu.com/?target=http%3A//blog.csdn.net/milado_nju")
