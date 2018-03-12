@@ -9,5 +9,6 @@ MVVM
 ## 编译模板
 
 ## React
+[react小书](http://huziketang.com/books/react/)
 
 ## Vue

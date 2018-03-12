@@ -1,4 +1,4 @@
-title: Prepare for the interview
+title: Knowledge
 date: 2018-03-05 09:29:55
 tags:
     - html
@@ -7,7 +7,7 @@ tags:
 
 Html && Css
 <!--more-->
-[Interview-Questions-Answers](https://github.com/Liyuk/Interview-Questions-Answers)
+[Questions-Answers](https://github.com/Liyuk/Interview-Questions-Answers)
 ## Html
 
 ### html的规范

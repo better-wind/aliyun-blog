@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2018-03-08T03:23:49.882Z</updated>
+  <updated>2018-03-12T06:03:50.043Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -20,10 +20,11 @@
     <link href="//blog.fenghou.site/2018/03/09/2018-03-09-interview/"/>
     <id>//blog.fenghou.site/2018/03/09/2018-03-09-interview/</id>
     <published>2018-03-09T03:18:48.000Z</published>
-    <updated>2018-03-08T03:23:49.882Z</updated>
+    <updated>2018-03-12T06:03:50.043Z</updated>
     
     <content type="html"><![CDATA[<p>MVVM<br><a id="more"></a></p>
-<h2 id="编译模板"><a href="#编译模板" class="headerlink" title="编译模板"></a>编译模板</h2><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2>]]></content>
+<h2 id="编译模板"><a href="#编译模板" class="headerlink" title="编译模板"></a>编译模板</h2><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p><a href="http://huziketang.com/books/react/" target="_blank" rel="external">react小书</a></p>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2>]]></content>
     
     <summary type="html">
     
@@ -39,11 +40,11 @@
   </entry>
   
   <entry>
-    <title>Prepare for the interview</title>
+    <title>Knowledge</title>
     <link href="//blog.fenghou.site/2018/03/08/2018-03-08-interview/"/>
     <id>//blog.fenghou.site/2018/03/08/2018-03-08-interview/</id>
     <published>2018-03-08T03:19:05.000Z</published>
-    <updated>2018-03-10T07:40:33.316Z</updated>
+    <updated>2018-03-12T06:51:52.234Z</updated>
     
     <content type="html"><![CDATA[<p>Node &amp;&amp; Linux &amp;&amp; Nginx &amp;&amp; 自动化脚本<br><a id="more"></a></p>
 <h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>依赖的安装 xshell链接的配置</p>
@@ -59,6 +60,7 @@
 <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><p>###配置<br>配置合并 分离<br>本质<br>实现原理</p>
 <p>###启动<br>命令行启动</p>
 <p>配合node启动</p>
+<p><a href="https://juejin.im/post/5aa3d2056fb9a028c36868aa?utm_source=gold_browser_extension" target="_blank" rel="external">webpack详解</a></p>
 ]]></content>
     
     <summary type="html">
@@ -77,11 +79,11 @@
   </entry>
   
   <entry>
-    <title>Prepare for the interview</title>
+    <title>Knowledge</title>
     <link href="//blog.fenghou.site/2018/03/07/2018-03-07-interview/"/>
     <id>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</id>
     <published>2018-03-07T09:22:43.000Z</published>
-    <updated>2018-03-08T03:18:39.506Z</updated>
+    <updated>2018-03-12T06:51:52.259Z</updated>
     
     <content type="html"><![CDATA[<p>Canvas &amp;&amp; Js<br><a id="more"></a></p>
 <h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><p>颜色提取<br>毛笔字<br>连线小球<br>烟花<br>星空</p>
@@ -111,11 +113,11 @@
   </entry>
   
   <entry>
-    <title>Prepare for the interview</title>
+    <title>Knowledge</title>
     <link href="//blog.fenghou.site/2018/03/06/2018-03-06-interview/"/>
     <id>//blog.fenghou.site/2018/03/06/2018-03-06-interview/</id>
     <published>2018-03-06T02:45:29.000Z</published>
-    <updated>2018-03-10T07:12:32.337Z</updated>
+    <updated>2018-03-12T06:51:52.254Z</updated>
     
     <content type="html"><![CDATA[<p>通信 &amp;&amp; 浏览器<br><a id="more"></a></p>
 <h2 id="通信"><a href="#通信" class="headerlink" title="通信"></a>通信</h2><h3 id="Http"><a href="#Http" class="headerlink" title="Http"></a>Http</h3><p>http协议<br>客户端请求 服务端响应 单次链接<br>无状态 对处理的事务没有记忆<br>request headers<br>content-type 请求传输的MIME类型<br>常用的<br>application/json json数据格式 {username:”name”,password:”pwd”}<br>application/x-www-from-urlencoded 经过编码的键值对请求字符串 username=name&amp;password=pwd<br>注意点：这边转换的时候需要进行encodeURIComponent转码处理</p>
@@ -154,13 +156,13 @@
   </entry>
   
   <entry>
-    <title>Prepare for the interview</title>
+    <title>Knowledge</title>
     <link href="//blog.fenghou.site/2018/03/05/2018-03-05-interview/"/>
     <id>//blog.fenghou.site/2018/03/05/2018-03-05-interview/</id>
     <published>2018-03-05T01:29:55.000Z</published>
-    <updated>2018-03-12T02:14:41.238Z</updated>
+    <updated>2018-03-12T06:51:52.244Z</updated>
     
-    <content type="html"><![CDATA[<p>Html &amp;&amp; Css<br><a id="more"></a><br><a href="https://github.com/Liyuk/Interview-Questions-Answers" target="_blank" rel="external">Interview-Questions-Answers</a></p>
+    <content type="html"><![CDATA[<p>Html &amp;&amp; Css<br><a id="more"></a><br><a href="https://github.com/Liyuk/Interview-Questions-Answers" target="_blank" rel="external">Questions-Answers</a></p>
 <h2 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h2><h3 id="html的规范"><a href="#html的规范" class="headerlink" title="html的规范"></a>html的规范</h3><p>首先是标签的语义化<br>语义化 顾名思义就是 什么时候该用什么标签 例如header section footer<br>接着是标签的嵌套规则<br>典型的就是 h1-h6 p 标签中不能再嵌套块级元素 原则上行内元素内不能嵌套块级元素</p>
 <h4 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h4><p>用于提供页面的元信息 比如<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">针对搜索引擎 <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"robots"</span> <span class="attr">content</span>=<span class="string">"noarchive"</span> /&gt;</span> </div><div class="line">关键词 <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Keywords"</span> <span class="attr">content</span>=<span class="string">"关键字"</span> /&gt;</span></div><div class="line">描述  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"Description"</span> <span class="attr">content</span>=<span class="string">"页面的描述"</span> /&gt;</span></div><div class="line">重定向 <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Refresh"</span> <span class="attr">content</span>=<span class="string">"5;url=https://fenghou.site"</span> /&gt;</span></div><div class="line">通知浏览器接收类型 <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span></div><div class="line">网页可视区域的设置 <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1,user-scalable=no"</span> /&gt;</span></div><div class="line">不识别数字为电话号码 <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> /&gt;</span></div><div class="line">针对iphone 允许全屏模式浏览 <span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"yes"</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
 <h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><h3 id="css的规范"><a href="#css的规范" class="headerlink" title="css的规范"></a>css的规范</h3><p>css方面的规范 首先体现在命名规范上 例如 BEM 规范 block(块) Element(元素) Modifier(修饰器)<br>命名方式如下 block__element-modifier 基本上采用BEM表示该元素出现的频率很高<br>例如下面的一个商品列表<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"product"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"product__header-wrap"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"product__header"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"product__footer-wrap"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"product__footer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>

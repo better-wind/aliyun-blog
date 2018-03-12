@@ -1,4 +1,4 @@
-title: Prepare for the interview
+title: Knowledge
 date: 2018-03-08 11:19:05
 tags:
     - Node
@@ -48,3 +48,5 @@ gulp 前端自动化
 命令行启动
 
 配合node启动
+
+[webpack详解](https://juejin.im/post/5aa3d2056fb9a028c36868aa?utm_source=gold_browser_extension)
