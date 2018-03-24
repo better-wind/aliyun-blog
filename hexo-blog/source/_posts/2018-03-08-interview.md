@@ -38,6 +38,9 @@ puppeteer
 ### gulp
 gulp 前端自动化
 
+
+## rollup
+[深入学习rollup来进行打包](https://www.cnblogs.com/tugenhua0707/p/8179686.html)
 ## webpack
 ###配置
 配置合并 分离

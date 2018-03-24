@@ -311,11 +311,34 @@ margin-bottom 设为赋值 容器会从下往上搜索
     margin-bottom: -10000px;
     padding-bottom: 10000px;
 }
+.wrap{
+    display: table-row;
+}
+.box{
+    display: table-cell;
+}
 </style>
 <div class="wrap">
     <div class="box"></div>
     <div class="box"></div>
 </div>
 ```
+
+伪元素和伪类
+伪元素::before ::after ::first-letter ::first-line
+伪类: css2 :hover :active :focus :first-child ...
+      css3 :checked :nth-child(n) :last-child ...
+   
+     
+/* 为不同语言指定引号的表现 */
+:lang(ch) > q { quotes: '“' '”'; }
+:lang(en) > q { quotes: '"' '"'; }
+:lang(no) > q { quotes: '«' '»'; }
+/* 在 q 标签的前后插入引号 */
+q:before { content: open-quote; }
+q:after { content: close-quote; }
+<p lang="ch"><q>这本书很赞！</q></p>
+<p lang="en"><q>This book is very good!</q></p>
+<p lang="no"><q>denne bog er fantastisk!</q></p>
 
 
