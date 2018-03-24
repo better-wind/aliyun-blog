@@ -14,7 +14,7 @@
 <meta property="og:url" content="//blog.fenghou.site/2018/03/05/2018-03-05-interview/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="Html &amp;amp;&amp;amp; Css">
-<meta property="og:updated_time" content="2018-03-12T06:51:52.244Z">
+<meta property="og:updated_time" content="2018-03-16T08:59:40.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Knowledge">
 <meta name="twitter:description" content="Html &amp;amp;&amp;amp; Css">
@@ -233,19 +233,16 @@ var _hmt = _hmt || [];
                         border-bottom: 50px solid transparent;"></div>
 
 <p>文字溢出的省略表示<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//单行</span></div><div class="line"><span class="selector-class">.clamp</span>&#123;</div><div class="line"><span class="attribute">width</span>: <span class="number">150px</span>;</div><div class="line"><span class="attribute">overflow</span>: hidden;</div><div class="line"><span class="attribute">white-space</span>: nowrap;</div><div class="line"><span class="attribute">text-overflow</span>: ellipsis;</div><div class="line">&#125;</div><div class="line"><span class="comment">//多行</span></div><div class="line"><span class="selector-class">.line-clamp</span>&#123;</div><div class="line"><span class="attribute">width</span>: <span class="number">150px</span>;</div><div class="line"><span class="attribute">display</span>: -webkit-box;</div><div class="line">-webkit-line-clamp: <span class="number">2</span>;</div><div class="line">-webkit-box-orient: vertical;</div><div class="line"><span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p></p><p style="width: 150px;
+<p style="width: 150px;
           overflow: hidden;
           white-space: nowrap;
-          text-overflow: ellipsis;">单行文字溢出单行文字溢出单行文字溢出</p><p></p>
-<div style="width: 150px;
+          text-overflow: ellipsis;">单行文字溢出单行文字溢出单行文字溢出</p><br><div style="width: 150px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-            overflow: hidden;"><br>多行文字溢出多行文字溢出多行文字溢出多行文字溢出多行文字溢出<br></div>           
+            overflow: hidden;"><br>多行文字溢出多行文字溢出多行文字溢出多行文字溢出多行文字溢出<br></div><br><br>负边距<br>margin-top 设为负值 容器会往上<br>margin-bottom 设为赋值 容器会从下往上搜索<br><br>拓展 俩容器内容不同 保证高度一致<br><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">10000px</span>;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10000px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-row;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-cell;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure><br><br>伪元素和伪类<br>伪元素::before ::after ::first-letter ::first-line<br>伪类: css2 :hover :active :focus :first-child …<br>      css3 :checked :nth-child(n) :last-child …<br><br><br>/<em> 为不同语言指定引号的表现 </em>/<br>:lang(ch) &gt; q { quotes: ‘“’ ‘”’; }<br>:lang(en) &gt; q { quotes: ‘“‘ ‘“‘; }<br>:lang(no) &gt; q { quotes: ‘«’ ‘»’; }<br>/<em> 在 q 标签的前后插入引号 </em>/<br>q:before { content: open-quote; }<br>q:after { content: close-quote; }<br><p lang="ch"><q>这本书很赞！</q></p><br><p lang="en"><q>This book is very good!</q></p><br><p lang="no"><q>denne bog er fantastisk!</q></p>
 
-<p>负边距<br>margin-top 设为负值 容器会往上<br>margin-bottom 设为赋值 容器会从下往上搜索</p>
-<p>拓展 俩容器内容不同 保证高度一致</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">10000px</span>;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10000px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+
 
       
 
@@ -427,11 +424,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -439,15 +436,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -459,15 +452,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -479,15 +472,19 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rax</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -499,19 +496,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -523,11 +516,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -548,6 +541,10 @@ var _hmt = _hmt || [];
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
             <div class="clearfix"></div>

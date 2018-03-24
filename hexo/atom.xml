@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.fenghou.site/"/>
-  <updated>2018-03-12T06:03:50.043Z</updated>
+  <updated>2018-03-16T02:23:10.107Z</updated>
   <id>//blog.fenghou.site/</id>
   
   <author>
@@ -16,14 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Prepare for the interview</title>
+    <title>css-world</title>
+    <link href="//blog.fenghou.site/2018/03/16/2018-02-26-css-world/"/>
+    <id>//blog.fenghou.site/2018/03/16/2018-02-26-css-world/</id>
+    <published>2018-03-16T02:04:47.000Z</published>
+    <updated>2018-03-16T02:23:10.107Z</updated>
+    
+    <content type="html"><![CDATA[<p>Css<br><a id="more"></a></p>
+<h3 id="神奇的width-auto"><a href="#神奇的width-auto" class="headerlink" title="神奇的width:auto"></a>神奇的width:auto</h3><p>块级元素 常规定位时 宽度默认展开为父元素的宽度 遇到margin padding 会减小宽度<br>float absolute定位时 宽度包裹内部元素  单当 left和right一起出现时 根据父元素宽度展开</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Css&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="css" scheme="//blog.fenghou.site/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Knowledge</title>
     <link href="//blog.fenghou.site/2018/03/09/2018-03-09-interview/"/>
     <id>//blog.fenghou.site/2018/03/09/2018-03-09-interview/</id>
     <published>2018-03-09T03:18:48.000Z</published>
-    <updated>2018-03-12T06:03:50.043Z</updated>
+    <updated>2018-03-21T02:13:34.652Z</updated>
     
     <content type="html"><![CDATA[<p>MVVM<br><a id="more"></a></p>
-<h2 id="编译模板"><a href="#编译模板" class="headerlink" title="编译模板"></a>编译模板</h2><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p><a href="http://huziketang.com/books/react/" target="_blank" rel="external">react小书</a></p>
+<h2 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h2><p>String-based 模板技术 (基于字符串的parse和compile过程)<br>Dom-based 模板技术 (基于Dom的link或compile过程)<br>杂交的Living templating 技术 (基于字符串的parse 和 基于dom的compile过程)</p>
+<p><a href="http://www.html-js.com/article/Regularjs-Chinese-guidelines-for-a-comprehensive-summary-of-the-front-template-technology" target="_blank" rel="external">RegularJS 作者对前端模板技术的总结</a></p>
+<p><a href="https://github.com/livoras/blog/issues/11" target="_blank" rel="external">界面之下：还原真实的MV*模式</a></p>
+<h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>React 生命周期<br>类型校验 PropTypes  prop-types<br>Virtual DOM<br>渲染优化</p>
+<p>Redux<br>让变化可控制控制<br>数据流 要修改 state 必须通过 dispatch 一个 action<br>为了描述 action 如何改变 state 树 必须编写 reducers<br>middleware<br><a href="http://www.redux.org.cn/docs/advanced/Middleware.html" target="_blank" rel="external">middleware</a></p>
+<p>react-redux context<br>Provider 构建根节点 将store 写入context<br>connect  根据传入的参数 将store中的state dispatch 混入 组件props中</p>
+<p>react-router</p>
+<p><a href="https://devhints.io/react" target="_blank" rel="external">React.js cheatsheet</a><br><a href="https://reactjs.org/docs/events.html#supported-events" target="_blank" rel="external">SyntheticEvent</a><br><a href="http://huziketang.com/books/react/" target="_blank" rel="external">react小书</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-id">#wrapper</span>~<span class="selector-tag">div</span>,<span class="selector-id">#granted-modal</span>&#123;</div><div class="line">    	<span class="attribute">opacity</span>:<span class="number">0</span><span class="meta">!important</span>;</div><div class="line">        <span class="attribute">display</span>:none<span class="meta">!important</span>;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/livoras/blog/issues/13" target="_blank" rel="external">深度剖析：如何实现一个 Virtual DOM 算法</a><br><a href="http://cn.mobx.js.org/" target="_blank" rel="external">MobX</a></p>
+<p>redux connect<br>react-redux Provider</p>
+<p>router-route</p>
 <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2>]]></content>
     
     <summary type="html">
@@ -44,7 +76,7 @@
     <link href="//blog.fenghou.site/2018/03/08/2018-03-08-interview/"/>
     <id>//blog.fenghou.site/2018/03/08/2018-03-08-interview/</id>
     <published>2018-03-08T03:19:05.000Z</published>
-    <updated>2018-03-12T06:51:52.234Z</updated>
+    <updated>2018-03-21T02:43:30.540Z</updated>
     
     <content type="html"><![CDATA[<p>Node &amp;&amp; Linux &amp;&amp; Nginx &amp;&amp; 自动化脚本<br><a id="more"></a></p>
 <h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>依赖的安装 xshell链接的配置</p>
@@ -57,6 +89,7 @@
 <h3 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h3><p>远程文件拉取<br>脚手架配置</p>
 <h3 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h3><p>网络爬虫<br>puppeteer </p>
 <h3 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h3><p>gulp 前端自动化</p>
+<h2 id="rollup"><a href="#rollup" class="headerlink" title="rollup"></a>rollup</h2><p><a href="https://www.cnblogs.com/tugenhua0707/p/8179686.html" target="_blank" rel="external">深入学习rollup来进行打包</a></p>
 <h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><p>###配置<br>配置合并 分离<br>本质<br>实现原理</p>
 <p>###启动<br>命令行启动</p>
 <p>配合node启动</p>
@@ -83,14 +116,14 @@
     <link href="//blog.fenghou.site/2018/03/07/2018-03-07-interview/"/>
     <id>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</id>
     <published>2018-03-07T09:22:43.000Z</published>
-    <updated>2018-03-12T06:51:52.259Z</updated>
+    <updated>2018-03-12T08:41:17.095Z</updated>
     
     <content type="html"><![CDATA[<p>Canvas &amp;&amp; Js<br><a id="more"></a></p>
 <h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><p>颜色提取<br>毛笔字<br>连线小球<br>烟花<br>星空</p>
 <h2 id="Js"><a href="#Js" class="headerlink" title="Js"></a>Js</h2><h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><p>命名规范<br>命名<br>规范检查<br>eslint</p>
 <h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><p>ES5/ES6/ES7<br><a href="https://github.com/Chalarangelo/30-seconds-of-code" target="_blank" rel="external">30-seconds-of-code</a></p>
 <h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p>类型<br>存储<br>对象</p>
-<h3 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h3><p>事件冒泡<br>事件捕获<br>事件委托</p>
+<h3 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h3><p>事件冒泡 从点击外外    false<br>事件捕获 从点击外往里  true<br>事件委托</p>
 <h3 id="作用域和上下文"><a href="#作用域和上下文" class="headerlink" title="作用域和上下文"></a>作用域和上下文</h3><p>函数作用域<br>作用域链<br>执行环境<br>执行上下文</p>
 <h3 id="事件机制"><a href="#事件机制" class="headerlink" title="事件机制"></a>事件机制</h3><p>eventLoop</p>
 <h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>函数私有化<br>柯里化<br>IIFE</p>
@@ -160,7 +193,7 @@
     <link href="//blog.fenghou.site/2018/03/05/2018-03-05-interview/"/>
     <id>//blog.fenghou.site/2018/03/05/2018-03-05-interview/</id>
     <published>2018-03-05T01:29:55.000Z</published>
-    <updated>2018-03-12T06:51:52.244Z</updated>
+    <updated>2018-03-16T08:59:40.695Z</updated>
     
     <content type="html"><![CDATA[<p>Html &amp;&amp; Css<br><a id="more"></a><br><a href="https://github.com/Liyuk/Interview-Questions-Answers" target="_blank" rel="external">Questions-Answers</a></p>
 <h2 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h2><h3 id="html的规范"><a href="#html的规范" class="headerlink" title="html的规范"></a>html的规范</h3><p>首先是标签的语义化<br>语义化 顾名思义就是 什么时候该用什么标签 例如header section footer<br>接着是标签的嵌套规则<br>典型的就是 h1-h6 p 标签中不能再嵌套块级元素 原则上行内元素内不能嵌套块级元素</p>
@@ -223,19 +256,16 @@
                         border-bottom: 50px solid transparent;"></div>
 
 <p>文字溢出的省略表示<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//单行</span></div><div class="line"><span class="selector-class">.clamp</span>&#123;</div><div class="line"><span class="attribute">width</span>: <span class="number">150px</span>;</div><div class="line"><span class="attribute">overflow</span>: hidden;</div><div class="line"><span class="attribute">white-space</span>: nowrap;</div><div class="line"><span class="attribute">text-overflow</span>: ellipsis;</div><div class="line">&#125;</div><div class="line"><span class="comment">//多行</span></div><div class="line"><span class="selector-class">.line-clamp</span>&#123;</div><div class="line"><span class="attribute">width</span>: <span class="number">150px</span>;</div><div class="line"><span class="attribute">display</span>: -webkit-box;</div><div class="line">-webkit-line-clamp: <span class="number">2</span>;</div><div class="line">-webkit-box-orient: vertical;</div><div class="line"><span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p></p><p style="width: 150px;
+<p style="width: 150px;
           overflow: hidden;
           white-space: nowrap;
-          text-overflow: ellipsis;">单行文字溢出单行文字溢出单行文字溢出</p><p></p>
-<div style="width: 150px;
+          text-overflow: ellipsis;">单行文字溢出单行文字溢出单行文字溢出</p><br><div style="width: 150px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-            overflow: hidden;"><br>多行文字溢出多行文字溢出多行文字溢出多行文字溢出多行文字溢出<br></div>           
+            overflow: hidden;"><br>多行文字溢出多行文字溢出多行文字溢出多行文字溢出多行文字溢出<br></div><br><br>负边距<br>margin-top 设为负值 容器会往上<br>margin-bottom 设为赋值 容器会从下往上搜索<br><br>拓展 俩容器内容不同 保证高度一致<br><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">10000px</span>;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10000px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-row;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: table-cell;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure><br><br>伪元素和伪类<br>伪元素::before ::after ::first-letter ::first-line<br>伪类: css2 :hover :active :focus :first-child …<br>      css3 :checked :nth-child(n) :last-child …<br><br><br>/<em> 为不同语言指定引号的表现 </em>/<br>:lang(ch) &gt; q { quotes: ‘“’ ‘”’; }<br>:lang(en) &gt; q { quotes: ‘“‘ ‘“‘; }<br>:lang(no) &gt; q { quotes: ‘«’ ‘»’; }<br>/<em> 在 q 标签的前后插入引号 </em>/<br>q:before { content: open-quote; }<br>q:after { content: close-quote; }<br><p lang="ch"><q>这本书很赞！</q></p><br><p lang="en"><q>This book is very good!</q></p><br><p lang="no"><q>denne bog er fantastisk!</q></p>
 
-<p>负边距<br>margin-top 设为负值 容器会往上<br>margin-bottom 设为赋值 容器会从下往上搜索</p>
-<p>拓展 俩容器内容不同 保证高度一致</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">10000px</span>;</div><div class="line">    <span class="attribute">padding-bottom</span>: <span class="number">10000px</span>;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrap"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+
 ]]></content>
     
     <summary type="html">
@@ -351,10 +381,13 @@
     <link href="//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/"/>
     <id>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</id>
     <published>2017-11-21T05:33:37.000Z</published>
-    <updated>2017-12-25T05:50:51.258Z</updated>
+    <updated>2018-03-24T02:19:01.809Z</updated>
     
     <content type="html"><![CDATA[<p>Git命令行操作-收纳<br><a id="more"></a></p>
 <h3 id="About-分支"><a href="#About-分支" class="headerlink" title="About 分支"></a>About 分支</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> checkout &lt;<span class="keyword">branchName&gt; </span>切换分支</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>&lt;<span class="keyword">branchName&gt; </span>新建分支</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-a 本地分支列表</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-r 远程分支列表</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-D &lt;<span class="keyword">branchName&gt; </span>删除本地分支</div><div class="line"></div><div class="line"><span class="symbol">Git</span> <span class="built_in">v1</span>.<span class="number">7</span>.<span class="number">0</span> 之后</div><div class="line"><span class="symbol">git</span> <span class="keyword">push </span>origin --delete &lt;<span class="keyword">branchName&gt; </span>删除远程分支</div><div class="line"></div><div class="line">之前</div><div class="line"><span class="symbol">git</span> <span class="keyword">push </span>origin :&lt;<span class="keyword">branchName&gt;</span></div><div class="line"></div><div class="line"><span class="symbol">git</span> merge &lt;<span class="keyword">branchName&gt; </span>合并分支到当前分支</div></pre></td></tr></table></figure>
+<h3 id="About-版本"><a href="#About-版本" class="headerlink" title="About 版本"></a>About 版本</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git log -3  查看最近三次<span class="keyword">commit</span></div><div class="line">git <span class="keyword">log</span> <span class="comment">--pretty=oneline  commit单行显示</span></div><div class="line">git <span class="keyword">reset</span> <span class="comment">--hard &lt;版本号&gt;</span></div><div class="line"></div><div class="line">git push -f origin <span class="keyword">master</span> 用于回退有跟新时强制提交</div></pre></td></tr></table></figure>
+<p>333333 modify pull 3<br>222222 modify pull 2<br>111111 modify pull 1<br>已经push的版本号有3个<br>如果现在 git reset –hard 222222<br>会回退会222222的版本 提交的时候会提示有commit需要拉取<br>这时强制提交的话<br>版本记录会变成<br>222222 modify pull 2<br>111111 modify pull 1</p>
+<p>本地的commit回退<br>push之后commit会指向提交的版本 回退前的版本会消失</p>
 ]]></content>
     
     <summary type="html">

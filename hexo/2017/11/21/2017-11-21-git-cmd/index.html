@@ -14,7 +14,7 @@
 <meta property="og:url" content="//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="Git命令行操作-收纳">
-<meta property="og:updated_time" content="2017-12-25T05:50:51.258Z">
+<meta property="og:updated_time" content="2018-03-24T02:19:01.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git命令行">
 <meta name="twitter:description" content="Git命令行操作-收纳">
@@ -174,6 +174,9 @@ var _hmt = _hmt || [];
       
         <p>Git命令行操作-收纳<br><a id="more"></a></p>
 <h3 id="About-分支"><a href="#About-分支" class="headerlink" title="About 分支"></a>About 分支</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> checkout &lt;<span class="keyword">branchName&gt; </span>切换分支</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>&lt;<span class="keyword">branchName&gt; </span>新建分支</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-a 本地分支列表</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-r 远程分支列表</div><div class="line"></div><div class="line"><span class="symbol">git</span> <span class="keyword">branch </span>-D &lt;<span class="keyword">branchName&gt; </span>删除本地分支</div><div class="line"></div><div class="line"><span class="symbol">Git</span> <span class="built_in">v1</span>.<span class="number">7</span>.<span class="number">0</span> 之后</div><div class="line"><span class="symbol">git</span> <span class="keyword">push </span>origin --delete &lt;<span class="keyword">branchName&gt; </span>删除远程分支</div><div class="line"></div><div class="line">之前</div><div class="line"><span class="symbol">git</span> <span class="keyword">push </span>origin :&lt;<span class="keyword">branchName&gt;</span></div><div class="line"></div><div class="line"><span class="symbol">git</span> merge &lt;<span class="keyword">branchName&gt; </span>合并分支到当前分支</div></pre></td></tr></table></figure>
+<h3 id="About-版本"><a href="#About-版本" class="headerlink" title="About 版本"></a>About 版本</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git log -3  查看最近三次<span class="keyword">commit</span></div><div class="line">git <span class="keyword">log</span> <span class="comment">--pretty=oneline  commit单行显示</span></div><div class="line">git <span class="keyword">reset</span> <span class="comment">--hard &lt;版本号&gt;</span></div><div class="line"></div><div class="line">git push -f origin <span class="keyword">master</span> 用于回退有跟新时强制提交</div></pre></td></tr></table></figure>
+<p>333333 modify pull 3<br>222222 modify pull 2<br>111111 modify pull 1<br>已经push的版本号有3个<br>如果现在 git reset –hard 222222<br>会回退会222222的版本 提交的时候会提示有commit需要拉取<br>这时强制提交的话<br>版本记录会变成<br>222222 modify pull 2<br>111111 modify pull 1</p>
+<p>本地的commit回退<br>push之后commit会指向提交的版本 回退前的版本会消失</p>
 
       
 
@@ -351,11 +354,11 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -363,15 +366,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -383,15 +382,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -403,15 +402,19 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">PReact</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rax</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -423,19 +426,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -447,11 +446,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -472,6 +471,10 @@ var _hmt = _hmt || [];
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
             <div class="clearfix"></div>
