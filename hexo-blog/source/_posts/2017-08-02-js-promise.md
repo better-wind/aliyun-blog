@@ -180,7 +180,7 @@ start().then((rs)=>{
 ```
 
 关于异常返回从处理
-如果 await 后面的promise异常执行了reject name 后面的命令不再执行
+如果 await 后面的promise异常执行了reject 那么 后面的命令不再执行
 因此要把问题抛出来
 ```javascript
 const start = async ()=>{

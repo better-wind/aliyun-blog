@@ -14,7 +14,7 @@
 <meta property="og:url" content="//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="异步 总结(整理中)">
-<meta property="og:updated_time" content="2017-11-11T02:24:10.440Z">
+<meta property="og:updated_time" content="2018-03-28T08:15:26.942Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js异步编程">
 <meta name="twitter:description" content="异步 总结(整理中)">
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 <p>譬如<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>().then(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">    <span class="keyword">await</span> start()</div><div class="line">&#125;)</div><div class="line">[].forEach(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</div><div class="line">    <span class="keyword">await</span> start()</div><div class="line">&#125;)</div><div class="line"><span class="comment">//都会报错</span></div></pre></td></tr></table></figure></p>
 <p>await 返回的应该是 一个promise.resolve()中返回的数据</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> awaitLoad = <span class="function"><span class="params">()</span>=&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">reslove</span>)=&gt;</span>&#123;</div><div class="line">    <span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">    reslove(arr)</div><div class="line">&#125;)</div><div class="line"><span class="keyword">const</span> start = <span class="keyword">async</span> ()=&gt;&#123;</div><div class="line">    <span class="keyword">var</span> load = <span class="keyword">await</span> awaitLoad()</div><div class="line">    <span class="built_in">console</span>.log(load)</div><div class="line">    <span class="comment">//[1,2,3,4,5]</span></div><div class="line">    <span class="keyword">return</span> load</div><div class="line">&#125;</div><div class="line">start().then(<span class="function">(<span class="params">rs</span>)=&gt;</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(rs)</div><div class="line">    <span class="comment">//[1,2,3,4,5]</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>关于异常返回从处理<br>如果 await 后面的promise异常执行了reject name 后面的命令不再执行<br>因此要把问题抛出来<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> start = <span class="keyword">async</span> ()=&gt;&#123;</div><div class="line">    <span class="comment">//一种写法</span></div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        <span class="keyword">await</span> fn()</div><div class="line">    &#125; <span class="keyword">catch</span>(err)&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//第二种</span></div><div class="line">    <span class="keyword">await</span> fn().catch(<span class="function">(<span class="params">err</span>)=&gt;</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;)</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>关于异常返回从处理<br>如果 await 后面的promise异常执行了reject 那么 后面的命令不再执行<br>因此要把问题抛出来<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> start = <span class="keyword">async</span> ()=&gt;&#123;</div><div class="line">    <span class="comment">//一种写法</span></div><div class="line">    <span class="keyword">try</span> &#123;</div><div class="line">        <span class="keyword">await</span> fn()</div><div class="line">    &#125; <span class="keyword">catch</span>(err)&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//第二种</span></div><div class="line">    <span class="keyword">await</span> fn().catch(<span class="function">(<span class="params">err</span>)=&gt;</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;)</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
 
@@ -364,11 +364,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -384,27 +384,19 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">rem</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -420,11 +412,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">websocket</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -436,15 +432,19 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">nginx</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">

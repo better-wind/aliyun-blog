@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.fenghou.site">
-  <title>Archives: 2017/12 | Louis Blog</title>
+  <title>前端异常监控 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Louis Blog">
-<meta property="og:url" content="//blog.fenghou.site/archives/2017/12/index.html">
+  <meta name="description" content="前端页面报错监听 统计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端异常监控">
+<meta property="og:url" content="//blog.fenghou.site/2018/03/26/2018-03-26-fe-error-statistics/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="博客">
+<meta property="og:description" content="前端页面报错监听 统计">
+<meta property="og:updated_time" content="2018-03-26T07:41:34.945Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Louis Blog">
-<meta name="twitter:description" content="博客">
+<meta name="twitter:title" content="前端异常监控">
+<meta name="twitter:description" content="前端页面报错监听 统计">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -151,36 +152,66 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2018-03-26-fe-error-statistics" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/11/2017-12-11-array-storage-memory/" class="archive-article-date">
-  	<time datetime="2017-12-11T01:43:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-11</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/11/2017-12-11-array-storage-memory/">巧用数组存储</a>
+    <h1 class="article-title" itemprop="name">
+      前端异常监控
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/03/26/2018-03-26-fe-error-statistics/" class="archive-article-date">
+  	<time datetime="2018-03-26T01:40:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前端页面报错监听 统计<br><a id="more"></a></p>
+<h3 id="异常捕获"><a href="#异常捕获" class="headerlink" title="异常捕获"></a>异常捕获</h3><p>script error<br>window.error 进行全局捕获<br>对于从cdn引入的js script type<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Vue</span></div><div class="line">Vue.config.errorHandler = <span class="function"><span class="keyword">function</span> (<span class="params">err, vm, info</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> &#123;</div><div class="line">    message, <span class="comment">// 异常信息</span></div><div class="line">    name, <span class="comment">// 异常名称</span></div><div class="line">    script,  <span class="comment">// 异常脚本url</span></div><div class="line">    line,  <span class="comment">// 异常行号</span></div><div class="line">    column,  <span class="comment">// 异常列号</span></div><div class="line">    stack  <span class="comment">// 异常堆栈信息</span></div><div class="line">  &#125; = err;</div><div class="line">  <span class="built_in">console</span>.log(err)</div><div class="line">&#125;</div><div class="line"><span class="comment">//React</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ErrorBoundary</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123; <span class="attr">hasError</span>: <span class="literal">false</span> &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    componentDidCatch(error, info) &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123; <span class="attr">hasError</span>: <span class="literal">true</span> &#125;);</div><div class="line"></div><div class="line">        <span class="comment">// 将异常信息上报给服务器</span></div><div class="line">        logErrorToMyService(error, info);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.state.hasError) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="string">'出错了'</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.props.children;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//window</span></div><div class="line"><span class="built_in">window</span>.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">errorMessage, scriptURI, lineNo, columnNo, error</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'errorMessage: '</span> + errorMessage); <span class="comment">// 异常信息</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'scriptURI: '</span> + scriptURI); <span class="comment">// 异常文件路径</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'lineNo: '</span> + lineNo); <span class="comment">// 异常行号</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'columnNo: '</span> + columnNo); <span class="comment">// 异常列号</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'error: '</span> + error); <span class="comment">// 异常堆栈信息</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="异常上报"><a href="#异常上报" class="headerlink" title="异常上报"></a>异常上报</h3><p>模拟图片请求</p>
+<h3 id="异常分析"><a href="#异常分析" class="headerlink" title="异常分析"></a>异常分析</h3><p>nginx 日志分析 </p>
+<p>页面 图形可视化</p>
+<p><a href="https://zhuanlan.zhihu.com/p/32262716" target="_blank" rel="external">把前端监控做到极致</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p">Gives the rose fragrance in hand</p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wxpay.jpg">
+                      <span class="reward-type">WeChat</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -190,67 +221,54 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/01/2017-12-01-canvas-image-node-color/" class="archive-article-date">
-  	<time datetime="2017-12-01T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/01/2017-12-01-canvas-image-node-color/">根据图片色调生成渐变背景</a>
-    </h1>
+  
+    <a href="/2018/03/16/2018-02-26-css-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css-world</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+  <!--PC和WAP自适应版-->
+  <div id="SOHUCS" sid="前端异常监控" ></div>
+  <script type="text/javascript">
+    (function(){
+      var appid = 'cytiftFRT';
+      var conf = 'prod_f5e998d9b3eff429bcfbb306cdc89e14';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">canvas</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -274,8 +292,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

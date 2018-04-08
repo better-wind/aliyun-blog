@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.fenghou.site/2018/03/05/2018-03-05-interview/</loc>
+    
+    <lastmod>2018-04-08T09:53:00.526Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/01/20/2017-01-20-Canvas%E9%BB%91%E5%87%A4%E6%A2%A8/</loc>
+    
+    <lastmod>2018-04-02T01:50:06.244Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</loc>
+    
+    <lastmod>2018-03-28T08:15:26.942Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2018/03/26/2018-03-26-fe-error-statistics/</loc>
+    
+    <lastmod>2018-03-26T07:41:34.945Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</loc>
+    
+    <lastmod>2018-03-24T09:11:58.329Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</loc>
+    
+    <lastmod>2018-03-24T08:52:16.855Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</loc>
     
     <lastmod>2018-03-24T02:39:16.836Z</lastmod>
@@ -11,7 +53,7 @@
   <url>
     <loc>//blog.fenghou.site/2018/03/08/2018-03-08-interview/</loc>
     
-    <lastmod>2018-03-21T02:43:30.540Z</lastmod>
+    <lastmod>2018-03-21T02:43:30.541Z</lastmod>
     
   </url>
   
@@ -23,44 +65,37 @@
   </url>
   
   <url>
-    <loc>//blog.fenghou.site/2018/03/05/2018-03-05-interview/</loc>
-    
-    <lastmod>2018-03-16T08:59:40.695Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//blog.fenghou.site/2018/03/16/2018-02-26-css-world/</loc>
     
-    <lastmod>2018-03-16T02:23:10.107Z</lastmod>
+    <lastmod>2018-03-16T02:23:10.108Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</loc>
     
-    <lastmod>2018-03-12T08:41:17.095Z</lastmod>
+    <lastmod>2018-03-12T08:41:17.096Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2018/03/06/2018-03-06-interview/</loc>
     
-    <lastmod>2018-03-12T06:51:52.254Z</lastmod>
+    <lastmod>2018-03-12T06:51:52.255Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/11/13/2017-11-13-node-sms-boom/</loc>
     
-    <lastmod>2018-03-01T07:20:11.177Z</lastmod>
+    <lastmod>2018-03-01T07:20:11.178Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/</loc>
     
-    <lastmod>2018-03-01T07:15:15.170Z</lastmod>
+    <lastmod>2018-03-01T07:15:15.171Z</lastmod>
     
   </url>
   
@@ -75,13 +110,6 @@
     <loc>//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/</loc>
     
     <lastmod>2018-02-26T08:44:33.612Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</loc>
-    
-    <lastmod>2018-01-09T08:13:42.209Z</lastmod>
     
   </url>
   
@@ -102,7 +130,7 @@
   <url>
     <loc>//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/</loc>
     
-    <lastmod>2018-01-04T06:41:50.374Z</lastmod>
+    <lastmod>2018-01-04T06:41:50.375Z</lastmod>
     
   </url>
   
@@ -121,16 +149,9 @@
   </url>
   
   <url>
-    <loc>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</loc>
-    
-    <lastmod>2017-11-11T02:24:10.440Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//blog.fenghou.site/2017/11/07/2017-11-07-css-box-model/</loc>
     
-    <lastmod>2017-11-10T09:03:45.688Z</lastmod>
+    <lastmod>2017-11-10T09:03:45.689Z</lastmod>
     
   </url>
   
@@ -144,21 +165,21 @@
   <url>
     <loc>//blog.fenghou.site/2016/12/13/2016-12-13-node-spider/</loc>
     
-    <lastmod>2017-11-09T08:15:27.283Z</lastmod>
+    <lastmod>2017-11-09T08:15:27.284Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/05/17/2017-05-17-content-type/</loc>
     
-    <lastmod>2017-11-03T02:25:03.669Z</lastmod>
+    <lastmod>2017-11-03T02:25:03.670Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/</loc>
     
-    <lastmod>2017-11-02T08:48:38.456Z</lastmod>
+    <lastmod>2017-11-02T08:48:38.457Z</lastmod>
     
   </url>
   
@@ -186,28 +207,21 @@
   <url>
     <loc>//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/</loc>
     
-    <lastmod>2017-11-02T03:14:21.985Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</loc>
-    
-    <lastmod>2017-11-02T03:13:52.499Z</lastmod>
+    <lastmod>2017-11-02T03:14:21.986Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</loc>
     
-    <lastmod>2017-11-02T02:59:34.228Z</lastmod>
+    <lastmod>2017-11-02T02:59:34.229Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/</loc>
     
-    <lastmod>2017-11-02T02:45:19.116Z</lastmod>
+    <lastmod>2017-11-02T02:45:19.117Z</lastmod>
     
   </url>
   
@@ -228,28 +242,28 @@
   <url>
     <loc>//blog.fenghou.site/2017/02/21/2017-02-21-Weex/</loc>
     
-    <lastmod>2017-10-31T09:48:34.651Z</lastmod>
+    <lastmod>2017-10-31T09:48:34.652Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/02/17/2017-02-17-Rax/</loc>
     
-    <lastmod>2017-10-31T09:48:23.308Z</lastmod>
+    <lastmod>2017-10-31T09:48:23.309Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/</loc>
     
-    <lastmod>2017-10-31T09:48:23.299Z</lastmod>
+    <lastmod>2017-10-31T09:48:23.300Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/02/13/2017-02-13-PReact/</loc>
     
-    <lastmod>2017-10-31T09:48:23.290Z</lastmod>
+    <lastmod>2017-10-31T09:48:23.291Z</lastmod>
     
   </url>
   
@@ -277,14 +291,14 @@
   <url>
     <loc>//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/</loc>
     
-    <lastmod>2017-10-30T10:19:45.277Z</lastmod>
+    <lastmod>2017-10-30T10:19:45.278Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/</loc>
     
-    <lastmod>2017-10-23T06:16:49.433Z</lastmod>
+    <lastmod>2017-10-23T06:16:49.434Z</lastmod>
     
   </url>
   
@@ -333,7 +347,7 @@
   <url>
     <loc>//blog.fenghou.site/2016/12/16/2016-12-16-webpack/</loc>
     
-    <lastmod>2017-03-15T12:16:23.086Z</lastmod>
+    <lastmod>2017-03-15T12:16:23.087Z</lastmod>
     
   </url>
   
@@ -354,14 +368,14 @@
   <url>
     <loc>//blog.fenghou.site/2016/12/27/2016-12-27-%E4%BD%A0%E7%9C%9F%E7%9A%84%E5%AD%A6%E5%A5%BDJs/</loc>
     
-    <lastmod>2017-03-15T11:58:07.909Z</lastmod>
+    <lastmod>2017-03-15T11:58:07.910Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/</loc>
     
-    <lastmod>2017-03-15T11:52:29.208Z</lastmod>
+    <lastmod>2017-03-15T11:52:29.209Z</lastmod>
     
   </url>
   
@@ -387,23 +401,16 @@
   </url>
   
   <url>
-    <loc>//blog.fenghou.site/2017/01/20/2017-01-20-Canvas%E9%BB%91%E5%87%A4%E6%A2%A8/</loc>
-    
-    <lastmod>2017-03-15T11:34:33.356Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//blog.fenghou.site/2017/01/21/2017-01-21-Canvas%E6%AF%9B%E7%AC%94%E5%AD%97%E4%B9%A6%E6%B3%95/</loc>
     
-    <lastmod>2017-03-15T11:31:18.251Z</lastmod>
+    <lastmod>2017-03-15T11:31:18.252Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.fenghou.site/2017/02/13/2017-02-13-wx%E7%AD%BE%E5%90%8D%E5%87%BA%E9%94%99-URL/</loc>
     
-    <lastmod>2017-03-15T11:26:35.691Z</lastmod>
+    <lastmod>2017-03-15T11:26:35.692Z</lastmod>
     
   </url>
   

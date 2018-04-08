@@ -101,7 +101,8 @@ error:fatal: Unable to find remote helper for ‘https’
   yum install libcurl-devel
   然后按照上诉步骤重新安装编译git即可
 
-from [Linux安装最新版git](http://blog.csdn.net/u010887744/article/details/53957613)
+
+[Linux安装git](https://www.cnblogs.com/lhbryant/p/6928894.html)
 那么这解决问题的过程 就比解决问题来的跟有用
 前提是问题是你自己解决的
 
