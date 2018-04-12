@@ -28,6 +28,12 @@ ES5/ES6/ES7
 类型 
 存储
 对象
+
+### 正则
+元字符
+限定符
+test exec match
+replace
 ### 事件模型
 事件冒泡 从点击外外    false
 事件捕获 从点击外往里  true

@@ -178,3 +178,4 @@ function downImg(list,dirName){
 
 
 ```
+[如何防止网站被爬虫爬取的几种办法](http://blog.51cto.com/laoxu/1302013)

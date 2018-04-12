@@ -26,15 +26,18 @@ var cates = [
       ]  
     }
  ]
-//现在我想给label='me'的cates 复制怎么做
+//现在我想给label='me'的cates 赋值怎么做
 //假如我知道他的结构层级是[0,0,0]
-cates[0].cates[0].cates[0].cates = []
+//you can 
+cates[0].cates[0].cates[0].cates = [1,2,3,4]
+// other way
 let _item = [0,0,0]
 let _arr = []
 _item.map((item)=>{
     _arr = cates[item]
 })
-let arr = cates[0].cates[0].cates[0].cates
+_arr = [1,2,3,4]
+//此时 _arr 和 cates[0].cates[0].cates[0].cates 指向 相同 存储空间
 
 ```
 
