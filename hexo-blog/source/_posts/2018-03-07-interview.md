@@ -2,6 +2,7 @@ title: Knowledge
 date: 2018-03-07 17:22:43
 tags:
     - js
+    - canvas
 ---
 Canvas && Js
 <!--more-->

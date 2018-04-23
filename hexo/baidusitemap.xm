@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</loc>
+    <lastmod>2018-04-23T02:05:50.549Z</lastmod>
+    <data>
+        <display>
+        <title>Knowledge</title>
+        <pubTime>2018-03-07T09:22:43.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.fenghou.site/2018/04/20/2018-04-20-js-province-city-district/</loc>
     <lastmod>2018-04-23T01:48:01.345Z</lastmod>
     <data>
@@ -31,23 +50,6 @@
         <pubTime>2017-11-21T05:33:37.000Z</pubTime>
         
         <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</loc>
-    <lastmod>2018-04-10T09:16:18.955Z</lastmod>
-    <data>
-        <display>
-        <title>Knowledge</title>
-        <pubTime>2018-03-07T09:22:43.000Z</pubTime>
-        
-        <tag>js</tag>
          
          
            
