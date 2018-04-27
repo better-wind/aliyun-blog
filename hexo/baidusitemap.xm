@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</loc>
+    <lastmod>2018-04-25T09:43:10.005Z</lastmod>
+    <data>
+        <display>
+        <title>浅析vue数据响应</title>
+        <pubTime>2017-04-15T12:16:29.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</loc>
     <lastmod>2018-04-23T02:05:50.549Z</lastmod>
     <data>
@@ -605,23 +622,6 @@
         <tag>linux</tag>
          
         <tag>mysql</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</loc>
-    <lastmod>2017-10-31T09:49:41.887Z</lastmod>
-    <data>
-        <display>
-        <title>浅析vue数据响应</title>
-        <pubTime>2017-04-15T12:16:29.000Z</pubTime>
-        
-        <tag>vue</tag>
          
          
            

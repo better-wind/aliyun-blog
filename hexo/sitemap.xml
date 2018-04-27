@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</loc>
+    
+    <lastmod>2018-04-25T09:43:10.005Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</loc>
     
     <lastmod>2018-04-23T02:05:50.549Z</lastmod>
@@ -236,13 +243,6 @@
     <loc>//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/</loc>
     
     <lastmod>2017-11-01T09:39:29.341Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</loc>
-    
-    <lastmod>2017-10-31T09:49:41.887Z</lastmod>
     
   </url>
   

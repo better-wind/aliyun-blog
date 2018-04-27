@@ -1172,9 +1172,10 @@
     <link href="//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/"/>
     <id>//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</id>
     <published>2017-04-15T12:16:29.000Z</published>
-    <updated>2017-10-31T09:49:41.887Z</updated>
+    <updated>2018-04-25T09:43:10.005Z</updated>
     
-    <content type="html"><![CDATA[<p>Vue相关-整理中<br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>Vue相关-整理中<br><a id="more"></a><br>模板解析 指令解析<br>数据劫持过程中<br>监听 set 和 get<br>get 过程时 判断是否在模板解析时用到数据<br>通知 Dep 收集 当前 属性 的监听<br>watch 中 往 dep中添加 要收集的订阅</p>
+<p>set 时<br>Dep 通知 watch 可以发布订阅<br>watch 发布订阅  </p>
 ]]></content>
     
     <summary type="html">
