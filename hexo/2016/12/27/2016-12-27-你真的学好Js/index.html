@@ -9,12 +9,14 @@
   <title>你真的学好Js了吗 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在我看来前端(Js)就好比是个剑客江湖江湖中有人练react宝典，有人练vue神功有人锻造webpack利剑…">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你真的学好Js了吗">
 <meta property="og:url" content="//blog.fenghou.site/2016/12/27/2016-12-27-你真的学好Js/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="在我看来前端(Js)就好比是个剑客江湖江湖中有人练react宝典，有人练vue神功有人锻造webpack利剑…">
-<meta property="og:updated_time" content="2017-03-15T11:58:07.910Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你真的学好Js了吗">
 <meta name="twitter:description" content="在我看来前端(Js)就好比是个剑客江湖江湖中有人练react宝典，有人练vue神功有人锻造webpack利剑…">
@@ -181,14 +183,14 @@ var _hmt = _hmt || [];
 <p>一切事物皆对象<br>对象具有封装和继承特性<br>对象与对象之间使用消息通信，各自存在信息隐藏</p>
 </blockquote>
 <p>众所周知Java采用面向对象思想构造其语言，它实现了类、继承、多态、接口等机制。<br>但是这些机制，只是实现面向对象编程的一种方式<br>实际上，Js是通过原型的方式来实现面向对象编程的<br>Js中的对象是依靠构造器(constructor)利用原型(prototype)构造出来的</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对象的声明</span></div><div class="line"><span class="comment">//字面式对象声明</span></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'Louis'</span>,</div><div class="line">    <span class="attr">age</span>:<span class="string">'24'</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//使用函数构造器构造对象</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'Louis'</span>,</div><div class="line">    <span class="attr">age</span>:<span class="string">'24'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</div><div class="line"><span class="comment">//这里的new关键字跟java中 的new毫无关系</span></div><div class="line"><span class="comment">//只是借用了它的关键字new</span></div><div class="line"><span class="comment">//用来表示调用构造器创建对象</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象的声明</span></span><br><span class="line"><span class="comment">//字面式对象声明</span></span><br><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">    name:<span class="string">'Louis'</span>,</span><br><span class="line">    age:<span class="string">'24'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用函数构造器构造对象</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name:<span class="string">'Louis'</span>,</span><br><span class="line">    age:<span class="string">'24'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="comment">//这里的new关键字跟java中 的new毫无关系</span></span><br><span class="line"><span class="comment">//只是借用了它的关键字new</span></span><br><span class="line"><span class="comment">//用来表示调用构造器创建对象</span></span><br></pre></td></tr></table></figure>
 <h3 id="弱类型语言"><a href="#弱类型语言" class="headerlink" title="弱类型语言"></a>弱类型语言</h3><p>在Js中，定义变量不必声明其类型。但这不意味着变量没有类型。<br>原始类型：布尔型、数值型、字符串类型<br>引用类型：对象类型(数组是一种特殊的对象)、函数类型<br>其他类型：空类型和未定义类型<br>js中的变量可以根据所附的值改变类型<br>原始类型按值传送，在栈内存中存的是变量的值<br>引用类型则按引用传送，在栈内存中存的是 引用对象在堆内存中的地址<br>所以这里涉及到引用类型深拷贝和浅拷贝的问题</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//浅拷贝 把父对象的属性全部拷贝给子对象</span></div><div class="line"><span class="comment">//如果父元素的属性对应的值是引用类型，那子对象对应的属性的值还是引用类型的内存地址</span></div><div class="line"><span class="comment">//这个时候就需要深拷贝</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span>(<span class="params">pre</span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> ch = pre.constructor === <span class="built_in">Array</span> ? [] : &#123;&#125;;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> pre !== <span class="string">'object'</span>)&#123;</div><div class="line">            ch = pre;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.JSON)&#123;</div><div class="line">            ch = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(pre))</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> pre)&#123;</div><div class="line">                ch[i] = <span class="keyword">typeof</span> pre[i] === <span class="string">'object'</span> ?</div><div class="line">                (pre[i].constructor === <span class="built_in">Array</span> ? pre[i].slice() : deepCopy(pre[i]))</div><div class="line">                : pre[i]</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//浅拷贝 把父对象的属性全部拷贝给子对象</span></span><br><span class="line"><span class="comment">//如果父元素的属性对应的值是引用类型，那子对象对应的属性的值还是引用类型的内存地址</span></span><br><span class="line"><span class="comment">//这个时候就需要深拷贝</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepCopy</span>(<span class="params">pre</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> ch = pre.constructor === <span class="built_in">Array</span> ? [] : &#123;&#125;;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> pre !== <span class="string">'object'</span>)&#123;</span><br><span class="line">            ch = pre;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.JSON)&#123;</span><br><span class="line">            ch = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(pre))</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> pre)&#123;</span><br><span class="line">                ch[i] = <span class="keyword">typeof</span> pre[i] === <span class="string">'object'</span> ?</span><br><span class="line">                (pre[i].constructor === <span class="built_in">Array</span> ? pre[i].slice() : deepCopy(pre[i]))</span><br><span class="line">                : pre[i]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="函数是一等对象"><a href="#函数是一等对象" class="headerlink" title="函数是一等对象"></a>函数是一等对象</h3><p>在JavaScript中，函数是一等对象<br>可以存储在变量中<br>可以作为参数传给其他函数<br>可以作为返回值从其他函数传出<br>还可以在运行时进行构造<br>可以用function(){…}这样的语法创建匿名函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> foo = <span class="number">20</span>;</div><div class="line">    <span class="keyword">var</span> bar = <span class="number">2</span>;</div><div class="line">    alert(foo*bar);</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> foo = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">var</span> bar = <span class="number">2</span>;</span><br><span class="line">    alert(foo*bar);</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
 <p>这个函数在定义后便会立即执行<br>匿名函数可以用来创建闭包<br>闭包是一个受到保护的变量空间<br>由内嵌函数生成</p>
 <h3 id="对象的易变性"><a href="#对象的易变性" class="headerlink" title="对象的易变性"></a>对象的易变性</h3><p>JavaScript中,一切都是对象<br>除了三种原始类型(布尔型、数值型、字符串类型)<br>即便是这几种类型在必要时候也会被自动封装成对象<br>而且所有对象都是易变的(mutable)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//为函数添加属性</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dispalyError</span>(<span class="params">message</span>)</span>&#123;</div><div class="line">    dispalyError.numTimesExecuted++;</div><div class="line">    alert(message);</div><div class="line">&#125;</div><div class="line">dispalyError.numTimesExecuted = <span class="number">0</span>;</div><div class="line"><span class="comment">//对定义的类和实例化的对象进行修改</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">getName</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getAge</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.age;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> alice = <span class="keyword">new</span> Person(<span class="string">'Alice'</span>,<span class="number">39</span>);</div><div class="line"><span class="keyword">var</span> bill = <span class="keyword">new</span> Person(<span class="string">'Bill'</span>,<span class="number">20</span>);</div><div class="line">Person.prototype.getGreeting = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'Hi '</span>+ <span class="keyword">this</span>.getName()+<span class="string">'!'</span>;</div><div class="line">&#125;</div><div class="line">alice.displayGreeting = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="keyword">this</span>.getGreeting);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//为函数添加属性</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dispalyError</span>(<span class="params">message</span>)</span>&#123;</span><br><span class="line">    dispalyError.numTimesExecuted++;</span><br><span class="line">    alert(message);</span><br><span class="line">&#125;</span><br><span class="line">dispalyError.numTimesExecuted = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//对定义的类和实例化的对象进行修改</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    getName:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">    &#125;,</span><br><span class="line">    getAge:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> alice = <span class="keyword">new</span> Person(<span class="string">'Alice'</span>,<span class="number">39</span>);</span><br><span class="line"><span class="keyword">var</span> bill = <span class="keyword">new</span> Person(<span class="string">'Bill'</span>,<span class="number">20</span>);</span><br><span class="line">Person.prototype.getGreeting = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hi '</span>+ <span class="keyword">this</span>.getName()+<span class="string">'!'</span>;</span><br><span class="line">&#125;</span><br><span class="line">alice.displayGreeting = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.getGreeting);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承在JavaScript中不像在别的面向对象语言中那样简单<br>JavaScript使用的是基于对象的继承<br>它也可以用来模仿基于类的继承<br>Es6中新增了extends实现继承<br>后面会有文章相信讲讲继承</p>
 
       
@@ -367,7 +369,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -375,15 +377,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -395,6 +393,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -403,15 +405,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -427,19 +429,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -451,6 +441,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -459,7 +461,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -467,7 +473,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -483,11 +493,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

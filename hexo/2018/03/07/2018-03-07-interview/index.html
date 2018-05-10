@@ -9,12 +9,14 @@
   <title>Knowledge | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Canvas &amp;amp;&amp;amp; Js">
+<meta name="keywords" content="js,canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Knowledge">
 <meta property="og:url" content="//blog.fenghou.site/2018/03/07/2018-03-07-interview/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="Canvas &amp;amp;&amp;amp; Js">
-<meta property="og:updated_time" content="2018-04-23T02:05:50.549Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-07T08:31:03.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Knowledge">
 <meta name="twitter:description" content="Canvas &amp;amp;&amp;amp; Js">
@@ -175,7 +177,7 @@ var _hmt = _hmt || [];
         <p>Canvas &amp;&amp; Js<br><a id="more"></a></p>
 <h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><p>颜色提取<br>毛笔字<br>连线小球<br>烟花<br>星空</p>
 <h2 id="Js"><a href="#Js" class="headerlink" title="Js"></a>Js</h2><h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><p>命名规范<br>命名<br>规范检查<br>eslint</p>
-<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><p>ES5/ES6/ES7<br><a href="https://github.com/Chalarangelo/30-seconds-of-code" target="_blank" rel="external">30-seconds-of-code</a></p>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><p>ES5/ES6/ES7<br><a href="https://github.com/Chalarangelo/30-seconds-of-code" target="_blank" rel="noopener">30-seconds-of-code</a></p>
 <h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p>类型<br>存储<br>对象</p>
 <h3 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h3><p>元字符<br>限定符<br>test exec match<br>replace</p>
 <h3 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h3><p>事件冒泡 从点击外外    false<br>事件捕获 从点击外往里  true<br>事件委托</p>
@@ -187,6 +189,7 @@ var _hmt = _hmt || [];
 <h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>apply call bind 剪头函数</p>
 <h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p>commonJS<br>import</p>
 <h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>Promise<br>Generator<br>async await</p>
+<h3 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> image = <span class="keyword">new</span> Image()</span><br><span class="line">        image.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(image.width)</span><br><span class="line">          <span class="built_in">console</span>.log(image.height)</span><br><span class="line">        &#125;</span><br><span class="line">        image.src = <span class="built_in">window</span>.URL.createObjectURL(file)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> fr = <span class="keyword">new</span> FileReader();</span><br><span class="line">        fr.onload = <span class="function"><span class="keyword">function</span>(<span class="params">file</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">var</span> image = <span class="keyword">new</span> Image();</span><br><span class="line">          image.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(image.width)</span><br><span class="line">            <span class="built_in">console</span>.log(image.height)</span><br><span class="line">          &#125;</span><br><span class="line">          image.src = file.target.result;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        fr.readAsDataURL(file);</span><br></pre></td></tr></table></figure>
 
       
 
@@ -368,7 +371,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -376,15 +379,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -396,6 +395,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -404,15 +407,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -428,19 +431,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -452,6 +443,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -460,7 +463,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -468,7 +475,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -484,11 +495,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

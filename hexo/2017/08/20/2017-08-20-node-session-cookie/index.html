@@ -9,12 +9,14 @@
   <title>Node-Session | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Node中使用Session">
+<meta name="keywords" content="node,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-Session">
 <meta property="og:url" content="//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="Node中使用Session">
-<meta property="og:updated_time" content="2017-11-02T03:24:53.180Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-Session">
 <meta name="twitter:description" content="Node中使用Session">
@@ -176,19 +178,19 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>server.js</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bodyParser  =  <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</div><div class="line"><span class="keyword">var</span> session = <span class="built_in">require</span>(<span class="string">'express-session'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'express'</span>)()</div><div class="line"><span class="keyword">var</span> router = <span class="built_in">require</span>(<span class="string">'./models/user'</span>)</div><div class="line"></div><div class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</div><div class="line">app.use(session(&#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'SESSION'</span>,</div><div class="line">    <span class="attr">secret</span>: <span class="string">'recommand 128 bytes random string'</span>,</div><div class="line">    <span class="attr">cookie</span>: &#123; <span class="attr">maxAge</span>: <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> &#125;</div><div class="line">&#125;));</div><div class="line">app.use(<span class="string">'/'</span>, router);</div><div class="line">app.listen(<span class="number">4000</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bodyParser  =  <span class="built_in">require</span>(<span class="string">'body-parser'</span>);</span><br><span class="line"><span class="keyword">var</span> session = <span class="built_in">require</span>(<span class="string">'express-session'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = <span class="built_in">require</span>(<span class="string">'express'</span>)()</span><br><span class="line"><span class="keyword">var</span> router = <span class="built_in">require</span>(<span class="string">'./models/user'</span>)</span><br><span class="line"></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br><span class="line">app.use(session(&#123;</span><br><span class="line">    name:<span class="string">'SESSION'</span>,</span><br><span class="line">    secret: <span class="string">'recommand 128 bytes random string'</span>,</span><br><span class="line">    cookie: &#123; <span class="attr">maxAge</span>: <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span> &#125;</span><br><span class="line">&#125;));</span><br><span class="line">app.use(<span class="string">'/'</span>, router);</span><br><span class="line">app.listen(<span class="number">4000</span>)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>./models/user.js</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</div><div class="line"><span class="keyword">var</span> router = express.Router();</div><div class="line"><span class="keyword">var</span> userControl = <span class="built_in">require</span>(<span class="string">'../controller/user'</span>)</div><div class="line">router.post(<span class="string">'/user/login'</span>,userControl.login)</div><div class="line">router.post(<span class="string">'/user/check'</span>,userControl.check)</div><div class="line">router.post(<span class="string">'/user/create'</span>,userControl.createUser)</div><div class="line"><span class="built_in">module</span>.exports = router;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="keyword">var</span> userControl = <span class="built_in">require</span>(<span class="string">'../controller/user'</span>)</span><br><span class="line">router.post(<span class="string">'/user/login'</span>,userControl.login)</span><br><span class="line">router.post(<span class="string">'/user/check'</span>,userControl.check)</span><br><span class="line">router.post(<span class="string">'/user/create'</span>,userControl.createUser)</span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>../controller/user.js</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> userService = <span class="built_in">require</span>(<span class="string">'../service/user'</span>)</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">login</span>: <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">        userService.login(req,res)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">check</span>: <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">        userService.check(req,res)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">createUser</span>: <span class="function"><span class="keyword">function</span> (<span class="params">req,res</span>) </span>&#123;</div><div class="line">        userService.createUser(req,res)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> userService = <span class="built_in">require</span>(<span class="string">'../service/user'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    login: <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">        userService.login(req,res)</span><br><span class="line">    &#125;,</span><br><span class="line">    check: <span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">        userService.check(req,res)</span><br><span class="line">    &#125;,</span><br><span class="line">    createUser: <span class="function"><span class="keyword">function</span> (<span class="params">req,res</span>) </span>&#123;</span><br><span class="line">        userService.createUser(req,res)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>../service/user.js</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> User = <span class="built_in">require</span>(<span class="string">'./../dataBase/user'</span>)</div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">login</span>:<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">        <span class="keyword">const</span> name = req.body.name,</div><div class="line">            pwd = req.body.pwd</div><div class="line">        <span class="keyword">var</span> user = <span class="keyword">new</span> User(&#123;</div><div class="line">            <span class="attr">name</span>:name,</div><div class="line">            <span class="attr">password</span>:pwd</div><div class="line">        &#125;)</div><div class="line">        user.findUser(user.name,user.password)</div><div class="line">            .then(<span class="function">(<span class="params">rs</span>)=&gt;</span>&#123;</div><div class="line">                <span class="keyword">let</span> _data = &#123;&#125;</div><div class="line">                <span class="keyword">if</span>(rs.length)&#123;</div><div class="line">                    _data = &#123;</div><div class="line">                        <span class="attr">code</span>:<span class="number">200</span>,</div><div class="line">                        <span class="attr">data</span>:rs[<span class="number">0</span>]</div><div class="line">                    &#125;</div><div class="line">                    req.session.user = rs[<span class="number">0</span>].id;</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    _data = &#123;</div><div class="line">                        <span class="attr">code</span>:<span class="number">500</span>,</div><div class="line">                        <span class="attr">msg</span>:<span class="string">'用户名或密码不正确'</span>,</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">                res.send(_data)</div><div class="line">            &#125;)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">check</span>:<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">        <span class="keyword">let</span> _data = &#123;&#125;</div><div class="line">        <span class="keyword">if</span>(req.session.user)&#123;</div><div class="line">            _data = &#123;</div><div class="line">                <span class="attr">code</span>:<span class="number">200</span>,</div><div class="line">                <span class="attr">data</span>:<span class="literal">true</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            _data = &#123;</div><div class="line">                <span class="attr">code</span>:<span class="number">200</span>,</div><div class="line">                <span class="attr">data</span>:<span class="literal">false</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        res.send(_data)</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">createUser</span>:<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">        <span class="keyword">const</span> name = req.body.name,</div><div class="line">            pwd = req.body.pwd</div><div class="line">        <span class="keyword">var</span> user = <span class="keyword">new</span> User(&#123;</div><div class="line">            <span class="attr">name</span>:name,</div><div class="line">            <span class="attr">password</span>:pwd</div><div class="line">        &#125;)</div><div class="line">        user.createUser(user.name,user.password)</div><div class="line">            .then(<span class="function">(<span class="params">rs</span>)=&gt;</span>&#123;</div><div class="line">                <span class="keyword">let</span> _data = &#123;&#125;</div><div class="line">                _data = &#123;</div><div class="line">                    <span class="attr">code</span>:<span class="number">200</span>,</div><div class="line">                    <span class="attr">data</span>:rs[<span class="number">0</span>]</div><div class="line">                &#125;</div><div class="line">                req.session.user = rs[<span class="number">0</span>].id;</div><div class="line">                res.send(_data)</div><div class="line">            &#125;)</div><div class="line">    &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> User = <span class="built_in">require</span>(<span class="string">'./../dataBase/user'</span>)</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    login:<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">const</span> name = req.body.name,</span><br><span class="line">            pwd = req.body.pwd</span><br><span class="line">        <span class="keyword">var</span> user = <span class="keyword">new</span> User(&#123;</span><br><span class="line">            name:name,</span><br><span class="line">            password:pwd</span><br><span class="line">        &#125;)</span><br><span class="line">        user.findUser(user.name,user.password)</span><br><span class="line">            .then(<span class="function">(<span class="params">rs</span>)=&gt;</span>&#123;</span><br><span class="line">                <span class="keyword">let</span> _data = &#123;&#125;</span><br><span class="line">                <span class="keyword">if</span>(rs.length)&#123;</span><br><span class="line">                    _data = &#123;</span><br><span class="line">                        code:<span class="number">200</span>,</span><br><span class="line">                        data:rs[<span class="number">0</span>]</span><br><span class="line">                    &#125;</span><br><span class="line">                    req.session.user = rs[<span class="number">0</span>].id;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    _data = &#123;</span><br><span class="line">                        code:<span class="number">500</span>,</span><br><span class="line">                        msg:<span class="string">'用户名或密码不正确'</span>,</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                res.send(_data)</span><br><span class="line">            &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    check:<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> _data = &#123;&#125;</span><br><span class="line">        <span class="keyword">if</span>(req.session.user)&#123;</span><br><span class="line">            _data = &#123;</span><br><span class="line">                code:<span class="number">200</span>,</span><br><span class="line">                data:<span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            _data = &#123;</span><br><span class="line">                code:<span class="number">200</span>,</span><br><span class="line">                data:<span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res.send(_data)</span><br><span class="line">    &#125;,</span><br><span class="line">    createUser:<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">const</span> name = req.body.name,</span><br><span class="line">            pwd = req.body.pwd</span><br><span class="line">        <span class="keyword">var</span> user = <span class="keyword">new</span> User(&#123;</span><br><span class="line">            name:name,</span><br><span class="line">            password:pwd</span><br><span class="line">        &#125;)</span><br><span class="line">        user.createUser(user.name,user.password)</span><br><span class="line">            .then(<span class="function">(<span class="params">rs</span>)=&gt;</span>&#123;</span><br><span class="line">                <span class="keyword">let</span> _data = &#123;&#125;</span><br><span class="line">                _data = &#123;</span><br><span class="line">                    code:<span class="number">200</span>,</span><br><span class="line">                    data:rs[<span class="number">0</span>]</span><br><span class="line">                &#125;</span><br><span class="line">                req.session.user = rs[<span class="number">0</span>].id;</span><br><span class="line">                res.send(_data)</span><br><span class="line">            &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -369,7 +371,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -377,15 +379,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -397,6 +395,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -405,15 +407,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -429,19 +431,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -453,6 +443,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -461,7 +463,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -469,7 +475,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -485,11 +495,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

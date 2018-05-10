@@ -9,12 +9,14 @@
   <title>Canvas--刮刮卡 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="到年底了，去回顾了下做过的项目发现有很多跟Canvas有关的这里简单记录一点心得方便日后查阅">
+<meta name="keywords" content="canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Canvas--刮刮卡">
 <meta property="og:url" content="//blog.fenghou.site/2017/01/18/2017-01-18-Canvas刮刮卡/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="到年底了，去回顾了下做过的项目发现有很多跟Canvas有关的这里简单记录一点心得方便日后查阅">
-<meta property="og:updated_time" content="2017-03-15T11:38:58.172Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Canvas--刮刮卡">
 <meta name="twitter:description" content="到年底了，去回顾了下做过的项目发现有很多跟Canvas有关的这里简单记录一点心得方便日后查阅">
@@ -176,7 +178,7 @@ var _hmt = _hmt || [];
 <h2 id="一个模拟刮奖的活动"><a href="#一个模拟刮奖的活动" class="headerlink" title="一个模拟刮奖的活动"></a>一个模拟刮奖的活动</h2><h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><p>获奖结果上实现一个遮层<br>手指滑动位置遮层对应位置色值清空<br>判断清空数据达到设定值，清除遮层</p>
 <h3 id="必备API"><a href="#必备API" class="headerlink" title="必备API"></a>必备API</h3><p>getContext()<br>getImageData() //获取画布像素数据 每个像素包含RGBA四个值<br>fill() //填充<br>rect() //矩形<br>arc() //圆<br>globalCompositeOperation //设置或返回如何将一个源（新的）图像绘制到目标（已有）的图像上</p>
 <h3 id="touch事件"><a href="#touch事件" class="headerlink" title="touch事件"></a>touch事件</h3><p>touchstart<br>touchmove<br>touchend<br>changedTouches:touchlist。<br>对于 touchstart 事件, 这个 TouchList 对象列出在此次事件中新增加的触点<br>对于 touchmove 事件，列出和上一次事件相比较，发生了变化的触点<br>对于 touchend ，列出离开触摸平面的触点（这些触点对应已经不接触触摸平面的手指）</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">        <span class="keyword">let</span> domCanvas = <span class="built_in">document</span>.querySelector(<span class="string">'#GGL'</span>),</div><div class="line">            context = domCanvas.getContext(<span class="string">'2d'</span>);</div><div class="line">        <span class="comment">/*</span></div><div class="line">        * 构建对象</div><div class="line">        * width</div><div class="line">        * height</div><div class="line">        * filter 取消遮罩百分比</div><div class="line">        * */</div><div class="line">        <span class="keyword">let</span> clipImage = <span class="function"><span class="keyword">function</span>(<span class="params">height,width,filter</span>)</span>&#123;</div><div class="line">            <span class="keyword">this</span>.width = width;</div><div class="line">            <span class="keyword">this</span>.height = height;</div><div class="line">            <span class="keyword">this</span>.filter = filter;</div><div class="line">            domCanvas.width = <span class="keyword">this</span>.width;</div><div class="line">            domCanvas.height = <span class="keyword">this</span>.height;</div><div class="line">        &#125;</div><div class="line">        clipImage.prototype = &#123;</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 函数入口</div><div class="line">            * 开始监听事件</div><div class="line">            * */</div><div class="line">            start:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                context.fillStyle = <span class="string">'gray'</span>;</div><div class="line">                context.fillRect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height);</div><div class="line">                context.globalCompositeOperation = <span class="string">'destination-out'</span>;</div><div class="line">                <span class="keyword">this</span>.bindEventMove = <span class="keyword">this</span>.eventMove.bind(<span class="keyword">this</span>);</div><div class="line">                <span class="keyword">this</span>.bindEventUp= <span class="keyword">this</span>.eventUp.bind(<span class="keyword">this</span>);</div><div class="line">                domCanvas.addEventListener(<span class="string">'touchstart'</span>,<span class="keyword">this</span>.eventDown)</div><div class="line">                domCanvas.addEventListener(<span class="string">'touchmove'</span>,<span class="keyword">this</span>.bindEventMove)</div><div class="line">                domCanvas.addEventListener(<span class="string">'touchend'</span>,<span class="keyword">this</span>.bindEventUp)</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">eventDown</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'Down'</span>)</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">eventMove</span>:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'Move'</span>);</div><div class="line">                <span class="keyword">let</span> target = e.changedTouches[e.changedTouches.length<span class="number">-1</span>];</div><div class="line">                <span class="keyword">this</span>.clearMove(target)</div><div class="line">            &#125;,</div><div class="line">            <span class="attr">eventUp</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">'Up'</span>);</div><div class="line">                <span class="keyword">this</span>.clearMask();</div><div class="line">            &#125;,</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 清除划过画布</div><div class="line">            * */</div><div class="line">            clearMove:<span class="function"><span class="keyword">function</span>(<span class="params">target</span>)</span>&#123;</div><div class="line">                <span class="keyword">let</span> nX = target.clientX,</div><div class="line">                    nY = target.clientY;</div><div class="line">                context.beginPath();</div><div class="line">                context.arc(nX,nY,<span class="number">15</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI * <span class="number">2</span>);</div><div class="line">                context.fill();</div><div class="line">            &#125;,</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 判断像素点清除数是否到达指定百分比</div><div class="line">            * */</div><div class="line">            clearMask:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="keyword">let</span> nNum = <span class="number">0</span>,</div><div class="line">                    aImageData = context.getImageData(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height).data,</div><div class="line">                    nLength = aImageData.length;</div><div class="line">                aImageData.forEach(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</div><div class="line">                    <span class="keyword">if</span>(item == <span class="number">0</span>)&#123;</div><div class="line">                        nNum++;</div><div class="line">                    &#125;</div><div class="line">                &#125;)</div><div class="line">                <span class="keyword">if</span>(nNum &gt;= nLength * <span class="keyword">this</span>.filter)&#123;</div><div class="line">                    <span class="keyword">this</span>.finish();</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            <span class="comment">/*</span></div><div class="line">            * 完成刮奖</div><div class="line">            * */</div><div class="line">            finish:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                context.beginPath();</div><div class="line">                context.rect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height);</div><div class="line">                context.fill();</div><div class="line">                domCanvas.removeEventListener(<span class="string">'touchstart'</span>,<span class="keyword">this</span>.eventDown);</div><div class="line">                domCanvas.removeEventListener(<span class="string">'touchmove'</span>,<span class="keyword">this</span>.bindEventMove);</div><div class="line">                domCanvas.removeEventListener(<span class="string">'touchend'</span>,<span class="keyword">this</span>.bindEventUp);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">let</span> clip = <span class="keyword">new</span> clipImage(<span class="number">400</span>,<span class="number">400</span>,<span class="number">.3</span>);</div><div class="line">        clip.start();</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">        <span class="keyword">let</span> domCanvas = <span class="built_in">document</span>.querySelector(<span class="string">'#GGL'</span>),</span><br><span class="line">            context = domCanvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        * 构建对象</span></span><br><span class="line"><span class="comment">        * width</span></span><br><span class="line"><span class="comment">        * height</span></span><br><span class="line"><span class="comment">        * filter 取消遮罩百分比</span></span><br><span class="line"><span class="comment">        * */</span></span><br><span class="line">        <span class="keyword">let</span> clipImage = <span class="function"><span class="keyword">function</span>(<span class="params">height,width,filter</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.width = width;</span><br><span class="line">            <span class="keyword">this</span>.height = height;</span><br><span class="line">            <span class="keyword">this</span>.filter = filter;</span><br><span class="line">            domCanvas.width = <span class="keyword">this</span>.width;</span><br><span class="line">            domCanvas.height = <span class="keyword">this</span>.height;</span><br><span class="line">        &#125;</span><br><span class="line">        clipImage.prototype = &#123;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            * 函数入口</span></span><br><span class="line"><span class="comment">            * 开始监听事件</span></span><br><span class="line"><span class="comment">            * */</span></span><br><span class="line">            start:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                context.fillStyle = <span class="string">'gray'</span>;</span><br><span class="line">                context.fillRect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height);</span><br><span class="line">                context.globalCompositeOperation = <span class="string">'destination-out'</span>;</span><br><span class="line">                <span class="keyword">this</span>.bindEventMove = <span class="keyword">this</span>.eventMove.bind(<span class="keyword">this</span>);</span><br><span class="line">                <span class="keyword">this</span>.bindEventUp= <span class="keyword">this</span>.eventUp.bind(<span class="keyword">this</span>);</span><br><span class="line">                domCanvas.addEventListener(<span class="string">'touchstart'</span>,<span class="keyword">this</span>.eventDown)</span><br><span class="line">                domCanvas.addEventListener(<span class="string">'touchmove'</span>,<span class="keyword">this</span>.bindEventMove)</span><br><span class="line">                domCanvas.addEventListener(<span class="string">'touchend'</span>,<span class="keyword">this</span>.bindEventUp)</span><br><span class="line">            &#125;,</span><br><span class="line">            eventDown:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'Down'</span>)</span><br><span class="line">            &#125;,</span><br><span class="line">            eventMove:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'Move'</span>);</span><br><span class="line">                <span class="keyword">let</span> target = e.changedTouches[e.changedTouches.length<span class="number">-1</span>];</span><br><span class="line">                <span class="keyword">this</span>.clearMove(target)</span><br><span class="line">            &#125;,</span><br><span class="line">            eventUp:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'Up'</span>);</span><br><span class="line">                <span class="keyword">this</span>.clearMask();</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            * 清除划过画布</span></span><br><span class="line"><span class="comment">            * */</span></span><br><span class="line">            clearMove:<span class="function"><span class="keyword">function</span>(<span class="params">target</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">let</span> nX = target.clientX,</span><br><span class="line">                    nY = target.clientY;</span><br><span class="line">                context.beginPath();</span><br><span class="line">                context.arc(nX,nY,<span class="number">15</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI * <span class="number">2</span>);</span><br><span class="line">                context.fill();</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            * 判断像素点清除数是否到达指定百分比</span></span><br><span class="line"><span class="comment">            * */</span></span><br><span class="line">            clearMask:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">let</span> nNum = <span class="number">0</span>,</span><br><span class="line">                    aImageData = context.getImageData(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height).data,</span><br><span class="line">                    nLength = aImageData.length;</span><br><span class="line">                aImageData.forEach(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</span><br><span class="line">                    <span class="keyword">if</span>(item == <span class="number">0</span>)&#123;</span><br><span class="line">                        nNum++;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">                <span class="keyword">if</span>(nNum &gt;= nLength * <span class="keyword">this</span>.filter)&#123;</span><br><span class="line">                    <span class="keyword">this</span>.finish();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            * 完成刮奖</span></span><br><span class="line"><span class="comment">            * */</span></span><br><span class="line">            finish:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                context.beginPath();</span><br><span class="line">                context.rect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.width,<span class="keyword">this</span>.height);</span><br><span class="line">                context.fill();</span><br><span class="line">                domCanvas.removeEventListener(<span class="string">'touchstart'</span>,<span class="keyword">this</span>.eventDown);</span><br><span class="line">                domCanvas.removeEventListener(<span class="string">'touchmove'</span>,<span class="keyword">this</span>.bindEventMove);</span><br><span class="line">                domCanvas.removeEventListener(<span class="string">'touchend'</span>,<span class="keyword">this</span>.bindEventUp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> clip = <span class="keyword">new</span> clipImage(<span class="number">400</span>,<span class="number">400</span>,<span class="number">.3</span>);</span><br><span class="line">        clip.start();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -354,7 +356,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -362,15 +364,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -382,6 +380,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -390,15 +392,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -414,19 +416,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -438,6 +428,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -446,7 +448,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -454,7 +460,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -470,11 +480,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

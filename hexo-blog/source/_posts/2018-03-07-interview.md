@@ -71,6 +71,29 @@ Promise
 Generator
 async await
 
+### 图片预览
+```javascript
+var image = new Image()
+        image.onload = function(){
+          console.log(image.width)
+          console.log(image.height)
+        }
+        image.src = window.URL.createObjectURL(file)
+
+        var fr = new FileReader();
+        fr.onload = function(file) {
+
+          var image = new Image();
+          image.onload = function(){
+            console.log(image.width)
+            console.log(image.height)
+          }
+          image.src = file.target.result;
+
+        }
+        fr.readAsDataURL(file);
+```
+
 
 
 

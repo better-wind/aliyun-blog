@@ -9,12 +9,14 @@
   <title>Canvas--毛笔字书法 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="继续Canvas这次记录移动端手写书法的实现">
+<meta name="keywords" content="canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Canvas--毛笔字书法">
 <meta property="og:url" content="//blog.fenghou.site/2017/01/21/2017-01-21-Canvas毛笔字书法/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="继续Canvas这次记录移动端手写书法的实现">
-<meta property="og:updated_time" content="2017-03-15T11:31:18.252Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Canvas--毛笔字书法">
 <meta name="twitter:description" content="继续Canvas这次记录移动端手写书法的实现">
@@ -176,7 +178,7 @@ var _hmt = _hmt || [];
 <h3 id="抛出问题"><a href="#抛出问题" class="headerlink" title="抛出问题"></a>抛出问题</h3><p>canvas在移动端应用书法<br>需要解决两个问题<br>1.笔锋问题<br>2.连贯问题</p>
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>首先分析一下<br>毛笔字是有笔锋的<br>又粗有细有勾有钩<br>通过点击时间长短决定画笔大小<br>来模拟毛笔力度</p>
 <p>通过touchmove事件获取连续移动的两个点<br>计算两点间的直线距离<br>通过循环在canvas画图</p>
-<h3 id="代码上"><a href="#代码上" class="headerlink" title="代码上"></a>代码上</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> domCanvas = <span class="built_in">document</span>.querySelector(<span class="string">'#Calligraphy'</span>),</div><div class="line">        context = domCanvas.getContext(<span class="string">'2d'</span>),</div><div class="line">        CONFIG = &#123;</div><div class="line">            <span class="attr">lineMin</span>:<span class="number">8</span>,</div><div class="line">            <span class="attr">lineMax</span>:<span class="number">20</span>,</div><div class="line">            <span class="attr">radius</span>:<span class="number">0</span></div><div class="line">        &#125;;</div><div class="line">    <span class="keyword">let</span> Calligraphy = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">this</span>.touchFlog = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">this</span>.hasEvent = [];  <span class="comment">//move数组</span></div><div class="line">        <span class="keyword">this</span>.upEvent = <span class="literal">null</span>; <span class="comment">//当前操作</span></div><div class="line">        <span class="keyword">this</span>.limitDis = <span class="number">80</span>; <span class="comment">//移动最少距离</span></div><div class="line">        <span class="keyword">this</span>.radius = CONFIG.radius;</div><div class="line">        <span class="keyword">this</span>.lineMin = CONFIG.lineMin;</div><div class="line">        <span class="keyword">this</span>.lineMax = CONFIG.lineMax;</div><div class="line">    &#125;</div><div class="line">    Calligraphy.prototype = &#123;</div><div class="line">        <span class="attr">start</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//开始执行监听事件</span></div><div class="line">            <span class="keyword">this</span>.bindEventDown = <span class="keyword">this</span>.eventDown.bind(<span class="keyword">this</span>);</div><div class="line">            <span class="keyword">this</span>.bindEventMove = <span class="keyword">this</span>.eventMove.bind(<span class="keyword">this</span>);</div><div class="line">            <span class="keyword">this</span>.bindEventUp= <span class="keyword">this</span>.eventUp.bind(<span class="keyword">this</span>);</div><div class="line">            domCanvas.addEventListener(<span class="string">'touchstart'</span>,<span class="keyword">this</span>.eventDown)</div><div class="line">            domCanvas.addEventListener(<span class="string">'touchmove'</span>,<span class="keyword">this</span>.bindEventMove)</div><div class="line">            domCanvas.addEventListener(<span class="string">'touchend'</span>,<span class="keyword">this</span>.bindEventUp)</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">eventDown</span>:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'Down'</span>)</div><div class="line">            e.preventDefault();</div><div class="line">            <span class="keyword">let</span> target = e.changedTouches[e.changedTouches.length<span class="number">-1</span>];</div><div class="line">            <span class="keyword">this</span>.touchFlog = <span class="literal">true</span>;</div><div class="line">            <span class="keyword">this</span>.hasEvent = [];  <span class="comment">//</span></div><div class="line">            <span class="keyword">this</span>.upEvent = <span class="keyword">this</span>.getPoint(target); <span class="comment">//当前操作</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">eventMove</span>:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'Move'</span>);</div><div class="line">            <span class="keyword">let</span> target = e.changedTouches[e.changedTouches.length<span class="number">-1</span>];</div><div class="line">            <span class="keyword">this</span>.drawFont(<span class="keyword">this</span>.getPoint(target))</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">eventUp</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'Up'</span>);</div><div class="line">            e.preventDefault();</div><div class="line">            <span class="keyword">this</span>.moveFlog = <span class="literal">false</span>;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">drawFont</span>:<span class="function"><span class="keyword">function</span>(<span class="params">point</span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(!<span class="keyword">this</span>.touchFlog)</div><div class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            <span class="keyword">let</span> moEvent = point,</div><div class="line">                upEvent = <span class="keyword">this</span>.upEvent,</div><div class="line">                upRadius = <span class="keyword">this</span>.radius,</div><div class="line">                dis = <span class="number">0</span>, <span class="comment">//连续点距离</span></div><div class="line">                time = <span class="number">0</span>; <span class="comment">//时间</span></div><div class="line">            <span class="keyword">this</span>.hasEvent.unshift(&#123;<span class="attr">time</span>:<span class="keyword">new</span> <span class="built_in">Date</span>().getTime(),<span class="attr">dis</span>:<span class="keyword">this</span>.getDistance(upEvent,moEvent)&#125;);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> n = <span class="number">0</span>; n &lt; <span class="keyword">this</span>.hasEvent.length<span class="number">-1</span>; n++) &#123;</div><div class="line">                dis += <span class="keyword">this</span>.hasEvent[n].dis;</div><div class="line">                time += <span class="keyword">this</span>.hasEvent[n].time-<span class="keyword">this</span>.hasEvent[n+<span class="number">1</span>].time;</div><div class="line">                <span class="keyword">if</span> (dis&gt;<span class="keyword">this</span>.limitDis)</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">let</span> radius = <span class="built_in">Math</span>.min(time/dis+<span class="keyword">this</span>.lineMin,<span class="keyword">this</span>.lineMax)/<span class="number">2</span>; <span class="comment">//计算这次画笔半径</span></div><div class="line">            <span class="keyword">this</span>.radius = radius;</div><div class="line">            <span class="keyword">this</span>.upEvent = moEvent;</div><div class="line">            <span class="keyword">let</span> len = <span class="built_in">Math</span>.round(<span class="keyword">this</span>.hasEvent[<span class="number">0</span>].dis/<span class="number">2</span>)+<span class="number">1</span>;</div><div class="line">            <span class="comment">//跟上次画笔半径渐变</span></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">                <span class="keyword">let</span> x = upEvent.x + (moEvent.x-upEvent.x)/len* i,</div><div class="line">                    y = upEvent.y + (moEvent.y-upEvent.y)/len* i,</div><div class="line">                    r = upRadius + (radius-upRadius)/len*i;</div><div class="line">                context.beginPath();</div><div class="line">                context.arc(x,y,r,<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">Math</span>.PI,<span class="literal">true</span>);</div><div class="line">                context.fill();</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">getPoint</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> &#123;</div><div class="line">                <span class="attr">x</span>: e.clientX - domCanvas.offsetLeft + (<span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollLeft),</div><div class="line">                <span class="attr">y</span>: e.clientY - domCanvas.offsetTop + (<span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollTop),</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="attr">getDistance</span>: <span class="function"><span class="keyword">function</span>(<span class="params">pre,next</span>)</span>&#123;</div><div class="line">            <span class="keyword">let</span> x = next.x - pre.x,</div><div class="line">                y = next.y - pre.y;</div><div class="line">            <span class="keyword">return</span> <span class="built_in">Math</span>.sqrt(x*x + y*y);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">let</span> calligrapgy = <span class="keyword">new</span> Calligraphy();</div><div class="line">    calligrapgy.start();</div></pre></td></tr></table></figure>
+<h3 id="代码上"><a href="#代码上" class="headerlink" title="代码上"></a>代码上</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> domCanvas = <span class="built_in">document</span>.querySelector(<span class="string">'#Calligraphy'</span>),</span><br><span class="line">        context = domCanvas.getContext(<span class="string">'2d'</span>),</span><br><span class="line">        CONFIG = &#123;</span><br><span class="line">            lineMin:<span class="number">8</span>,</span><br><span class="line">            lineMax:<span class="number">20</span>,</span><br><span class="line">            radius:<span class="number">0</span></span><br><span class="line">        &#125;;</span><br><span class="line">    <span class="keyword">let</span> Calligraphy = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.touchFlog = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">this</span>.hasEvent = [];  <span class="comment">//move数组</span></span><br><span class="line">        <span class="keyword">this</span>.upEvent = <span class="literal">null</span>; <span class="comment">//当前操作</span></span><br><span class="line">        <span class="keyword">this</span>.limitDis = <span class="number">80</span>; <span class="comment">//移动最少距离</span></span><br><span class="line">        <span class="keyword">this</span>.radius = CONFIG.radius;</span><br><span class="line">        <span class="keyword">this</span>.lineMin = CONFIG.lineMin;</span><br><span class="line">        <span class="keyword">this</span>.lineMax = CONFIG.lineMax;</span><br><span class="line">    &#125;</span><br><span class="line">    Calligraphy.prototype = &#123;</span><br><span class="line">        start:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="comment">//开始执行监听事件</span></span><br><span class="line">            <span class="keyword">this</span>.bindEventDown = <span class="keyword">this</span>.eventDown.bind(<span class="keyword">this</span>);</span><br><span class="line">            <span class="keyword">this</span>.bindEventMove = <span class="keyword">this</span>.eventMove.bind(<span class="keyword">this</span>);</span><br><span class="line">            <span class="keyword">this</span>.bindEventUp= <span class="keyword">this</span>.eventUp.bind(<span class="keyword">this</span>);</span><br><span class="line">            domCanvas.addEventListener(<span class="string">'touchstart'</span>,<span class="keyword">this</span>.eventDown)</span><br><span class="line">            domCanvas.addEventListener(<span class="string">'touchmove'</span>,<span class="keyword">this</span>.bindEventMove)</span><br><span class="line">            domCanvas.addEventListener(<span class="string">'touchend'</span>,<span class="keyword">this</span>.bindEventUp)</span><br><span class="line">        &#125;,</span><br><span class="line">        eventDown:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'Down'</span>)</span><br><span class="line">            e.preventDefault();</span><br><span class="line">            <span class="keyword">let</span> target = e.changedTouches[e.changedTouches.length<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">this</span>.touchFlog = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">this</span>.hasEvent = [];  <span class="comment">//</span></span><br><span class="line">            <span class="keyword">this</span>.upEvent = <span class="keyword">this</span>.getPoint(target); <span class="comment">//当前操作</span></span><br><span class="line">        &#125;,</span><br><span class="line">        eventMove:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'Move'</span>);</span><br><span class="line">            <span class="keyword">let</span> target = e.changedTouches[e.changedTouches.length<span class="number">-1</span>];</span><br><span class="line">            <span class="keyword">this</span>.drawFont(<span class="keyword">this</span>.getPoint(target))</span><br><span class="line">        &#125;,</span><br><span class="line">        eventUp:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'Up'</span>);</span><br><span class="line">            e.preventDefault();</span><br><span class="line">            <span class="keyword">this</span>.moveFlog = <span class="literal">false</span>;</span><br><span class="line">        &#125;,</span><br><span class="line">        drawFont:<span class="function"><span class="keyword">function</span>(<span class="params">point</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(!<span class="keyword">this</span>.touchFlog)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">let</span> moEvent = point,</span><br><span class="line">                upEvent = <span class="keyword">this</span>.upEvent,</span><br><span class="line">                upRadius = <span class="keyword">this</span>.radius,</span><br><span class="line">                dis = <span class="number">0</span>, <span class="comment">//连续点距离</span></span><br><span class="line">                time = <span class="number">0</span>; <span class="comment">//时间</span></span><br><span class="line">            <span class="keyword">this</span>.hasEvent.unshift(&#123;<span class="attr">time</span>:<span class="keyword">new</span> <span class="built_in">Date</span>().getTime(),<span class="attr">dis</span>:<span class="keyword">this</span>.getDistance(upEvent,moEvent)&#125;);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> n = <span class="number">0</span>; n &lt; <span class="keyword">this</span>.hasEvent.length<span class="number">-1</span>; n++) &#123;</span><br><span class="line">                dis += <span class="keyword">this</span>.hasEvent[n].dis;</span><br><span class="line">                time += <span class="keyword">this</span>.hasEvent[n].time-<span class="keyword">this</span>.hasEvent[n+<span class="number">1</span>].time;</span><br><span class="line">                <span class="keyword">if</span> (dis&gt;<span class="keyword">this</span>.limitDis)</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">let</span> radius = <span class="built_in">Math</span>.min(time/dis+<span class="keyword">this</span>.lineMin,<span class="keyword">this</span>.lineMax)/<span class="number">2</span>; <span class="comment">//计算这次画笔半径</span></span><br><span class="line">            <span class="keyword">this</span>.radius = radius;</span><br><span class="line">            <span class="keyword">this</span>.upEvent = moEvent;</span><br><span class="line">            <span class="keyword">let</span> len = <span class="built_in">Math</span>.round(<span class="keyword">this</span>.hasEvent[<span class="number">0</span>].dis/<span class="number">2</span>)+<span class="number">1</span>;</span><br><span class="line">            <span class="comment">//跟上次画笔半径渐变</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">                <span class="keyword">let</span> x = upEvent.x + (moEvent.x-upEvent.x)/len* i,</span><br><span class="line">                    y = upEvent.y + (moEvent.y-upEvent.y)/len* i,</span><br><span class="line">                    r = upRadius + (radius-upRadius)/len*i;</span><br><span class="line">                context.beginPath();</span><br><span class="line">                context.arc(x,y,r,<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">Math</span>.PI,<span class="literal">true</span>);</span><br><span class="line">                context.fill();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        getPoint:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;</span><br><span class="line">                x: e.clientX - domCanvas.offsetLeft + (<span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollLeft),</span><br><span class="line">                y: e.clientY - domCanvas.offsetTop + (<span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollTop),</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        getDistance: <span class="function"><span class="keyword">function</span>(<span class="params">pre,next</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">let</span> x = next.x - pre.x,</span><br><span class="line">                y = next.y - pre.y;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Math</span>.sqrt(x*x + y*y);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> calligrapgy = <span class="keyword">new</span> Calligraphy();</span><br><span class="line">    calligrapgy.start();</span><br></pre></td></tr></table></figure>
 
       
 
@@ -354,7 +356,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -362,15 +364,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -382,6 +380,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -390,15 +392,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -414,19 +416,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -438,6 +428,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -446,7 +448,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -454,7 +460,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -470,11 +480,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

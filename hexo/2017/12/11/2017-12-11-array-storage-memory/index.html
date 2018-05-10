@@ -9,12 +9,14 @@
   <title>巧用数组存储 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="多重数组赋值">
+<meta name="keywords" content="js,vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="巧用数组存储">
 <meta property="og:url" content="//blog.fenghou.site/2017/12/11/2017-12-11-array-storage-memory/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="多重数组赋值">
-<meta property="og:updated_time" content="2018-04-10T06:28:35.706Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="巧用数组存储">
 <meta name="twitter:description" content="多重数组赋值">
@@ -172,7 +174,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>多重数组赋值<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cates = [</div><div class="line">    &#123;</div><div class="line">      <span class="attr">label</span>:<span class="string">''</span>,</div><div class="line">      <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">      <span class="attr">cates</span>:[</div><div class="line">        &#123;</div><div class="line">          <span class="attr">label</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">          <span class="attr">cates</span>:[</div><div class="line">           &#123;</div><div class="line">              <span class="attr">label</span>:<span class="string">'me'</span>,</div><div class="line">              <span class="attr">value</span>:<span class="string">''</span>,</div><div class="line">              <span class="attr">cates</span>:[]</div><div class="line">           &#125;</div><div class="line">          ]</div><div class="line">        &#125;</div><div class="line">      ]  </div><div class="line">    &#125;</div><div class="line"> ]</div><div class="line"><span class="comment">//现在我想给label='me'的cates 赋值怎么做</span></div><div class="line"><span class="comment">//假如我知道他的结构层级是[0,0,0]</span></div><div class="line"><span class="comment">//you can </span></div><div class="line">cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</div><div class="line"><span class="comment">// other way</span></div><div class="line"><span class="keyword">let</span> _item = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</div><div class="line"><span class="keyword">let</span> _arr = []</div><div class="line">_item.map(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</div><div class="line">    _arr = cates[item]</div><div class="line">&#125;)</div><div class="line">_arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</div><div class="line"><span class="comment">//此时 _arr 和 cates[0].cates[0].cates[0].cates 指向 相同 存储空间</span></div></pre></td></tr></table></figure></p>
+        <p>多重数组赋值<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cates = [</span><br><span class="line">    &#123;</span><br><span class="line">      label:<span class="string">''</span>,</span><br><span class="line">      value:<span class="string">''</span>,</span><br><span class="line">      cates:[</span><br><span class="line">        &#123;</span><br><span class="line">          label:<span class="string">''</span>,</span><br><span class="line">          value:<span class="string">''</span>,</span><br><span class="line">          cates:[</span><br><span class="line">           &#123;</span><br><span class="line">              label:<span class="string">'me'</span>,</span><br><span class="line">              value:<span class="string">''</span>,</span><br><span class="line">              cates:[]</span><br><span class="line">           &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br><span class="line">      ]  </span><br><span class="line">    &#125;</span><br><span class="line"> ]</span><br><span class="line"><span class="comment">//现在我想给label='me'的cates 赋值怎么做</span></span><br><span class="line"><span class="comment">//假如我知道他的结构层级是[0,0,0]</span></span><br><span class="line"><span class="comment">//you can </span></span><br><span class="line">cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates[<span class="number">0</span>].cates = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="comment">// other way</span></span><br><span class="line"><span class="keyword">let</span> _item = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line"><span class="keyword">let</span> _arr = []</span><br><span class="line">_item.map(<span class="function">(<span class="params">item</span>)=&gt;</span>&#123;</span><br><span class="line">    _arr = cates[item]</span><br><span class="line">&#125;)</span><br><span class="line">_arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="comment">//此时 _arr 和 cates[0].cates[0].cates[0].cates 指向 相同 存储空间</span></span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -354,7 +356,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -362,15 +364,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -382,6 +380,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -390,15 +392,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -414,19 +416,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -438,6 +428,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -446,7 +448,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -454,7 +460,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -470,11 +480,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

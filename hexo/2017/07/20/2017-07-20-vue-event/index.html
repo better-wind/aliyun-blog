@@ -9,12 +9,14 @@
   <title>Vue事件 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="vue 中通过[$on]注册事件[$emit]来触发事件这里来模拟一下它内部的实现机制超简易">
+<meta name="keywords" content="js,vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue事件">
 <meta property="og:url" content="//blog.fenghou.site/2017/07/20/2017-07-20-vue-event/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="vue 中通过[$on]注册事件[$emit]来触发事件这里来模拟一下它内部的实现机制超简易">
-<meta property="og:updated_time" content="2017-09-30T03:35:49.219Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue事件">
 <meta name="twitter:description" content="vue 中通过[$on]注册事件[$emit]来触发事件这里来模拟一下它内部的实现机制超简易">
@@ -173,10 +175,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>vue 中通过[$on]注册事件[$emit]来触发事件<br>这里来模拟一下它内部的实现机制<br>超简易<br><a id="more"></a></p>
-<h3 id="初始化Vue"><a href="#初始化Vue" class="headerlink" title="初始化Vue"></a>初始化Vue</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">V</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>._init()</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMixin</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">    v.prototype._init = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        initEvent(<span class="keyword">this</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">initMixin(V)</div></pre></td></tr></table></figure>
-<h3 id="初始化事件"><a href="#初始化事件" class="headerlink" title="初始化事件"></a>初始化事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">initEvent</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">    v._events = <span class="built_in">Object</span>.create(<span class="literal">null</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="混合事件"><a href="#混合事件" class="headerlink" title="混合事件"></a>混合事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventsMixin</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">    v.prototype.$on = <span class="function"><span class="keyword">function</span>(<span class="params">name,fn</span>)</span>&#123;</div><div class="line">        <span class="keyword">this</span>._events[name] = fn</div><div class="line">    &#125;</div><div class="line">    v.prototype.$emit = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">        <span class="keyword">let</span> cbs = <span class="keyword">this</span>._events[event]</div><div class="line">        <span class="keyword">let</span> args = toArray(<span class="built_in">arguments</span>,<span class="number">1</span>)</div><div class="line">        cbs.apply(<span class="keyword">this</span>,args)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">eventsMixin(V)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toArray</span> (<span class="params">list, start</span>) </span>&#123;</div><div class="line">    start = start || <span class="number">0</span></div><div class="line">    <span class="keyword">let</span> i = list.length - start</div><div class="line">    <span class="keyword">const</span> ret = <span class="keyword">new</span> <span class="built_in">Array</span>(i)</div><div class="line">    <span class="keyword">while</span> (i--) &#123;</div><div class="line">        ret[i] = list[i + start]</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ret</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> V()</div><div class="line">v.$on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(msg)</div><div class="line">&#125;)</div><div class="line">v.$emit(<span class="string">'click'</span>,<span class="string">'emit'</span>)</div></pre></td></tr></table></figure>
+<h3 id="初始化Vue"><a href="#初始化Vue" class="headerlink" title="初始化Vue"></a>初始化Vue</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">V</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>._init()</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initMixin</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    v.prototype._init = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        initEvent(<span class="keyword">this</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">initMixin(V)</span><br></pre></td></tr></table></figure>
+<h3 id="初始化事件"><a href="#初始化事件" class="headerlink" title="初始化事件"></a>初始化事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">initEvent</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    v._events = <span class="built_in">Object</span>.create(<span class="literal">null</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="混合事件"><a href="#混合事件" class="headerlink" title="混合事件"></a>混合事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">eventsMixin</span>(<span class="params">v</span>)</span>&#123;</span><br><span class="line">    v.prototype.$on = <span class="function"><span class="keyword">function</span>(<span class="params">name,fn</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>._events[name] = fn</span><br><span class="line">    &#125;</span><br><span class="line">    v.prototype.$emit = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> cbs = <span class="keyword">this</span>._events[event]</span><br><span class="line">        <span class="keyword">let</span> args = toArray(<span class="built_in">arguments</span>,<span class="number">1</span>)</span><br><span class="line">        cbs.apply(<span class="keyword">this</span>,args)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">eventsMixin(V)</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toArray</span> (<span class="params">list, start</span>) </span>&#123;</span><br><span class="line">    start = start || <span class="number">0</span></span><br><span class="line">    <span class="keyword">let</span> i = list.length - start</span><br><span class="line">    <span class="keyword">const</span> ret = <span class="keyword">new</span> <span class="built_in">Array</span>(i)</span><br><span class="line">    <span class="keyword">while</span> (i--) &#123;</span><br><span class="line">        ret[i] = list[i + start]</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> V()</span><br><span class="line">v.$on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(msg)</span><br><span class="line">&#125;)</span><br><span class="line">v.$emit(<span class="string">'click'</span>,<span class="string">'emit'</span>)</span><br></pre></td></tr></table></figure>
 
       
 
@@ -358,7 +360,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -366,15 +368,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -386,6 +384,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -394,15 +396,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -418,19 +420,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -442,6 +432,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -450,7 +452,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -458,7 +464,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -474,11 +484,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

@@ -9,12 +9,14 @@
   <title>canvas 图片裁剪 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="心血来潮想实现一个图片编辑器">
+<meta name="keywords" content="canvas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="canvas 图片裁剪">
 <meta property="og:url" content="//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="心血来潮想实现一个图片编辑器">
-<meta property="og:updated_time" content="2017-11-02T02:59:34.229Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="canvas 图片裁剪">
 <meta name="twitter:description" content="心血来潮想实现一个图片编辑器">
@@ -187,7 +189,7 @@ var _hmt = _hmt || [];
 <p>旋转</p>
 </blockquote>
 <p>通过控制Img旋转来控制<br>一开始的想法是通过旋转选择区域来选取，但这样选择区域的获取图片数据会很繁琐而且意义不大<br>旋转通过样式transform:rotate(0deg)<br>在js获取样式时 要通过getComputedStyle这个API来获取<br>style获取的是元素style属性中的样式 可读可写<br>所以通过style设置的元素回出现在元素的style属性中<br>getComputedStyle 获取的是最终作用在节点上的样式 只读<br>currentStyle IE自娱自乐产物 语法跟style类似 功能跟 getComputedStyle类似</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clipV = <span class="built_in">window</span>.getComputedStyle(clip,<span class="literal">null</span>)</div><div class="line"><span class="keyword">var</span> clipTrans = clip.getPropertyValue(<span class="string">'transform'</span>)</div><div class="line"><span class="comment">// or var clipTrans = clip.transform</span></div><div class="line"><span class="comment">// 这时候获取的是一个二维矩阵</span></div><div class="line"><span class="comment">// 型如 matrix(20, 10, 10, 10, 0, 0)</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> clipV = <span class="built_in">window</span>.getComputedStyle(clip,<span class="literal">null</span>)</span><br><span class="line"><span class="keyword">var</span> clipTrans = clip.getPropertyValue(<span class="string">'transform'</span>)</span><br><span class="line"><span class="comment">// or var clipTrans = clip.transform</span></span><br><span class="line"><span class="comment">// 这时候获取的是一个二维矩阵</span></span><br><span class="line"><span class="comment">// 型如 matrix(20, 10, 10, 10, 0, 0)</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>关于matrix</p>
 </blockquote>
@@ -197,11 +199,13 @@ var _hmt = _hmt || [];
 <p>matrix(1,tan(θy),tan(θx),1,0,0)<br>拉伸计算<br>x轴拉伸角度 skewX = Math.atan(c)<br>y轴拉伸角度 skewX = Math.atan(b)</p>
 <blockquote>
 <p>css动画界三巨头 transform transitions animation<br>举个例子<br>王者农药 新出一个英雄 <code>浪</code><br><code>一技能(transition)</code> 标记敌人 设置过度效果<br><code>二技能(transform)</code> 命中敌人 变化敌人<br><code>三技能(animation)</code> 命中目标 设置过度效果 变化敌人并带有过度效果(只产生效果)<br><code>被动(style.)</code>   二技能命中标记一技能的目标 会使二技能有过度效果；普攻第三次 变化敌人</p>
+</blockquote>
+<blockquote>
 <p>硝烟弥漫的峡谷中 刚刚结束一场战斗 我方四名英雄死于敌方小兵之手<br>这时。。。<br>我方<code>浪</code>出现在中路 对线敌方诸葛亮 李白 红蓝双buff在手<br>一技能 成功标记诸葛亮(李白逃脱)  transition:transform 100ms linear<br>反手 一个二技能  transform:translate(0px,100px)(移动到我方中路一塔下) 命中对方诸葛亮 和 李白<br>李白唰一下出现在我方塔下(效果如闪现) 诸葛亮也慢跑到塔下…<br><code>浪</code> double kill<br>对面鲁班 苏烈过来支援 反手一个 大招  animation:scale_leg(腿缩短至十分之一) 100ms 4  alternate linear<br>只见 鲁班 苏烈一会变高 一会变矮 …<br><code>浪</code> quadra kill<br>木兰从草丛杀出 一技能 怼脸上  transition:display 100ms linear 蓝条空了<br>普攻 普攻 丝血 闪现接普攻 触发被动<br>缓缓的消失吧，木兰！！ document.querySelector(‘花木兰’).style.display = ‘none’<br><code>浪</code> penta kill</p>
 </blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>css相关的还是要经常温故温故 不然真的容易忘了</p>
 <blockquote>
-<p>参考<br><a href="http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank" rel="external">获取元素CSS值之getComputedStyle方法熟悉</a><br><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/" target="_blank" rel="external">理解CSS3 transform中的Matrix(矩阵)</a></p>
+<p>参考<br><a href="http://www.zhangxinxu.com/wordpress/2012/05/getcomputedstyle-js-getpropertyvalue-currentstyle/" target="_blank" rel="noopener">获取元素CSS值之getComputedStyle方法熟悉</a><br><a href="http://www.zhangxinxu.com/wordpress/2012/06/css3-transform-matrix-%E7%9F%A9%E9%98%B5/" target="_blank" rel="noopener">理解CSS3 transform中的Matrix(矩阵)</a></p>
 </blockquote>
 
       
@@ -380,7 +384,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -388,15 +392,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -408,6 +408,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -416,15 +420,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -440,19 +444,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -464,6 +456,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -472,7 +476,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -480,7 +488,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -496,11 +508,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

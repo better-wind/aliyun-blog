@@ -9,12 +9,14 @@
   <title>Node-server | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="用Node搭建一个静态资源访问服务器">
+<meta name="keywords" content="node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node-server">
 <meta property="og:url" content="//blog.fenghou.site/2016/12/13/2016-12-13-node-server/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="用Node搭建一个静态资源访问服务器">
-<meta property="og:updated_time" content="2017-03-15T12:25:57.439Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node-server">
 <meta name="twitter:description" content="用Node搭建一个静态资源访问服务器">
@@ -175,12 +177,12 @@ var _hmt = _hmt || [];
         <p>用Node搭建一个静态资源访问服务器</p>
 <a id="more"></a>
 <p>用到的模块</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</div><div class="line">    url = <span class="built_in">require</span>(<span class="string">'url'</span>),</div><div class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>),</div><div class="line">    fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div></pre></td></tr></table></figure>
-<p>思路 获取访问路径，以文件后缀判断文件类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mimetype = &#123;</div><div class="line">    <span class="string">'txt'</span>: <span class="string">'text/plain'</span>,</div><div class="line">    <span class="string">'html'</span>: <span class="string">'text/html'</span>,</div><div class="line">    <span class="string">'css'</span>: <span class="string">'text/css'</span>,</div><div class="line">    <span class="string">'xml'</span>: <span class="string">'application/xml'</span>,</div><div class="line">    <span class="string">'json'</span>: <span class="string">'application/json'</span>,</div><div class="line">    <span class="string">'js'</span>: <span class="string">'application/javascript'</span>,</div><div class="line">    <span class="string">'jpg'</span>: <span class="string">'image/jpeg'</span>,</div><div class="line">    <span class="string">'jpeg'</span>: <span class="string">'image/jpeg'</span>,</div><div class="line">    <span class="string">'gif'</span>: <span class="string">'image/gif'</span>,</div><div class="line">    <span class="string">'png'</span>: <span class="string">'image/png'</span>,</div><div class="line">    <span class="string">'svg'</span>: <span class="string">'image/svg+xml'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>),</span><br><span class="line">    url = <span class="built_in">require</span>(<span class="string">'url'</span>),</span><br><span class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>),</span><br><span class="line">    fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br></pre></td></tr></table></figure>
+<p>思路 获取访问路径，以文件后缀判断文件类型<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mimetype = &#123;</span><br><span class="line">    <span class="string">'txt'</span>: <span class="string">'text/plain'</span>,</span><br><span class="line">    <span class="string">'html'</span>: <span class="string">'text/html'</span>,</span><br><span class="line">    <span class="string">'css'</span>: <span class="string">'text/css'</span>,</span><br><span class="line">    <span class="string">'xml'</span>: <span class="string">'application/xml'</span>,</span><br><span class="line">    <span class="string">'json'</span>: <span class="string">'application/json'</span>,</span><br><span class="line">    <span class="string">'js'</span>: <span class="string">'application/javascript'</span>,</span><br><span class="line">    <span class="string">'jpg'</span>: <span class="string">'image/jpeg'</span>,</span><br><span class="line">    <span class="string">'jpeg'</span>: <span class="string">'image/jpeg'</span>,</span><br><span class="line">    <span class="string">'gif'</span>: <span class="string">'image/gif'</span>,</span><br><span class="line">    <span class="string">'png'</span>: <span class="string">'image/png'</span>,</span><br><span class="line">    <span class="string">'svg'</span>: <span class="string">'image/svg+xml'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>获取请求的时候判断请求文件是否存在，决定返回的类型</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> pathname = url.parse(req.url).pathname,</div><div class="line">        realPath = path.join(__dirname,<span class="string">'/static'</span>,pathname);</div><div class="line">    <span class="keyword">var</span> body = [];</div><div class="line">    req.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">        body.push(data);</div><div class="line">    &#125;)</div><div class="line">    req.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        body = Buffer.concat(body);</div><div class="line">    &#125;)</div><div class="line">    fs.exists(realPath,<span class="function"><span class="keyword">function</span>(<span class="params">ex</span>)</span>&#123;</div><div class="line">        <span class="keyword">if</span>(ex)&#123;</div><div class="line">            <span class="keyword">var</span> rs = fs.createReadStream(realPath);</div><div class="line">            res.writeHead(<span class="number">200</span>,&#123;</div><div class="line">                <span class="string">'Content-Type'</span>:mimetype[realPath.split(<span class="string">'.'</span>).pop()] || <span class="string">'text/plain'</span></div><div class="line">            &#125;)</div><div class="line">            rs.on(<span class="string">'data'</span>,res.write.bind(res))</div><div class="line">            rs.on(<span class="string">'close'</span>,res.end.bind(res));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            page_404(req,res,realPath); <span class="comment">//错误页面</span></div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;).listen(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> pathname = url.parse(req.url).pathname,</span><br><span class="line">        realPath = path.join(__dirname,<span class="string">'/static'</span>,pathname);</span><br><span class="line">    <span class="keyword">var</span> body = [];</span><br><span class="line">    req.on(<span class="string">'data'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        body.push(data);</span><br><span class="line">    &#125;)</span><br><span class="line">    req.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        body = Buffer.concat(body);</span><br><span class="line">    &#125;)</span><br><span class="line">    fs.exists(realPath,<span class="function"><span class="keyword">function</span>(<span class="params">ex</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(ex)&#123;</span><br><span class="line">            <span class="keyword">var</span> rs = fs.createReadStream(realPath);</span><br><span class="line">            res.writeHead(<span class="number">200</span>,&#123;</span><br><span class="line">                <span class="string">'Content-Type'</span>:mimetype[realPath.split(<span class="string">'.'</span>).pop()] || <span class="string">'text/plain'</span></span><br><span class="line">            &#125;)</span><br><span class="line">            rs.on(<span class="string">'data'</span>,res.write.bind(res))</span><br><span class="line">            rs.on(<span class="string">'close'</span>,res.end.bind(res));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            page_404(req,res,realPath); <span class="comment">//错误页面</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;).listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
 <p>请求不存在</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">page_404</span>(<span class="params">req,res,path</span>)</span>&#123;</div><div class="line">    res.writeHead(<span class="number">404</span>,&#123;</div><div class="line">        <span class="string">'Content-Type'</span>:<span class="string">'text/html'</span></div><div class="line">    &#125;)</div><div class="line">    res.write(<span class="string">'&lt;!doctype html&gt;\n'</span>);</div><div class="line">    res.write(<span class="string">'&lt;title&gt;404 Not Found&lt;/title&gt;\n'</span>);</div><div class="line">    res.write(<span class="string">'&lt;h1&gt;Not Found&lt;/h1&gt;'</span>);</div><div class="line">    res.write(</div><div class="line">        <span class="string">'&lt;p&gt;The requested URL '</span> +</div><div class="line">        path +</div><div class="line">        <span class="string">' was not found on this server.&lt;/p&gt;'</span></div><div class="line">    );</div><div class="line">    res.end();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">page_404</span>(<span class="params">req,res,path</span>)</span>&#123;</span><br><span class="line">    res.writeHead(<span class="number">404</span>,&#123;</span><br><span class="line">        <span class="string">'Content-Type'</span>:<span class="string">'text/html'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    res.write(<span class="string">'&lt;!doctype html&gt;\n'</span>);</span><br><span class="line">    res.write(<span class="string">'&lt;title&gt;404 Not Found&lt;/title&gt;\n'</span>);</span><br><span class="line">    res.write(<span class="string">'&lt;h1&gt;Not Found&lt;/h1&gt;'</span>);</span><br><span class="line">    res.write(</span><br><span class="line">        <span class="string">'&lt;p&gt;The requested URL '</span> +</span><br><span class="line">        path +</span><br><span class="line">        <span class="string">' was not found on this server.&lt;/p&gt;'</span></span><br><span class="line">    );</span><br><span class="line">    res.end();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -358,7 +360,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -366,15 +368,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -386,6 +384,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -394,15 +396,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -418,19 +420,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -442,6 +432,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -450,7 +452,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -458,7 +464,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -474,11 +484,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

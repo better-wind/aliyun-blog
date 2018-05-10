@@ -9,12 +9,14 @@
   <title>node-npm | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="NPM - 笔记">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node-npm">
 <meta property="og:url" content="//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="NPM - 笔记">
-<meta property="og:updated_time" content="2017-12-27T08:38:07.658Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-04T02:32:42.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node-npm">
 <meta name="twitter:description" content="NPM - 笔记">
@@ -173,12 +175,23 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>NPM - 笔记<br><a id="more"></a></p>
-<h3 id="切换npm源"><a href="#切换npm源" class="headerlink" title="切换npm源"></a>切换npm源</h3><p><a href="https://registry.npmjs.org/" target="_blank" rel="external">https://registry.npmjs.org/</a><br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a><br>npm config set disturl <a href="https://npm.taobao.org/dist" target="_blank" rel="external">https://npm.taobao.org/dist</a><br>npm config delete registry<br>npm config delete disturl<br>npm config list<br>npm config edit</p>
-<h3 id="sass安装出错"><a href="#sass安装出错" class="headerlink" title="sass安装出错"></a>sass安装出错</h3><p>SASS_BINARY_SITE=<a href="https://npm.taobao.org/mirrors/node-sass/" target="_blank" rel="external">https://npm.taobao.org/mirrors/node-sass/</a> npm install node-sass –save-dev</p>
+<h3 id="切换npm源"><a href="#切换npm源" class="headerlink" title="切换npm源"></a>切换npm源</h3><p><a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>npm config set disturl <a href="https://npm.taobao.org/dist" target="_blank" rel="noopener">https://npm.taobao.org/dist</a><br>npm config delete registry<br>npm config delete disturl<br>npm config list<br>npm config edit</p>
+<h3 id="sass安装出错"><a href="#sass安装出错" class="headerlink" title="sass安装出错"></a>sass安装出错</h3><p>SASS_BINARY_SITE=<a href="https://npm.taobao.org/mirrors/node-sass/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node-sass/</a> npm install node-sass –save-dev</p>
 <h3 id="更新node版本"><a href="#更新node版本" class="headerlink" title="更新node版本"></a>更新node版本</h3><p>window 官网下载.msi文件 安装覆盖老版本</p>
 <h3 id="npm-版本"><a href="#npm-版本" class="headerlink" title="npm 版本"></a>npm 版本</h3><p>npm版本5.5.1<br>会生成 package-lock.json 锁定当前安装的 package 包<br>rm -rf package-lock.json<br>管理员身份 npm install 还有有问题 没解决  版本回退到5之前</p>
-<h3 id="npm-publish"><a href="#npm-publish" class="headerlink" title="npm publish"></a>npm publish</h3><p>登录 npm addUser<br>源切换 <a href="https://registry.npmjs.org/" target="_blank" rel="external">https://registry.npmjs.org/</a><br>不然会 <code>no_perms Private mode enable, only admin can publish this module</code></p>
+<h3 id="npm-publish"><a href="#npm-publish" class="headerlink" title="npm publish"></a>npm publish</h3><p>登录 npm addUser<br>源切换 <a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>不然会 <code>no_perms Private mode enable, only admin can publish this module</code></p>
 <h3 id="关于–save-dev"><a href="#关于–save-dev" class="headerlink" title="关于–save-dev"></a>关于–save-dev</h3><p>publish上去的包中的devDependencies中依赖的包 下载时不会被安装</p>
+<h3 id="关于包的安装依赖以及删除"><a href="#关于包的安装依赖以及删除" class="headerlink" title="关于包的安装依赖以及删除"></a>关于包的安装依赖以及删除</h3><p>npm view package versions 查看所有版本<br>npm view package version  查看最新版本</p>
+<p>npm ls package            查看安装的版本</p>
+<p>npm i package@version     安装指定版本</p>
+<p>npm i package@latesd      安装最新版本</p>
+<p>package.json 的版本依赖<br>x.y.z  x:主版本号  y:次版本号  z:补丁版本号<br>以下用 大 中 小 代替<br>~ 会匹配最新的小版本依赖包，比如~1.2.3会匹配所有1.2.z版本，但是不包括1.3.0<br>^ 会匹配最新的中版本依赖包，比如^1.2.3会匹配所有1.y.z的包，包括1.3.0，但是不包括2.0.0</p>
+<ul>
+<li>会匹配最新的版本<br>vue:’2.5.2’     安装 2.5.2版本<br>vue:’~2.5.2’    安装最近更新的小版本 2.5.z版本（z&gt;=3）<br>vue:’^2.5.2’    安装最近跟新的中版本 2.y.z版本 (y&gt;=5)(y = 5 ? z &gt;= 2 : z)<br>vue:’*’         安装最新版本</li>
+</ul>
+<p>npm update package  依赖～ ^版本规则<br>webpack:’3.7.0’    npm update webpack    不更新<br>webpack:’~3.7.0’   npm update webpack    3.7.0 —&gt; 3.7.1   小版本最新版本<br>webpack:’^3.7.0’   npm update webpack    3.7.0 —&gt; 3.11.0  中版本最新版本<br>webpack:’*’        npm update webpack                       最新版本</p>
+<p>npm uninstall package 删除依赖包</p>
+<p>npm cache clean 清除缓存</p>
 
       
 
@@ -345,7 +358,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -353,15 +366,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -373,6 +382,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -381,15 +394,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -405,19 +418,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -429,6 +430,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -437,7 +450,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -445,7 +462,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -461,11 +482,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

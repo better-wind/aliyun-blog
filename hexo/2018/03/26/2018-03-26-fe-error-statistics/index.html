@@ -9,12 +9,14 @@
   <title>前端异常监控 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前端页面报错监听 统计">
+<meta name="keywords" content="js,nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端异常监控">
 <meta property="og:url" content="//blog.fenghou.site/2018/03/26/2018-03-26-fe-error-statistics/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="前端页面报错监听 统计">
-<meta property="og:updated_time" content="2018-03-26T07:41:34.945Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端异常监控">
 <meta name="twitter:description" content="前端页面报错监听 统计">
@@ -173,11 +175,11 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>前端页面报错监听 统计<br><a id="more"></a></p>
-<h3 id="异常捕获"><a href="#异常捕获" class="headerlink" title="异常捕获"></a>异常捕获</h3><p>script error<br>window.error 进行全局捕获<br>对于从cdn引入的js script type<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Vue</span></div><div class="line">Vue.config.errorHandler = <span class="function"><span class="keyword">function</span> (<span class="params">err, vm, info</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> &#123;</div><div class="line">    message, <span class="comment">// 异常信息</span></div><div class="line">    name, <span class="comment">// 异常名称</span></div><div class="line">    script,  <span class="comment">// 异常脚本url</span></div><div class="line">    line,  <span class="comment">// 异常行号</span></div><div class="line">    column,  <span class="comment">// 异常列号</span></div><div class="line">    stack  <span class="comment">// 异常堆栈信息</span></div><div class="line">  &#125; = err;</div><div class="line">  <span class="built_in">console</span>.log(err)</div><div class="line">&#125;</div><div class="line"><span class="comment">//React</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ErrorBoundary</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.state = &#123; <span class="attr">hasError</span>: <span class="literal">false</span> &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    componentDidCatch(error, info) &#123;</div><div class="line">        <span class="keyword">this</span>.setState(&#123; <span class="attr">hasError</span>: <span class="literal">true</span> &#125;);</div><div class="line"></div><div class="line">        <span class="comment">// 将异常信息上报给服务器</span></div><div class="line">        logErrorToMyService(error, info);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.state.hasError) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="string">'出错了'</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.props.children;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//window</span></div><div class="line"><span class="built_in">window</span>.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">errorMessage, scriptURI, lineNo, columnNo, error</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'errorMessage: '</span> + errorMessage); <span class="comment">// 异常信息</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'scriptURI: '</span> + scriptURI); <span class="comment">// 异常文件路径</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'lineNo: '</span> + lineNo); <span class="comment">// 异常行号</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'columnNo: '</span> + columnNo); <span class="comment">// 异常列号</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'error: '</span> + error); <span class="comment">// 异常堆栈信息</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="异常捕获"><a href="#异常捕获" class="headerlink" title="异常捕获"></a>异常捕获</h3><p>script error<br>window.error 进行全局捕获<br>对于从cdn引入的js script type<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Vue</span></span><br><span class="line">Vue.config.errorHandler = <span class="function"><span class="keyword">function</span> (<span class="params">err, vm, info</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> &#123;</span><br><span class="line">    message, <span class="comment">// 异常信息</span></span><br><span class="line">    name, <span class="comment">// 异常名称</span></span><br><span class="line">    script,  <span class="comment">// 异常脚本url</span></span><br><span class="line">    line,  <span class="comment">// 异常行号</span></span><br><span class="line">    column,  <span class="comment">// 异常列号</span></span><br><span class="line">    stack  <span class="comment">// 异常堆栈信息</span></span><br><span class="line">  &#125; = err;</span><br><span class="line">  <span class="built_in">console</span>.log(err)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//React</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ErrorBoundary</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">        <span class="keyword">this</span>.state = &#123; <span class="attr">hasError</span>: <span class="literal">false</span> &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentDidCatch(error, info) &#123;</span><br><span class="line">        <span class="keyword">this</span>.setState(&#123; <span class="attr">hasError</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将异常信息上报给服务器</span></span><br><span class="line">        logErrorToMyService(error, info);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.state.hasError) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'出错了'</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.props.children;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//window</span></span><br><span class="line"><span class="built_in">window</span>.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">errorMessage, scriptURI, lineNo, columnNo, error</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'errorMessage: '</span> + errorMessage); <span class="comment">// 异常信息</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'scriptURI: '</span> + scriptURI); <span class="comment">// 异常文件路径</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'lineNo: '</span> + lineNo); <span class="comment">// 异常行号</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'columnNo: '</span> + columnNo); <span class="comment">// 异常列号</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'error: '</span> + error); <span class="comment">// 异常堆栈信息</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h3 id="异常上报"><a href="#异常上报" class="headerlink" title="异常上报"></a>异常上报</h3><p>模拟图片请求</p>
 <h3 id="异常分析"><a href="#异常分析" class="headerlink" title="异常分析"></a>异常分析</h3><p>nginx 日志分析 </p>
 <p>页面 图形可视化</p>
-<p><a href="https://zhuanlan.zhihu.com/p/32262716" target="_blank" rel="external">把前端监控做到极致</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/32262716" target="_blank" rel="noopener">把前端监控做到极致</a></p>
 
       
 
@@ -359,7 +361,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -367,15 +369,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -387,6 +385,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -395,15 +397,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -419,19 +421,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -443,6 +433,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -451,7 +453,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -459,7 +465,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -475,11 +485,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

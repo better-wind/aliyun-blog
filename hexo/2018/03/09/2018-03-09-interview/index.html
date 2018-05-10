@@ -9,12 +9,14 @@
   <title>Knowledge | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="MVVM">
+<meta name="keywords" content="React,Vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Knowledge">
 <meta property="og:url" content="//blog.fenghou.site/2018/03/09/2018-03-09-interview/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="MVVM">
-<meta property="og:updated_time" content="2018-03-21T02:13:34.652Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Knowledge">
 <meta name="twitter:description" content="MVVM">
@@ -174,14 +176,14 @@ var _hmt = _hmt || [];
       
         <p>MVVM<br><a id="more"></a></p>
 <h2 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h2><p>String-based 模板技术 (基于字符串的parse和compile过程)<br>Dom-based 模板技术 (基于Dom的link或compile过程)<br>杂交的Living templating 技术 (基于字符串的parse 和 基于dom的compile过程)</p>
-<p><a href="http://www.html-js.com/article/Regularjs-Chinese-guidelines-for-a-comprehensive-summary-of-the-front-template-technology" target="_blank" rel="external">RegularJS 作者对前端模板技术的总结</a></p>
-<p><a href="https://github.com/livoras/blog/issues/11" target="_blank" rel="external">界面之下：还原真实的MV*模式</a></p>
+<p><a href="http://www.html-js.com/article/Regularjs-Chinese-guidelines-for-a-comprehensive-summary-of-the-front-template-technology" target="_blank" rel="noopener">RegularJS 作者对前端模板技术的总结</a></p>
+<p><a href="https://github.com/livoras/blog/issues/11" target="_blank" rel="noopener">界面之下：还原真实的MV*模式</a></p>
 <h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>React 生命周期<br>类型校验 PropTypes  prop-types<br>Virtual DOM<br>渲染优化</p>
-<p>Redux<br>让变化可控制控制<br>数据流 要修改 state 必须通过 dispatch 一个 action<br>为了描述 action 如何改变 state 树 必须编写 reducers<br>middleware<br><a href="http://www.redux.org.cn/docs/advanced/Middleware.html" target="_blank" rel="external">middleware</a></p>
+<p>Redux<br>让变化可控制控制<br>数据流 要修改 state 必须通过 dispatch 一个 action<br>为了描述 action 如何改变 state 树 必须编写 reducers<br>middleware<br><a href="http://www.redux.org.cn/docs/advanced/Middleware.html" target="_blank" rel="noopener">middleware</a></p>
 <p>react-redux context<br>Provider 构建根节点 将store 写入context<br>connect  根据传入的参数 将store中的state dispatch 混入 组件props中</p>
 <p>react-router</p>
-<p><a href="https://devhints.io/react" target="_blank" rel="external">React.js cheatsheet</a><br><a href="https://reactjs.org/docs/events.html#supported-events" target="_blank" rel="external">SyntheticEvent</a><br><a href="http://huziketang.com/books/react/" target="_blank" rel="external">react小书</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-id">#wrapper</span>~<span class="selector-tag">div</span>,<span class="selector-id">#granted-modal</span>&#123;</div><div class="line">    	<span class="attribute">opacity</span>:<span class="number">0</span><span class="meta">!important</span>;</div><div class="line">        <span class="attribute">display</span>:none<span class="meta">!important</span>;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/livoras/blog/issues/13" target="_blank" rel="external">深度剖析：如何实现一个 Virtual DOM 算法</a><br><a href="http://cn.mobx.js.org/" target="_blank" rel="external">MobX</a></p>
+<p><a href="https://devhints.io/react" target="_blank" rel="noopener">React.js cheatsheet</a><br><a href="https://reactjs.org/docs/events.html#supported-events" target="_blank" rel="noopener">SyntheticEvent</a><br><a href="http://huziketang.com/books/react/" target="_blank" rel="noopener">react小书</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    <span class="selector-id">#wrapper</span>~<span class="selector-tag">div</span>,<span class="selector-id">#granted-modal</span>&#123;</span></span><br><span class="line"><span class="css">    	<span class="selector-tag">opacity</span><span class="selector-pseudo">:0</span>!<span class="selector-tag">important</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">display</span><span class="selector-pseudo">:none</span>!<span class="selector-tag">important</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/livoras/blog/issues/13" target="_blank" rel="noopener">深度剖析：如何实现一个 Virtual DOM 算法</a><br><a href="http://cn.mobx.js.org/" target="_blank" rel="noopener">MobX</a></p>
 <p>redux connect<br>react-redux Provider</p>
 <p>router-route</p>
 <h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2>
@@ -365,7 +367,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -373,15 +375,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -393,6 +391,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -401,15 +403,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -425,19 +427,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -449,6 +439,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -457,7 +459,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -465,7 +471,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -481,11 +491,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

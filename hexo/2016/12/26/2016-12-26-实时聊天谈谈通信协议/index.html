@@ -9,12 +9,14 @@
   <title>从实时聊天谈谈通信协议 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="作为前端开发人员了解前后端通信协议还是很必须的尤其是在用Node写服务端的时候对于请求的响应处理和返回有很大的帮助">
+<meta name="keywords" content="node,http,websocket">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从实时聊天谈谈通信协议">
 <meta property="og:url" content="//blog.fenghou.site/2016/12/26/2016-12-26-实时聊天谈谈通信协议/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="作为前端开发人员了解前后端通信协议还是很必须的尤其是在用Node写服务端的时候对于请求的响应处理和返回有很大的帮助">
-<meta property="og:updated_time" content="2017-03-15T12:02:03.382Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从实时聊天谈谈通信协议">
 <meta name="twitter:description" content="作为前端开发人员了解前后端通信协议还是很必须的尤其是在用Node写服务端的时候对于请求的响应处理和返回有很大的帮助">
@@ -189,9 +191,9 @@ var _hmt = _hmt || [];
 <h3 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h3><p>TCP(Transmission Control Protocol 传输控制协议)是一种面向连接的、可靠的、基于字节流的传输层通信协议<br>连接时三次握手<br>第一次Client端发送SYN报文请求连接<br>第二次Server端接受连接后回复ACK报文，并且为这次连接分配资源<br>第三次Client端接收ACK报文后向Server端发送ACK报文，并分配资源<br>TCP连接建立</p>
 <p>断开时四次握手<br>第一次Client发起中断连接，发送FIN报文<br>第二次Server端接到FIN报文后，发送ACK报文，(可能还有数据没有传输完)，Client进入FIN_WAIT状态<br>第三次Server端确定数据已经发送完成，则向Client端发送FIN报文，准备好关闭连接<br>第四次Client端接收FIN报文,知道可以关闭连接，但不相信网络,怕Server端不知道要关闭，发送ACK报文，并进入TIME_WAIT状态<br>Server端收到ACK报文后断开连接<br>Client端等待了一定时间(依赖实现方法)后，没有收到Server回复，表示Server端已正常关闭，Client端也关闭链接<br>TCP连接关闭</p>
 <h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><p>AJAX (Asynchronous Javascript And XML 异步JavaScript和XML)，是指一种创建交互式网页应用的网页开发技术。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">* open(method,url,async) 规定请求的类型、URL 以及是否异步处理请求</div><div class="line">* method：请求的类型；GET 或 POST</div><div class="line">* url：文件在服务器上的位置</div><div class="line">* async：true（异步）或 false（同步）</div><div class="line">*</div><div class="line">* send(string) 将请求发送到服务器</div><div class="line">* string：仅用于 POST 请求</div><div class="line">*</div><div class="line">* setRequestHeader(header,value) 向请求添加 HTTP 头</div><div class="line">* header: 规定头的名称</div><div class="line">* value: 规定头的值</div><div class="line">*</div><div class="line">* responseText	获得字符串形式的响应数据。</div><div class="line">* responseXML	获得XML形式的响应数据。</div><div class="line">*</div><div class="line">* onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数</div><div class="line">*</div><div class="line">* readyState 存有 XMLHttpRequest 的状态 从 0 到 4 发生变化</div><div class="line">* 0: 请求未初始化</div><div class="line">* 1: 服务器连接已建立</div><div class="line">* 2: 请求已接收</div><div class="line">* 3: 请求处理中</div><div class="line">* 4: 请求已完成，且响应已就绪</div><div class="line">*</div><div class="line">* status</div><div class="line">* 200: "OK"</div><div class="line">* 404: 未找到页面</div><div class="line">* */</div><div class="line"><span class="keyword">var</span> xmlhttp = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xmlhttp.open(<span class="string">'POST'</span>,url,<span class="literal">true</span>);</div><div class="line">xmlhttp.setRequestHeader(<span class="string">'Content-type'</span>,<span class="string">'application/x-www-form-urlencoded'</span>);</div><div class="line">xmlhttp.send(<span class="string">'page=2&amp;size=10'</span>);</div><div class="line">xmlhttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(xmlhttp.readystate == <span class="number">4</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(xmlhttp.status == <span class="number">200</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(xmlhttp.responseText);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="comment">//异常</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* open(method,url,async) 规定请求的类型、URL 以及是否异步处理请求</span></span><br><span class="line"><span class="comment">* method：请求的类型；GET 或 POST</span></span><br><span class="line"><span class="comment">* url：文件在服务器上的位置</span></span><br><span class="line"><span class="comment">* async：true（异步）或 false（同步）</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* send(string) 将请求发送到服务器</span></span><br><span class="line"><span class="comment">* string：仅用于 POST 请求</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* setRequestHeader(header,value) 向请求添加 HTTP 头</span></span><br><span class="line"><span class="comment">* header: 规定头的名称</span></span><br><span class="line"><span class="comment">* value: 规定头的值</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* responseText	获得字符串形式的响应数据。</span></span><br><span class="line"><span class="comment">* responseXML	获得XML形式的响应数据。</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* readyState 存有 XMLHttpRequest 的状态 从 0 到 4 发生变化</span></span><br><span class="line"><span class="comment">* 0: 请求未初始化</span></span><br><span class="line"><span class="comment">* 1: 服务器连接已建立</span></span><br><span class="line"><span class="comment">* 2: 请求已接收</span></span><br><span class="line"><span class="comment">* 3: 请求处理中</span></span><br><span class="line"><span class="comment">* 4: 请求已完成，且响应已就绪</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* status</span></span><br><span class="line"><span class="comment">* 200: "OK"</span></span><br><span class="line"><span class="comment">* 404: 未找到页面</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">var</span> xmlhttp = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xmlhttp.open(<span class="string">'POST'</span>,url,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.setRequestHeader(<span class="string">'Content-type'</span>,<span class="string">'application/x-www-form-urlencoded'</span>);</span><br><span class="line">xmlhttp.send(<span class="string">'page=2&amp;size=10'</span>);</span><br><span class="line">xmlhttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(xmlhttp.readystate == <span class="number">4</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(xmlhttp.status == <span class="number">200</span>)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(xmlhttp.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//异常</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h3><p>websocket协议本质上是一个基于TCP的协议<br>是先通过HTTP/HTTPS协议发起一条特殊的HTTP请求进行握手后创建一个用于交换数据的TCP连接<br>此后服务端与客户端通过此TCP连接进行实时通信</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//客户端</span></div><div class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> WebSocket(<span class="string">'ws://localhost:8181/'</span>);</div><div class="line"><span class="comment">//连接发生错误的回调方法</span></div><div class="line">ws.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line"><span class="comment">//websocket 在任何时候都会处于下面4种状态中的其中一种</span></div><div class="line"><span class="comment">//CONNECTING (0) 表示还没建立连接</span></div><div class="line"><span class="comment">//OPEN (1)       已经建立连接，可以进行通讯</span></div><div class="line"><span class="comment">//CLOSING (2)    通过关闭握手，正在关闭连接</span></div><div class="line"><span class="comment">//CLOSED (3)     连接已经关闭或无法打开</span></div><div class="line"><span class="comment">//WebSocket.OPEN = 1;</span></div><div class="line"><span class="comment">//连接成功建立的回调方法</span></div><div class="line">ws.onopen = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(ws.readyState === <span class="number">1</span>)&#123;</div><div class="line">        wsSend(<span class="string">'msg'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//接收到消息的回调方法</span></div><div class="line">ws.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="comment">//e.data</span></div><div class="line">&#125;</div><div class="line"><span class="comment">//连接关闭的回调方法</span></div><div class="line">ws.onclose = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsSend</span>(<span class="params">rs</span>)</span>&#123;</div><div class="line">    ws.send(rs);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsEnd</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    ws.close();</div><div class="line">&#125;</div><div class="line"><span class="comment">//服务端(Node)</span></div><div class="line"><span class="keyword">var</span> WebSocketServer = <span class="built_in">require</span>(<span class="string">'ws'</span>).Server,</div><div class="line">    ws = <span class="keyword">new</span> WebSocketServer(&#123; <span class="attr">port</span>: <span class="number">8181</span> &#125;),</div><div class="line">    clients = [],</div><div class="line">    clientNum = <span class="number">0</span>;</div><div class="line">ws.on(<span class="string">'connection'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">ws</span>)</span>&#123;</div><div class="line">    clientNum ++;</div><div class="line">    clients.push(&#123;<span class="string">'ws'</span>:ws&#125;);</div><div class="line">    ws.on(<span class="string">'message'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">rs</span>)</span>&#123;</div><div class="line">        wsSend(rs);</div><div class="line">    &#125;)</div><div class="line">&#125;)</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsSend</span>(<span class="params">rs</span>)</span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;clients.length;i++)&#123;</div><div class="line">        <span class="keyword">var</span> clientSocket = clients[i].ws;</div><div class="line">        <span class="keyword">if</span> (clientSocket.readyState === <span class="number">1</span>) &#123;</div><div class="line">            clientSocket.send(<span class="built_in">JSON</span>.stringify(rs));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//客户端</span></span><br><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> WebSocket(<span class="string">'ws://localhost:8181/'</span>);</span><br><span class="line"><span class="comment">//连接发生错误的回调方法</span></span><br><span class="line">ws.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//websocket 在任何时候都会处于下面4种状态中的其中一种</span></span><br><span class="line"><span class="comment">//CONNECTING (0) 表示还没建立连接</span></span><br><span class="line"><span class="comment">//OPEN (1)       已经建立连接，可以进行通讯</span></span><br><span class="line"><span class="comment">//CLOSING (2)    通过关闭握手，正在关闭连接</span></span><br><span class="line"><span class="comment">//CLOSED (3)     连接已经关闭或无法打开</span></span><br><span class="line"><span class="comment">//WebSocket.OPEN = 1;</span></span><br><span class="line"><span class="comment">//连接成功建立的回调方法</span></span><br><span class="line">ws.onopen = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ws.readyState === <span class="number">1</span>)&#123;</span><br><span class="line">        wsSend(<span class="string">'msg'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//接收到消息的回调方法</span></span><br><span class="line">ws.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//e.data</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//连接关闭的回调方法</span></span><br><span class="line">ws.onclose = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsSend</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">    ws.send(rs);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsEnd</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ws.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//服务端(Node)</span></span><br><span class="line"><span class="keyword">var</span> WebSocketServer = <span class="built_in">require</span>(<span class="string">'ws'</span>).Server,</span><br><span class="line">    ws = <span class="keyword">new</span> WebSocketServer(&#123; <span class="attr">port</span>: <span class="number">8181</span> &#125;),</span><br><span class="line">    clients = [],</span><br><span class="line">    clientNum = <span class="number">0</span>;</span><br><span class="line">ws.on(<span class="string">'connection'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">ws</span>)</span>&#123;</span><br><span class="line">    clientNum ++;</span><br><span class="line">    clients.push(&#123;<span class="string">'ws'</span>:ws&#125;);</span><br><span class="line">    ws.on(<span class="string">'message'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">        wsSend(rs);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsSend</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;clients.length;i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> clientSocket = clients[i].ws;</span><br><span class="line">        <span class="keyword">if</span> (clientSocket.readyState === <span class="number">1</span>) &#123;</span><br><span class="line">            clientSocket.send(<span class="built_in">JSON</span>.stringify(rs));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -376,7 +378,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -384,15 +386,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -404,6 +402,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -412,15 +414,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -436,19 +438,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -460,6 +450,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -468,7 +470,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -476,7 +482,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -492,11 +502,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

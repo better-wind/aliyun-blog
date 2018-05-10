@@ -9,12 +9,14 @@
   <title>基于Vue的CPS后台 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="上周结束了在想去的最后一个项目公众号联盟的推广后台">
+<meta name="keywords" content="webpack,vue,es6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Vue的CPS后台">
 <meta property="og:url" content="//blog.fenghou.site/2017/02/27/2017-02-27-基于Vue的CPS后台/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="上周结束了在想去的最后一个项目公众号联盟的推广后台">
-<meta property="og:updated_time" content="2017-03-15T11:22:58.483Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.719Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Vue的CPS后台">
 <meta name="twitter:description" content="上周结束了在想去的最后一个项目公众号联盟的推广后台">
@@ -177,8 +179,10 @@ var _hmt = _hmt || [];
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>将整个后台按功能抽离成单独的模块<br>header 模块<br>footer 模块<br>menu 模块<br>page 分页模块<br>and 具体功能模块<br>balabalabalabala~~~<br>其实也没什么好说的。。。</p>
 <h3 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h3><p>还是有不少值得注意的地方的</p>
 <blockquote>
-<p>路由切换中页面的刷新<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//监听路由变化</span></div><div class="line">watch: &#123;</div><div class="line">      <span class="string">'$route'</span> (to, <span class="keyword">from</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (to.fullPath !== <span class="keyword">from</span>.fullPath) &#123;</div><div class="line">          <span class="keyword">this</span>.pageInt() <span class="comment">// 刷新处理</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
-<p>store交互数据的延迟<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//返回异步操作</span></div><div class="line"><span class="comment">//actions</span></div><div class="line">getOrder (&#123;commit&#125;, data) &#123;</div><div class="line">    <span class="keyword">const</span> opts = &#123;</div><div class="line">      <span class="attr">type</span>: <span class="string">'POST'</span>,</div><div class="line">      <span class="attr">url</span>: <span class="string">'/union/order/list'</span>,</div><div class="line">      <span class="attr">data</span>: data</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> fetchLoading(commit, <span class="string">'SET_ORDER'</span>, opts)</div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> fetchLoading = <span class="function">(<span class="params">commit, fn, opts</span>) =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">    beginLoading(commit)</div><div class="line">    Util.fetch(opts)</div><div class="line">      .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</div><div class="line">        stopLoading(commit)</div><div class="line">        <span class="keyword">if</span> (fn) &#123;</div><div class="line">          commit(fn, response)</div><div class="line">          resolve()</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          resolve(response)</div><div class="line">        &#125;</div><div class="line">      &#125;, error =&gt; &#123;</div><div class="line">        stopLoading(commit)</div><div class="line">        <span class="keyword">const</span> config = &#123;</div><div class="line">          <span class="attr">isShow</span>: <span class="literal">true</span>,</div><div class="line">          <span class="attr">isToast</span>: <span class="literal">true</span>,</div><div class="line">          <span class="attr">toastConfig</span>: &#123;</div><div class="line">            <span class="attr">toastMsg</span>: <span class="string">'系统繁忙,请稍后再试'</span></div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">        commit(<span class="string">'SET_POP'</span>, config)</div><div class="line">        <span class="built_in">console</span>.error(error)</div><div class="line">      &#125;)</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">//模块中调用actions中方法</span></div><div class="line"><span class="keyword">this</span>.getOrder(opts)</div><div class="line">          .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="keyword">this</span>.getPaging(opts)</div><div class="line">          &#125;)</div></pre></td></tr></table></figure></p>
+<p>路由切换中页面的刷新<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//监听路由变化</span></span><br><span class="line">watch: &#123;</span><br><span class="line">      <span class="string">'$route'</span> (to, <span class="keyword">from</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (to.fullPath !== <span class="keyword">from</span>.fullPath) &#123;</span><br><span class="line">          <span class="keyword">this</span>.pageInt() <span class="comment">// 刷新处理</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>store交互数据的延迟<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//返回异步操作</span></span><br><span class="line"><span class="comment">//actions</span></span><br><span class="line">getOrder (&#123;commit&#125;, data) &#123;</span><br><span class="line">    <span class="keyword">const</span> opts = &#123;</span><br><span class="line">      type: <span class="string">'POST'</span>,</span><br><span class="line">      url: <span class="string">'/union/order/list'</span>,</span><br><span class="line">      data: data</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fetchLoading(commit, <span class="string">'SET_ORDER'</span>, opts)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> fetchLoading = <span class="function">(<span class="params">commit, fn, opts</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    beginLoading(commit)</span><br><span class="line">    Util.fetch(opts)</span><br><span class="line">      .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">        stopLoading(commit)</span><br><span class="line">        <span class="keyword">if</span> (fn) &#123;</span><br><span class="line">          commit(fn, response)</span><br><span class="line">          resolve()</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          resolve(response)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, error =&gt; &#123;</span><br><span class="line">        stopLoading(commit)</span><br><span class="line">        <span class="keyword">const</span> config = &#123;</span><br><span class="line">          isShow: <span class="literal">true</span>,</span><br><span class="line">          isToast: <span class="literal">true</span>,</span><br><span class="line">          toastConfig: &#123;</span><br><span class="line">            toastMsg: <span class="string">'系统繁忙,请稍后再试'</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        commit(<span class="string">'SET_POP'</span>, config)</span><br><span class="line">        <span class="built_in">console</span>.error(error)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//模块中调用actions中方法</span></span><br><span class="line"><span class="keyword">this</span>.getOrder(opts)</span><br><span class="line">          .then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.getPaging(opts)</span><br><span class="line">          &#125;)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>估计这周就离职了<br>额，就这样吧</p>
 
@@ -366,7 +370,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -374,15 +378,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -394,6 +394,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -402,15 +406,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -426,19 +430,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -450,6 +442,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -458,7 +462,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -466,7 +474,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -482,11 +494,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

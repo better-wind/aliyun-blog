@@ -3,7 +3,7 @@ date: 2017-08-02 10:19:25
 tags:
     - js
 ---
-异步 总结(整理中)
+异步 总结
 <!--more-->
 ### promise
 通过简易实现 promise 了解原理
@@ -126,6 +126,7 @@ A.then((rs)=>{
 
 ```
 
+
 ### generator
 ```javascript
 function* genT(arr){
@@ -197,6 +198,64 @@ const start = async ()=>{
     
 }
 ```
+
+### 避免async/await 地狱
+promise 有一个好玩的特性，
+你可以在一行代码中得到一个 promise 对象，
+在另一行代码中得到这个 promise 的执行结果。
+这是逃离 async/await 地狱的关键。
+```javascript
+async function init(){
+    const pizzaData = await getPizzaData()
+    const drinkData = await getDrinkData()
+    const chosenPizza = choosePizza()
+    const chosenDrink = chooseDrink()
+    await addPizzaToCart(chosenPizza)
+    await addDrinkTOCart(chosenDrink)
+    orderItems()
+}
+async function orderItems(){
+    const items = await getCartItems()
+    const noOfItems = items.length
+    for(var i = 0;i<noOfItems;i++){
+        await sendRequest(items[i])
+    }
+}
+```
+多余的等待 drinkData 不需要多余的等待
+
+```javascript
+async function selectPizza(){
+    const pizzaData = await getPizzaData()
+    const chonsePizza = choosePizza()
+    await addPizzaToCart()
+}
+async function selectDrink(){
+    const drinkData = await getDrinkData()
+    const chosenDrink = chooseDrink()
+    await addDrinkToCart()
+}
+async function init(){
+    const pizzaPromise = selectPizza()
+    const drinkPromise = selectDrink()
+    await pizzaPromise
+    await drinkPromise
+    orderItems()
+    //或者直接promise.all
+    // Promise.all([selectPizza(),selectDrink()]).then(orderItems)
+}
+async function orderItems(){
+    const items = await getCartItems()
+    const noOfItems = items.length
+    let promises = []
+    for(var i = 0;i<noOfItems;i++){
+        const orderPromise = sendRequest(items[i])
+        promises.push(orderPromise)
+    }
+    await Promise.all(promises)
+}
+```
+[如何逃离 async/await 地狱](https://juejin.im/post/5aefbb48f265da0b9b073c40?utm_medium=fe&utm_source=weixinqun)
 
 
 

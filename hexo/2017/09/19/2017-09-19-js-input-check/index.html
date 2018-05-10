@@ -9,12 +9,14 @@
   <title>Js类型 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="总结一些输入框中类型的判断">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Js类型">
 <meta property="og:url" content="//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="总结一些输入框中类型的判断">
-<meta property="og:updated_time" content="2017-10-23T06:16:49.434Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Js类型">
 <meta name="twitter:description" content="总结一些输入框中类型的判断">
@@ -215,7 +217,7 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="literal">undefined</span> || <span class="literal">null</span> || <span class="string">''</span> || <span class="number">0</span> || <span class="literal">false</span></div><div class="line"><span class="keyword">if</span>(!a)&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'会执行'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> b = a || <span class="string">'test'</span></div><div class="line"><span class="built_in">console</span>.log(b) <span class="comment">// test</span></div><div class="line"><span class="comment">//判断是否输入了</span></div><div class="line"><span class="comment">//转成string 一来replace可以调用 而来 如果数据是一开始写入的0</span></div><div class="line"><span class="keyword">var</span> _s = (inputVal+<span class="string">''</span>).replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>,<span class="string">''</span>)</div><div class="line"><span class="keyword">if</span>(_s)&#123;</div><div class="line">    <span class="comment">//输入有效</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">undefined</span> || <span class="literal">null</span> || <span class="string">''</span> || <span class="number">0</span> || <span class="literal">false</span></span><br><span class="line"><span class="keyword">if</span>(!a)&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'会执行'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = a || <span class="string">'test'</span></span><br><span class="line"><span class="built_in">console</span>.log(b) <span class="comment">// test</span></span><br><span class="line"><span class="comment">//判断是否输入了</span></span><br><span class="line"><span class="comment">//转成string 一来replace可以调用 而来 如果数据是一开始写入的0</span></span><br><span class="line"><span class="keyword">var</span> _s = (inputVal+<span class="string">''</span>).replace(<span class="regexp">/(^\s*)|(\s*$)/g</span>,<span class="string">''</span>)</span><br><span class="line"><span class="keyword">if</span>(_s)&#123;</span><br><span class="line">    <span class="comment">//输入有效</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -393,7 +395,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -401,15 +403,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -421,6 +419,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -429,15 +431,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -453,19 +455,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -477,6 +467,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -485,7 +487,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -493,7 +499,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -509,11 +519,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>

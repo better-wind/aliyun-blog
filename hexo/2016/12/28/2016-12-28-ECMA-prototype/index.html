@@ -9,13 +9,15 @@
   <title>ECMA-prototype | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="要学好Js，首先必须得先理解原型(prototype)why？js作为面向对象的语言，实现面向对象的机制就是原型！">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ECMA-prototype">
 <meta property="og:url" content="//blog.fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/index.html">
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="要学好Js，首先必须得先理解原型(prototype)why？js作为面向对象的语言，实现面向对象的机制就是原型！">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="//blog.fenghou.site/assets/blogImg/prototype.png">
-<meta property="og:updated_time" content="2017-03-15T11:52:29.209Z">
+<meta property="og:updated_time" content="2018-05-02T09:18:50.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ECMA-prototype">
 <meta name="twitter:description" content="要学好Js，首先必须得先理解原型(prototype)why？js作为面向对象的语言，实现面向对象的机制就是原型！">
@@ -179,7 +181,7 @@ var _hmt = _hmt || [];
 <p>对象是属性的集合，并有一个原型对象。原型对象可以是空值。<br>  按宿主环境分可以分为<br>  原生对象：由ECMAScript规范定义其语义的对象<br>  内置对象：由ECMAScript实现提供，独立于宿主环境的对象，ECMAScript程序开始执行时就存在(所有内置对象是原生对象)<br>  宿主对象：由宿主环境提供的对象，用于完善ECMAScript执行环境(DOM,BOM)<br>  按功能分可以分为：<br>  普通对象：无原型对象<br>  函数对象：有原型对象(函数对象的一个实例)</p>
 </blockquote>
 <p>我们这里只关注函数对象<br>那么到底什么是原型呢？</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//凡是通过new Function() 创建的对象都是函数对象</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> baz = <span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="comment">//Bar foo baz 都是函数对象</span></div><div class="line"><span class="comment">//原型对象本质是函数对象的一个实例</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;</div><div class="line">&#125;</div><div class="line">Bar.prototype</div><div class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> Bar();</div><div class="line">Bar.prototype = temp;</div><div class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> <span class="built_in">Function</span>();</div><div class="line"><span class="built_in">Function</span>.prototype = temp</div><div class="line"><span class="comment">//构造器：创建和初始化对象的函数对象(在原型对象prototype中,prototype.constructor)</span></div><div class="line"><span class="comment">//原型对象prototype中都有个预定义的constructor属性，用来引用它的函数对象</span></div><div class="line"><span class="comment">//每个由构造器创建的对象拥有一个执行构造器prototype的属性值的隐式引用</span></div><div class="line"><span class="comment">//这个引用称之为原型</span></div><div class="line"><span class="comment">//每个原型可以拥有指向自己原型的隐式引用(原型的原型),就是所谓的原型链</span></div><div class="line"><span class="comment">//每个对象都有一个__proto__属性来实现对原型的隐式引用</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">name</span>:<span class="string">'Louis'</span>,</div><div class="line">    <span class="attr">age</span>:<span class="string">'24'</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</div><div class="line">person.__proto__ = Person.prototype</div><div class="line">Person.prototype.__proto__ = <span class="built_in">Object</span>.prototype</div><div class="line"><span class="built_in">Object</span>.prototype.__proto__ = <span class="literal">null</span></div><div class="line"><span class="comment">//person对象由构造器Person创建</span></div><div class="line"><span class="comment">//所以person对Person.prototype有隐式引用(__proto__)</span></div><div class="line"><span class="comment">//Person对象又是由构造器Object创建</span></div><div class="line"><span class="comment">//所以Person对Object.prototype有隐式引用(__proto__)</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//凡是通过new Function() 创建的对象都是函数对象</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> baz = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line"><span class="comment">//Bar foo baz 都是函数对象</span></span><br><span class="line"><span class="comment">//原型对象本质是函数对象的一个实例</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bar</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">Bar.prototype</span><br><span class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> Bar();</span><br><span class="line">Bar.prototype = temp;</span><br><span class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line"><span class="built_in">Function</span>.prototype = temp</span><br><span class="line"><span class="comment">//构造器：创建和初始化对象的函数对象(在原型对象prototype中,prototype.constructor)</span></span><br><span class="line"><span class="comment">//原型对象prototype中都有个预定义的constructor属性，用来引用它的函数对象</span></span><br><span class="line"><span class="comment">//每个由构造器创建的对象拥有一个执行构造器prototype的属性值的隐式引用</span></span><br><span class="line"><span class="comment">//这个引用称之为原型</span></span><br><span class="line"><span class="comment">//每个原型可以拥有指向自己原型的隐式引用(原型的原型),就是所谓的原型链</span></span><br><span class="line"><span class="comment">//每个对象都有一个__proto__属性来实现对原型的隐式引用</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name:<span class="string">'Louis'</span>,</span><br><span class="line">    age:<span class="string">'24'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person();</span><br><span class="line">person.__proto__ = Person.prototype</span><br><span class="line">Person.prototype.__proto__ = <span class="built_in">Object</span>.prototype</span><br><span class="line"><span class="built_in">Object</span>.prototype.__proto__ = <span class="literal">null</span></span><br><span class="line"><span class="comment">//person对象由构造器Person创建</span></span><br><span class="line"><span class="comment">//所以person对Person.prototype有隐式引用(__proto__)</span></span><br><span class="line"><span class="comment">//Person对象又是由构造器Object创建</span></span><br><span class="line"><span class="comment">//所以Person对Object.prototype有隐式引用(__proto__)</span></span><br></pre></td></tr></table></figure>
 <p><img src="/assets/blogImg/prototype.png" alt="原型"></p>
 
       
@@ -358,7 +360,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -366,15 +368,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -386,6 +384,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
@@ -394,15 +396,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">websocket</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -418,19 +420,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+                <a href="javascript:void(0)" class="js-tag color5">weex</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -442,6 +432,18 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">https</a>
               </li>
             
@@ -450,7 +452,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">weex</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -458,7 +464,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -474,11 +484,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">interview</a>
               </li>
             
             <div class="clearfix"></div>
