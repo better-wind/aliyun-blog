@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:description" content="Canvas &amp;amp;&amp;amp; Js">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-07T08:31:03.574Z">
+<meta property="og:updated_time" content="2018-05-18T07:12:15.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Knowledge">
 <meta name="twitter:description" content="Canvas &amp;amp;&amp;amp; Js">
@@ -188,8 +188,7 @@ var _hmt = _hmt || [];
 <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承方式</p>
 <h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>apply call bind 剪头函数</p>
 <h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p>commonJS<br>import</p>
-<h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>Promise<br>Generator<br>async await</p>
-<h3 id="图片预览"><a href="#图片预览" class="headerlink" title="图片预览"></a>图片预览</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> image = <span class="keyword">new</span> Image()</span><br><span class="line">        image.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(image.width)</span><br><span class="line">          <span class="built_in">console</span>.log(image.height)</span><br><span class="line">        &#125;</span><br><span class="line">        image.src = <span class="built_in">window</span>.URL.createObjectURL(file)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> fr = <span class="keyword">new</span> FileReader();</span><br><span class="line">        fr.onload = <span class="function"><span class="keyword">function</span>(<span class="params">file</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">var</span> image = <span class="keyword">new</span> Image();</span><br><span class="line">          image.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(image.width)</span><br><span class="line">            <span class="built_in">console</span>.log(image.height)</span><br><span class="line">          &#125;</span><br><span class="line">          image.src = file.target.result;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        fr.readAsDataURL(file);</span><br></pre></td></tr></table></figure>
+<h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><p>Promise<br>Generator<br>async await<br>图片预览<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">getFileImage:<span class="function">(<span class="params">src</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> image = <span class="keyword">new</span> Image();</span><br><span class="line">      image.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">const</span> width = image.width</span><br><span class="line">        <span class="keyword">const</span> height = image.height</span><br><span class="line">        resolve(&#123;width,height&#125;)</span><br><span class="line">      &#125;</span><br><span class="line">      image.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">        reject(err)</span><br><span class="line">      &#125;</span><br><span class="line">      image.src = src;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  getFileReaderImage:<span class="function">(<span class="params">file</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">var</span> fr = <span class="keyword">new</span> FileReader();</span><br><span class="line">      fr.onload = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params">_file</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">          <span class="keyword">const</span> imageWh =  <span class="keyword">await</span> UtilTool.getFileImage(_file.target.result)</span><br><span class="line">          <span class="keyword">const</span> size = file.size</span><br><span class="line">          <span class="keyword">const</span> type = file.type</span><br><span class="line">          resolve(&#123;...imageWh,size,type&#125;)</span><br><span class="line">        &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">          reject(err)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// var image = new Image();</span></span><br><span class="line">        <span class="comment">// image.onload = function()&#123;</span></span><br><span class="line">        <span class="comment">//   const width = image.width</span></span><br><span class="line">        <span class="comment">//   const height = image.height</span></span><br><span class="line">        <span class="comment">//   const size = file.size</span></span><br><span class="line">        <span class="comment">//   const type = file.type</span></span><br><span class="line">        <span class="comment">//   resolve(&#123;width,height,size,type&#125;)</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// image.onerror = function(err)&#123;</span></span><br><span class="line">        <span class="comment">//   reject(err)</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// image.src = _file.target.result;</span></span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">      fr.onerror = <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">        reject(err)</span><br><span class="line">      &#125;</span><br><span class="line">      fr.readAsDataURL(file);</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -371,19 +370,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随想</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color3">随想</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -395,6 +390,10 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
@@ -403,7 +402,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -415,7 +414,7 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -427,11 +426,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">wx</a>
+                <a href="javascript:void(0)" class="js-tag color4">rax</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">rax</a>
+                <a href="javascript:void(0)" class="js-tag color3">wx</a>
               </li>
             
               <li class="article-tag-list-item">
