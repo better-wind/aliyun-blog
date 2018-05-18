@@ -35,6 +35,32 @@ ES5/ES6/ES7
 限定符
 test exec match
 replace
+```javascript
+var reg = new RegExp('^[0-9]{1}[0-9]*$','g')
+var reg = new RegExp(/^[0-9]{1}[0-9]*$/g)
+var reg = /^[0-9]{1}[0-9]*$/g
+
+var a = '12'
+console.log(reg.test(a))  //true
+console.log(reg.test(a))  //false
+// 如果正则表达式设置了全局标志，
+// test() 的执行会改变正则表达式   
+// lastIndex属性。连续的执行test()方法，
+// 后续的执行将会从 lastIndex 处开始匹配字符串，
+// (exec() 同样改变正则本身的 lastIndex属性值).
+
+//下面的实例表现了这种行为： 
+
+var regex = /foo/g;
+
+// regex.lastIndex is at 0
+regex.test('foo'); // true
+
+// regex.lastIndex is now at 3
+regex.test('foo'); // false
+
+```
+
 ### 事件模型
 事件冒泡 从点击外外    false
 事件捕获 从点击外往里  true
