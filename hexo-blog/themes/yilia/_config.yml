@@ -84,15 +84,12 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-#  friends: '友链'
+  friends: '作品'
   aboutme: '关于我'
 
 friends:
-  友情链接1: http://localhost:4000/
-  友情链接2: http://localhost:4000/
-  友情链接3: http://localhost:4000/
-  友情链接4: http://localhost:4000/
-  友情链接5: http://localhost:4000/
-  友情链接6: http://localhost:4000/
+  canvas烟花: http://firework.fenghou.site/
+  Holo艺术给养空间: http://www.holoartstudio.com/
 
-aboutme: 正年轻，<br>为什么不经历？<br><br>自信从而强大，<br>专注前端，剑指架构
+
+aboutme: 正年轻<br>为什么不经历！<br><br>大道万千 日拱一卒<br> 如此而已

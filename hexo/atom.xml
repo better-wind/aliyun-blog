@@ -5,9 +5,9 @@
   <subtitle>Louis/十年</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="//blog.fenghou.site/"/>
-  <updated>2018-05-11T02:01:45.788Z</updated>
-  <id>//blog.fenghou.site/</id>
+  <link href="//fenghou.site/"/>
+  <updated>2018-05-25T01:30:46.278Z</updated>
+  <id>//fenghou.site/</id>
   
   <author>
     <name>Louis</name>
@@ -17,9 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>大道万千，日拱一卒</title>
+    <link href="//fenghou.site/2018/05/25/2018-05-25-diary-fe/"/>
+    <id>//fenghou.site/2018/05/25/2018-05-25-diary-fe/</id>
+    <published>2018-05-25T01:22:43.000Z</published>
+    <updated>2018-05-25T01:30:46.278Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="//fenghou.site/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个人项目经验</title>
-    <link href="//blog.fenghou.site/2018/05/10/2018-05-10-interview-work-peoject/"/>
-    <id>//blog.fenghou.site/2018/05/10/2018-05-10-interview-work-peoject/</id>
+    <link href="//fenghou.site/2018/05/10/2018-05-10-interview-work-peoject/"/>
+    <id>//fenghou.site/2018/05/10/2018-05-10-interview-work-peoject/</id>
     <published>2018-05-10T03:01:38.000Z</published>
     <updated>2018-05-11T02:01:45.788Z</updated>
     
@@ -32,14 +56,14 @@
     </summary>
     
     
-      <category term="interview" scheme="//blog.fenghou.site/tags/interview/"/>
+      <category term="interview" scheme="//fenghou.site/tags/interview/"/>
     
   </entry>
   
   <entry>
     <title>一颗关于省市区的树</title>
-    <link href="//blog.fenghou.site/2018/04/20/2018-04-20-js-province-city-district/"/>
-    <id>//blog.fenghou.site/2018/04/20/2018-04-20-js-province-city-district/</id>
+    <link href="//fenghou.site/2018/04/20/2018-04-20-js-province-city-district/"/>
+    <id>//fenghou.site/2018/04/20/2018-04-20-js-province-city-district/</id>
     <published>2018-04-20T06:17:54.000Z</published>
     <updated>2018-05-02T09:18:50.725Z</updated>
     
@@ -52,16 +76,16 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
-      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>前端异常监控</title>
-    <link href="//blog.fenghou.site/2018/03/26/2018-03-26-fe-error-statistics/"/>
-    <id>//blog.fenghou.site/2018/03/26/2018-03-26-fe-error-statistics/</id>
+    <link href="//fenghou.site/2018/03/26/2018-03-26-fe-error-statistics/"/>
+    <id>//fenghou.site/2018/03/26/2018-03-26-fe-error-statistics/</id>
     <published>2018-03-26T01:40:57.000Z</published>
     <updated>2018-05-02T09:18:50.724Z</updated>
     
@@ -74,16 +98,16 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
-      <category term="nginx" scheme="//blog.fenghou.site/tags/nginx/"/>
+      <category term="nginx" scheme="//fenghou.site/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>css-world</title>
-    <link href="//blog.fenghou.site/2018/03/16/2018-02-26-css-world/"/>
-    <id>//blog.fenghou.site/2018/03/16/2018-02-26-css-world/</id>
+    <link href="//fenghou.site/2018/03/16/2018-02-26-css-world/"/>
+    <id>//fenghou.site/2018/03/16/2018-02-26-css-world/</id>
     <published>2018-03-16T02:04:47.000Z</published>
     <updated>2018-05-07T10:34:54.808Z</updated>
     
@@ -96,16 +120,16 @@
     </summary>
     
     
-      <category term="css" scheme="//blog.fenghou.site/tags/css/"/>
+      <category term="css" scheme="//fenghou.site/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>Knowledge</title>
-    <link href="//blog.fenghou.site/2018/03/09/2018-03-09-interview/"/>
-    <id>//blog.fenghou.site/2018/03/09/2018-03-09-interview/</id>
+    <link href="//fenghou.site/2018/03/09/2018-03-09-interview/"/>
+    <id>//fenghou.site/2018/03/09/2018-03-09-interview/</id>
     <published>2018-03-09T03:18:48.000Z</published>
-    <updated>2018-05-02T09:18:50.724Z</updated>
+    <updated>2018-05-25T01:36:24.832Z</updated>
     
     <content type="html"><![CDATA[<p>MVVM<br><a id="more"></a></p><h2 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h2><p>String-based 模板技术 (基于字符串的parse和compile过程)<br>Dom-based 模板技术 (基于Dom的link或compile过程)<br>杂交的Living templating 技术 (基于字符串的parse 和 基于dom的compile过程)</p><p><a href="http://www.html-js.com/article/Regularjs-Chinese-guidelines-for-a-comprehensive-summary-of-the-front-template-technology" target="_blank" rel="noopener">RegularJS 作者对前端模板技术的总结</a></p><p><a href="https://github.com/livoras/blog/issues/11" target="_blank" rel="noopener">界面之下：还原真实的MV*模式</a></p><h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><p>React 生命周期<br>类型校验 PropTypes  prop-types<br>Virtual DOM<br>渲染优化</p><p>Redux<br>让变化可控制控制<br>数据流 要修改 state 必须通过 dispatch 一个 action<br>为了描述 action 如何改变 state 树 必须编写 reducers<br>middleware<br><a href="http://www.redux.org.cn/docs/advanced/Middleware.html" target="_blank" rel="noopener">middleware</a></p><p>react-redux context<br>Provider 构建根节点 将store 写入context<br>connect  根据传入的参数 将store中的state dispatch 混入 组件props中</p><p>react-router</p><p><a href="https://devhints.io/react" target="_blank" rel="noopener">React.js cheatsheet</a><br><a href="https://reactjs.org/docs/events.html#supported-events" target="_blank" rel="noopener">SyntheticEvent</a><br><a href="http://huziketang.com/books/react/" target="_blank" rel="noopener">react小书</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    <span class="selector-id">#wrapper</span>~<span class="selector-tag">div</span>,<span class="selector-id">#granted-modal</span>&#123;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">opacity</span><span class="selector-pseudo">:0</span>!<span class="selector-tag">important</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">display</span><span class="selector-pseudo">:none</span>!<span class="selector-tag">important</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p><p><a href="https://github.com/livoras/blog/issues/13" target="_blank" rel="noopener">深度剖析：如何实现一个 Virtual DOM 算法</a><br><a href="http://cn.mobx.js.org/" target="_blank" rel="noopener">MobX</a></p><p>redux connect<br>react-redux Provider</p><p>router-route</p><h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2>]]></content>
     
@@ -116,18 +140,18 @@
     </summary>
     
     
-      <category term="React" scheme="//blog.fenghou.site/tags/React/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
-      <category term="Vue" scheme="//blog.fenghou.site/tags/Vue/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>Knowledge</title>
-    <link href="//blog.fenghou.site/2018/03/08/2018-03-08-interview/"/>
-    <id>//blog.fenghou.site/2018/03/08/2018-03-08-interview/</id>
+    <link href="//fenghou.site/2018/03/08/2018-03-08-interview/"/>
+    <id>//fenghou.site/2018/03/08/2018-03-08-interview/</id>
     <published>2018-03-08T03:19:05.000Z</published>
-    <updated>2018-05-02T09:18:50.723Z</updated>
+    <updated>2018-05-25T01:36:24.873Z</updated>
     
     <content type="html"><![CDATA[<p>Node &amp;&amp; Linux &amp;&amp; Nginx &amp;&amp; 自动化脚本<br><a id="more"></a></p><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p>依赖的安装 xshell链接的配置</p><h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>nginx 反向代理<br>静态资源服务器</p><h3 id="资源压缩"><a href="#资源压缩" class="headerlink" title="资源压缩"></a>资源压缩</h3><p>gzip 压缩</p><h3 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h3><p>分析请求日志<br>前端异常监控</p><h2 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h2><h3 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h3><p>服务器</p><h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><p>express 服务 express-session</p><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>node 链接 mysql</p><h3 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h3><p>远程文件拉取<br>脚手架配置</p><h3 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h3><p>网络爬虫<br>puppeteer </p><h3 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h3><p>gulp 前端自动化</p><h2 id="rollup"><a href="#rollup" class="headerlink" title="rollup"></a>rollup</h2><p><a href="https://www.cnblogs.com/tugenhua0707/p/8179686.html" target="_blank" rel="noopener">深入学习rollup来进行打包</a></p><h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><p>###配置<br>配置合并 分离<br>本质<br>实现原理</p><p>###启动<br>命令行启动</p><p>配合node启动</p><p><a href="https://juejin.im/post/5aa3d2056fb9a028c36868aa?utm_source=gold_browser_extension" target="_blank" rel="noopener">webpack详解</a></p>]]></content>
     
@@ -138,18 +162,18 @@
     </summary>
     
     
-      <category term="Node" scheme="//blog.fenghou.site/tags/Node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="Linux" scheme="//blog.fenghou.site/tags/Linux/"/>
+      <category term="linux" scheme="//fenghou.site/tags/linux/"/>
     
-      <category term="Nginx" scheme="//blog.fenghou.site/tags/Nginx/"/>
+      <category term="nginx" scheme="//fenghou.site/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>Knowledge</title>
-    <link href="//blog.fenghou.site/2018/03/07/2018-03-07-interview/"/>
-    <id>//blog.fenghou.site/2018/03/07/2018-03-07-interview/</id>
+    <link href="//fenghou.site/2018/03/07/2018-03-07-interview/"/>
+    <id>//fenghou.site/2018/03/07/2018-03-07-interview/</id>
     <published>2018-03-07T09:22:43.000Z</published>
     <updated>2018-05-18T07:58:41.738Z</updated>
     
@@ -162,16 +186,16 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
-      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+      <category term="canvas" scheme="//fenghou.site/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>Knowledge</title>
-    <link href="//blog.fenghou.site/2018/03/06/2018-03-06-interview/"/>
-    <id>//blog.fenghou.site/2018/03/06/2018-03-06-interview/</id>
+    <link href="//fenghou.site/2018/03/06/2018-03-06-interview/"/>
+    <id>//fenghou.site/2018/03/06/2018-03-06-interview/</id>
     <published>2018-03-06T02:45:29.000Z</published>
     <updated>2018-05-02T09:18:50.723Z</updated>
     
@@ -184,14 +208,14 @@
     </summary>
     
     
-      <category term="浏览器" scheme="//blog.fenghou.site/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+      <category term="浏览器" scheme="//fenghou.site/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>Knowledge</title>
-    <link href="//blog.fenghou.site/2018/03/05/2018-03-05-interview/"/>
-    <id>//blog.fenghou.site/2018/03/05/2018-03-05-interview/</id>
+    <link href="//fenghou.site/2018/03/05/2018-03-05-interview/"/>
+    <id>//fenghou.site/2018/03/05/2018-03-05-interview/</id>
     <published>2018-03-05T01:29:55.000Z</published>
     <updated>2018-05-02T09:18:50.723Z</updated>
     
@@ -204,16 +228,16 @@
     </summary>
     
     
-      <category term="css" scheme="//blog.fenghou.site/tags/css/"/>
+      <category term="css" scheme="//fenghou.site/tags/css/"/>
     
-      <category term="html" scheme="//blog.fenghou.site/tags/html/"/>
+      <category term="html" scheme="//fenghou.site/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>查看Nginx日志</title>
-    <link href="//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/"/>
-    <id>//blog.fenghou.site/2018/02/03/2018-02-03-nginx-log/</id>
+    <link href="//fenghou.site/2018/02/03/2018-02-03-nginx-log/"/>
+    <id>//fenghou.site/2018/02/03/2018-02-03-nginx-log/</id>
     <published>2018-02-03T09:35:27.000Z</published>
     <updated>2018-05-02T09:18:50.723Z</updated>
     
@@ -226,16 +250,16 @@
     </summary>
     
     
-      <category term="linux" scheme="//blog.fenghou.site/tags/linux/"/>
+      <category term="linux" scheme="//fenghou.site/tags/linux/"/>
     
-      <category term="nginx" scheme="//blog.fenghou.site/tags/nginx/"/>
+      <category term="nginx" scheme="//fenghou.site/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>巧用数组存储</title>
-    <link href="//blog.fenghou.site/2017/12/11/2017-12-11-array-storage-memory/"/>
-    <id>//blog.fenghou.site/2017/12/11/2017-12-11-array-storage-memory/</id>
+    <link href="//fenghou.site/2017/12/11/2017-12-11-array-storage-memory/"/>
+    <id>//fenghou.site/2017/12/11/2017-12-11-array-storage-memory/</id>
     <published>2017-12-11T01:43:41.000Z</published>
     <updated>2018-05-02T09:18:50.722Z</updated>
     
@@ -248,16 +272,16 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
-      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>根据图片色调生成渐变背景</title>
-    <link href="//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/"/>
-    <id>//blog.fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/</id>
+    <link href="//fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/"/>
+    <id>//fenghou.site/2017/12/01/2017-12-01-canvas-image-node-color/</id>
     <published>2017-12-01T02:00:00.000Z</published>
     <updated>2018-05-02T09:18:50.722Z</updated>
     
@@ -270,16 +294,16 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+      <category term="canvas" scheme="//fenghou.site/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>Git命令行</title>
-    <link href="//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/"/>
-    <id>//blog.fenghou.site/2017/11/21/2017-11-21-git-cmd/</id>
+    <link href="//fenghou.site/2017/11/21/2017-11-21-git-cmd/"/>
+    <id>//fenghou.site/2017/11/21/2017-11-21-git-cmd/</id>
     <published>2017-11-21T05:33:37.000Z</published>
     <updated>2018-05-02T09:18:50.722Z</updated>
     
@@ -292,14 +316,14 @@
     </summary>
     
     
-      <category term="git" scheme="//blog.fenghou.site/tags/git/"/>
+      <category term="git" scheme="//fenghou.site/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>HTML标签语义</title>
-    <link href="//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/"/>
-    <id>//blog.fenghou.site/2017/11/20/2017-11-20-html-tag/</id>
+    <link href="//fenghou.site/2017/11/20/2017-11-20-html-tag/"/>
+    <id>//fenghou.site/2017/11/20/2017-11-20-html-tag/</id>
     <published>2017-11-20T10:09:08.000Z</published>
     <updated>2018-05-02T09:18:50.722Z</updated>
     
@@ -312,14 +336,14 @@
     </summary>
     
     
-      <category term="html" scheme="//blog.fenghou.site/tags/html/"/>
+      <category term="html" scheme="//fenghou.site/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>vue-about</title>
-    <link href="//blog.fenghou.site/2017/11/17/2017-11-17-vue-about/"/>
-    <id>//blog.fenghou.site/2017/11/17/2017-11-17-vue-about/</id>
+    <link href="//fenghou.site/2017/11/17/2017-11-17-vue-about/"/>
+    <id>//fenghou.site/2017/11/17/2017-11-17-vue-about/</id>
     <published>2017-11-17T06:30:23.000Z</published>
     <updated>2018-05-02T09:18:50.722Z</updated>
     
@@ -332,14 +356,14 @@
     </summary>
     
     
-      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>node-webpack</title>
-    <link href="//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/"/>
-    <id>//blog.fenghou.site/2017/11/16/2017-11-16-webpack-rules/</id>
+    <link href="//fenghou.site/2017/11/16/2017-11-16-webpack-rules/"/>
+    <id>//fenghou.site/2017/11/16/2017-11-16-webpack-rules/</id>
     <published>2017-11-16T03:29:13.000Z</published>
     <updated>2018-05-02T09:18:50.722Z</updated>
     
@@ -352,16 +376,16 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
+      <category term="webpack" scheme="//fenghou.site/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>node-sms-boom</title>
-    <link href="//blog.fenghou.site/2017/11/13/2017-11-13-node-sms-boom/"/>
-    <id>//blog.fenghou.site/2017/11/13/2017-11-13-node-sms-boom/</id>
+    <link href="//fenghou.site/2017/11/13/2017-11-13-node-sms-boom/"/>
+    <id>//fenghou.site/2017/11/13/2017-11-13-node-sms-boom/</id>
     <published>2017-11-13T01:27:44.000Z</published>
     <updated>2018-05-02T09:18:50.721Z</updated>
     
@@ -374,16 +398,16 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>node-npm</title>
-    <link href="//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/"/>
-    <id>//blog.fenghou.site/2017/11/08/2017-11-08-node-npm/</id>
+    <link href="//fenghou.site/2017/11/08/2017-11-08-node-npm/"/>
+    <id>//fenghou.site/2017/11/08/2017-11-08-node-npm/</id>
     <published>2017-11-08T08:25:10.000Z</published>
-    <updated>2018-05-04T02:32:42.476Z</updated>
+    <updated>2018-05-25T01:36:24.864Z</updated>
     
     <content type="html"><![CDATA[<p>NPM - 笔记<br><a id="more"></a></p><h3 id="切换npm源"><a href="#切换npm源" class="headerlink" title="切换npm源"></a>切换npm源</h3><p><a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>npm config set disturl <a href="https://npm.taobao.org/dist" target="_blank" rel="noopener">https://npm.taobao.org/dist</a><br>npm config delete registry<br>npm config delete disturl<br>npm config list<br>npm config edit</p><h3 id="sass安装出错"><a href="#sass安装出错" class="headerlink" title="sass安装出错"></a>sass安装出错</h3><p>SASS_BINARY_SITE=<a href="https://npm.taobao.org/mirrors/node-sass/" target="_blank" rel="noopener">https://npm.taobao.org/mirrors/node-sass/</a> npm install node-sass –save-dev</p><h3 id="更新node版本"><a href="#更新node版本" class="headerlink" title="更新node版本"></a>更新node版本</h3><p>window 官网下载.msi文件 安装覆盖老版本</p><h3 id="npm-版本"><a href="#npm-版本" class="headerlink" title="npm 版本"></a>npm 版本</h3><p>npm版本5.5.1<br>会生成 package-lock.json 锁定当前安装的 package 包<br>rm -rf package-lock.json<br>管理员身份 npm install 还有有问题 没解决  版本回退到5之前</p><h3 id="npm-publish"><a href="#npm-publish" class="headerlink" title="npm publish"></a>npm publish</h3><p>登录 npm addUser<br>源切换 <a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>不然会 <code>no_perms Private mode enable, only admin can publish this module</code></p><h3 id="关于–save-dev"><a href="#关于–save-dev" class="headerlink" title="关于–save-dev"></a>关于–save-dev</h3><p>publish上去的包中的devDependencies中依赖的包 下载时不会被安装</p><h3 id="关于包的安装依赖以及删除"><a href="#关于包的安装依赖以及删除" class="headerlink" title="关于包的安装依赖以及删除"></a>关于包的安装依赖以及删除</h3><p>npm view package versions 查看所有版本<br>npm view package version  查看最新版本</p><p>npm ls package            查看安装的版本</p><p>npm i package@version     安装指定版本</p><p>npm i package@latesd      安装最新版本</p><p>package.json 的版本依赖<br>x.y.z  x:主版本号  y:次版本号  z:补丁版本号<br>以下用 大 中 小 代替<br>~ 会匹配最新的小版本依赖包，比如~1.2.3会匹配所有1.2.z版本，但是不包括1.3.0<br>^ 会匹配最新的中版本依赖包，比如^1.2.3会匹配所有1.y.z的包，包括1.3.0，但是不包括2.0.0</p><ul><li>会匹配最新的版本<br>vue:’2.5.2’     安装 2.5.2版本<br>vue:’~2.5.2’    安装最近更新的小版本 2.5.z版本（z&gt;=3）<br>vue:’^2.5.2’    安装最近跟新的中版本 2.y.z版本 (y&gt;=5)(y = 5 ? z &gt;= 2 : z)<br>vue:’*’         安装最新版本</li></ul><p>npm update package  依赖～ ^版本规则<br>webpack:’3.7.0’    npm update webpack    不更新<br>webpack:’~3.7.0’   npm update webpack    3.7.0 —&gt; 3.7.1   小版本最新版本<br>webpack:’^3.7.0’   npm update webpack    3.7.0 —&gt; 3.11.0  中版本最新版本<br>webpack:’*’        npm update webpack                       最新版本</p><p>npm uninstall package 删除依赖包</p><p>npm cache clean 清除缓存</p>]]></content>
     
@@ -394,12 +418,14 @@
     </summary>
     
     
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
+    
   </entry>
   
   <entry>
     <title>Css-Specification</title>
-    <link href="//blog.fenghou.site/2017/11/07/2017-11-07-css-Specification/"/>
-    <id>//blog.fenghou.site/2017/11/07/2017-11-07-css-Specification/</id>
+    <link href="//fenghou.site/2017/11/07/2017-11-07-css-Specification/"/>
+    <id>//fenghou.site/2017/11/07/2017-11-07-css-Specification/</id>
     <published>2017-11-07T07:08:16.000Z</published>
     <updated>2018-05-02T09:18:50.721Z</updated>
     
@@ -412,14 +438,14 @@
     </summary>
     
     
-      <category term="css" scheme="//blog.fenghou.site/tags/css/"/>
+      <category term="css" scheme="//fenghou.site/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>css-Box-Model</title>
-    <link href="//blog.fenghou.site/2017/11/07/2017-11-07-css-box-model/"/>
-    <id>//blog.fenghou.site/2017/11/07/2017-11-07-css-box-model/</id>
+    <link href="//fenghou.site/2017/11/07/2017-11-07-css-box-model/"/>
+    <id>//fenghou.site/2017/11/07/2017-11-07-css-box-model/</id>
     <published>2017-11-07T01:56:43.000Z</published>
     <updated>2018-05-02T09:18:50.721Z</updated>
     
@@ -432,14 +458,14 @@
     </summary>
     
     
-      <category term="css" scheme="//blog.fenghou.site/tags/css/"/>
+      <category term="css" scheme="//fenghou.site/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>从源码看webpack</title>
-    <link href="//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/"/>
-    <id>//blog.fenghou.site/2017/10/25/2017-10-25-webpack-source-code/</id>
+    <link href="//fenghou.site/2017/10/25/2017-10-25-webpack-source-code/"/>
+    <id>//fenghou.site/2017/10/25/2017-10-25-webpack-source-code/</id>
     <published>2017-10-25T02:21:01.000Z</published>
     <updated>2018-05-02T09:18:50.721Z</updated>
     
@@ -452,14 +478,14 @@
     </summary>
     
     
-      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
+      <category term="webpack" scheme="//fenghou.site/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>canvas 图片裁剪</title>
-    <link href="//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/"/>
-    <id>//blog.fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</id>
+    <link href="//fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/"/>
+    <id>//fenghou.site/2017/10/10/2017-10-10-canvas-clip-image/</id>
     <published>2017-10-10T08:50:07.000Z</published>
     <updated>2018-05-02T09:18:50.721Z</updated>
     
@@ -472,14 +498,14 @@
     </summary>
     
     
-      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+      <category term="canvas" scheme="//fenghou.site/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>Js类型</title>
-    <link href="//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/"/>
-    <id>//blog.fenghou.site/2017/09/19/2017-09-19-js-input-check/</id>
+    <link href="//fenghou.site/2017/09/19/2017-09-19-js-input-check/"/>
+    <id>//fenghou.site/2017/09/19/2017-09-19-js-input-check/</id>
     <published>2017-09-19T02:02:58.000Z</published>
     <updated>2018-05-02T09:18:50.721Z</updated>
     
@@ -492,14 +518,14 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>Node-Session</title>
-    <link href="//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/"/>
-    <id>//blog.fenghou.site/2017/08/20/2017-08-20-node-session-cookie/</id>
+    <link href="//fenghou.site/2017/08/20/2017-08-20-node-session-cookie/"/>
+    <id>//fenghou.site/2017/08/20/2017-08-20-node-session-cookie/</id>
     <published>2017-08-20T02:20:32.000Z</published>
     <updated>2018-05-02T09:18:50.720Z</updated>
     
@@ -512,16 +538,16 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>Linux 使用 Mysql</title>
-    <link href="//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/"/>
-    <id>//blog.fenghou.site/2017/08/18/2017-08-18-linux-mysql/</id>
+    <link href="//fenghou.site/2017/08/18/2017-08-18-linux-mysql/"/>
+    <id>//fenghou.site/2017/08/18/2017-08-18-linux-mysql/</id>
     <published>2017-08-18T02:20:08.000Z</published>
     <updated>2018-05-02T09:18:50.720Z</updated>
     
@@ -534,16 +560,16 @@
     </summary>
     
     
-      <category term="linux" scheme="//blog.fenghou.site/tags/linux/"/>
+      <category term="linux" scheme="//fenghou.site/tags/linux/"/>
     
-      <category term="mysql" scheme="//blog.fenghou.site/tags/mysql/"/>
+      <category term="mysql" scheme="//fenghou.site/tags/mysql/"/>
     
   </entry>
   
   <entry>
     <title>浏览器中js事件运行机制</title>
-    <link href="//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/"/>
-    <id>//blog.fenghou.site/2017/08/08/2017-08-08-js-event-loop/</id>
+    <link href="//fenghou.site/2017/08/08/2017-08-08-js-event-loop/"/>
+    <id>//fenghou.site/2017/08/08/2017-08-08-js-event-loop/</id>
     <published>2017-08-08T08:28:27.000Z</published>
     <updated>2018-05-02T09:18:50.720Z</updated>
     
@@ -556,14 +582,14 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>Js异步编程</title>
-    <link href="//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/"/>
-    <id>//blog.fenghou.site/2017/08/02/2017-08-02-js-promise/</id>
+    <link href="//fenghou.site/2017/08/02/2017-08-02-js-promise/"/>
+    <id>//fenghou.site/2017/08/02/2017-08-02-js-promise/</id>
     <published>2017-08-02T02:19:25.000Z</published>
     <updated>2018-05-08T06:57:16.513Z</updated>
     
@@ -576,14 +602,14 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>Vue事件</title>
-    <link href="//blog.fenghou.site/2017/07/20/2017-07-20-vue-event/"/>
-    <id>//blog.fenghou.site/2017/07/20/2017-07-20-vue-event/</id>
+    <link href="//fenghou.site/2017/07/20/2017-07-20-vue-event/"/>
+    <id>//fenghou.site/2017/07/20/2017-07-20-vue-event/</id>
     <published>2017-07-20T02:18:56.000Z</published>
     <updated>2018-05-02T09:18:50.720Z</updated>
     
@@ -596,18 +622,18 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
-      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>Nginx配置https</title>
-    <link href="//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"/>
-    <id>//blog.fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</id>
+    <link href="//fenghou.site/2017/07/12/2017-07-12-nginx-ssl/"/>
+    <id>//fenghou.site/2017/07/12/2017-07-12-nginx-ssl/</id>
     <published>2017-07-12T09:40:27.000Z</published>
-    <updated>2018-05-02T09:18:50.720Z</updated>
+    <updated>2018-05-25T01:36:24.859Z</updated>
     
     <content type="html"><![CDATA[<p>最近刚续费阿里云服务器，肉疼中。。。<br>今天先尝试了下 把http改成https 在这里记录一下<br><a id="more"></a></p><h3 id="Http和Https"><a href="#Http和Https" class="headerlink" title="Http和Https"></a>Http和Https</h3><p>关于http和https的差别 就不说了<br>反正不是只多了个s就对了~~</p><h3 id="Linux中配置nginx"><a href="#Linux中配置nginx" class="headerlink" title="Linux中配置nginx"></a>Linux中配置nginx</h3><p>服务器上的项目是通过nginx跑起来的<br>所以主要还是围绕着nginx配置展开</p><blockquote><p>ssl on ;<br>我服务器上nginx配置编译的时候没有把ssl的模块编译进去<br>所以在这里报了缺少ssl指令的错误</p></blockquote><p>so 需要重新编译nginx<br>找到nginx下载目录 没了就就重新下~~</p><blockquote><p>./configure –with-http_ssl_module<br>很好 如果服务器上面已经安装了openssl 那么基本可以编译通过<br>yum install openssl openssl-devel<br>恩 如果编译的时候没有加载默认的 那么就需要手动配置<br>./configure –with-http_ssl_module –with-openssl=/usr/bin/openssl<br>敲黑板 这么写 编译的时候openssl会去从–with-openssl 那里取<br>所以这里必须是源码目录 不应该安装目录</p></blockquote><p>补充：填了安装目录 编译失败 竟然也找到了编译通过的方法。。<br>修改方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># vi auto/lib/openssl/conf</span><br><span class="line">CORE_INCS=<span class="string">"$CORE_INCS $OPENSSL/openssl/include"</span></span><br><span class="line">CORE_DEPS=<span class="string">"$CORE_DEPS $OPENSSL/openssl/include/openssl/ssl.h"</span></span><br><span class="line">CORE_LIBS=<span class="string">"$CORE_LIBS $OPENSSL/openssl/lib/libssl.a"</span></span><br><span class="line">CORE_LIBS=<span class="string">"$CORE_LIBS $OPENSSL/openssl/lib/libcrypto.a"</span></span><br><span class="line">改为：</span><br><span class="line">CORE_INCS=<span class="string">"$CORE_INCS $OPENSSL/include"</span></span><br><span class="line">CORE_DEPS=<span class="string">"$CORE_DEPS $OPENSSL/include/openssl/ssl.h"</span></span><br><span class="line">CORE_LIBS=<span class="string">"$CORE_LIBS $OPENSSL/lib/libssl.a"</span></span><br><span class="line">CORE_LIBS=<span class="string">"$CORE_LIBS $OPENSSL/lib/libcrypto.a"</span></span><br></pre></td></tr></table></figure></p><p>但是 make 的时候还是会报错 </p><p>make 打包成功后会在nginx源码目录的objs下生成nginx</p><blockquote><p>cp objs/nginx nginx配置目录/sbin<br>拷贝覆盖 即可</p></blockquote><p>然后配置<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">listen <span class="number">443</span>;</span><br><span class="line">ssl on;</span><br><span class="line">ssl_certificate /---------------------.pem;</span><br><span class="line">ssl_certificate_key /-----------------.key;</span><br><span class="line">ssl_session_timeout <span class="number">5</span>m;</span><br><span class="line">ssl_ciphers -----------------------------------------------;</span><br><span class="line">ssl_protocols ------------------------;</span><br><span class="line">ssl_prefer_server_ciphers on;</span><br></pre></td></tr></table></figure></p><p>配置ssl证书 基本就ok了</p><blockquote><p>sbin/nginx -t<br>  nginx: [emerg] getpwnam(“www”) failed</p></blockquote><p>错误的原因是没有创建www这个用户 解决办法</p><blockquote><p>1 在nginx.conf中 把user nobody的注释去掉既可<br>2 /usr/sbin/groupadd -f www<br>    /usr/sbin/useradd -g www www</p></blockquote><h3 id="关于证书"><a href="#关于证书" class="headerlink" title="关于证书"></a>关于证书</h3><p>生成步骤 百度。。。</p><blockquote><p>startSSL</p></blockquote><p>注册申请 生成ctr…<br>捣腾许久 终于配置成功 微信打开失败 不被认证</p><blockquote><p>Symantec Ltd</p></blockquote><p>在阿里云 免费申请ssl证书<br>nginx如果配置是全局https<br>受认证只能是 申请ssl时填写的域名<br>xx.xx 申请<br>xx.xx.xx 不被认证</p><h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>不想搞运维的前端不是个好架构</p><h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>今天下班 被分配到 小黑屋封闭开发<br>没空调。。</p><p><a href="https://www.cnblogs.com/jimisun/p/8057156.html" target="_blank" rel="noopener">nginx安装</a></p>]]></content>
     
@@ -618,18 +644,18 @@
     </summary>
     
     
-      <category term="nginx" scheme="//blog.fenghou.site/tags/nginx/"/>
+      <category term="http" scheme="//fenghou.site/tags/http/"/>
     
-      <category term="https" scheme="//blog.fenghou.site/tags/https/"/>
+      <category term="nginx" scheme="//fenghou.site/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>谈谈我的vue项目</title>
-    <link href="//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/"/>
-    <id>//blog.fenghou.site/2017/06/25/2017-06-25-vue-modules/</id>
+    <link href="//fenghou.site/2017/06/25/2017-06-25-vue-modules/"/>
+    <id>//fenghou.site/2017/06/25/2017-06-25-vue-modules/</id>
     <published>2017-06-25T12:17:35.000Z</published>
-    <updated>2018-05-02T09:18:50.720Z</updated>
+    <updated>2018-05-25T01:36:24.843Z</updated>
     
     <content type="html"><![CDATA[<p>Vue相关-整理中<br><a id="more"></a></p>]]></content>
     
@@ -640,16 +666,14 @@
     </summary>
     
     
-      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
-    
-      <category term="vuex" scheme="//blog.fenghou.site/tags/vuex/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>XX云音乐</title>
-    <link href="//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/"/>
-    <id>//blog.fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</id>
+    <link href="//fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/"/>
+    <id>//fenghou.site/2017/06/20/2017-06-20-node-simple-netease-cloud-music/</id>
     <published>2017-06-20T08:30:19.000Z</published>
     <updated>2018-05-02T09:18:50.719Z</updated>
     
@@ -662,16 +686,16 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="react" scheme="//blog.fenghou.site/tags/react/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>前端的请求</title>
-    <link href="//blog.fenghou.site/2017/05/17/2017-05-17-content-type/"/>
-    <id>//blog.fenghou.site/2017/05/17/2017-05-17-content-type/</id>
+    <link href="//fenghou.site/2017/05/17/2017-05-17-content-type/"/>
+    <id>//fenghou.site/2017/05/17/2017-05-17-content-type/</id>
     <published>2017-05-17T03:28:09.000Z</published>
     <updated>2018-05-02T09:18:50.719Z</updated>
     
@@ -688,14 +712,14 @@
     </summary>
     
     
-      <category term="http" scheme="//blog.fenghou.site/tags/http/"/>
+      <category term="http" scheme="//fenghou.site/tags/http/"/>
     
   </entry>
   
   <entry>
     <title>浅析vue数据响应</title>
-    <link href="//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/"/>
-    <id>//blog.fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</id>
+    <link href="//fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/"/>
+    <id>//fenghou.site/2017/04/15/2017-04-15-vue-observe-watch/</id>
     <published>2017-04-15T12:16:29.000Z</published>
     <updated>2018-05-02T09:18:50.719Z</updated>
     
@@ -708,14 +732,14 @@
     </summary>
     
     
-      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>Nginx在前端</title>
-    <link href="//blog.fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/"/>
-    <id>//blog.fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/</id>
+    <link href="//fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/"/>
+    <id>//fenghou.site/2017/03/31/2017-03-31-nginx-proxy-vue/</id>
     <published>2017-03-31T01:55:58.000Z</published>
     <updated>2018-05-02T09:18:50.719Z</updated>
     
@@ -728,16 +752,16 @@
     </summary>
     
     
-      <category term="nginx" scheme="//blog.fenghou.site/tags/nginx/"/>
+      <category term="nginx" scheme="//fenghou.site/tags/nginx/"/>
     
   </entry>
   
   <entry>
-    <title>骗到手的第八年@陈妞妞@我才是香坊大呲花</title>
-    <link href="//blog.fenghou.site/2017/03/23/2017-03-23-love/"/>
-    <id>//blog.fenghou.site/2017/03/23/2017-03-23-love/</id>
+    <title>骗到手的第八年</title>
+    <link href="//fenghou.site/2017/03/23/2017-03-23-love/"/>
+    <id>//fenghou.site/2017/03/23/2017-03-23-love/</id>
     <published>2017-03-23T02:22:59.000Z</published>
-    <updated>2018-05-02T09:18:50.719Z</updated>
+    <updated>2018-05-25T01:36:24.862Z</updated>
     
     <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=406346853&auto=0&height=66"></iframe><br><a id="more"></a></p><p>八年<br>九十六个月<br>两千九百二十二天</p><p><img src="/assets/blogImg/love/IMG_0053.PNG" alt="love"></p><p>那会还很瘦的陈妞妞(当然现在也不怎么胖)<br><img src="/assets/blogImg/love/IMG_0045.JPG" alt="love"></p><p><img src="/assets/blogImg/love/IMG_0051.JPG" alt="love"><br>(是的，陈妞妞现在的形象)</p><p>当陈妞妞意识到自己变胖了以后<br>深深的自责，忏悔着<br>but~~</p><p><img src="/assets/blogImg/love/IMG_0040.JPG" alt="love"></p><p>高中那会<br>我跟陈妞妞说<br>你负责貌美如花<br>我负责赚钱养家</p><p><img src="/assets/blogImg/love/IMG_0047.JPG" alt="love"><br>(I Love You)</p><p>现在<br>我正在努力<br>陈妞妞不仅仅是花<br>还兼职当上了小仙女<br>~~~</p><p><img src="/assets/blogImg/love/IMG_0054.GIF" alt="love"></p><p>多年后<br>幼儿园<br>很多小朋友争得面红耳赤<br>“我妈是老师！”<br>“我爸是警察！”<br>“我爸是局长！”</p><p>而我家小孩</p><p>云淡风轻 一脸不屑<br>“呵，我妈可是仙女！”</p><p><img src="/assets/blogImg/love/IMG_0042.JPG" alt="love"><br>(该打赏打赏，都别客气)</p>]]></content>
     
@@ -748,16 +772,16 @@
     </summary>
     
     
-      <category term="随笔" scheme="//blog.fenghou.site/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="//fenghou.site/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
-    <title>此去经年@我才是香坊大呲花</title>
-    <link href="//blog.fenghou.site/2017/03/22/2017-03-21-diary/"/>
-    <id>//blog.fenghou.site/2017/03/22/2017-03-21-diary/</id>
+    <title>此去经年</title>
+    <link href="//fenghou.site/2017/03/22/2017-03-21-diary/"/>
+    <id>//fenghou.site/2017/03/22/2017-03-21-diary/</id>
     <published>2017-03-22T06:05:31.000Z</published>
-    <updated>2018-05-02T09:18:50.719Z</updated>
+    <updated>2018-05-25T01:36:24.828Z</updated>
     
     <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=187908&auto=0&height=66"></iframe><br><a id="more"></a></p><p>昨天跟同事一起去打球<br>还没开始打，热身阶段投了会儿球<br>完了，跟跑完1000米一样一样的<br>后来还硬是打了快俩小时<br>今天全身酸爽的不行<br>连走路都走不顺</p><p>唉 老是真的老了<br>想想上次打球<br>还是去年毕业前最后的寝室南北对抗赛</p><p><img src="/assets/blogImg/2017-03-21-basekitball.jpg" alt="脆皮鸡"><br>(拍照那小子，问什么不把我照进去)</p><p>那会虽然体重跟现在差了略微几斤<br>但是照样能跑能跳</p><p>大学不是一点儿好处没有<br>它能洗去人的浮华<br>同时让人意志消磨<br>多愁善感<br>酒量大增(有吗)</p><p><img src="/assets/blogImg/2017-03-21-study.jpg" alt="脆皮鸡"></p><p><img src="/assets/blogImg/2017-03-21-IMG_0048.jpg" alt="脆皮鸡"><br>真正的成长或许就是<br>你开始低下了头<br>无论在行走还是坐着的时候<br>当头颅微微低下成为你日常生活中的主要姿势<br>你就真的长大了<br>总仰着脑袋的一定小屁孩<br>以为自己很牛x<br>其实差远了<br><img src="/assets/blogImg/2017-03-21-IMG_0050.jpg" alt="脆皮鸡"></p>]]></content>
     
@@ -768,16 +792,14 @@
     </summary>
     
     
-      <category term="随想" scheme="//blog.fenghou.site/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="随笔" scheme="//fenghou.site/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>基于Vue的CPS后台</title>
-    <link href="//blog.fenghou.site/2017/02/27/2017-02-27-%E5%9F%BA%E4%BA%8EVue%E7%9A%84CPS%E5%90%8E%E5%8F%B0/"/>
-    <id>//blog.fenghou.site/2017/02/27/2017-02-27-基于Vue的CPS后台/</id>
+    <link href="//fenghou.site/2017/02/27/2017-02-27-%E5%9F%BA%E4%BA%8EVue%E7%9A%84CPS%E5%90%8E%E5%8F%B0/"/>
+    <id>//fenghou.site/2017/02/27/2017-02-27-基于Vue的CPS后台/</id>
     <published>2017-02-27T11:17:43.000Z</published>
     <updated>2018-05-02T09:18:50.719Z</updated>
     
@@ -790,20 +812,20 @@
     </summary>
     
     
-      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
+      <category term="webpack" scheme="//fenghou.site/tags/webpack/"/>
     
-      <category term="vue" scheme="//blog.fenghou.site/tags/vue/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
-      <category term="es6" scheme="//blog.fenghou.site/tags/es6/"/>
+      <category term="es6" scheme="//fenghou.site/tags/es6/"/>
     
   </entry>
   
   <entry>
     <title>Weex</title>
-    <link href="//blog.fenghou.site/2017/02/21/2017-02-21-Weex/"/>
-    <id>//blog.fenghou.site/2017/02/21/2017-02-21-Weex/</id>
+    <link href="//fenghou.site/2017/02/21/2017-02-21-Weex/"/>
+    <id>//fenghou.site/2017/02/21/2017-02-21-Weex/</id>
     <published>2017-02-21T11:17:14.000Z</published>
-    <updated>2018-05-02T09:18:50.718Z</updated>
+    <updated>2018-05-25T01:36:24.875Z</updated>
     
     <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>]]></content>
     
@@ -814,16 +836,16 @@
     </summary>
     
     
-      <category term="weex" scheme="//blog.fenghou.site/tags/weex/"/>
+      <category term="vue" scheme="//fenghou.site/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>Rax</title>
-    <link href="//blog.fenghou.site/2017/02/17/2017-02-17-Rax/"/>
-    <id>//blog.fenghou.site/2017/02/17/2017-02-17-Rax/</id>
+    <link href="//fenghou.site/2017/02/17/2017-02-17-Rax/"/>
+    <id>//fenghou.site/2017/02/17/2017-02-17-Rax/</id>
     <published>2017-02-17T11:16:59.000Z</published>
-    <updated>2018-05-02T09:18:50.718Z</updated>
+    <updated>2018-05-25T01:36:24.870Z</updated>
     
     <content type="html"><![CDATA[<p>整理中<br><a id="more"></a></p>]]></content>
     
@@ -834,16 +856,16 @@
     </summary>
     
     
-      <category term="rax" scheme="//blog.fenghou.site/tags/rax/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>PReact</title>
-    <link href="//blog.fenghou.site/2017/02/13/2017-02-13-PReact/"/>
-    <id>//blog.fenghou.site/2017/02/13/2017-02-13-PReact/</id>
+    <link href="//fenghou.site/2017/02/13/2017-02-13-PReact/"/>
+    <id>//fenghou.site/2017/02/13/2017-02-13-PReact/</id>
     <published>2017-02-13T11:16:39.000Z</published>
-    <updated>2018-05-02T09:18:50.718Z</updated>
+    <updated>2018-05-25T01:36:24.837Z</updated>
     
     <content type="html"><![CDATA[<p>React相关-整理中<br><a id="more"></a></p>]]></content>
     
@@ -854,14 +876,14 @@
     </summary>
     
     
-      <category term="PReact" scheme="//blog.fenghou.site/tags/PReact/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>wx签名出错-URL</title>
-    <link href="//blog.fenghou.site/2017/02/13/2017-02-13-wx%E7%AD%BE%E5%90%8D%E5%87%BA%E9%94%99-URL/"/>
-    <id>//blog.fenghou.site/2017/02/13/2017-02-13-wx签名出错-URL/</id>
+    <link href="//fenghou.site/2017/02/13/2017-02-13-wx%E7%AD%BE%E5%90%8D%E5%87%BA%E9%94%99-URL/"/>
+    <id>//fenghou.site/2017/02/13/2017-02-13-wx签名出错-URL/</id>
     <published>2017-02-13T11:16:16.000Z</published>
     <updated>2018-05-02T09:18:50.718Z</updated>
     
@@ -874,14 +896,14 @@
     </summary>
     
     
-      <category term="wx" scheme="//blog.fenghou.site/tags/wx/"/>
+      <category term="wx" scheme="//fenghou.site/tags/wx/"/>
     
   </entry>
   
   <entry>
     <title>react-redux</title>
-    <link href="//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/"/>
-    <id>//blog.fenghou.site/2017/02/05/2017-02-05-react-redux/</id>
+    <link href="//fenghou.site/2017/02/05/2017-02-05-react-redux/"/>
+    <id>//fenghou.site/2017/02/05/2017-02-05-react-redux/</id>
     <published>2017-02-05T11:15:42.000Z</published>
     <updated>2018-05-02T09:18:50.718Z</updated>
     
@@ -894,14 +916,14 @@
     </summary>
     
     
-      <category term="react" scheme="//blog.fenghou.site/tags/react/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>react-flux</title>
-    <link href="//blog.fenghou.site/2017/02/04/2017-02-04-react-flux/"/>
-    <id>//blog.fenghou.site/2017/02/04/2017-02-04-react-flux/</id>
+    <link href="//fenghou.site/2017/02/04/2017-02-04-react-flux/"/>
+    <id>//fenghou.site/2017/02/04/2017-02-04-react-flux/</id>
     <published>2017-02-04T11:15:20.000Z</published>
     <updated>2018-05-02T09:18:50.718Z</updated>
     
@@ -914,14 +936,14 @@
     </summary>
     
     
-      <category term="react" scheme="//blog.fenghou.site/tags/react/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>react-immutable</title>
-    <link href="//blog.fenghou.site/2017/02/03/2017-02-03-react-immutable/"/>
-    <id>//blog.fenghou.site/2017/02/03/2017-02-03-react-immutable/</id>
+    <link href="//fenghou.site/2017/02/03/2017-02-03-react-immutable/"/>
+    <id>//fenghou.site/2017/02/03/2017-02-03-react-immutable/</id>
     <published>2017-02-03T11:14:58.000Z</published>
     <updated>2018-05-02T09:18:50.718Z</updated>
     
@@ -934,14 +956,14 @@
     </summary>
     
     
-      <category term="react" scheme="//blog.fenghou.site/tags/react/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>Canvas--毛笔字书法</title>
-    <link href="//blog.fenghou.site/2017/01/21/2017-01-21-Canvas%E6%AF%9B%E7%AC%94%E5%AD%97%E4%B9%A6%E6%B3%95/"/>
-    <id>//blog.fenghou.site/2017/01/21/2017-01-21-Canvas毛笔字书法/</id>
+    <link href="//fenghou.site/2017/01/21/2017-01-21-Canvas%E6%AF%9B%E7%AC%94%E5%AD%97%E4%B9%A6%E6%B3%95/"/>
+    <id>//fenghou.site/2017/01/21/2017-01-21-Canvas毛笔字书法/</id>
     <published>2017-01-21T11:14:18.000Z</published>
     <updated>2018-05-02T09:18:50.718Z</updated>
     
@@ -954,14 +976,14 @@
     </summary>
     
     
-      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+      <category term="canvas" scheme="//fenghou.site/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>Canvas--黑凤梨</title>
-    <link href="//blog.fenghou.site/2017/01/20/2017-01-20-Canvas%E9%BB%91%E5%87%A4%E6%A2%A8/"/>
-    <id>//blog.fenghou.site/2017/01/20/2017-01-20-Canvas黑凤梨/</id>
+    <link href="//fenghou.site/2017/01/20/2017-01-20-Canvas%E9%BB%91%E5%87%A4%E6%A2%A8/"/>
+    <id>//fenghou.site/2017/01/20/2017-01-20-Canvas黑凤梨/</id>
     <published>2017-01-20T11:13:46.000Z</published>
     <updated>2018-05-02T09:18:50.717Z</updated>
     
@@ -974,14 +996,14 @@
     </summary>
     
     
-      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+      <category term="canvas" scheme="//fenghou.site/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>Canvas--星空</title>
-    <link href="//blog.fenghou.site/2017/01/19/2017-01-19-Canvas%E6%98%9F%E7%A9%BA/"/>
-    <id>//blog.fenghou.site/2017/01/19/2017-01-19-Canvas星空/</id>
+    <link href="//fenghou.site/2017/01/19/2017-01-19-Canvas%E6%98%9F%E7%A9%BA/"/>
+    <id>//fenghou.site/2017/01/19/2017-01-19-Canvas星空/</id>
     <published>2017-01-19T11:13:18.000Z</published>
     <updated>2018-05-02T09:18:50.717Z</updated>
     
@@ -994,14 +1016,14 @@
     </summary>
     
     
-      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+      <category term="canvas" scheme="//fenghou.site/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>Canvas--刮刮卡</title>
-    <link href="//blog.fenghou.site/2017/01/18/2017-01-18-Canvas%E5%88%AE%E5%88%AE%E5%8D%A1/"/>
-    <id>//blog.fenghou.site/2017/01/18/2017-01-18-Canvas刮刮卡/</id>
+    <link href="//fenghou.site/2017/01/18/2017-01-18-Canvas%E5%88%AE%E5%88%AE%E5%8D%A1/"/>
+    <id>//fenghou.site/2017/01/18/2017-01-18-Canvas刮刮卡/</id>
     <published>2017-01-18T11:12:27.000Z</published>
     <updated>2018-05-02T09:18:50.717Z</updated>
     
@@ -1014,14 +1036,14 @@
     </summary>
     
     
-      <category term="canvas" scheme="//blog.fenghou.site/tags/canvas/"/>
+      <category term="canvas" scheme="//fenghou.site/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>谈谈js的继承</title>
-    <link href="//blog.fenghou.site/2017/01/03/2017-01-03-%E8%B0%88%E8%B0%88js%E7%9A%84%E7%BB%A7%E6%89%BF/"/>
-    <id>//blog.fenghou.site/2017/01/03/2017-01-03-谈谈js的继承/</id>
+    <link href="//fenghou.site/2017/01/03/2017-01-03-%E8%B0%88%E8%B0%88js%E7%9A%84%E7%BB%A7%E6%89%BF/"/>
+    <id>//fenghou.site/2017/01/03/2017-01-03-谈谈js的继承/</id>
     <published>2017-01-03T11:11:44.000Z</published>
     <updated>2018-05-02T09:18:50.716Z</updated>
     
@@ -1034,14 +1056,14 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>彻底理解Js中的作用域和上下文</title>
-    <link href="//blog.fenghou.site/2016/12/30/2016-12-30-%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Js%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%B8%8A%E4%B8%8B%E6%96%87/"/>
-    <id>//blog.fenghou.site/2016/12/30/2016-12-30-彻底理解Js中的作用域和上下文/</id>
+    <link href="//fenghou.site/2016/12/30/2016-12-30-%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3Js%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E4%B8%8A%E4%B8%8B%E6%96%87/"/>
+    <id>//fenghou.site/2016/12/30/2016-12-30-彻底理解Js中的作用域和上下文/</id>
     <published>2016-12-30T11:11:06.000Z</published>
     <updated>2018-05-07T07:05:12.036Z</updated>
     
@@ -1054,14 +1076,14 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>ECMA-prototype</title>
-    <link href="//blog.fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/"/>
-    <id>//blog.fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/</id>
+    <link href="//fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/"/>
+    <id>//fenghou.site/2016/12/28/2016-12-28-ECMA-prototype/</id>
     <published>2016-12-28T11:09:23.000Z</published>
     <updated>2018-05-02T09:18:50.716Z</updated>
     
@@ -1074,14 +1096,14 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>你真的学好Js了吗</title>
-    <link href="//blog.fenghou.site/2016/12/27/2016-12-27-%E4%BD%A0%E7%9C%9F%E7%9A%84%E5%AD%A6%E5%A5%BDJs/"/>
-    <id>//blog.fenghou.site/2016/12/27/2016-12-27-你真的学好Js/</id>
+    <link href="//fenghou.site/2016/12/27/2016-12-27-%E4%BD%A0%E7%9C%9F%E7%9A%84%E5%AD%A6%E5%A5%BDJs/"/>
+    <id>//fenghou.site/2016/12/27/2016-12-27-你真的学好Js/</id>
     <published>2016-12-27T11:08:58.000Z</published>
     <updated>2018-05-02T09:18:50.716Z</updated>
     
@@ -1094,16 +1116,16 @@
     </summary>
     
     
-      <category term="js" scheme="//blog.fenghou.site/tags/js/"/>
+      <category term="js" scheme="//fenghou.site/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>从实时聊天谈谈通信协议</title>
-    <link href="//blog.fenghou.site/2016/12/26/2016-12-26-%E5%AE%9E%E6%97%B6%E8%81%8A%E5%A4%A9%E8%B0%88%E8%B0%88%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/"/>
-    <id>//blog.fenghou.site/2016/12/26/2016-12-26-实时聊天谈谈通信协议/</id>
+    <link href="//fenghou.site/2016/12/26/2016-12-26-%E5%AE%9E%E6%97%B6%E8%81%8A%E5%A4%A9%E8%B0%88%E8%B0%88%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/"/>
+    <id>//fenghou.site/2016/12/26/2016-12-26-实时聊天谈谈通信协议/</id>
     <published>2016-12-26T11:08:20.000Z</published>
-    <updated>2018-05-02T09:18:50.716Z</updated>
+    <updated>2018-05-25T01:36:24.841Z</updated>
     
     <content type="html"><![CDATA[<p>作为前端开发人员<br>了解前后端通信协议还是很必须的<br>尤其是在用Node写服务端的时候<br>对于请求的响应处理和返回有很大的帮助<br><a id="more"></a><br>客户端与服务端的通信协议有HTTP(HTTPS)协议和WebSocket协议<br>HTTP协议是无状态的，服务端进行处理返回response后很难主动向客户端发送数据<br>WebSocket协议实现了客户端与服务端的全双工通信<br>扩展了客户端与服务端的通信功能<br>使服务端也能主动向客户端发送数据<br>在WebSocket协议提出之前<br>要实现即时通信、实时数据这样的功能，经常会使用轮询(polling)和Comet技术</p><p>轮询是最原始的实现实时Web应用的解决方案。<br>轮询技术要求客户端以设定的时间间隔周期性地向服务端发送请求，频繁地查询是否有新的数据改动。<br>明显地，这种方法会导致过多不必要的请求，浪费流量和服务器资源</p><p>Comet技术又可以分为长轮询和流技术。<br>长轮询改进了上述的轮询技术，减小了无用的请求。<br>它会为某些数据设定过期时间，当数据过期后才会向服务端发送请求；<br>这种机制适合数据的改动不是特别频繁的情况。<br>流技术通常是指客户端使用一个隐藏的窗口与服务端建立一个HTTP长连接，<br>服务端会不断更新连接状态以保持HTTP长连接存活；<br>这样的话，服务端就可以通过这条长连接主动将数据发送给客户端；<br>流技术在大并发环境下，可能会考验到服务端的性能。</p><p>WebSocket，真正实现了Web的实时通信</p><h3 id="Http协议"><a href="#Http协议" class="headerlink" title="Http协议"></a>Http协议</h3><p>HTTP(Hypertext Transfer Protocol 超文本传输协议)是一个基于请求与响应模式的、无状态的、应用层的协议<br>HTTP限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接<br>HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。<br>缺少状态意味着如果后续处理需要前面的信息，则它必须重传，<br>这样可能导致每次连接传送的数据量增大。<br>另一方面，在服务器不需要先前信息时它的应答就较快。</p><blockquote><p>HTTP的常用请求方法<br>  GET 请求获取Request-URI所标识的资源<br>  POST 在Request-URI所标识的资源后附加新的数据<br>  HEAD 请求获取由Request-URI所标识的资源的响应消息报头<br>  请求和响应都包含请求头或响应头header和可选的请求体或响应体Body(自由的文本)<br>  只有POST请求包含一个Body<br>  Content-type常用的MiME类型<br>  application/x-wwwform-urlencoded 经过编码的键值对请求字符串(Body)，web服务器需要解码字符串获得参数<br>  text/xml,application/xml Body是XML文档<br>  text/plain 普通文本<br>  text/html, text/xhtml Body是(X)HTML内容，web服务器端发送的标准web页面或内容片段<br>  text/javascript Body是一段JavaScript代码<br>  image/png, image/jpeg, image/gif：Body是二进制图像</p></blockquote><h3 id="HTTPS协议"><a href="#HTTPS协议" class="headerlink" title="HTTPS协议"></a>HTTPS协议</h3><p>HTTPS(Secure Hypertext Transfer Protocol 安全超文本传输协议)<br>是一个安全通信通道，它基于HTTP开发，用于在客户计算机和服务器之间交换信息。<br>它使用安全套接字层(SSL)进行信息交换，简单来说它是HTTP的安全版。<br>HTTP协议是不安全的，可以轻松对窃听你跟 Web 服务器之间的数据传输<br>在很多情况下，客户和服务器之间传输的是敏感信息，需要防止未经授权的访问</p><p>HTTPS协议在TCP协议上加了层SSL协议</p><blockquote><p>网络七层协议<br>  应用层 Http Https<br>  表示层 SSL TLS<br>  会话层<br>  传输层 TCP<br>  网络层 IP<br>  数据链路层<br>  物理层</p></blockquote><p>SSL 包含如下动作：<br>1.验证服务器端<br>2.允许客户端和服务器端选择加密算法和密码，确保双方都支持<br>3.验证客户端(可选)<br>4.使用公钥加密技术来生成共享加密数据<br>5.创建一个加密的 SSL 连接<br>6.基于该 SSL 连接传递 HTTP 请求</p><h3 id="TCP协议"><a href="#TCP协议" class="headerlink" title="TCP协议"></a>TCP协议</h3><p>TCP(Transmission Control Protocol 传输控制协议)是一种面向连接的、可靠的、基于字节流的传输层通信协议<br>连接时三次握手<br>第一次Client端发送SYN报文请求连接<br>第二次Server端接受连接后回复ACK报文，并且为这次连接分配资源<br>第三次Client端接收ACK报文后向Server端发送ACK报文，并分配资源<br>TCP连接建立</p><p>断开时四次握手<br>第一次Client发起中断连接，发送FIN报文<br>第二次Server端接到FIN报文后，发送ACK报文，(可能还有数据没有传输完)，Client进入FIN_WAIT状态<br>第三次Server端确定数据已经发送完成，则向Client端发送FIN报文，准备好关闭连接<br>第四次Client端接收FIN报文,知道可以关闭连接，但不相信网络,怕Server端不知道要关闭，发送ACK报文，并进入TIME_WAIT状态<br>Server端收到ACK报文后断开连接<br>Client端等待了一定时间(依赖实现方法)后，没有收到Server回复，表示Server端已正常关闭，Client端也关闭链接<br>TCP连接关闭</p><h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><p>AJAX (Asynchronous Javascript And XML 异步JavaScript和XML)，是指一种创建交互式网页应用的网页开发技术。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* open(method,url,async) 规定请求的类型、URL 以及是否异步处理请求</span></span><br><span class="line"><span class="comment">* method：请求的类型；GET 或 POST</span></span><br><span class="line"><span class="comment">* url：文件在服务器上的位置</span></span><br><span class="line"><span class="comment">* async：true（异步）或 false（同步）</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* send(string) 将请求发送到服务器</span></span><br><span class="line"><span class="comment">* string：仅用于 POST 请求</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* setRequestHeader(header,value) 向请求添加 HTTP 头</span></span><br><span class="line"><span class="comment">* header: 规定头的名称</span></span><br><span class="line"><span class="comment">* value: 规定头的值</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* responseText获得字符串形式的响应数据。</span></span><br><span class="line"><span class="comment">* responseXML获得XML形式的响应数据。</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* readyState 存有 XMLHttpRequest 的状态 从 0 到 4 发生变化</span></span><br><span class="line"><span class="comment">* 0: 请求未初始化</span></span><br><span class="line"><span class="comment">* 1: 服务器连接已建立</span></span><br><span class="line"><span class="comment">* 2: 请求已接收</span></span><br><span class="line"><span class="comment">* 3: 请求处理中</span></span><br><span class="line"><span class="comment">* 4: 请求已完成，且响应已就绪</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* status</span></span><br><span class="line"><span class="comment">* 200: "OK"</span></span><br><span class="line"><span class="comment">* 404: 未找到页面</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">var</span> xmlhttp = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xmlhttp.open(<span class="string">'POST'</span>,url,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.setRequestHeader(<span class="string">'Content-type'</span>,<span class="string">'application/x-www-form-urlencoded'</span>);</span><br><span class="line">xmlhttp.send(<span class="string">'page=2&amp;size=10'</span>);</span><br><span class="line">xmlhttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(xmlhttp.readystate == <span class="number">4</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(xmlhttp.status == <span class="number">200</span>)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(xmlhttp.responseText);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//异常</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h3><p>websocket协议本质上是一个基于TCP的协议<br>是先通过HTTP/HTTPS协议发起一条特殊的HTTP请求进行握手后创建一个用于交换数据的TCP连接<br>此后服务端与客户端通过此TCP连接进行实时通信</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//客户端</span></span><br><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> WebSocket(<span class="string">'ws://localhost:8181/'</span>);</span><br><span class="line"><span class="comment">//连接发生错误的回调方法</span></span><br><span class="line">ws.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//websocket 在任何时候都会处于下面4种状态中的其中一种</span></span><br><span class="line"><span class="comment">//CONNECTING (0) 表示还没建立连接</span></span><br><span class="line"><span class="comment">//OPEN (1)       已经建立连接，可以进行通讯</span></span><br><span class="line"><span class="comment">//CLOSING (2)    通过关闭握手，正在关闭连接</span></span><br><span class="line"><span class="comment">//CLOSED (3)     连接已经关闭或无法打开</span></span><br><span class="line"><span class="comment">//WebSocket.OPEN = 1;</span></span><br><span class="line"><span class="comment">//连接成功建立的回调方法</span></span><br><span class="line">ws.onopen = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ws.readyState === <span class="number">1</span>)&#123;</span><br><span class="line">        wsSend(<span class="string">'msg'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//接收到消息的回调方法</span></span><br><span class="line">ws.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//e.data</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//连接关闭的回调方法</span></span><br><span class="line">ws.onclose = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsSend</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">    ws.send(rs);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsEnd</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    ws.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//服务端(Node)</span></span><br><span class="line"><span class="keyword">var</span> WebSocketServer = <span class="built_in">require</span>(<span class="string">'ws'</span>).Server,</span><br><span class="line">    ws = <span class="keyword">new</span> WebSocketServer(&#123; <span class="attr">port</span>: <span class="number">8181</span> &#125;),</span><br><span class="line">    clients = [],</span><br><span class="line">    clientNum = <span class="number">0</span>;</span><br><span class="line">ws.on(<span class="string">'connection'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">ws</span>)</span>&#123;</span><br><span class="line">    clientNum ++;</span><br><span class="line">    clients.push(&#123;<span class="string">'ws'</span>:ws&#125;);</span><br><span class="line">    ws.on(<span class="string">'message'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">        wsSend(rs);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wsSend</span>(<span class="params">rs</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;clients.length;i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> clientSocket = clients[i].ws;</span><br><span class="line">        <span class="keyword">if</span> (clientSocket.readyState === <span class="number">1</span>) &#123;</span><br><span class="line">            clientSocket.send(<span class="built_in">JSON</span>.stringify(rs));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -1114,18 +1136,16 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="http" scheme="//blog.fenghou.site/tags/http/"/>
-    
-      <category term="websocket" scheme="//blog.fenghou.site/tags/websocket/"/>
+      <category term="http" scheme="//fenghou.site/tags/http/"/>
     
   </entry>
   
   <entry>
     <title>Git自动化部署</title>
-    <link href="//blog.fenghou.site/2016/12/22/2016-12-22-git%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
-    <id>//blog.fenghou.site/2016/12/22/2016-12-22-git自动化部署/</id>
+    <link href="//fenghou.site/2016/12/22/2016-12-22-git%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
+    <id>//fenghou.site/2016/12/22/2016-12-22-git自动化部署/</id>
     <published>2016-12-22T11:07:31.000Z</published>
     <updated>2018-05-02T09:18:50.714Z</updated>
     
@@ -1138,18 +1158,18 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="git" scheme="//blog.fenghou.site/tags/git/"/>
+      <category term="git" scheme="//fenghou.site/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>1px != 1px -- 移动端适配浅析</title>
-    <link href="//blog.fenghou.site/2016/12/19/2016-12-19-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/"/>
-    <id>//blog.fenghou.site/2016/12/19/2016-12-19-移动端适配/</id>
+    <link href="//fenghou.site/2016/12/19/2016-12-19-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D/"/>
+    <id>//fenghou.site/2016/12/19/2016-12-19-移动端适配/</id>
     <published>2016-12-19T11:06:45.000Z</published>
-    <updated>2018-05-02T09:18:50.713Z</updated>
+    <updated>2018-05-25T01:36:24.820Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/blogImg/rem-dpr.png" alt="px"><br><a id="more"></a></p><p>css中我们一般使用px作为单位<br>在pc上css中的1个像素往往对应着电脑屏幕中的1个物理像素<br>这可能会给我们造成一个错觉<br>css中的像素等于设备的物理像素<br>但实际情况却并非如此<br>css中的像素只是一个抽象的单位<br>在不同的设备或不同的环境中<br>css中的1px所代表的设备物理像素是不同的</p><p>典型的就是retina屏</p><p>首先我们先了解几个概念</p><h3 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h3><p>viewport 是用户网页的可视区域<br>pc中就是屏幕宽度<br>移动设备中viewport(这个虚拟窗口)比屏幕宽 一般为980</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line">移动端布局viewport的宽度设为理想宽度</span><br><span class="line">layout viewport 默认的viewport 比屏幕宽 <span class="built_in">document</span>.documentElement.clientWidth</span><br><span class="line">visual viewport  浏览器可视区域的大小 <span class="built_in">window</span>.innerWidth</span><br><span class="line">ideal viewport 最适合移动设备的viewport</span><br><span class="line">width：控制 viewport 的大小，可以指定的一个值，如果 <span class="number">600</span>，或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 <span class="number">100</span>% 时的 CSS 的像素）。</span><br><span class="line">height：和 width 相对应，指定高度。</span><br><span class="line">initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。</span><br><span class="line">maximum-scale：允许用户缩放到的最大比例。</span><br><span class="line">minimum-scale：允许用户缩放到的最小比例。</span><br><span class="line">user-scalable：用户是否可以手动缩放。</span><br></pre></td></tr></table></figure><h3 id="物理像素-physical-pixel"><a href="#物理像素-physical-pixel" class="headerlink" title="物理像素(physical pixel)"></a>物理像素(physical pixel)</h3><p>一个物理像素是显示器(手机屏幕)上最小的物理显示单元<br>在操作系统的调度下<br>每一个设备像素都有自己的颜色值和亮度值。</p><h3 id="设备独立像素-density-independent-pixel"><a href="#设备独立像素-density-independent-pixel" class="headerlink" title="设备独立像素(density-independent pixel)"></a>设备独立像素(density-independent pixel)</h3><p>设备独立像素(也叫密度无关像素)<br>可以认为是计算机坐标系统中得一个点<br>这个点代表一个可以由程序使用的虚拟像素(比如: css像素)<br>简单点就是屏幕宽高</p><h3 id="设备像素比-device-pixel-ratio"><a href="#设备像素比-device-pixel-ratio" class="headerlink" title="设备像素比(device pixel ratio)"></a>设备像素比(device pixel ratio)</h3><p>设备像素比 ＝ 物理像素 / 设备独立像素<br>5,6的dpr=2，1个css像素等于2个物理像素<br>6p的dpr=3,1个css像素等于3个物理像素</p><p>那首先我们在移动端布局，viewport肯定不能是默认的值<br>最终viewport宽度等于应该等于设备的宽度<br>我们的布局视图应该是 按照物理像素来布局<br>设备独立像素可获得<br>设备像素比 window.devicePixelRatio<br>现在假设 在iphone6上布局</p><p>此时dpr = 2,<br>dip = 375<br>物理像素应该是 dpr * dip = 750<br>div{<br>border-top:1px solid #000;<br>}<br>现在在页面上要实现一个1px的上边框<br>由于移动端布局viewport缩成设备宽度<br>而分辨率没有变<br>所以这时的1px会有2px的效果</p><p>这个时候可以手动将viewport 宽度设成物理像素的宽度，然后将整个页面缩小 dpr 倍</p><p>1px 的问题解决了，那如何解决在不同手机显示设计稿中的一个100x100的div<br>设计稿 750<br>其中div 100x100<br>750的设计稿对应的是iPhone6<br>结合上面viewport的缩放<br>div{<br>width:100px;<br>height:100px;<br>}<br>在6上跟设计稿是完全相同的<br>而在5(640)上会变大</p><p>这个时候可以通过rem在不同设备上动态计算出比例值</p><p>假设在750设计稿中 1rem = 100px<br>那么在640设计稿中 1rem = 640/750*100px<br>此时1rem 不管在5上还是6上显示都完全跟在设计稿中显示效果相同</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//html</span></span><br><span class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span><br><span class="line"><span class="comment">//动态计算rem</span></span><br><span class="line"><span class="keyword">var</span> domDocEL = <span class="built_in">window</span>.document.documentElement,</span><br><span class="line">    mateViewPort = <span class="built_in">window</span>.document.querySelector(<span class="string">'meta[name="viewport"]'</span>),</span><br><span class="line">    nBasePsdWidth = <span class="number">750</span> / <span class="number">100</span>,</span><br><span class="line">    nDpr = <span class="built_in">window</span>.devicePixelRatio,</span><br><span class="line">    nScale = <span class="number">1</span> / nDpr,</span><br><span class="line">    nLayout = domDocEL.clientWidth,</span><br><span class="line">    nRem = nLayout * nDpr / nBasePsdWidth;</span><br><span class="line">domDocEL.style.fontSize = rem +<span class="string">'px'</span>;</span><br><span class="line">mateViewPort.setAttribute(<span class="string">'content'</span>,<span class="string">'width='</span>+nDpr*nLayout+<span class="string">',initial-scale='</span>+nScale+<span class="string">',maximum-scale='</span>+nScale+<span class="string">',minimum-scale='</span>+nScale+<span class="string">',user-scalable=no'</span>);</span><br></pre></td></tr></table></figure><p>对于字体可以用写个mixin方法<br>根据不同的dpr设置字号</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@mixin px2rem($name,$px) &#123;</span><br><span class="line">   [data-dpr=<span class="string">"2"</span>] &amp; &#123;</span><br><span class="line">     #&#123;$name&#125;: $px*2/2+px;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>移动端布局将viewport设成物理像素的大小,然后在缩放为dpr的倒数倍。<br>dpr不存在？<br>简单点~~~<br>那就指定为1！</p>]]></content>
     
@@ -1160,16 +1180,14 @@
     </summary>
     
     
-      <category term="css" scheme="//blog.fenghou.site/tags/css/"/>
-    
-      <category term="rem" scheme="//blog.fenghou.site/tags/rem/"/>
+      <category term="css" scheme="//fenghou.site/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>react</title>
-    <link href="//blog.fenghou.site/2016/12/18/2016-12-18-react/"/>
-    <id>//blog.fenghou.site/2016/12/18/2016-12-18-react/</id>
+    <link href="//fenghou.site/2016/12/18/2016-12-18-react/"/>
+    <id>//fenghou.site/2016/12/18/2016-12-18-react/</id>
     <published>2016-12-18T11:06:01.000Z</published>
     <updated>2018-05-02T09:18:50.713Z</updated>
     
@@ -1182,14 +1200,14 @@
     </summary>
     
     
-      <category term="react" scheme="//blog.fenghou.site/tags/react/"/>
+      <category term="react" scheme="//fenghou.site/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>webpack配置</title>
-    <link href="//blog.fenghou.site/2016/12/16/2016-12-16-webpack/"/>
-    <id>//blog.fenghou.site/2016/12/16/2016-12-16-webpack/</id>
+    <link href="//fenghou.site/2016/12/16/2016-12-16-webpack/"/>
+    <id>//fenghou.site/2016/12/16/2016-12-16-webpack/</id>
     <published>2016-12-16T11:05:13.000Z</published>
     <updated>2018-05-02T09:18:50.713Z</updated>
     
@@ -1202,14 +1220,14 @@
     </summary>
     
     
-      <category term="webpack" scheme="//blog.fenghou.site/tags/webpack/"/>
+      <category term="webpack" scheme="//fenghou.site/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>学点运维，配个服务器</title>
-    <link href="//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/"/>
-    <id>//blog.fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</id>
+    <link href="//fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/"/>
+    <id>//fenghou.site/2016/12/15/2016-12-15-aliyun-yunwei/</id>
     <published>2016-12-15T11:04:25.000Z</published>
     <updated>2018-05-02T09:18:50.713Z</updated>
     
@@ -1222,18 +1240,18 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
-      <category term="linux" scheme="//blog.fenghou.site/tags/linux/"/>
+      <category term="linux" scheme="//fenghou.site/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>In city</title>
-    <link href="//blog.fenghou.site/2016/12/14/2016-12-14-incity/"/>
-    <id>//blog.fenghou.site/2016/12/14/2016-12-14-incity/</id>
+    <link href="//fenghou.site/2016/12/14/2016-12-14-incity/"/>
+    <id>//fenghou.site/2016/12/14/2016-12-14-incity/</id>
     <published>2016-12-14T11:03:52.000Z</published>
-    <updated>2018-05-02T09:18:50.712Z</updated>
+    <updated>2018-05-25T01:36:24.854Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/assets/blogImg/city.jpg" alt="city"></p><a id="more"></a><p>悠然<br>随心<br>随性<br>随缘</p><p>杭州，省会<br>美丽的西湖（我也只去过西湖。。）<br>一年前，在这<br>我开启了前端之旅</p><p>那谁说过，在风口，是只猪也能飞起来。<br>何况是在杭州这样的互联网台风中。。</p><p>但是风过了，依然在飞的却是鹰</p><p>麻雀从不担心树枝会断<br>因为他相信的不是树枝<br>而是自己的翅膀</p><p>身处互联网大时代<br>机会很多，机遇很多<br>首先飞起来<br>然后去充实自己<br>不断学习不断进步</p><p>最后<br>风即使过了<br>我们也进化成了鹰</p>]]></content>
     
@@ -1244,14 +1262,14 @@
     </summary>
     
     
-      <category term="随想" scheme="//blog.fenghou.site/tags/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随笔" scheme="//fenghou.site/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>Node-Spider</title>
-    <link href="//blog.fenghou.site/2016/12/13/2016-12-13-node-spider/"/>
-    <id>//blog.fenghou.site/2016/12/13/2016-12-13-node-spider/</id>
+    <link href="//fenghou.site/2016/12/13/2016-12-13-node-spider/"/>
+    <id>//fenghou.site/2016/12/13/2016-12-13-node-spider/</id>
     <published>2016-12-13T11:03:06.000Z</published>
     <updated>2018-05-02T09:18:50.712Z</updated>
     
@@ -1264,14 +1282,14 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>Node-server</title>
-    <link href="//blog.fenghou.site/2016/12/13/2016-12-13-node-server/"/>
-    <id>//blog.fenghou.site/2016/12/13/2016-12-13-node-server/</id>
+    <link href="//fenghou.site/2016/12/13/2016-12-13-node-server/"/>
+    <id>//fenghou.site/2016/12/13/2016-12-13-node-server/</id>
     <published>2016-12-13T11:02:26.000Z</published>
     <updated>2018-05-02T09:18:50.712Z</updated>
     
@@ -1284,16 +1302,16 @@
     </summary>
     
     
-      <category term="node" scheme="//blog.fenghou.site/tags/node/"/>
+      <category term="node" scheme="//fenghou.site/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>MarkDown语法</title>
-    <link href="//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/"/>
-    <id>//blog.fenghou.site/2016/12/12/2016-12-12-md-rule/</id>
+    <link href="//fenghou.site/2016/12/12/2016-12-12-md-rule/"/>
+    <id>//fenghou.site/2016/12/12/2016-12-12-md-rule/</id>
     <published>2016-12-12T02:25:27.000Z</published>
-    <updated>2018-05-02T09:18:50.712Z</updated>
+    <updated>2018-05-24T07:31:02.964Z</updated>
     
     <content type="html"><![CDATA[<p>markdown 语法<br><a id="more"></a></p><h1 id="A"><a href="#A" class="headerlink" title="A"></a>A</h1><h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><hr><p><code>亮不亮</code></p><p><a href="http://blog.csdn.net/guodongxiaren" title="悬停显示" target="_blank" rel="noopener">我的博客</a></p><ul><li>ES<ul><li>JS<ul><li>JS1</li></ul></li></ul></li></ul><blockquote><p>数据结构</p><blockquote><p>树</p><blockquote><p>二叉树</p><blockquote><p>平衡二叉树</p><blockquote><p>满二叉树</p></blockquote></blockquote></blockquote></blockquote></blockquote><table><thead><tr><th>第一格表头</th><th>第二格表头</th></tr></thead><tbody><tr><td>内容单元格 第一列第一格</td><td>内容单元格第二列第一格</td></tr><tr><td>内容单元格 第一列第二格 多加文字</td><td>内容单元格第二列第二格</td></tr></tbody></table><p>加删除线像这样用： <del>删除这些</del></p><ul><li>[x] 支持 @提到某人、#引用、<a href="">链接</a>、<strong>格式化</strong> 和 <del>标签</del> 等语法</li><li>[x] 需要使用列表语法来激活（无序或有序列表均可）</li><li>[x] 这是一个已完成项目</li><li>[ ] 这是一个未完成项目</li></ul>]]></content>
     
@@ -1304,7 +1322,7 @@
     </summary>
     
     
-      <category term="markdown" scheme="//blog.fenghou.site/tags/markdown/"/>
+      <category term="markdown" scheme="//fenghou.site/tags/markdown/"/>
     
   </entry>
   

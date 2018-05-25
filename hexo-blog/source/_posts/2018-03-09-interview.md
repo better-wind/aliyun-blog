@@ -1,8 +1,8 @@
 title: Knowledge
 date: 2018-03-09 11:18:48
 tags:
-    - React
-    - Vue
+    - react
+    - vue
 ---
 MVVM
 <!--more-->

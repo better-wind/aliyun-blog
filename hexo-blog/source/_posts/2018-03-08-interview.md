@@ -1,9 +1,9 @@
 title: Knowledge
 date: 2018-03-08 11:19:05
 tags:
-    - Node
-    - Linux
-    - Nginx
+    - node
+    - linux
+    - nginx
 ---
 Node && Linux && Nginx && 自动化脚本
 <!--more-->

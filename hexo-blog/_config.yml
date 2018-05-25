@@ -12,7 +12,7 @@ keywords: "前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极�
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: //blog.fenghou.site
+url: //fenghou.site
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -96,11 +96,11 @@ exclude_generator:
 #  branch: master
 
 deploy:
-  type: rsync
-  host: 120.24.181.238
-  user: root
-  root: /usr/local/nginx/litten.me/
-  port: 22
+  type:
+  host:
+  user:
+  root:
+  port:
 
 sitemap:
     path: sitemap.xml
