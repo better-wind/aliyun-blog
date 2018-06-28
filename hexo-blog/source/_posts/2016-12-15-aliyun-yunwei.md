@@ -103,7 +103,10 @@ error:fatal: Unable to find remote helper for ‘https’
 
 
 [Linux安装git](https://www.cnblogs.com/lhbryant/p/6928894.html)
-那么这解决问题的过程 就比解决问题来的跟有用
-前提是问题是你自己解决的
+
+###  常用的命令
+ssh连接远程服务器   ssh name@ip
+拷贝服务器文件到本地 scp [-r](文件) name@ip:服务器地址 本地地址
+
 
 
