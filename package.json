@@ -4,7 +4,8 @@
   "description": "aliyun,blog",
   "main": "server-blog.js",
   "scripts": {
-    "build": "node server-blog.js"
+    "build": "node server-blog.js",
+    "release":"sh shell/release.sh"
   },
   "repository": {
     "type": "git",

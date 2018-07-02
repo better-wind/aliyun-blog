@@ -1,4 +1,4 @@
-title: 'iterm+zsh配置'
+title: 'ohmyzsh配置'
 date: 2018-06-29 10:20:52
 tags:
     -

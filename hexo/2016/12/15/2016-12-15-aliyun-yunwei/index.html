@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Louis Blog">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png">
-<meta property="og:updated_time" content="2018-05-02T09:18:50.713Z">
+<meta property="og:updated_time" content="2018-06-28T05:57:16.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学点运维，配个服务器">
 <meta name="twitter:image" content="http://imgs.ebrun.com/resources/2016_11/2016_11_23/2016112329114798900788972.png">
@@ -200,7 +200,8 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>1、查看当前git版本：git –version<br>  查看最新版git：访问<a href="https://www.kernel.org/pub/software/scm/git/" target="_blank" rel="noopener">https://www.kernel.org/pub/software/scm/git/</a><br>  或者<a href="https://github.com/git/git/releases" target="_blank" rel="noopener">https://github.com/git/git/releases</a><br>  2、官网下载：<br>  wget <a href="https://Github.com/Git/Git/archive/v2.11.0.tar.gz" target="_blank" rel="noopener">https://Github.com/Git/Git/archive/v2.11.0.tar.gz</a><br>  （建议本机迅雷下载rz到服务器,安装yum install lrzsz后rz即可）<br>  解压：tar -zxvf git-2.11.0.tar.gz<br>  3、cd git-2.11.0<br>  4、移除旧版本git：yum remove git<br>  5、make configure<br>  如果报错/bin/sh: autoconf: command not found：<br>  安装libtool即可：yum install install autoconf automake libtool<br>  正常会打印：GEN configure<br>  执行<br>  6、./configure –prefix=/usr/local/git –with-iconv =/usr/local/lib（建议优先尝试后者）<br>  或者<br>  ./configure –prefix=/usr/local/git –with-iconv –with-curl –with-expat=/usr/local/lib（如果没有安装libiconv请自行安装）<br>  make &amp;&amp; make install<br>  ①如果报错：cache.h:40:18: fatal error: zlib.h: No such file or directory<br>  安装zlib：yum install zlib、yum install zlib-devel<br>  ②如果报错：make[1]: *** [perl.mak] Error 2<br>  安装：yum install perl-ExtUtils-MakeMaker package<br>  7、echo “export PATH=$PATH:/usr/local/git/bin” &gt;&gt; /etc/bashrc<br>  8、source /etc/bashrc<br>  9、git –version<br>  编译git时报错： zlib.h: No such file or directory<br>      缺少 zlib的头文件， 开发包没装，<br>      yum install zlib （系统默认已经装上）<br>      yum install zlib-devel<br>  git clone时候提示fatal: Unable to find remote helper for ‘https’<br>  yum install libcurl-devel<br>  然后按照上诉步骤重新安装编译git即可</p>
 </blockquote>
-<p><a href="https://www.cnblogs.com/lhbryant/p/6928894.html" target="_blank" rel="noopener">Linux安装git</a><br>那么这解决问题的过程 就比解决问题来的跟有用<br>前提是问题是你自己解决的</p>
+<p><a href="https://www.cnblogs.com/lhbryant/p/6928894.html" target="_blank" rel="noopener">Linux安装git</a></p>
+<h3 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h3><p>ssh连接远程服务器   ssh name@ip<br>拷贝服务器文件到本地 scp <a href="文件">-r</a> name@ip:服务器地址 本地地址</p>
 
       
 
@@ -390,7 +391,7 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -398,7 +399,15 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+            
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+            
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -406,15 +415,11 @@ var _hmt = _hmt || [];
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-            
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
             
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
@@ -427,10 +432,6 @@ var _hmt = _hmt || [];
             
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-            
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
               <li class="article-tag-list-item">
