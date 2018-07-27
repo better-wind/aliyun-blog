@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//fenghou.site">
-  <title>Louis Blog</title>
+  <title>https配置的坑 | Louis Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="博客">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Louis Blog">
-<meta property="og:url" content="//fenghou.site/page/6/index.html">
+  <meta name="description" content="配置https注意的坑">
+<meta name="keywords" content="linux,nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="https配置的坑">
+<meta property="og:url" content="//fenghou.site/2018/07/27/2018-07-27-nginx-ssl-https/index.html">
 <meta property="og:site_name" content="Louis Blog">
-<meta property="og:description" content="博客">
+<meta property="og:description" content="配置https注意的坑">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-27T02:07:59.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Louis Blog">
-<meta name="twitter:description" content="博客">
+<meta name="twitter:title" content="https配置的坑">
+<meta name="twitter:description" content="配置https注意的坑">
   
     <link rel="alternative" href="/atom.xml" title="Louis Blog" type="application/atom+xml">
   
@@ -157,34 +158,64 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2017-03-21-diary" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-2018-07-27-nginx-ssl-https" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/22/2017-03-21-diary/">此去经年</a>
+    <h1 class="article-title" itemprop="name">
+      https配置的坑
     </h1>
   
 
         
-        <a href="/2017/03/22/2017-03-21-diary/" class="archive-article-date">
-  	<time datetime="2017-03-22T06:05:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-22</time>
+        <a href="/2018/07/27/2018-07-27-nginx-ssl-https/" class="archive-article-date">
+  	<time datetime="2018-07-27T01:44:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://music.163.com/outchain/player?type=2&id=187908&auto=0&height=66"></iframe><br>
-        
-          <!--<a class="article-more-a" href="/2017/03/22/2017-03-21-diary/#more">more</a>-->
-        
+        <p>配置https注意的坑<br><a id="more"></a></p>
+<h3 id="开启nginx-ssl模块"><a href="#开启nginx-ssl模块" class="headerlink" title="开启nginx ssl模块"></a>开启nginx ssl模块</h3><p>nginx 需要开启ssl模块</p>
+<p>/usr/local/nginx/sbin/nginx -V<br>查看安装时已经开启的模块信息<br>like this<br>–prefix=/usr/local/nginx –with-http_stub_status_module<br>那么 开启ssl配置<br>./configure –prefix=/usr/local/nginx –with-http_stub_status_module –with-http_ssl_module</p>
+<p>然后make &amp;&amp; make install 就ok了<br>网上说直接这么操作会覆盖掉原来的nginx配置<br>我这边nginx.conf 的配置什么的都还在 没什么影响<br>担心被覆盖的 不要执行make install 可以先 克隆下来<br>cp /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.bak<br>cp ./objs/nginx /usr/local/nginx/sbin/<br>直接用新的nginx 去替换 sbin里的nginx 就OK了</p>
+<h3 id="服务器端口开启"><a href="#服务器端口开启" class="headerlink" title="服务器端口开启"></a>服务器端口开启</h3><p>唉 在这里寻寻觅觅了小半天不知道https访问不了的原因</p>
+<p>https 需要服务器开启443端口的监听</p>
+<p>一般的阿里云啊腾讯云啊 都可以配置规则组<br>但是配完规则组 记得重启服务器</p>
+<p>nginx 关闭命令<br>ps -ef|grep nginx   //查看进程号<br>//正常停止<br>kill -QUIT 2072<br>//快速停止<br>kill -TERM 2072<br>kill -INT 2072</p>
+<p>//强制停止<br>pkill -9 nginx</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p">Gives the rose fragrance in hand</p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wxpay.jpg">
+                      <span class="reward-type">WeChat</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -195,79 +226,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/22/2017-03-21-diary/">展开全文</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-02-27-基于Vue的CPS后台" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/27/2017-02-27-基于Vue的CPS后台/">基于Vue的CPS后台</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/27/2017-02-27-基于Vue的CPS后台/" class="archive-article-date">
-  	<time datetime="2017-02-27T11:17:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>上周结束了在想去的最后一个项目<br>公众号联盟的推广后台<br>
-        
-          <!--<a class="article-more-a" href="/2017/02/27/2017-02-27-基于Vue的CPS后台/#more">more</a>-->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nginx</a>
         		</li>
       		
 		</ul>
@@ -276,10 +239,6 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/27/2017-02-27-基于Vue的CPS后台/">展开全文</a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -287,7 +246,16 @@ var _hmt = _hmt || [];
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/02/2018-07-02-sh-shell/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">shell脚本应用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -295,395 +263,21 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-2017-02-21-Weex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/21/2017-02-21-Weex/">Weex</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/21/2017-02-21-Weex/" class="archive-article-date">
-  	<time datetime="2017-02-21T11:17:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>整理中<br>
-        
-          <!--<a class="article-more-a" href="/2017/02/21/2017-02-21-Weex/#more">more</a>-->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/21/2017-02-21-Weex/">展开全文</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
+  <div class="duoshuo">
+  <!--PC和WAP自适应版-->
+  <div id="SOHUCS" sid="https配置的坑" ></div>
+  <script type="text/javascript">
+    (function(){
+      var appid = 'cytiftFRT';
+      var conf = 'prod_f5e998d9b3eff429bcfbb306cdc89e14';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+        window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+</div>
 
   
-    <article id="post-2017-02-17-Rax" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/17/2017-02-17-Rax/">Rax</a>
-    </h1>
-  
 
-        
-        <a href="/2017/02/17/2017-02-17-Rax/" class="archive-article-date">
-  	<time datetime="2017-02-17T11:16:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>整理中<br>
-        
-          <!--<a class="article-more-a" href="/2017/02/17/2017-02-17-Rax/#more">more</a>-->
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/17/2017-02-17-Rax/">展开全文</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-02-13-PReact" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/2017-02-13-PReact/">PReact</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/13/2017-02-13-PReact/" class="archive-article-date">
-  	<time datetime="2017-02-13T11:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>React相关-整理中<br>
-        
-          <!--<a class="article-more-a" href="/2017/02/13/2017-02-13-PReact/#more">more</a>-->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/13/2017-02-13-PReact/">展开全文</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-02-13-wx签名出错-URL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/2017-02-13-wx签名出错-URL/">wx签名出错-URL</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/13/2017-02-13-wx签名出错-URL/" class="archive-article-date">
-  	<time datetime="2017-02-13T11:16:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>上周调试wx收货地址的时候<br>碰到一个签名出错的问题<br>invalid signature<br>
-        
-          <!--<a class="article-more-a" href="/2017/02/13/2017-02-13-wx签名出错-URL/#more">more</a>-->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">wx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/13/2017-02-13-wx签名出错-URL/">展开全文</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-02-05-react-redux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/05/2017-02-05-react-redux/">react-redux</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/05/2017-02-05-react-redux/" class="archive-article-date">
-  	<time datetime="2017-02-05T11:15:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>React相关-整理中<br>
-        
-          <!--<a class="article-more-a" href="/2017/02/05/2017-02-05-react-redux/#more">more</a>-->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/05/2017-02-05-react-redux/">展开全文</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-2017-02-04-react-flux" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/04/2017-02-04-react-flux/">react-flux</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/04/2017-02-04-react-flux/" class="archive-article-date">
-  	<time datetime="2017-02-04T11:15:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>React相关-整理中<br>
-        
-          <!--<a class="article-more-a" href="/2017/02/04/2017-02-04-react-flux/#more">more</a>-->
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/04/2017-02-04-react-flux/">展开全文</a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -706,8 +300,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
